@@ -1,0 +1,60 @@
+{
+  "orig": {
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 0
+    },
+    "heroHeading": null,
+    "heroImage": {
+      "x": 63.75,
+      "y": 240,
+      "w": 262.5,
+      "h": 306.25
+    },
+    "secNeuGedacht": null,
+    "secFinanzwelt": null,
+    "secDochWas": null,
+    "secSoFunktioniert": null,
+    "secKunden": null,
+    "secFaq": null,
+    "doc": {
+      "h": 12566,
+      "w": 390
+    },
+    "animStats": {
+      "all": 0,
+      "visible": 0
+    }
+  },
+  "static": {
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 47
+    },
+    "heroHeading": null,
+    "heroImage": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "secNeuGedacht": null,
+    "secFinanzwelt": null,
+    "secDochWas": null,
+    "secSoFunktioniert": null,
+    "secKunden": null,
+    "secFaq": null,
+    "doc": {
+      "h": 14210,
+      "w": 390
+    },
+    "animStats": {
+      "all": 16,
+      "visible": 3
+    }
+  }
+}

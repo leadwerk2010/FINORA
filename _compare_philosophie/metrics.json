@@ -1,0 +1,90 @@
+{
+  "orig_desktop": {
+    "doc": {
+      "h": 15744,
+      "w": 1512
+    },
+    "hero": {
+      "x": 0,
+      "y": 32,
+      "w": 1512,
+      "h": 820
+    },
+    "heroHeading": null,
+    "heroImage": {
+      "x": 1042,
+      "y": 202,
+      "w": 343,
+      "h": 462
+    },
+    "pillarsHeading": null,
+    "animAll": 0,
+    "animVisible": 0
+  },
+  "static_desktop": {
+    "doc": {
+      "h": 10668,
+      "w": 1512
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "w": 1512,
+      "h": 982
+    },
+    "heroHeading": null,
+    "heroImage": {
+      "x": 893,
+      "y": 156,
+      "w": 549,
+      "h": 740
+    },
+    "pillarsHeading": null,
+    "animAll": 22,
+    "animVisible": 3
+  },
+  "orig_mobile": {
+    "doc": {
+      "h": 29553,
+      "w": 375
+    },
+    "hero": {
+      "x": 0,
+      "y": 46,
+      "w": 375,
+      "h": 820
+    },
+    "heroHeading": null,
+    "heroImage": {
+      "x": 62,
+      "y": 286,
+      "w": 251,
+      "h": 339
+    },
+    "pillarsHeading": null,
+    "animAll": 0,
+    "animVisible": 0
+  },
+  "static_mobile": {
+    "doc": {
+      "h": 19445,
+      "w": 375
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "w": 375,
+      "h": 1097
+    },
+    "heroHeading": null,
+    "heroImage": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "pillarsHeading": null,
+    "animAll": 22,
+    "animVisible": 3
+  }
+}

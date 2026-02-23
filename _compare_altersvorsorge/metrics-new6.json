@@ -1,0 +1,228 @@
+{
+  "orig_desktop": {
+    "docH": 9819,
+    "hero": {
+      "h": 832.6875
+    },
+    "heroText": {
+      "h": 349.890625
+    },
+    "heroImg": {
+      "h": 330.09375
+    },
+    "sections": [
+      {
+        "i": 0,
+        "cls": "et_pb_section et_pb_section_1 et_pb_equal_columns et_section_specialty",
+        "h": 865
+      },
+      {
+        "i": 1,
+        "cls": "et_pb_section et_pb_section_2 et_pb_with_background et_section_regular",
+        "h": 816
+      },
+      {
+        "i": 2,
+        "cls": "et_pb_section et_pb_section_3 et_pb_with_background et_section_regular",
+        "h": 835
+      },
+      {
+        "i": 3,
+        "cls": "et_pb_section et_pb_section_4 et_pb_with_background et_section_regular",
+        "h": 699
+      },
+      {
+        "i": 4,
+        "cls": "et_pb_section et_pb_section_5 et_pb_with_background et_section_regular",
+        "h": 1018
+      },
+      {
+        "i": 5,
+        "cls": "et_pb_section et_pb_section_6 et_pb_with_background et_section_regular",
+        "h": 2531
+      },
+      {
+        "i": 6,
+        "cls": "et_pb_section et_pb_section_7 et_pb_with_background et_section_regular",
+        "h": 949
+      },
+      {
+        "i": 7,
+        "cls": "et_pb_section et_pb_section_8 et_pb_with_background et_section_regular",
+        "h": 668
+      }
+    ]
+  },
+  "static_desktop": {
+    "docH": 9594,
+    "hero": {
+      "h": 715.390625
+    },
+    "heroText": {
+      "h": 475.390625
+    },
+    "heroImg": {
+      "h": 330.09375
+    },
+    "sections": [
+      {
+        "i": 0,
+        "cls": "hero hero--altersvorsorge",
+        "h": 715
+      },
+      {
+        "i": 1,
+        "cls": "content-section content-section--white section-meaning",
+        "h": 832
+      },
+      {
+        "i": 2,
+        "cls": "content-section content-section--light section-workflow",
+        "h": 762
+      },
+      {
+        "i": 3,
+        "cls": "content-section content-section--white section-private-vorsorge",
+        "h": 868
+      },
+      {
+        "i": 4,
+        "cls": "center-cta section-gap-cta",
+        "h": 685
+      },
+      {
+        "i": 5,
+        "cls": "content-section content-section--white section-favorites",
+        "h": 1023
+      },
+      {
+        "i": 6,
+        "cls": "content-section content-section--light section-audience",
+        "h": 2601
+      },
+      {
+        "i": 7,
+        "cls": "content-section content-section--white section-concepts",
+        "h": 949
+      },
+      {
+        "i": 8,
+        "cls": "center-cta section-final-cta",
+        "h": 654
+      }
+    ]
+  },
+  "orig_mobile": {
+    "docH": 16664,
+    "hero": {
+      "h": 665.15625
+    },
+    "heroText": {
+      "h": 0
+    },
+    "heroImg": {
+      "h": 285.15625
+    },
+    "sections": [
+      {
+        "i": 0,
+        "cls": "et_pb_section et_pb_section_1 et_pb_equal_columns et_section_specialty",
+        "h": 1295
+      },
+      {
+        "i": 1,
+        "cls": "et_pb_section et_pb_section_2 et_pb_with_background et_section_regular",
+        "h": 1130
+      },
+      {
+        "i": 2,
+        "cls": "et_pb_section et_pb_section_3 et_pb_with_background et_section_regular",
+        "h": 1206
+      },
+      {
+        "i": 3,
+        "cls": "et_pb_section et_pb_section_4 et_pb_with_background et_section_regular",
+        "h": 676
+      },
+      {
+        "i": 4,
+        "cls": "et_pb_section et_pb_section_5 et_pb_with_background et_section_regular",
+        "h": 2296
+      },
+      {
+        "i": 5,
+        "cls": "et_pb_section et_pb_section_6 et_pb_with_background et_section_regular",
+        "h": 5501
+      },
+      {
+        "i": 6,
+        "cls": "et_pb_section et_pb_section_7 et_pb_with_background et_section_regular",
+        "h": 1089
+      },
+      {
+        "i": 7,
+        "cls": "et_pb_section et_pb_section_8 et_pb_with_background et_section_regular",
+        "h": 879
+      }
+    ]
+  },
+  "static_mobile": {
+    "docH": 16466,
+    "hero": {
+      "h": 665.375
+    },
+    "heroText": {
+      "h": 0
+    },
+    "heroImg": {
+      "h": 285.375
+    },
+    "sections": [
+      {
+        "i": 0,
+        "cls": "hero hero--altersvorsorge",
+        "h": 665
+      },
+      {
+        "i": 1,
+        "cls": "content-section content-section--white section-meaning",
+        "h": 1223
+      },
+      {
+        "i": 2,
+        "cls": "content-section content-section--light section-workflow",
+        "h": 1118
+      },
+      {
+        "i": 3,
+        "cls": "content-section content-section--white section-private-vorsorge",
+        "h": 1192
+      },
+      {
+        "i": 4,
+        "cls": "center-cta section-gap-cta",
+        "h": 660
+      },
+      {
+        "i": 5,
+        "cls": "content-section content-section--white section-favorites",
+        "h": 2254
+      },
+      {
+        "i": 6,
+        "cls": "content-section content-section--light section-audience",
+        "h": 5617
+      },
+      {
+        "i": 7,
+        "cls": "content-section content-section--white section-concepts",
+        "h": 1173
+      },
+      {
+        "i": 8,
+        "cls": "center-cta section-final-cta",
+        "h": 859
+      }
+    ]
+  }
+}

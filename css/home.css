@@ -1,0 +1,101 @@
+/* Home page fidelity overrides (Finora _ Investment Studio.htm) */
+
+.page-home {
+    background-color: #ffffff;
+}
+
+.page-home .hero {
+    background-image: linear-gradient(0deg, #043c43 31%, rgba(4, 60, 67, 0.84) 100%);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #003c43;
+}
+
+.page-home .hero-text {
+    float: left;
+    display: block;
+}
+
+.page-home .hero-images {
+    float: left;
+}
+
+.page-home .hero-content {
+    display: block;
+}
+
+.page-home .hero-content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.page-home .hero-text h1 {
+    max-width: 80%;
+    margin-top: 42px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+.page-home .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-home .hero-img-secondary {
+    margin-right: auto;
+}
+
+.page-home .hero-img-main img,
+.page-home .hero-img-secondary img {
+    width: auto;
+}
+
+@media (min-width: 981px) and (max-width: 1670px) {
+    .page-home .hero-text h1 {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 980px) {
+    .page-home .hero-subtitle {
+        margin-bottom: 0;
+    }
+
+    .page-home .hero-text h1 {
+        max-width: 80%;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .page-home .why-finora-right img {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .page-home .faq-left {
+        display: none;
+    }
+
+    .page-home .faq-right {
+        width: 100%;
+        padding: 5% 4%;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-home .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .page-home .hero-text h1 {
+        max-width: 150%;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}

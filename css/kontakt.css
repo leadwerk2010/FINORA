@@ -1,0 +1,343 @@
+/* ============================================================
+   Kontakt page fidelity overrides
+   Source-matched to original Divi export (page-id 89203)
+   ============================================================ */
+
+.page-kontakt {
+    background: #ffffff;
+}
+
+/* --- Hero (.et_pb_section_0) --- */
+.page-kontakt .hero.hero--kontakt {
+    background-position: center bottom;
+    background-image: linear-gradient(0deg, #043c43 32%, rgba(4, 60, 67, 0.84) 100%), url('../assets/images/Invest-bw.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #003c43 !important;
+    padding: 0 70px;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-kontakt .hero.hero--kontakt::after {
+    display: none;
+}
+
+.page-kontakt .hero--kontakt .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 100px auto 1px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.page-kontakt .hero--kontakt .hero-text {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-kontakt .hero--kontakt .hero-text h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 110px;
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 42px auto 20px;
+    max-width: 80%;
+    padding-bottom: 10px;
+}
+
+.page-kontakt .hero--kontakt .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-kontakt .hero--kontakt .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 21px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 49px;
+}
+
+/* --- Contact main section (.et_pb_section_1) --- */
+.page-kontakt .section-kontakt-main {
+    background: #ffffff;
+    padding: 54px 0;
+}
+
+.page-kontakt .section-kontakt-main .container--xl {
+    width: 90%;
+    max-width: 1400px;
+}
+
+.page-kontakt .kontakt-layout {
+    display: grid;
+    grid-template-columns: 65.5172% 29.3103%;
+    column-gap: 5.1725%;
+    align-items: start;
+}
+
+.page-kontakt .kontakt-form-col {
+    min-width: 0;
+}
+
+.page-kontakt .kontakt-info-col {
+    min-width: 0;
+}
+
+.page-kontakt .kontakt-form-col h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-kontakt .kontakt-form-col p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: none;
+}
+
+.page-kontakt .contact-form {
+    margin: 0;
+}
+
+.page-kontakt .contact-form .wpforms-field {
+    margin-bottom: 18px;
+}
+
+.page-kontakt .contact-form label {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0 0 10px;
+}
+
+.page-kontakt .contact-form label span {
+    font-weight: 600;
+}
+
+.page-kontakt .contact-form input[type="text"],
+.page-kontakt .contact-form input[type="email"],
+.page-kontakt .contact-form textarea {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 25px 20px;
+    font-size: 16px;
+    background: #ffffff;
+    min-height: unset;
+    line-height: 1.4;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.page-kontakt .contact-form textarea {
+    min-height: 219px;
+    resize: vertical;
+}
+
+.page-kontakt .contact-form input:focus,
+.page-kontakt .contact-form textarea:focus {
+    outline: none;
+    border-color: #90b4b2;
+    box-shadow: 0 0 0 2px rgba(144, 180, 178, 0.15);
+}
+
+.page-kontakt .contact-form .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 0 18px;
+}
+
+.page-kontakt .contact-form .checkbox-group input[type="checkbox"] {
+    margin-top: 4px;
+    accent-color: #266063;
+}
+
+.page-kontakt .contact-form .checkbox-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.page-kontakt .contact-form .checkbox-group a {
+    color: #266063;
+    text-decoration: underline;
+}
+
+.page-kontakt .contact-form .btn-submit {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    background: #000000;
+    background-image: none;
+    padding: 13px 50px 14px;
+    min-height: unset;
+    line-height: 1.2;
+    box-shadow: none;
+    text-shadow: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.page-kontakt .contact-form .btn-submit:hover {
+    background-color: #90b4b2;
+    border-color: #90b4b2;
+}
+
+.page-kontakt .contact-form .btn-submit:active {
+    transform: translateY(1px);
+}
+
+.page-kontakt .kontakt-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-kontakt .kontakt-info-card {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffffff;
+    background-color: #043c43;
+    border-radius: 10px 10px 10vw 10px;
+    overflow: hidden;
+    height: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-kontakt .kontakt-info-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 70px;
+    color: #ffffff;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+
+.page-kontakt .kontakt-info-card h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #ffffff;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0 0 12px;
+}
+
+.page-kontakt .kontakt-info-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 1.8em;
+    text-align: center;
+    margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .page-kontakt .hero.hero--kontakt {
+        padding-top: 70px;
+        padding-right: 40px;
+        padding-bottom: 70px;
+        padding-left: 40px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text {
+        display: none;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text h1 {
+        font-size: 105px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-subtitle {
+        margin-bottom: 0;
+    }
+
+    .page-kontakt .kontakt-layout {
+        grid-template-columns: 100%;
+        row-gap: 20px;
+    }
+
+    .page-kontakt .kontakt-form-col h2 {
+        font-size: 45px;
+        margin-top: 0;
+    }
+
+    .page-kontakt .kontakt-form-col p {
+        margin-bottom: 52px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-kontakt .hero.hero--kontakt {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text {
+        display: none;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text h1 {
+        font-size: 52px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-subtitle {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .page-kontakt .kontakt-form-col h2 {
+        font-size: 26px;
+    }
+
+    .page-kontakt .kontakt-form-col p {
+        margin-bottom: 30px;
+    }
+}

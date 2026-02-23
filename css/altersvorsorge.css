@@ -1,0 +1,1016 @@
+/* ============================================================
+   Altersvorsorge-Beratung page fidelity overrides
+   Source-matched to original Divi export (static rebuild)
+   ============================================================ */
+
+.page-altersvorsorge {
+    background: #ffffff;
+}
+
+/* --- Hero (.et_pb_section_0) --- */
+.page-altersvorsorge .hero.hero--altersvorsorge {
+    background-position: center bottom;
+    background-image: linear-gradient(0deg, #043c43 32%, rgba(4, 60, 67, 0.84) 100%), url('../assets/images/Finanzwelt-sw.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #003c43 !important;
+    padding: 0 70px;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-altersvorsorge .hero.hero--altersvorsorge::after {
+    display: none;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 100px auto 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text {
+    width: 66.666%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 110px;
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 42px auto 20px;
+    max-width: 80%;
+    padding-bottom: 10px;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 21px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 49px;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-images {
+    width: 33.333%;
+    display: block;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-images.hero-images--single .hero-img-main {
+    max-width: 75%;
+    margin: 0 auto;
+    border-radius: 32px 32px 10vw 32px;
+    overflow: hidden;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-images.hero-images--single .hero-img-main img {
+    width: 100%;
+    display: block;
+}
+
+/* --- Shared dark-button module style (.et_pb_button_1..14) --- */
+.page-altersvorsorge .section-meaning .btn--dark,
+.page-altersvorsorge .section-workflow .btn--dark,
+.page-altersvorsorge .section-private-vorsorge .btn--dark,
+.page-altersvorsorge .section-favorites .btn--dark,
+.page-altersvorsorge .section-audience .btn--dark,
+.page-altersvorsorge .section-concepts .btn--dark {
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+    background-color: #191919;
+    padding: 13px 50px 14px;
+}
+
+.page-altersvorsorge .section-meaning .btn--dark:hover,
+.page-altersvorsorge .section-workflow .btn--dark:hover,
+.page-altersvorsorge .section-private-vorsorge .btn--dark:hover,
+.page-altersvorsorge .section-favorites .btn--dark:hover,
+.page-altersvorsorge .section-audience .btn--dark:hover,
+.page-altersvorsorge .section-concepts .btn--dark:hover {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+}
+
+/* --- Section 1 (.et_pb_section_1) --- */
+.page-altersvorsorge .section-meaning {
+    background: #ffffff;
+    border-radius: 10vw 0 0 0;
+    overflow: hidden;
+    padding: 70px 0 90px;
+}
+
+.page-altersvorsorge .section-meaning .two-col--meaning {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-altersvorsorge .section-meaning .col-img {
+    flex: 0 0 40%;
+}
+
+.page-altersvorsorge .section-meaning .col-text {
+    flex: 0 0 60%;
+}
+
+.page-altersvorsorge .section-meaning .col-img img {
+    border-radius: 10px 10px 10vw 10px;
+    overflow: hidden;
+    margin-right: -73px;
+    max-width: 659px;
+    width: 100%;
+}
+
+.page-altersvorsorge .section-meaning .col-text h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-altersvorsorge .section-meaning .col-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+.page-altersvorsorge .section-meaning .col-text p:first-of-type {
+    margin-top: 50px;
+    margin-bottom: 24px;
+}
+
+.page-altersvorsorge .section-meaning .col-text p:last-of-type {
+    margin-bottom: 75px;
+}
+
+.page-altersvorsorge .section-meaning .btn-section {
+    margin-top: 0;
+}
+
+/* --- Section 2 (.et_pb_section_2) --- */
+.page-altersvorsorge .section-workflow {
+    background: #f2f2f2;
+    padding: 100px 0;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text {
+    flex: 0 0 50%;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text:first-child {
+    padding-right: 40px;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text:last-child {
+    padding-left: 5px;
+}
+
+.page-altersvorsorge .section-workflow h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    margin: 0 0 2px;
+}
+
+.page-altersvorsorge .section-workflow .btn-section {
+    margin-top: 75px;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text:last-child>p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.page-altersvorsorge .section-workflow .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-workflow .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: -2px;
+}
+
+.page-altersvorsorge .section-workflow .blurb-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-workflow .workflow-highlight {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 26px;
+    line-height: 1.4em;
+    color: #266063;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* --- Section 3 (.et_pb_section_3) --- */
+.page-altersvorsorge .section-private-vorsorge {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-altersvorsorge .section-private-vorsorge .two-col--private {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-text {
+    flex: 0 0 52%;
+    padding-right: 25px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-img {
+    flex: 0 0 48%;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-text h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .lead {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    line-height: 1.6em;
+    color: #191919;
+    margin: 0 0 35px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-text>p:last-of-type {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .btn-section {
+    margin-top: 40px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-img img {
+    border-radius: 10px 10px 10vw 10px;
+    overflow: hidden;
+    margin-right: -73px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* --- Section 4 + 8 (.et_pb_section_4 / .et_pb_section_8) --- */
+.page-altersvorsorge .section-gap-cta,
+.page-altersvorsorge .section-final-cta {
+    background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.page-altersvorsorge .section-gap-cta .container,
+.page-altersvorsorge .section-final-cta .container {
+    width: 80%;
+    max-width: 100%;
+    padding: 120px 0;
+}
+
+.page-altersvorsorge .section-gap-cta h2,
+.page-altersvorsorge .section-final-cta h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-gap-cta p,
+.page-altersvorsorge .section-final-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8em;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.page-altersvorsorge .section-gap-cta .btn,
+.page-altersvorsorge .section-final-cta .btn {
+    color: #ffffff !important;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 11px 80px 12px;
+}
+
+.page-altersvorsorge .section-gap-cta .btn:hover,
+.page-altersvorsorge .section-final-cta .btn:hover {
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+}
+
+/* --- Section 5 (.et_pb_section_5) --- */
+.page-altersvorsorge .section-favorites {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-altersvorsorge .section-favorites .container--wide {
+    width: 100%;
+    max-width: 100%;
+}
+
+.page-altersvorsorge .section-favorites .favorites-heading-row {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.page-altersvorsorge .section-favorites .favorites-title {
+    flex: 0 0 66.666%;
+}
+
+.page-altersvorsorge .section-favorites .favorites-cta {
+    flex: 0 0 33.333%;
+    padding-top: 20px;
+}
+
+.page-altersvorsorge .section-favorites .favorites-title h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    margin: 0 0 2px;
+    text-align: left;
+}
+
+.page-altersvorsorge .section-favorites .favorites-title p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    line-height: 1.6em;
+    color: #191919;
+    margin: 0;
+    text-align: left;
+}
+
+.page-altersvorsorge .section-favorites .favorites-cta .btn {
+    margin-top: 0;
+}
+
+.page-altersvorsorge .section-favorites .tabs-wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.page-altersvorsorge .section-favorites .tabs-img {
+    flex: 0 0 33.333%;
+}
+
+.page-altersvorsorge .section-favorites .tabs-img img {
+    border-radius: 10px 10px 10vw 10px;
+    overflow: hidden;
+    margin-top: 70px;
+    margin-right: -73px;
+    width: 100%;
+}
+
+.page-altersvorsorge .section-favorites .tabs-content {
+    flex: 0 0 66.666%;
+    margin-top: 20px;
+}
+
+.page-altersvorsorge .section-favorites .tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 0;
+    border: 0;
+    padding: 0;
+}
+
+.page-altersvorsorge .section-favorites .tab-nav button {
+    background: #90b4b2;
+    color: #ffffff;
+    border: 0;
+    border-radius: 50px;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    padding: 8px 20px 9px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    line-height: 2em;
+    font-weight: 400;
+}
+
+.page-altersvorsorge .section-favorites .tab-nav button.is-active {
+    background: #266063;
+    color: #ffffff;
+    border: 0;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel {
+    background-image: linear-gradient(13deg, #f8f8f8 0%, rgba(255, 255, 255, 0) 72%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 18px -12px rgba(0, 0, 0, 0.1);
+    padding: 24px 28px;
+    color: #191919;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel h4 {
+    color: #266063;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    line-height: 1.4em;
+    margin: 0 0 14px;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel ul {
+    list-style: disc;
+    padding-left: 22px;
+    margin: 0 0 16px;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 2.4em;
+    color: #191919;
+}
+
+/* --- Section 6 (.et_pb_section_6) --- */
+.page-altersvorsorge .section-audience {
+    background: #f2f2f2;
+    padding: 115px 0 120px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.page-altersvorsorge .section-audience .section-heading {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+.page-altersvorsorge .section-audience .section-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.page-altersvorsorge .section-audience .audience-links {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.page-altersvorsorge .section-audience .btn.btn-audience {
+    width: 100%;
+    padding: 8px 20px 9px;
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+    background-image: linear-gradient(127deg, #043c43 2%, #266063 100%);
+    text-align: center;
+}
+
+.page-altersvorsorge .section-audience .btn.btn-audience:hover {
+    color: #ffffff !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+    background-image: none;
+}
+
+.page-altersvorsorge .section-audience .audience-card {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 60px 40px 40px;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.page-altersvorsorge .section-audience .audience-card:hover {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+}
+
+.page-altersvorsorge .section-audience .audience-card--highlight {
+    background-image: linear-gradient(187deg, rgba(255, 255, 255, 0.43) 1%, rgba(255, 255, 255, 0.92) 60%);
+    border: 1px solid rgba(255, 255, 255, 0.84);
+    box-shadow: 0 12px 18px -9px rgba(0, 0, 0, 0.07);
+}
+
+.page-altersvorsorge .section-audience .audience-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    color: #266063;
+    line-height: 1.2em;
+    margin: 0 0 25px;
+}
+
+.page-altersvorsorge .section-audience .audience-card>p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0 0 35px;
+}
+
+.page-altersvorsorge .section-audience .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-audience .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: -2px;
+}
+
+.page-altersvorsorge .section-audience .blurb-content h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #266063;
+    line-height: 1.2em;
+    margin: 0 0 8px;
+}
+
+.page-altersvorsorge .section-audience .blurb-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-audience .audience-grid {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+}
+
+.page-altersvorsorge .section-audience .audience-grid .audience-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-audience .audience-card--large .btn-section,
+.page-altersvorsorge .section-audience #berufseinsteiger .btn-section {
+    margin-top: 35px;
+}
+
+/* --- Section 7 (.et_pb_section_7) --- */
+.page-altersvorsorge .section-concepts {
+    background: #ffffff;
+    padding: 0;
+}
+
+.page-altersvorsorge .section-concepts .concepts-grid {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: stretch;
+    gap: 0;
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-col {
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+    padding: 40px;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-col:hover {
+    transform: translateY(-2px);
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-wrap {
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.page-altersvorsorge .section-concepts .concepts-text-col {
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 7%;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.page-altersvorsorge .section-concepts .concepts-text-col:hover {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+}
+
+.page-altersvorsorge .section-concepts h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    margin: 0 0 20px;
+}
+
+.page-altersvorsorge .section-concepts .concepts-text-col>p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0 0 75px;
+}
+
+.page-altersvorsorge .section-concepts .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-concepts .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: -4px;
+}
+
+.page-altersvorsorge .section-concepts .blurb-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-concepts .btn-section {
+    margin-top: 40px;
+}
+
+@media (min-width: 981px) {
+    .page-altersvorsorge .section-concepts .concepts-grid {
+        min-height: 949px;
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .page-altersvorsorge .hero.hero--altersvorsorge {
+        padding: 70px 40px;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-content {
+        margin: 100px auto 0;
+        padding: 70px 0;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-text {
+        display: none;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-images {
+        width: 100%;
+        display: block;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-altersvorsorge .section-meaning .two-col--meaning,
+    .page-altersvorsorge .section-workflow .two-col--workflow,
+    .page-altersvorsorge .section-private-vorsorge .two-col--private,
+    .page-altersvorsorge .section-favorites .tabs-wrap,
+    .page-altersvorsorge .section-concepts .concepts-grid {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .page-altersvorsorge .section-meaning .col-img,
+    .page-altersvorsorge .section-meaning .col-text,
+    .page-altersvorsorge .section-workflow .two-col--workflow>.col-text,
+    .page-altersvorsorge .section-private-vorsorge .col-text,
+    .page-altersvorsorge .section-private-vorsorge .col-img,
+    .page-altersvorsorge .section-favorites .tabs-img,
+    .page-altersvorsorge .section-favorites .tabs-content,
+    .page-altersvorsorge .section-concepts .concepts-image-col,
+    .page-altersvorsorge .section-concepts .concepts-text-col {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .page-altersvorsorge .section-meaning .col-img img,
+    .page-altersvorsorge .section-private-vorsorge .col-img img,
+    .page-altersvorsorge .section-favorites .tabs-img img {
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text h2 {
+        margin-top: 0;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:first-of-type {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:last-of-type {
+        margin-bottom: 52px;
+    }
+
+    .page-altersvorsorge .section-meaning {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .two-col--private {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text {
+        padding-right: 0;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text h2 {
+        margin-top: 0;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text>p:last-of-type {
+        margin-top: 0;
+        margin-bottom: 52px;
+    }
+
+    .page-altersvorsorge .section-favorites .favorites-heading-row {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-favorites .favorites-title,
+    .page-altersvorsorge .section-favorites .favorites-cta {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .page-altersvorsorge .section-favorites .tabs-img {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-favorites .tabs-content {
+        margin-top: 0;
+    }
+
+    .page-altersvorsorge .section-favorites .tabs-wrap {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text h2,
+    .page-altersvorsorge .section-workflow h2,
+    .page-altersvorsorge .section-private-vorsorge .col-text h2,
+    .page-altersvorsorge .section-favorites .favorites-title h2,
+    .page-altersvorsorge .section-audience .section-heading h2,
+    .page-altersvorsorge .section-concepts .concepts-text-col h2,
+    .page-altersvorsorge .section-gap-cta h2,
+    .page-altersvorsorge .section-final-cta h2 {
+        font-size: 45px;
+    }
+
+    .page-altersvorsorge .section-workflow .workflow-highlight,
+    .page-altersvorsorge .section-private-vorsorge .lead,
+    .page-altersvorsorge .section-favorites .favorites-title p {
+        font-size: 21px;
+    }
+
+    .page-altersvorsorge .section-concepts .concepts-text-col>p {
+        margin-bottom: 52px;
+    }
+
+    .page-altersvorsorge .section-audience {
+        border-radius: 0 0 96px 96px;
+        padding: 115px 0 120px;
+    }
+
+    .page-altersvorsorge .section-concepts {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+        padding: 115px 0 120px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-links {
+        max-width: 440px;
+        grid-template-columns: 1fr;
+        margin-bottom: 58px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-card,
+    .page-altersvorsorge .section-audience .audience-grid,
+    .page-altersvorsorge .section-concepts .concepts-grid {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-altersvorsorge .section-audience .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-altersvorsorge .section-concepts .concepts-image-col {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-altersvorsorge .hero.hero--altersvorsorge {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-altersvorsorge .section-meaning .col-img img,
+    .page-altersvorsorge .section-private-vorsorge .col-img img,
+    .page-altersvorsorge .section-favorites .tabs-img img {
+        margin-top: 55px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text h2,
+    .page-altersvorsorge .section-workflow h2,
+    .page-altersvorsorge .section-private-vorsorge .col-text h2,
+    .page-altersvorsorge .section-favorites .favorites-title h2,
+    .page-altersvorsorge .section-audience .section-heading h2,
+    .page-altersvorsorge .section-concepts .concepts-text-col h2,
+    .page-altersvorsorge .section-gap-cta h2,
+    .page-altersvorsorge .section-final-cta h2 {
+        font-size: 26px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-card h3 {
+        font-size: 24px;
+    }
+
+    .page-altersvorsorge .section-workflow .workflow-highlight,
+    .page-altersvorsorge .section-private-vorsorge .lead,
+    .page-altersvorsorge .section-favorites .favorites-title p {
+        font-size: 19px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:first-of-type {
+        margin-bottom: 20px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text>p:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-gap-cta p,
+    .page-altersvorsorge .section-final-cta p {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-audience {
+        border-radius: 0 0 36px 36px;
+        padding: 85px 0 90px;
+    }
+
+    .page-altersvorsorge .section-concepts {
+        border-radius: 0 0 36px 36px;
+        padding: 85px 0 90px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-card,
+    .page-altersvorsorge .section-concepts .concepts-text-col,
+    .page-altersvorsorge .section-concepts .concepts-image-col {
+        padding: 40px 24px 30px;
+    }
+}
