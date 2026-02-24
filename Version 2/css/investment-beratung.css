@@ -1,0 +1,881 @@
+/* ============================================================
+   Investment-Beratung page fidelity overrides
+   Source-matched to original Divi export (static structure)
+   ============================================================ */
+
+.page-investment {
+    background: #ffffff;
+}
+
+.page-investment .btn--light {
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+    background-color: #191919;
+}
+
+.page-investment .btn--light:hover {
+    background-color: #90b4b2;
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+}
+
+/* --- Hero (.et_pb_section_0) --- */
+.page-investment .hero.hero--investment {
+    background-position: center bottom;
+    background-image: linear-gradient(0deg, #043c43 32%, rgba(4, 60, 67, 0.84) 100%), url('../assets/images/Finanzwelt-sw.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #003c43 !important;
+    padding: 0 70px;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-investment .hero.hero--investment::after {
+    display: none;
+}
+
+.page-investment .hero--investment .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 100px auto 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.page-investment .hero--investment .hero-text {
+    width: 66.666%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-investment .hero--investment .hero-text h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: clamp(42px, 7vw, 100px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 42px auto 20px;
+    max-width: 80%;
+    padding-bottom: 10px;
+}
+
+.page-investment .hero--investment .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-investment .hero--investment .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 21px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 49px;
+}
+
+.page-investment .hero--investment .hero-text>div[style*="text-align"] {
+    text-align: center;
+    width: 100%;
+}
+
+.page-investment .hero--investment .hero-images {
+    width: 33.333%;
+    display: block;
+}
+
+.page-investment .hero--investment .hero-images.hero-images--single .hero-img-main {
+    max-width: 75%;
+    margin: 0 auto;
+    border-radius: 32px 32px 10vw 32px;
+    overflow: hidden;
+}
+
+.page-investment .hero--investment .hero-images.hero-images--single .hero-img-main img {
+    width: 100%;
+    display: block;
+}
+
+/* --- Strategy (.et_pb_section_1) --- */
+.page-investment .section-strategy {
+    background: #ffffff;
+    border-radius: 10vw 0 0 0;
+    overflow: hidden;
+    padding: 70px 0 90px;
+}
+
+.page-investment .section-strategy .two-col {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-investment .section-strategy .col-img {
+    flex: 0 0 40%;
+}
+
+.page-investment .section-strategy .col-text {
+    flex: 0 0 60%;
+}
+
+.page-investment .section-strategy .col-img img {
+    border-radius: 10px 10px 10vw 10px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-right: -73px;
+}
+
+.page-investment .section-strategy .col-text h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-investment .section-strategy .col-text>p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-strategy .col-text>p:last-of-type {
+    color: #043c43;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    line-height: 1.6em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.page-investment .section-strategy .btn-section {
+    margin-top: 40px;
+}
+
+/* --- Challenge (.et_pb_section_2) --- */
+.page-investment .section-challenge {
+    background-color: #f2f2f2;
+    padding: 100px 0;
+}
+
+.page-investment .section-challenge .section-heading {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-challenge .section-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+}
+
+.page-investment .section-challenge .section-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    line-height: 1.6em;
+    color: #191919;
+    margin-top: 0;
+    max-width: none;
+}
+
+.page-investment .section-challenge .two-col {
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-investment .section-challenge .two-col>.col-text:first-child {
+    flex: 0 0 58%;
+}
+
+.page-investment .section-challenge .two-col>.col-text:last-child {
+    flex: 0 0 38%;
+    background-image: linear-gradient(35deg, rgba(255, 255, 255, 0.27) 29%, #ffffff 48%, rgba(255, 255, 255, 0.59) 66%);
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 2px 18px rgba(255, 255, 255, 0.32);
+}
+
+.page-investment .section-challenge .two-col>.col-text:last-child h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-challenge .two-col>.col-text:last-child p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.page-investment .section-challenge .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-challenge .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.page-investment .section-challenge .blurb-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #191919;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-investment .section-challenge .btn-section {
+    margin-top: 40px;
+}
+
+/* --- Flipboxes (.et_pb_section_3) --- */
+.page-investment .section-flipboxes {
+    padding: 100px 0;
+}
+
+.page-investment .section-flipboxes .section-heading {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.page-investment .section-flipboxes .section-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #ffffff;
+    line-height: 1.2em;
+}
+
+.page-investment .section-flipboxes .section-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    line-height: 1.6em;
+    color: #ffffff;
+    margin-top: 0;
+    max-width: none;
+}
+
+.page-investment .section-flipboxes .two-col {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.page-investment .section-flipboxes .two-col>.col-text {
+    flex: 0 0 34%;
+}
+
+.page-investment .section-flipboxes .two-col>.col-img {
+    flex: 0 0 60%;
+}
+
+.page-investment .section-flipboxes .two-col>.col-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page-investment .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 0;
+}
+
+.page-investment .flip-card {
+    height: 250px;
+    perspective: 1000px;
+    background: transparent;
+}
+
+.page-investment .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s var(--ease-out-expo);
+    transform-style: preserve-3d;
+}
+
+.page-investment .flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.page-investment .flip-front,
+.page-investment .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #043c43;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.48) 99%);
+}
+
+.page-investment .flip-card:nth-child(1) .flip-front,
+.page-investment .flip-card:nth-child(1) .flip-back,
+.page-investment .flip-card:nth-child(3) .flip-front,
+.page-investment .flip-card:nth-child(3) .flip-back {
+    border-radius: 10px 10px 5vw 10px;
+}
+
+.page-investment .flip-card:nth-child(2) .flip-front,
+.page-investment .flip-card:nth-child(2) .flip-back,
+.page-investment .flip-card:nth-child(4) .flip-front,
+.page-investment .flip-card:nth-child(4) .flip-back {
+    border-radius: 10px 10px 10px 5vw;
+}
+
+.page-investment .flip-front h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    color: #ffffff !important;
+    line-height: 1.3em;
+    text-align: center;
+    margin: 0;
+}
+
+.page-investment .flip-back {
+    transform: rotateY(180deg);
+}
+
+.page-investment .flip-back p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    margin: 0;
+}
+
+/* --- Goal (.et_pb_section_4) --- */
+.page-investment .section-goal {
+    padding: 30px 0;
+    margin: 0;
+    background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A6656_prev.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-investment .section-goal .section-heading {
+    text-align: center;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+.page-investment .section-goal h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #ffffff !important;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-goal p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 75px;
+}
+
+.page-investment .section-goal .btn {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background: transparent;
+}
+
+.page-investment .section-goal .btn:hover {
+    background-color: #90b4b2;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+/* --- Timeline (.et_pb_section_5) --- */
+.page-investment .section-timeline {
+    background: #f2f2f2;
+    border-radius: 0 10vw 0 0;
+    overflow: hidden;
+    padding: 115px 0 120px;
+}
+
+.page-investment .section-timeline .section-heading {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.page-investment .section-timeline .section-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+}
+
+.page-investment .section-timeline .section-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    line-height: 1.6em;
+    color: #191919;
+    margin-top: 0;
+    max-width: none;
+}
+
+.page-investment .section-timeline .timeline {
+    max-width: 1100px;
+}
+
+.page-investment .section-timeline .timeline::before {
+    width: 3px;
+    background: #90b4b2;
+}
+
+.page-investment .section-timeline .timeline-item {
+    width: 45%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.page-investment .section-timeline .timeline-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.page-investment .section-timeline .timeline-item h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 38px;
+    color: #043c43;
+    margin-bottom: 12px;
+}
+
+.page-investment .section-timeline .timeline-item p,
+.page-investment .section-timeline .timeline-item li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+}
+
+/* --- Target Groups (.et_pb_section_6) --- */
+.page-investment .section-target-groups {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-investment .section-target-groups .two-col {
+    align-items: flex-start;
+}
+
+.page-investment .section-target-groups .two-col>.col-text:first-child,
+.page-investment .section-target-groups .two-col>.col-text:last-child {
+    flex: 0 0 calc(50% - 30px);
+}
+
+.page-investment .section-target-groups h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    max-width: 65%;
+    margin-bottom: 2px;
+}
+
+.page-investment .section-target-groups .btn-section {
+    margin-top: 60px;
+}
+
+.page-investment .section-target-groups h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    color: #191919;
+    line-height: 1.2em;
+}
+
+.page-investment .section-target-groups .target-group-grid {
+    display: block;
+    margin-top: 0;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb:hover {
+    transform: none;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-top: -3px;
+    margin-right: 0;
+    width: 32px;
+    min-width: 32px;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    display: block;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb-content p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+}
+
+.page-investment .section-target-groups .col-text>p:last-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-top: 20px;
+}
+
+/* --- Results (.et_pb_section_7) --- */
+.page-investment .section-results {
+    background: #f2f2f2;
+    padding: 0;
+    margin: 0;
+}
+
+.page-investment .section-results .two-col {
+    gap: 0;
+    align-items: stretch;
+    min-height: 800px;
+}
+
+.page-investment .section-results .col-img {
+    flex: 0 0 40%;
+    min-height: 800px;
+    background-image: url('../assets/images/X8A7369_prev-e1769685408385.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+}
+
+.page-investment .section-results .col-text {
+    flex: 0 0 60%;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 7%;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.page-investment .section-results .col-text:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.page-investment .section-results h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-results .col-text>p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    line-height: 1.6em;
+    color: #191919;
+    margin-bottom: 50px;
+}
+
+.page-investment .section-results .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-results .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.page-investment .section-results .blurb-content p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+}
+
+.page-investment .section-results .btn-section {
+    margin-top: 40px;
+}
+
+/* --- Final CTA (.et_pb_section_8) --- */
+.page-investment .section-final-cta {
+    background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 0;
+    margin: 0;
+}
+
+.page-investment .section-final-cta .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 120px 0;
+}
+
+.page-investment .section-final-cta h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-final-cta h2 strong {
+    color: #ffffff;
+}
+
+.page-investment .section-final-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8em;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 1200px;
+    margin: 0 auto 75px;
+}
+
+.page-investment .section-final-cta .btn {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.page-investment .section-final-cta .btn:hover {
+    background-color: #90b4b2;
+    border-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .page-investment .hero.hero--investment {
+        padding: 70px 40px !important;
+    }
+
+    .page-investment .hero--investment .hero-content {
+        margin: 100px auto 0;
+        padding: 70px 0;
+    }
+
+    .page-investment .hero--investment .hero-text {
+        display: none;
+    }
+
+    .page-investment .hero--investment .hero-images {
+        width: 100%;
+        display: block;
+    }
+
+    .page-investment .hero--investment .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .page-investment .section-strategy .col-img img {
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .page-investment .section-strategy .col-text h2,
+    .page-investment .section-challenge .section-heading h2,
+    .page-investment .section-flipboxes .section-heading h2,
+    .page-investment .section-goal h2,
+    .page-investment .section-timeline .section-heading h2,
+    .page-investment .section-target-groups h2,
+    .page-investment .section-results h2,
+    .page-investment .section-final-cta h2 {
+        font-size: 45px;
+    }
+
+    .page-investment .section-challenge .two-col>.col-text:last-child h3,
+    .page-investment .section-timeline .timeline-item h4 {
+        font-size: 32px;
+        line-height: 1.2em;
+    }
+
+    .page-investment .section-target-groups h2 {
+        max-width: none;
+    }
+
+    .page-investment .section-timeline,
+    .page-investment .section-results {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+    }
+
+    .page-investment .section-timeline {
+        padding: 115px 0 120px;
+    }
+
+    .page-investment .section-results {
+        padding: 115px 0 120px;
+    }
+
+    .page-investment .section-results .two-col {
+        min-height: 0;
+        gap: 30px;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .page-investment .section-results .col-img {
+        min-height: 420px;
+        background-attachment: scroll;
+    }
+
+    .page-investment .section-results .col-text,
+    .page-investment .section-results .col-text:hover {
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-investment .hero.hero--investment {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+
+    .page-investment .hero--investment .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-investment .section-strategy .col-img img {
+        margin-top: 55px;
+    }
+
+    .page-investment .section-strategy .col-text h2,
+    .page-investment .section-challenge .section-heading h2,
+    .page-investment .section-flipboxes .section-heading h2,
+    .page-investment .section-goal h2,
+    .page-investment .section-timeline .section-heading h2,
+    .page-investment .section-target-groups h2,
+    .page-investment .section-results h2,
+    .page-investment .section-final-cta h2 {
+        font-size: 26px;
+    }
+
+    .page-investment .section-challenge .two-col>.col-text:last-child h3,
+    .page-investment .section-timeline .timeline-item h4 {
+        font-size: 24px;
+    }
+
+    .page-investment .section-strategy .col-text>p:last-of-type,
+    .page-investment .section-challenge .section-heading p,
+    .page-investment .section-timeline .section-heading p,
+    .page-investment .section-results .col-text>p,
+    .page-investment .section-final-cta p {
+        font-size: 19px;
+    }
+
+    .page-investment .section-timeline,
+    .page-investment .section-results {
+        border-radius: 0 0 36px 36px;
+        overflow: hidden;
+    }
+
+    .page-investment .section-timeline {
+        padding: 85px 0 90px;
+    }
+
+    .page-investment .section-results {
+        padding: 85px 0 90px;
+    }
+
+    .page-investment .section-final-cta p {
+        margin-bottom: 30px;
+    }
+
+    .page-investment .section-final-cta .container {
+        padding: 85px 0 90px;
+    }
+}

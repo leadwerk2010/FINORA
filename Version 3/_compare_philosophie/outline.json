@@ -1,0 +1,693 @@
+{
+  "orig": {
+    "headings": [
+      {
+        "i": 0,
+        "tag": "h1",
+        "text": "Drei Säulen. Ein Ziel.",
+        "y": 244
+      },
+      {
+        "i": 1,
+        "tag": "h2",
+        "text": "Die 3 Säulen der Finora-Philosophie:",
+        "y": 967
+      },
+      {
+        "i": 2,
+        "tag": "h3",
+        "text": "Basis-Strategie",
+        "y": 1305
+      },
+      {
+        "i": 3,
+        "tag": "h3",
+        "text": "Flexibler Vermögensaufbau",
+        "y": 1305
+      },
+      {
+        "i": 4,
+        "tag": "h3",
+        "text": "Reduzierung deiner Steuerlast",
+        "y": 1305
+      },
+      {
+        "i": 5,
+        "tag": "h2",
+        "text": "Die Basis-Strategie.",
+        "y": 1984
+      },
+      {
+        "i": 6,
+        "tag": "h4",
+        "text": "Sicherung deiner Einnahmequellen",
+        "y": 2612
+      },
+      {
+        "i": 7,
+        "tag": "h4",
+        "text": "Aufbau einer alternativen Einkommensquelle im Ruhestand",
+        "y": 2814
+      },
+      {
+        "i": 8,
+        "tag": "h2",
+        "text": "Für wen ist die Basis-Strategie gedacht?",
+        "y": 3360
+      },
+      {
+        "i": 9,
+        "tag": "h3",
+        "text": "Berufseinsteiger & Young Professionals:",
+        "y": 3557
+      },
+      {
+        "i": 10,
+        "tag": "h3",
+        "text": "Angestellte & Selbstständige:",
+        "y": 3557
+      },
+      {
+        "i": 11,
+        "tag": "h3",
+        "text": "Internationals & Expats:",
+        "y": 4088
+      },
+      {
+        "i": 12,
+        "tag": "h3",
+        "text": "ETF-Investoren:",
+        "y": 4088
+      },
+      {
+        "i": 13,
+        "tag": "h2",
+        "text": "Finora steht für ein starkes & effizientes Fundament im Vermögensaufbau.",
+        "y": 4843
+      },
+      {
+        "i": 14,
+        "tag": "h2",
+        "text": "Flexibler Vermögensaufbau",
+        "y": 5542
+      },
+      {
+        "i": 15,
+        "tag": "h2",
+        "text": "Was thematisches Investieren bedeutet:",
+        "y": 6172
+      },
+      {
+        "i": 16,
+        "tag": "h3",
+        "text": "Diese langfristigen Entwicklungen lassen sich in 4 Mega-Trends unterteilen – das Fundament zukünftigem Wachstums:",
+        "y": 6600
+      },
+      {
+        "i": 17,
+        "tag": "h4",
+        "text": "1. Technologie & Digitalisierung",
+        "y": 6826
+      },
+      {
+        "i": 18,
+        "tag": "h4",
+        "text": "2. Urbanisierung",
+        "y": 6840
+      },
+      {
+        "i": 19,
+        "tag": "h4",
+        "text": "3. Ressourcenknappheit",
+        "y": 6826
+      },
+      {
+        "i": 20,
+        "tag": "h4",
+        "text": "4. Demografischer & sozialer Wandel",
+        "y": 6826
+      },
+      {
+        "i": 21,
+        "tag": "h2",
+        "text": "Für wen ist das interessant?",
+        "y": 7372
+      },
+      {
+        "i": 22,
+        "tag": "h3",
+        "text": "Berufseinsteiger & Young Professionals:",
+        "y": 7569
+      },
+      {
+        "i": 23,
+        "tag": "h3",
+        "text": "Angestellte & Selbstständige:",
+        "y": 7569
+      },
+      {
+        "i": 24,
+        "tag": "h3",
+        "text": "Internationals & Expats:",
+        "y": 7569
+      },
+      {
+        "i": 25,
+        "tag": "h3",
+        "text": "ETF-Investoren:",
+        "y": 8065
+      },
+      {
+        "i": 26,
+        "tag": "h3",
+        "text": "Erben:",
+        "y": 8065
+      },
+      {
+        "i": 27,
+        "tag": "h2",
+        "text": "Finora steht für intelligente Investmentstrategien.",
+        "y": 8723
+      },
+      {
+        "i": 28,
+        "tag": "h2",
+        "text": "Reduzierung deiner Steuerlast durch Immobilien",
+        "y": 9382
+      },
+      {
+        "i": 29,
+        "tag": "h3",
+        "text": "Wie das funktioniert:",
+        "y": 10142
+      },
+      {
+        "i": 30,
+        "tag": "h2",
+        "text": "Wir begleiten dich durch alle Schritte:",
+        "y": 10531
+      },
+      {
+        "i": 31,
+        "tag": "h4",
+        "text": "1. Planung & Strategieentwicklung",
+        "y": 10825
+      },
+      {
+        "i": 32,
+        "tag": "h4",
+        "text": "2. Objektkalkulation & Finanzierung",
+        "y": 10825
+      },
+      {
+        "i": 33,
+        "tag": "h4",
+        "text": "3. Kauf & Umsetzung",
+        "y": 10825
+      },
+      {
+        "i": 34,
+        "tag": "h2",
+        "text": "Für wen ist das interessant?",
+        "y": 11339
+      },
+      {
+        "i": 35,
+        "tag": "h3",
+        "text": "Angestellte & Selbstständige:",
+        "y": 11536
+      },
+      {
+        "i": 36,
+        "tag": "h3",
+        "text": "Internationals & Expats:",
+        "y": 11536
+      },
+      {
+        "i": 37,
+        "tag": "h3",
+        "text": "ETF-Investoren:",
+        "y": 12002
+      },
+      {
+        "i": 38,
+        "tag": "h3",
+        "text": "Erben:",
+        "y": 12002
+      },
+      {
+        "i": 39,
+        "tag": "h2",
+        "text": "Finora steht für dynamisches, zukunftsorientiertes Investieren.",
+        "y": 12628
+      },
+      {
+        "i": 40,
+        "tag": "h2",
+        "text": "Das sagen unsere Kunden:",
+        "y": 13320
+      },
+      {
+        "i": 41,
+        "tag": "h3",
+        "text": "Élisa L.",
+        "y": 13677
+      },
+      {
+        "i": 42,
+        "tag": "h3",
+        "text": "S.B.",
+        "y": 13677
+      },
+      {
+        "i": 43,
+        "tag": "h3",
+        "text": "Nonso Mgbechi",
+        "y": 13677
+      },
+      {
+        "i": 44,
+        "tag": "h2",
+        "text": "Fragen zu Finanzen? Hier gibt’s Klartext.",
+        "y": 14284
+      },
+      {
+        "i": 45,
+        "tag": "h5",
+        "text": "Muss ich mich nach dem ersten Gespräch sofort entscheiden?",
+        "y": 14608
+      },
+      {
+        "i": 46,
+        "tag": "h5",
+        "text": "Kann die Beratung auch auf Englisch stattfinden?",
+        "y": 14789
+      },
+      {
+        "i": 47,
+        "tag": "h5",
+        "text": "Was kostet die Beratung?",
+        "y": 14886
+      },
+      {
+        "i": 48,
+        "tag": "h5",
+        "text": "Welche Möglichkeiten gibt es, ein Erbe verantwortungsvoll zu investieren?",
+        "y": 14982
+      },
+      {
+        "i": 49,
+        "tag": "h4",
+        "text": "Menü",
+        "y": 15292
+      },
+      {
+        "i": 50,
+        "tag": "h4",
+        "text": "Themen",
+        "y": 15292
+      },
+      {
+        "i": 51,
+        "tag": "h4",
+        "text": "Kontakt",
+        "y": 15292
+      }
+    ],
+    "sections": [],
+    "doc": 15744
+  },
+  "static": {
+    "headings": [
+      {
+        "i": 0,
+        "tag": "h1",
+        "text": "Drei Säulen. Ein Ziel.",
+        "y": 171
+      },
+      {
+        "i": 1,
+        "tag": "h2",
+        "text": "Die 3 Säulen der Finora-Philosophie:",
+        "y": 1097
+      },
+      {
+        "i": 2,
+        "tag": "h3",
+        "text": "Basis-Strategie",
+        "y": 1422
+      },
+      {
+        "i": 3,
+        "tag": "h3",
+        "text": "Flexibler Vermögensaufbau",
+        "y": 1422
+      },
+      {
+        "i": 4,
+        "tag": "h3",
+        "text": "Reduzierung deiner Steuerlast",
+        "y": 1422
+      },
+      {
+        "i": 5,
+        "tag": "h2",
+        "text": "Unsere Basis-Strategie im Detail",
+        "y": 2097
+      },
+      {
+        "i": 6,
+        "tag": "h3",
+        "text": "So setzen wir das um:",
+        "y": 2429
+      },
+      {
+        "i": 7,
+        "tag": "h4",
+        "text": "Steueroptimierte Altersvorsorge",
+        "y": 2454
+      },
+      {
+        "i": 8,
+        "tag": "h4",
+        "text": "Einkommensabsicherung",
+        "y": 2612
+      },
+      {
+        "i": 9,
+        "tag": "h4",
+        "text": "Ruhestandsplanung",
+        "y": 2770
+      },
+      {
+        "i": 10,
+        "tag": "h3",
+        "text": "Für wen ist die Basis-Strategie gedacht?",
+        "y": 3065
+      },
+      {
+        "i": 11,
+        "tag": "h4",
+        "text": "Berufseinsteiger",
+        "y": 3248
+      },
+      {
+        "i": 12,
+        "tag": "h4",
+        "text": "Angestellte",
+        "y": 3248
+      },
+      {
+        "i": 13,
+        "tag": "h4",
+        "text": "Internationals / Expats",
+        "y": 3572
+      },
+      {
+        "i": 14,
+        "tag": "h4",
+        "text": "ETF-Sparer",
+        "y": 3572
+      },
+      {
+        "i": 15,
+        "tag": "h2",
+        "text": "Finora steht für ein starkes & effizientes Fundament im Vermögensaufbau.",
+        "y": 3957
+      },
+      {
+        "i": 16,
+        "tag": "h2",
+        "text": "Flexibler Vermögensaufbau",
+        "y": 4515
+      },
+      {
+        "i": 17,
+        "tag": "h4",
+        "text": "Unsere Investment-Philosophie:",
+        "y": 4834
+      },
+      {
+        "i": 18,
+        "tag": "h3",
+        "text": "Wir investieren in die Themen der Zukunft",
+        "y": 5116
+      },
+      {
+        "i": 19,
+        "tag": "h4",
+        "text": "Technologie & KI",
+        "y": 5455
+      },
+      {
+        "i": 20,
+        "tag": "h4",
+        "text": "Technologie",
+        "y": 5357
+      },
+      {
+        "i": 21,
+        "tag": "h4",
+        "text": "Urbanisierung",
+        "y": 5455
+      },
+      {
+        "i": 22,
+        "tag": "h4",
+        "text": "Urbanisierung",
+        "y": 5357
+      },
+      {
+        "i": 23,
+        "tag": "h4",
+        "text": "Ressourcen",
+        "y": 5455
+      },
+      {
+        "i": 24,
+        "tag": "h4",
+        "text": "Nachhaltigkeit",
+        "y": 5357
+      },
+      {
+        "i": 25,
+        "tag": "h4",
+        "text": "Demografie",
+        "y": 5455
+      },
+      {
+        "i": 26,
+        "tag": "h4",
+        "text": "Demografie",
+        "y": 5357
+      },
+      {
+        "i": 27,
+        "tag": "h3",
+        "text": "Für wen ist das interessant?",
+        "y": 5692
+      },
+      {
+        "i": 28,
+        "tag": "h4",
+        "text": "Vermögensaufbauer",
+        "y": 5875
+      },
+      {
+        "i": 29,
+        "tag": "h4",
+        "text": "Einmalanleger",
+        "y": 5875
+      },
+      {
+        "i": 30,
+        "tag": "h2",
+        "text": "Reduzierung deiner Steuerlast",
+        "y": 6261
+      },
+      {
+        "i": 31,
+        "tag": "h3",
+        "text": "Der Weg zur eigenen Immobilie",
+        "y": 6792
+      },
+      {
+        "i": 32,
+        "tag": "h4",
+        "text": "Analyse & Konzept",
+        "y": 6957
+      },
+      {
+        "i": 33,
+        "tag": "h4",
+        "text": "Objektauswahl",
+        "y": 6957
+      },
+      {
+        "i": 34,
+        "tag": "h4",
+        "text": "Umsetzung",
+        "y": 6957
+      },
+      {
+        "i": 35,
+        "tag": "h3",
+        "text": "Für wen lohnt sich das?",
+        "y": 7133
+      },
+      {
+        "i": 36,
+        "tag": "h4",
+        "text": "Gutverdiener",
+        "y": 7316
+      },
+      {
+        "i": 37,
+        "tag": "h4",
+        "text": "Immobilien-Interessierte",
+        "y": 7316
+      },
+      {
+        "i": 38,
+        "tag": "h2",
+        "text": "Das sagen unsere Kunden:",
+        "y": 7681
+      },
+      {
+        "i": 39,
+        "tag": "h3",
+        "text": "Julien Dine",
+        "y": 7993
+      },
+      {
+        "i": 40,
+        "tag": "h3",
+        "text": "Kristina Trotsko",
+        "y": 7993
+      },
+      {
+        "i": 41,
+        "tag": "h3",
+        "text": "Walid Sharaar",
+        "y": 7993
+      },
+      {
+        "i": 42,
+        "tag": "h2",
+        "text": "Fragen zu Finanzen? Hier gibt's Klartext.",
+        "y": 8485
+      },
+      {
+        "i": 43,
+        "tag": "h5",
+        "text": "Warum heutzutage überhaupt noch eine Beratung in Anspruch nehmen?",
+        "y": 8755
+      },
+      {
+        "i": 44,
+        "tag": "h5",
+        "text": "Was kostet die Beratung?",
+        "y": 9358
+      },
+      {
+        "i": 45,
+        "tag": "h5",
+        "text": "Wie verdient Finora Geld?",
+        "y": 9455
+      },
+      {
+        "i": 46,
+        "tag": "h5",
+        "text": "Kann die Beratung auf Englisch stattfinden?",
+        "y": 9551
+      },
+      {
+        "i": 47,
+        "tag": "h5",
+        "text": "Muss ich mich nach dem ersten Gespräch direkt entscheiden?",
+        "y": 9648
+      },
+      {
+        "i": 48,
+        "tag": "h2",
+        "text": "Bereit für dein Finanzkonzept?",
+        "y": 9880
+      },
+      {
+        "i": 49,
+        "tag": "h4",
+        "text": "Menü",
+        "y": 10302
+      },
+      {
+        "i": 50,
+        "tag": "h4",
+        "text": "Themen",
+        "y": 10302
+      },
+      {
+        "i": 51,
+        "tag": "h4",
+        "text": "Kontakt",
+        "y": 10302
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "cls": "hero",
+        "y": 0,
+        "h": 982
+      },
+      {
+        "i": 1,
+        "cls": "pillars",
+        "y": 982,
+        "h": 1015
+      },
+      {
+        "i": 2,
+        "cls": "content-section content-section--white",
+        "y": 1997,
+        "h": 1861
+      },
+      {
+        "i": 3,
+        "cls": "content-section content-section--light",
+        "y": 3857,
+        "h": 557
+      },
+      {
+        "i": 4,
+        "cls": "content-section content-section--dark",
+        "y": 4415,
+        "h": 1746
+      },
+      {
+        "i": 5,
+        "cls": "content-section content-section--light",
+        "y": 6161,
+        "h": 1405
+      },
+      {
+        "i": 6,
+        "cls": "testimonials",
+        "y": 7566,
+        "h": 844
+      },
+      {
+        "i": 7,
+        "cls": "faq",
+        "y": 8410,
+        "h": 1390
+      },
+      {
+        "i": 8,
+        "cls": "center-cta",
+        "y": 9800,
+        "h": 392
+      }
+    ],
+    "doc": 10668
+  }
+}

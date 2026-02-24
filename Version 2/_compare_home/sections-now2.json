@@ -1,0 +1,390 @@
+{
+  "orig_desktop": [
+    {
+      "i": 0,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_0_tb_header et_pb_with_background et_section_regular et_pb_section--fixed et_pb_section--with-menu",
+      "y": 32,
+      "h": 108.5625,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 1,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_0 vertikal-zentrieren et_pb_section_video et_pb_with_background et_section_regular",
+      "y": 32,
+      "h": 1200,
+      "pt": "0px",
+      "pb": "70px",
+      "br": "0px"
+    },
+    {
+      "i": 2,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_1 et_pb_with_background et_section_regular",
+      "y": 1232,
+      "h": 976.640625,
+      "pt": "115px",
+      "pb": "120px",
+      "br": "0px 0px 151.2px"
+    },
+    {
+      "i": 3,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_2 et_pb_with_background et_section_regular",
+      "y": 2208.640625,
+      "h": 1356.1875,
+      "pt": "120px",
+      "pb": "150px",
+      "br": "0px"
+    },
+    {
+      "i": 4,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_3 et_pb_equal_columns et_section_specialty",
+      "y": 3564.828125,
+      "h": 1446.109375,
+      "pt": "115px",
+      "pb": "115px",
+      "br": "0px 0px 0px 151.2px"
+    },
+    {
+      "i": 5,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_4 et_pb_with_background et_section_regular",
+      "y": 5010.9375,
+      "h": 1049.03125,
+      "pt": "100px",
+      "pb": "100px",
+      "br": "0px"
+    },
+    {
+      "i": 6,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_5 et_pb_with_background et_section_regular",
+      "y": 6059.96875,
+      "h": 951.828125,
+      "pt": "115px",
+      "pb": "120px",
+      "br": "0px"
+    },
+    {
+      "i": 7,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_6 et_section_regular",
+      "y": 7011.796875,
+      "h": 1444.71875,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 8,
+      "tag": "footer",
+      "cls": "et-l et-l--footer",
+      "y": 8456.515625,
+      "h": 583.609375,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 9,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular",
+      "y": 8456.515625,
+      "h": 500.8125,
+      "pt": "54px",
+      "pb": "54px",
+      "br": "0px"
+    },
+    {
+      "i": 10,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_1_tb_footer et_pb_with_background et_section_regular",
+      "y": 8957.328125,
+      "h": 82.796875,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    }
+  ],
+  "static_desktop": [
+    {
+      "i": 0,
+      "tag": "section",
+      "cls": "hero",
+      "y": 0,
+      "h": 1200,
+      "pt": "0px",
+      "pb": "70px",
+      "br": "0px"
+    },
+    {
+      "i": 1,
+      "tag": "section",
+      "cls": "pillars",
+      "y": 1200,
+      "h": 1014.640625,
+      "pt": "115px",
+      "pb": "120px",
+      "br": "0px 0px 151.2px"
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "cls": "slider-section",
+      "y": 2214.640625,
+      "h": 1210.609375,
+      "pt": "120px",
+      "pb": "150px",
+      "br": "0px"
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "cls": "why-finora",
+      "y": 3425.25,
+      "h": 1394.71875,
+      "pt": "115px",
+      "pb": "115px",
+      "br": "0px 0px 0px 151.2px"
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "cls": "how-it-works",
+      "y": 4819.96875,
+      "h": 885.625,
+      "pt": "100px",
+      "pb": "100px",
+      "br": "0px"
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "cls": "testimonials",
+      "y": 5705.59375,
+      "h": 862.828125,
+      "pt": "115px",
+      "pb": "120px",
+      "br": "0px"
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "cls": "faq",
+      "y": 6568.421875,
+      "h": 1389.71875,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 7,
+      "tag": "footer",
+      "cls": "site-footer",
+      "y": 7958.140625,
+      "h": 475.75,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    }
+  ],
+  "orig_mobile": [
+    {
+      "i": 0,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_0_tb_header et_pb_with_background et_section_regular et_pb_section--fixed et_pb_section--with-menu",
+      "y": 32,
+      "h": 46,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 1,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_0 vertikal-zentrieren et_pb_section_video et_pb_with_background et_section_regular",
+      "y": 46,
+      "h": 1097.1875,
+      "pt": "70px",
+      "pb": "70px",
+      "br": "0px"
+    },
+    {
+      "i": 2,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_1 et_pb_with_background et_section_regular",
+      "y": 1143.1875,
+      "h": 1992.296875,
+      "pt": "85px",
+      "pb": "90px",
+      "br": "0px 0px 36px 36px"
+    },
+    {
+      "i": 3,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_2 et_pb_with_background et_section_regular",
+      "y": 3135.484375,
+      "h": 1155.171875,
+      "pt": "20px",
+      "pb": "80px",
+      "br": "0px"
+    },
+    {
+      "i": 4,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_3 et_pb_equal_columns et_section_specialty",
+      "y": 4290.65625,
+      "h": 2256.515625,
+      "pt": "90px",
+      "pb": "90px",
+      "br": "0px 0px 36px 36px"
+    },
+    {
+      "i": 5,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_4 et_pb_with_background et_section_regular",
+      "y": 6547.171875,
+      "h": 1952.46875,
+      "pt": "20px",
+      "pb": "80px",
+      "br": "0px"
+    },
+    {
+      "i": 6,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_5 et_pb_with_background et_section_regular",
+      "y": 8499.640625,
+      "h": 1951.46875,
+      "pt": "85px",
+      "pb": "90px",
+      "br": "0px 0px 36px 36px"
+    },
+    {
+      "i": 7,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_6 et_section_regular",
+      "y": 10451.109375,
+      "h": 2048.5,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 8,
+      "tag": "footer",
+      "cls": "et-l et-l--footer",
+      "y": 12499.609375,
+      "h": 1878.921875,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 9,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular",
+      "y": 12499.609375,
+      "h": 1690.125,
+      "pt": "50px",
+      "pb": "50px",
+      "br": "0px"
+    },
+    {
+      "i": 10,
+      "tag": "div",
+      "cls": "et_pb_section et_pb_section_1_tb_footer et_pb_with_background et_section_regular",
+      "y": 14189.734375,
+      "h": 188.796875,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    }
+  ],
+  "static_mobile": [
+    {
+      "i": 0,
+      "tag": "section",
+      "cls": "hero",
+      "y": 0,
+      "h": 1097.1875,
+      "pt": "20px",
+      "pb": "20px",
+      "br": "0px"
+    },
+    {
+      "i": 1,
+      "tag": "section",
+      "cls": "pillars",
+      "y": 1097.1875,
+      "h": 2055.296875,
+      "pt": "85px",
+      "pb": "90px",
+      "br": "0px 0px 36px 36px"
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "cls": "slider-section",
+      "y": 3152.484375,
+      "h": 1088.375,
+      "pt": "20px",
+      "pb": "80px",
+      "br": "0px"
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "cls": "why-finora",
+      "y": 4240.859375,
+      "h": 2803.296875,
+      "pt": "90px",
+      "pb": "90px",
+      "br": "0px 0px 36px 36px"
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "cls": "how-it-works",
+      "y": 7044.15625,
+      "h": 1786.46875,
+      "pt": "20px",
+      "pb": "80px",
+      "br": "0px"
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "cls": "testimonials",
+      "y": 8830.625,
+      "h": 1772.078125,
+      "pt": "85px",
+      "pb": "90px",
+      "br": "0px 0px 36px 36px"
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "cls": "faq",
+      "y": 10602.703125,
+      "h": 2411.90625,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    },
+    {
+      "i": 7,
+      "tag": "footer",
+      "cls": "site-footer",
+      "y": 13014.609375,
+      "h": 1702.75,
+      "pt": "0px",
+      "pb": "0px",
+      "br": "0px"
+    }
+  ]
+}

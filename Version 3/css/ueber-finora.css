@@ -1,0 +1,370 @@
+/* ============================================================
+   Ueber-Finora — Awwwards-Level Page Overrides
+   ============================================================ */
+
+.page-ueber .hero.hero--ueber {
+  background-position: center bottom;
+  background-image: linear-gradient(0deg, var(--color-primary) 32%, rgba(4, 60, 67, 0.84) 100%), url('../assets/images/Invest-bw.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #003c43 !important;
+  padding: 0 70px;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-ueber .hero.hero--ueber::before {
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(144, 180, 178, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 30%, rgba(38, 96, 99, 0.08) 0%, transparent 50%);
+  animation: heroGlowDrift 20s ease-in-out infinite alternate;
+}
+
+.page-ueber .hero.hero--ueber::after { display: none; }
+
+.page-ueber .hero--ueber .hero-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 100px auto 101px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.page-ueber .hero--ueber .hero-text {
+  width: 66.666%;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-ueber .hero--ueber .hero-text h1 {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: var(--fs-display);
+  color: var(--color-white) !important;
+  line-height: var(--lh-tight);
+  text-align: center;
+  margin: 42px auto 20px;
+  max-width: 80%;
+  padding-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+
+.page-ueber .hero--ueber .hero-text h1 strong {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-accent-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-ueber .hero--ueber .hero-subtitle {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: clamp(1rem, 1.2vw + 0.4rem, 1.3rem);
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-align: center;
+  max-width: 440px;
+  margin: 0 auto 49px;
+}
+
+.page-ueber .hero--ueber .hero-text > div[style*="text-align"] {
+  width: 100%;
+  text-align: center;
+}
+
+.page-ueber .hero--ueber .hero-images {
+  width: 33.333%;
+  display: block;
+}
+
+.page-ueber .hero--ueber .hero-images.hero-images--single .hero-img-main {
+  max-width: 75%;
+  margin: 0 auto;
+  border-radius: var(--radius-organic);
+  overflow: hidden;
+  box-shadow: var(--elevation-5);
+}
+
+.page-ueber .hero--ueber .hero-images.hero-images--single .hero-img-main img {
+  width: 100%;
+  display: block;
+}
+
+/* Why Finora */
+.page-ueber .why-finora {
+  border-radius: 10vw 0 0 0;
+  overflow: hidden;
+  padding: var(--space-16) 0;
+}
+
+.page-ueber .why-finora .row { gap: 0; }
+.page-ueber .why-finora-left { padding: 0 20px; }
+.page-ueber .why-finora-left h2 { margin: var(--space-5) 0 2px; }
+.page-ueber .why-finora-left .about-text { margin: var(--space-6) 0 var(--space-8); }
+
+.page-ueber .why-finora-right img {
+  max-width: 659px;
+  margin-top: 0;
+  box-shadow: var(--elevation-4);
+}
+
+/* Finanzwelt */
+.page-ueber .section-finanzwelt .section-heading {
+  margin-bottom: 2px !important;
+}
+
+.page-ueber .section-finanzwelt .section-heading h2 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-white) !important;
+  text-align: center;
+}
+
+.page-ueber .section-finanzwelt .container > div[style*="max-width"] p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Bedeutet */
+.page-ueber .section-bedeutet {
+  border-radius: 10vw 0 0 0;
+  overflow: hidden;
+}
+
+.page-ueber .section-bedeutet .container--narrow {
+  width: 95%;
+  max-width: 1290px;
+}
+
+.page-ueber .section-bedeutet .section-heading {
+  margin-top: var(--space-5);
+  margin-bottom: 2px !important;
+  width: 65%;
+}
+
+.page-ueber .section-bedeutet .section-heading h2 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+.page-ueber .section-bedeutet .two-col {
+  gap: 0;
+  align-items: flex-start;
+}
+
+.page-ueber .section-bedeutet .two-col > .col-text {
+  flex: 0 0 50%;
+}
+
+.page-ueber .section-bedeutet .two-col > .col-text:first-child p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-3);
+}
+
+.page-ueber .section-bedeutet .two-col > .col-text:first-child p:last-of-type {
+  margin-bottom: var(--space-6);
+}
+
+.page-ueber .section-bedeutet .two-col > .col-text:last-child .blurb {
+  margin-bottom: var(--space-3);
+}
+
+.page-ueber .section-bedeutet .two-col > .col-text:last-child .blurb:last-child {
+  margin-bottom: var(--space-5);
+}
+
+.page-ueber .section-bedeutet .two-col > .col-text:last-child .blurb-content h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 23px;
+  color: var(--color-teal);
+}
+
+.page-ueber .section-bedeutet .two-col > .col-text:last-child .blurb-content p {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+/* How */
+.page-ueber .section-how { padding: var(--space-12) 0; }
+.page-ueber .section-how .how-title { margin-top: var(--space-5); margin-bottom: var(--space-10); }
+
+.page-ueber .section-how .how-title h2 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-white);
+}
+
+.page-ueber .section-how .how-grid {
+  width: 90%;
+  max-width: 1290px;
+  margin: 0 auto var(--space-16);
+  gap: 0;
+}
+
+.page-ueber .section-how .how-step { padding-right: var(--space-2); }
+
+.page-ueber .section-how .how-step h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  color: var(--color-white);
+  line-height: var(--lh-heading);
+  text-align: center;
+}
+
+.page-ueber .section-how .how-step p,
+.page-ueber .section-how .how-bottom p { display: none; }
+
+.page-ueber .section-how .how-bottom .btn { padding: 11px 80px 12px; }
+
+/* Testimonials */
+.page-ueber .section-testimonials { padding: var(--space-16) 0 var(--space-16); }
+.page-ueber .section-testimonials .testimonials-title { margin-bottom: 58px; }
+.page-ueber .section-testimonials .testimonials-title h2 { font-size: var(--fs-h2); }
+
+.page-ueber .section-testimonials .testimonials-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.1vw + 0.4rem, 1.3rem);
+  line-height: 1.6em;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.page-ueber .section-testimonials .container--wide:last-child {
+  width: 90%;
+  max-width: 100%;
+}
+
+.page-ueber .section-testimonials .testimonial-text { margin-bottom: 75px; }
+
+/* FAQ */
+.page-ueber .section-faq { background-color: var(--color-white); }
+
+.page-ueber .section-faq .faq-left {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-radius: 0 0 10vw 0;
+  overflow: hidden;
+}
+
+.page-ueber .section-faq .faq-right { padding: 5% 4%; }
+.page-ueber .section-faq .faq-right h2 { margin-bottom: var(--space-3); }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .page-ueber .hero.hero--ueber { padding: 70px 40px; }
+
+  .page-ueber .hero--ueber .hero-content {
+    margin: 100px auto 101px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .page-ueber .hero--ueber .hero-text { display: none; }
+  .page-ueber .hero--ueber .hero-images { width: 100%; }
+
+  .page-ueber .hero--ueber .hero-images.hero-images--single .hero-img-main {
+    max-width: 75%;
+  }
+
+  .page-ueber .mobile-menu-toggle {
+    width: 24px;
+    height: 24px;
+  }
+
+  .page-ueber .mobile-menu-toggle span { display: none; }
+
+  .page-ueber .mobile-menu-toggle::before {
+    content: "a";
+    font-family: ETmodules;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--color-white);
+    display: block;
+    transform: translateY(-2px);
+  }
+
+  .page-ueber .why-finora,
+  .page-ueber .section-testimonials {
+    border-radius: 0 0 96px 96px;
+    overflow: hidden;
+  }
+
+  .page-ueber .why-finora-left,
+  .page-ueber .why-finora-right { width: 100%; padding: 0; }
+
+  .page-ueber .why-finora-left h2 { margin-top: 0; margin-bottom: 2px; }
+  .page-ueber .why-finora-right img { margin-top: 70px; margin-right: 0; }
+
+  .page-ueber .why-finora-left h2,
+  .page-ueber .section-finanzwelt .section-heading h2,
+  .page-ueber .section-bedeutet .section-heading h2,
+  .page-ueber .section-how .how-title h2,
+  .page-ueber .section-testimonials .testimonials-title h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  .page-ueber .section-bedeutet .section-heading { width: 100%; }
+
+  .page-ueber .section-bedeutet .two-col { flex-wrap: wrap; gap: 0; }
+  .page-ueber .section-bedeutet .two-col > .col-text { flex: 0 0 100%; }
+
+  .page-ueber .section-how { padding: var(--space-16) 0 var(--space-12); }
+  .page-ueber .section-how .how-grid { flex-direction: column; margin-bottom: var(--space-16); }
+  .page-ueber .section-how .how-step { padding-right: 0; }
+
+  .page-ueber .section-testimonials { padding: var(--space-16) 0 var(--space-16); }
+  .page-ueber .section-testimonials .testimonials-grid { max-width: 440px; margin: 0 auto; }
+}
+
+@media (max-width: 767px) {
+  .page-ueber .hero.hero--ueber { padding: 70px 20px; }
+
+  .page-ueber .why-finora,
+  .page-ueber .section-testimonials {
+    border-radius: 0 0 36px 36px;
+    overflow: hidden;
+  }
+
+  .page-ueber .why-finora { padding: var(--space-12) 0; }
+  .page-ueber .why-finora-right img { margin-top: 55px; }
+
+  .page-ueber .why-finora-left h2,
+  .page-ueber .section-finanzwelt .section-heading h2,
+  .page-ueber .section-bedeutet .section-heading h2,
+  .page-ueber .section-how .how-title h2,
+  .page-ueber .section-testimonials .testimonials-title h2 {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+
+  .page-ueber .section-how { padding: var(--space-3) 0 var(--space-10); }
+  .page-ueber .section-how .how-grid { margin-bottom: var(--space-12); }
+
+  .page-ueber .section-testimonials { padding: var(--space-10) 0 var(--space-12); }
+
+  .page-ueber .section-testimonials .testimonials-subtitle { font-size: 19px; }
+}

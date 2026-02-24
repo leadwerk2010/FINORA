@@ -1,0 +1,136 @@
+:root {
+  /* Color palette */
+  --color-primary: #043c43;
+  --color-primary-dark: #022a2f;
+  --color-primary-deeper: #011a1e;
+  --color-accent: #90b4b2;
+  --color-accent-bright: #a8ccc9;
+  --color-teal: #266063;
+  --color-teal-light: #2d7275;
+  --color-text: #191919;
+  --color-text-muted: #5B6D6B;
+  --color-white: #ffffff;
+  --color-light-bg: #f0ede8;
+  --color-light-bg-alt: #e8e4dd;
+  --color-card-bg: #ffffff;
+  --color-muted: #5B6D6B;
+
+  /* Gradient system */
+  --gradient-deep: linear-gradient(180deg, #022a2f 0%, #043c43 50%, #0a4f57 100%);
+  --gradient-hero: linear-gradient(170deg, rgba(2,42,47,0.95) 0%, rgba(4,60,67,0.7) 50%, transparent 100%);
+  --gradient-section-dark: linear-gradient(180deg, #043c43 0%, #022a2f 100%);
+  --gradient-section-light: linear-gradient(180deg, #f0ede8 0%, #e8e4dd 100%);
+  --gradient-glass-light: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
+  --gradient-glass-dark: linear-gradient(135deg, rgba(38,96,99,0.6) 0%, rgba(2,42,47,0.4) 100%);
+  --gradient-accent: linear-gradient(135deg, #90b4b2 0%, #6d9e9b 100%);
+  --gradient-mint-glow: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(144,180,178,0.15) 0%, transparent 70%);
+  --gradient-mesh-1: radial-gradient(ellipse 120% 80% at 20% 20%, rgba(144,180,178,0.12) 0%, transparent 50%);
+  --gradient-mesh-2: radial-gradient(ellipse 100% 60% at 80% 80%, rgba(4,60,67,0.2) 0%, transparent 50%);
+  --gradient-mesh-3: radial-gradient(ellipse 80% 100% at 50% 50%, rgba(168,204,201,0.08) 0%, transparent 60%);
+
+  /* Glow system */
+  --glow-mint: 0 0 40px rgba(144,180,178,0.25);
+  --glow-mint-subtle: 0 0 20px rgba(144,180,178,0.12);
+  --glow-mint-strong: 0 0 60px rgba(144,180,178,0.35);
+  --glow-petrol: 0 0 60px rgba(4,60,67,0.4);
+  --glow-white: 0 0 30px rgba(255,255,255,0.08);
+
+  /* Elevation system */
+  --elevation-1: 0 2px 8px rgba(2,42,47,0.06);
+  --elevation-2: 0 4px 16px rgba(2,42,47,0.08);
+  --elevation-3: 0 8px 32px rgba(2,42,47,0.12);
+  --elevation-4: 0 16px 48px rgba(2,42,47,0.16);
+  --elevation-5: 0 24px 64px rgba(2,42,47,0.24);
+
+  /* Glass system */
+  --glass-bg: rgba(255,255,255,0.06);
+  --glass-bg-light: rgba(255,255,255,0.72);
+  --glass-bg-medium: rgba(255,255,255,0.08);
+  --glass-bg-card-light: rgba(255,255,255,0.6);
+  --glass-border: 1px solid rgba(144,180,178,0.12);
+  --glass-border-light: 1px solid rgba(255,255,255,0.18);
+  --glass-border-bright: 1px solid rgba(255,255,255,0.3);
+  --glass-blur: blur(24px);
+  --glass-blur-heavy: blur(40px);
+  --glass-blur-light: blur(12px);
+  --glass-inner-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+  --glass-inner-highlight: inset 0 1px 0 rgba(255,255,255,0.15);
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', Helvetica, Arial, sans-serif;
+  --font-body: 'Montserrat', Helvetica, Arial, sans-serif;
+  --fs-display: clamp(3.6rem, 7vw + 1rem, 8rem);
+  --fs-h1: clamp(2.4rem, 4vw + 0.8rem, 5rem);
+  --fs-h2: clamp(1.8rem, 3vw + 0.5rem, 3.5rem);
+  --fs-h3: clamp(1.4rem, 1.5vw + 0.5rem, 1.75rem);
+  --fs-h4: clamp(1.1rem, 1vw + 0.4rem, 1.4rem);
+  --fs-body: clamp(0.95rem, 0.5vw + 0.7rem, 1.125rem);
+  --fs-small: clamp(0.8rem, 0.3vw + 0.65rem, 0.95rem);
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-body: 1.75;
+  --lh-relaxed: 1.6;
+  --lh-loose: 1.5;
+  --ls-tight: -0.04em;
+  --ls-heading: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.04em;
+
+  /* Spacing (8px grid) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+  --space-20: 160px;
+
+  /* Border radii */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+  --radius-card: 24px;
+  --radius-button: 50px;
+  --radius-organic: 32px 32px 10vw 32px;
+
+  /* Z-index scale */
+  --z-base: 1;
+  --z-content: 10;
+  --z-overlay: 50;
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-header: 9999;
+
+  /* Motion tokens */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.3, 0.64, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
+  --duration-slow: 500ms;
+  --duration-reveal: 800ms;
+  --transition-default: var(--duration-normal) var(--ease-out-quart);
+  --transition-slow: var(--duration-slow) var(--ease-out-expo);
+
+  /* Hero mesh positions */
+  --mesh-x1: 20%;
+  --mesh-y1: 80%;
+  --mesh-x2: 80%;
+  --mesh-y2: 20%;
+  --mesh-x3: 50%;
+  --mesh-y3: 50%;
+
+  /* Slider tokens */
+  --fin-card: rgba(19,71,75,0.85);
+  --fin-text: #e8f4f3;
+  --fin-accent: #90b4b2;
+  --fin-border: rgba(144,180,178,0.2);
+}

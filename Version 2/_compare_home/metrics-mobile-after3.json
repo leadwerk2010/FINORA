@@ -1,0 +1,231 @@
+{
+  "orig": {
+    "doc": {
+      "w": 390,
+      "h": 14379
+    },
+    "header": {
+      "x": 0,
+      "y": 32,
+      "w": 390,
+      "h": 46
+    },
+    "hero": {
+      "x": 0,
+      "y": 46,
+      "w": 390,
+      "h": 1097.1875
+    },
+    "h1": {
+      "x": 20,
+      "y": 238.53125,
+      "w": 350,
+      "h": 117.125
+    },
+    "whySec": {
+      "x": 0,
+      "y": 4290.65625,
+      "w": 390,
+      "h": 2256.515625
+    },
+    "whyImg": {
+      "x": 19.5,
+      "y": 5930.671875,
+      "w": 351,
+      "h": 526.5
+    },
+    "faqSec": {
+      "x": 0,
+      "y": 10451.109375,
+      "w": 390,
+      "h": 2048.5
+    },
+    "faqL": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "faqR": {
+      "x": 0,
+      "y": 10451.109375,
+      "w": 390,
+      "h": 2048.5
+    },
+    "faqLStyle": {
+      "display": "none",
+      "height": "auto",
+      "min-height": "1px"
+    },
+    "faqRStyle": {
+      "padding-top": "19.5px",
+      "padding-right": "15.5938px",
+      "padding-bottom": "19.5px",
+      "padding-left": "15.5938px"
+    },
+    "sections": [
+      {
+        "cls": "et_pb_section et_pb_section_0_tb_header et_pb_with_background et_section_regular et_pb_section--fixed et_pb_section--with-menu",
+        "y": 32,
+        "h": 46
+      },
+      {
+        "cls": "et_pb_section et_pb_section_0 vertikal-zentrieren et_pb_section_video et_pb_with_background et_section_regular",
+        "y": 46,
+        "h": 1097.1875
+      },
+      {
+        "cls": "et_pb_section et_pb_section_1 et_pb_with_background et_section_regular",
+        "y": 1143.1875,
+        "h": 1992.296875
+      },
+      {
+        "cls": "et_pb_section et_pb_section_2 et_pb_with_background et_section_regular",
+        "y": 3135.484375,
+        "h": 1155.171875
+      },
+      {
+        "cls": "et_pb_section et_pb_section_3 et_pb_equal_columns et_section_specialty",
+        "y": 4290.65625,
+        "h": 2256.515625
+      },
+      {
+        "cls": "et_pb_section et_pb_section_4 et_pb_with_background et_section_regular",
+        "y": 6547.171875,
+        "h": 1952.46875
+      },
+      {
+        "cls": "et_pb_section et_pb_section_5 et_pb_with_background et_section_regular",
+        "y": 8499.640625,
+        "h": 1951.46875
+      },
+      {
+        "cls": "et_pb_section et_pb_section_6 et_section_regular",
+        "y": 10451.109375,
+        "h": 2048.5
+      },
+      {
+        "cls": "et-l et-l--footer",
+        "y": 12499.609375,
+        "h": 1878.921875
+      },
+      {
+        "cls": "et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular",
+        "y": 12499.609375,
+        "h": 1690.125
+      },
+      {
+        "cls": "et_pb_section et_pb_section_1_tb_footer et_pb_with_background et_section_regular",
+        "y": 14189.734375,
+        "h": 188.796875
+      }
+    ]
+  },
+  "static": {
+    "doc": {
+      "w": 390,
+      "h": 13882
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 47
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 1097.1875
+    },
+    "h1": {
+      "x": 20,
+      "y": 197.03125,
+      "w": 350,
+      "h": 117.125
+    },
+    "whySec": {
+      "x": 0,
+      "y": 4240.859375,
+      "w": 390,
+      "h": 2341.390625
+    },
+    "whyImg": {
+      "x": 19.5,
+      "y": 5965.859375,
+      "w": 351,
+      "h": 526.390625
+    },
+    "faqSec": {
+      "x": 0,
+      "y": 10140.796875,
+      "w": 390,
+      "h": 2038.5
+    },
+    "faqL": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "faqR": {
+      "x": 0,
+      "y": 10140.796875,
+      "w": 390,
+      "h": 2038.5
+    },
+    "faqLStyle": {
+      "display": "none",
+      "height": "auto",
+      "min-height": "300px"
+    },
+    "faqRStyle": {
+      "padding-top": "19.5px",
+      "padding-right": "15.5938px",
+      "padding-bottom": "19.5px",
+      "padding-left": "15.5938px"
+    },
+    "sections": [
+      {
+        "cls": "hero",
+        "y": 0,
+        "h": 1097.1875
+      },
+      {
+        "cls": "pillars",
+        "y": 1097.1875,
+        "h": 2055.296875
+      },
+      {
+        "cls": "slider-section",
+        "y": 3152.484375,
+        "h": 1088.375
+      },
+      {
+        "cls": "why-finora",
+        "y": 4240.859375,
+        "h": 2341.390625
+      },
+      {
+        "cls": "how-it-works",
+        "y": 6582.25,
+        "h": 1786.46875
+      },
+      {
+        "cls": "testimonials",
+        "y": 8368.71875,
+        "h": 1772.078125
+      },
+      {
+        "cls": "faq",
+        "y": 10140.796875,
+        "h": 2038.5
+      },
+      {
+        "cls": "site-footer",
+        "y": 12179.296875,
+        "h": 1702.75
+      }
+    ]
+  }
+}

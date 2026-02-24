@@ -1,0 +1,364 @@
+/* Home hero */
+.page-home .hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-primary-dark);
+}
+
+.page-home .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse at var(--mesh-x1) var(--mesh-y1),
+      rgba(144, 180, 178, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at var(--mesh-x2) var(--mesh-y2),
+      rgba(144, 180, 178, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at var(--mesh-x3) var(--mesh-y3),
+      rgba(144, 180, 178, 0.12) 0%,
+      transparent 50%
+    );
+  animation: heroGlowDrift 20s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.page-home .hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    170deg,
+    rgba(2, 26, 30, 0.92) 0%,
+    rgba(4, 60, 67, 0.78) 50%,
+    rgba(4, 60, 67, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+.page-home .hero-text h1 {
+  font-size: var(--fs-display);
+  font-weight: 700;
+}
+
+.page-home .hero-text h1 strong {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-accent-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero video */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Hero floating accents */
+.hero-accent {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-accent--1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: -5%;
+  background: radial-gradient(
+    circle,
+    rgba(144, 180, 178, 0.25) 0%,
+    transparent 70%
+  );
+  opacity: 0.15;
+  animation: accentFloat1 12s ease-in-out infinite alternate;
+}
+
+.hero-accent--2 {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  right: 5%;
+  background: radial-gradient(
+    circle,
+    rgba(4, 60, 67, 0.4) 0%,
+    transparent 70%
+  );
+  opacity: 0.1;
+  animation: accentFloat2 15s ease-in-out infinite alternate;
+}
+
+.hero-accent--3 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: 25%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 204, 201, 0.2) 0%,
+    transparent 70%
+  );
+  opacity: 0.08;
+  animation: accentFloat3 18s ease-in-out infinite alternate;
+}
+
+@keyframes accentFloat1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(15px, -20px) scale(1.05); }
+}
+
+@keyframes accentFloat2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-10px, 15px) scale(0.98); }
+}
+
+@keyframes accentFloat3 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(8px, 10px) scale(1.02); }
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: var(--z-base);
+  width: 100%;
+  margin: 101px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Hero text */
+.hero-text {
+  width: 60%;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: var(--fs-display);
+  color: var(--color-white);
+  text-align: center;
+  max-width: 85%;
+  letter-spacing: var(--ls-tight);
+  text-shadow: 0 0 80px rgba(144, 180, 178, 0.15);
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: var(--fs-h3);
+  color: var(--color-white);
+  opacity: 0.8;
+  text-align: center;
+  max-width: 480px;
+}
+
+/* Hero images */
+.hero-images {
+  width: 40%;
+  position: relative;
+}
+
+.hero-img-main {
+  border-radius: var(--radius-organic);
+  overflow: hidden;
+  max-width: 72%;
+  margin-left: auto;
+  box-shadow: var(--elevation-5);
+  z-index: 1;
+  position: relative;
+}
+
+.hero-img-secondary {
+  border-radius: var(--radius-organic);
+  overflow: hidden;
+  max-width: 52%;
+  margin-top: -10%;
+  box-shadow: var(--elevation-4);
+  position: relative;
+}
+
+.hero-images--single .hero-img-main {
+  max-width: 100%;
+  margin-left: 0;
+}
+
+/* Hero services */
+.hero-services {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: var(--z-content);
+  background: rgba(4, 60, 67, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(144, 180, 178, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+}
+
+.service-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(var(--fs-small), 1.5vw, var(--fs-body));
+  color: var(--color-white);
+  opacity: 0.7;
+  transition: color var(--duration-normal) var(--ease-out-quart),
+    transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.service-item:hover {
+  color: var(--color-white);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  width: 80px;
+  opacity: 0.75;
+  transition: opacity var(--duration-normal) var(--ease-out-quart),
+    filter var(--duration-normal) var(--ease-out-quart);
+}
+
+.service-item:hover .service-icon {
+  opacity: 1;
+  filter: drop-shadow(0 0 12px rgba(144, 180, 178, 0.4));
+}
+
+/* Page hero (inner pages) */
+.page-hero,
+.hero--altersvorsorge,
+.hero--investment,
+.hero--immobilien,
+.hero--erbanlage,
+.hero--philosophie,
+.hero--ueber,
+.hero--kontakt {
+  padding: 200px 0 100px;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-primary-dark);
+}
+
+.page-hero::before,
+.hero--altersvorsorge::before,
+.hero--investment::before,
+.hero--immobilien::before,
+.hero--erbanlage::before,
+.hero--philosophie::before,
+.hero--ueber::before,
+.hero--kontakt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse at var(--mesh-x1) var(--mesh-y1),
+      rgba(144, 180, 178, 0.04) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at var(--mesh-x2) var(--mesh-y2),
+      rgba(144, 180, 178, 0.04) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at var(--mesh-x3) var(--mesh-y3),
+      rgba(144, 180, 178, 0.04) 0%,
+      transparent 50%
+    );
+  opacity: 0.3;
+  animation: heroGlowDrift 25s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.page-hero::after,
+.hero--altersvorsorge::after,
+.hero--investment::after,
+.hero--immobilien::after,
+.hero--erbanlage::after,
+.hero--philosophie::after,
+.hero--ueber::after,
+.hero--kontakt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    170deg,
+    rgba(2, 26, 30, 0.92) 0%,
+    rgba(4, 60, 67, 0.78) 50%,
+    rgba(4, 60, 67, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+.page-hero .hero-content,
+.hero--altersvorsorge .hero-content,
+.hero--investment .hero-content,
+.hero--immobilien .hero-content,
+.hero--erbanlage .hero-content,
+.hero--philosophie .hero-content,
+.hero--ueber .hero-content,
+.hero--kontakt .hero-content {
+  margin: 0 auto;
+}
+
+.page-hero .hero-text h1,
+.hero--altersvorsorge .hero-text h1,
+.hero--investment .hero-text h1,
+.hero--immobilien .hero-text h1,
+.hero--erbanlage .hero-text h1,
+.hero--philosophie .hero-text h1,
+.hero--ueber .hero-text h1,
+.hero--kontakt .hero-text h1 {
+  font-size: var(--fs-h1);
+}
+
+@keyframes heroGlowDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(2%, 1%) scale(1.02);
+  }
+}

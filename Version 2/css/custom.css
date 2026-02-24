@@ -1,0 +1,898 @@
+/* --- Immobilien-Beratung page fidelity fixes --- */
+
+/* Hero: same layout as Altersvorsorge/Investment/Erbanlage (styles.css) – no overrides */
+
+/* Rechten Balken entfernen: Body/HTML und Scrollbar-Track auf Weiß */
+body.page-immobilien {
+    overflow-x: hidden;
+    background: #fff;
+}
+
+html:has(body.page-immobilien) {
+    background: #fff;
+    scrollbar-color: #90b4b2 #fff; /* Firefox: Thumb | Track */
+}
+
+html:has(body.page-immobilien)::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+html:has(body.page-immobilien)::-webkit-scrollbar {
+    width: 10px;
+}
+
+html:has(body.page-immobilien)::-webkit-scrollbar-thumb {
+    background: #90b4b2;
+    border-radius: 5px;
+}
+
+.page-immobilien .immobilien-intro-section {
+    padding: 60px 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+.page-immobilien .immobilien-intro-section .container--wide {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.page-immobilien .two-col--immobilien-intro {
+  gap: 56px;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.page-immobilien .col-img--immobilien-intro {
+    flex: 0 0 38%;
+    min-width: 0;
+    max-width: 42%;
+}
+
+.page-immobilien .col-text--immobilien-intro {
+    flex: 1 1 0;
+    min-width: 280px;
+}
+
+.page-immobilien .immobilien-intro-image {
+    border-radius: 16px 16px 8vw 16px;
+    width: 100%;
+    margin-top: 40px;
+    margin-right: 0;
+}
+
+.page-immobilien .col-text--immobilien-intro h2,
+.page-immobilien .immobilien-timeline-section .section-heading h2,
+.page-immobilien .adrian-heading {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(28px, 3.5vw, 52px);
+    line-height: 1.2em;
+    color: #191919;
+}
+
+.page-immobilien .col-text--immobilien-intro h2 {
+    margin-top: 40px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.page-immobilien .col-text--immobilien-intro h2 strong {
+    color: #191919;
+    font-weight: 700;
+}
+
+.page-immobilien .col-text--immobilien-intro p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.page-immobilien .col-text--immobilien-intro .blurb {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.page-immobilien .col-text--immobilien-intro .blurb:last-child {
+    margin-bottom: 0;
+}
+
+.page-immobilien .immobilien-timeline-section {
+    padding: 115px 0 120px;
+}
+
+.page-immobilien .immobilien-timeline-section .section-heading {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.page-immobilien .immobilien-timeline-section .section-heading p {
+    margin: 20px 0 0;
+    max-width: none;
+}
+
+/* Timeline „Von der Analyse zur Immobilie“: vertikale Linie links, nummerierte Kreise, Karten rechts */
+.page-immobilien .immobilien-timeline-section .timeline--vertical {
+    position: relative;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-accent);
+    z-index: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 48px;
+    padding-left: 100px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item::before {
+    display: none;
+}
+
+/* Kreis: deckt Linie ab (Linie endet oberhalb, beginnt unterhalb), größer, mit Glow */
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__number {
+    position: absolute;
+    left: 28px;
+    top: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--color-primary);
+    background: var(--color-light-bg);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(144, 180, 178, 0.4), 0 0 40px rgba(144, 180, 178, 0.2), 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card {
+    flex: 1;
+    min-width: 0;
+    padding: 28px 32px;
+    background: var(--color-card-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(144, 180, 178, 0.15);
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth);
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 24px rgba(144, 180, 178, 0.15);
+    border-color: rgba(144, 180, 178, 0.35);
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: var(--color-accent);
+    background: rgba(144, 180, 178, 0.1);
+    border-radius: 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-teal);
+    margin: 0 0 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0 0 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card li {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+.page-immobilien .immobilien-calculation-section {
+    background: linear-gradient(147deg, #043c43 0%, #90b4b2 100%);
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+.page-immobilien .grid--3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.page-immobilien .calculation-grid {
+    margin-top: 0;
+}
+
+.page-immobilien .calc-item {
+    text-align: left;
+    padding: 0;
+}
+
+.page-immobilien .calc-title {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.page-immobilien .calc-data-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.page-immobilien .calc-data-row i {
+    color: #ffffff;
+    margin-right: 12px;
+    margin-top: 6px;
+    width: 18px;
+    text-align: center;
+}
+
+.page-immobilien .calc-data-row strong {
+    font-weight: 700;
+}
+
+.page-immobilien .calc-data-row.highlight-row {
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+}
+
+.page-immobilien .calc-data-row.huge-text span {
+    font-size: 20px;
+}
+
+.page-immobilien .adrian-fall-section {
+    background: #ffffff;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page-immobilien .adrian-fall-section .container.container--wide {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}
+
+.page-immobilien .adrian-layout {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 60vh;
+}
+
+.page-immobilien .adrian-image-col {
+    min-height: 60vh;
+}
+
+.page-immobilien .adrian-img-wrapper {
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+    height: 100%;
+    min-height: 60vh;
+    padding: 0;
+}
+
+.page-immobilien .adrian-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 10vw 0;
+}
+
+.page-immobilien .adrian-text-col {
+    border-radius: 32px;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.page-immobilien .adrian-text-col:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-immobilien .adrian-heading {
+    margin: 0 0 20px;
+    color: #191919;
+}
+
+.page-immobilien .adrian-heading strong {
+    font-weight: 700;
+}
+
+.page-immobilien .adrian-text {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-bottom: 75px;
+}
+
+.page-immobilien .adrian-quote-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.page-immobilien .quote-icon-large {
+    font-family: ETmodules;
+    font-weight: 400;
+    font-size: 90px;
+    color: #90b4b2;
+    line-height: 1;
+    flex: 0 0 auto;
+}
+
+.page-immobilien .adrian-quote {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.page-immobilien .final-cta-section {
+    background: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-immobilien .final-cta-section h2 strong {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .page-immobilien .final-cta-section {
+        background-attachment: scroll;
+    }
+}
+
+.page-immobilien .btn--white {
+    background-color: #ffffff;
+    color: var(--color-primary);
+    border: 2px solid #ffffff;
+}
+
+.page-immobilien .btn--white:hover {
+    background: transparent;
+    color: #ffffff;
+}
+
+@media (max-width: 980px) {
+    .page-immobilien .hero--immobilien {
+        padding: 70px 40px;
+    }
+
+    .page-immobilien .immobilien-intro-image {
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .page-immobilien .col-text--immobilien-intro h2,
+    .page-immobilien .immobilien-timeline-section .section-heading h2,
+    .page-immobilien .adrian-heading {
+        font-size: 45px;
+    }
+
+    .page-immobilien .col-text--immobilien-intro p,
+    .page-immobilien .adrian-text {
+        margin-bottom: 52px;
+    }
+
+    .page-immobilien .immobilien-timeline-section,
+    .page-immobilien .adrian-fall-section {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+        padding: 115px 0 120px;
+    }
+
+    .page-immobilien .grid--3 {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        padding-left: 78px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical::before {
+        left: 22px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__number {
+        left: 22px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .page-immobilien .adrian-layout {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .page-immobilien .adrian-image-col {
+        min-height: 0;
+    }
+
+    .page-immobilien .adrian-img-wrapper {
+        padding: 0;
+        height: auto;
+    }
+
+    .page-immobilien .adrian-img {
+        height: auto;
+    }
+
+    .page-immobilien .adrian-text-col,
+    .page-immobilien .adrian-text-col:hover {
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-immobilien .hero--immobilien {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+        padding-left: 64px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical::before {
+        left: 18px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__number {
+        left: 18px;
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card {
+        padding: 20px 24px;
+    }
+
+    .page-immobilien .col-text--immobilien-intro h2,
+    .page-immobilien .immobilien-timeline-section .section-heading h2,
+    .page-immobilien .adrian-heading {
+        font-size: 26px;
+    }
+
+    .page-immobilien .col-text--immobilien-intro p,
+    .page-immobilien .adrian-text {
+        margin-bottom: 30px;
+    }
+
+    .page-immobilien .immobilien-timeline-section,
+    .page-immobilien .adrian-fall-section {
+        border-radius: 0 0 36px 36px;
+        padding: 85px 0 90px;
+    }
+
+    .page-immobilien .quote-icon-large {
+        font-size: 68px;
+    }
+}
+
+/* --- 16. FINORA PHILOSOPHIE COMPONENTS --- */
+
+/* Target Group Grid (2x2) */
+.target-group-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .target-group-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.target-group-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    /* Slight rounding like Divi default */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    text-align: center;
+    transition: transform 0.35s var(--ease-out-expo);
+}
+
+.target-group-card:hover {
+    transform: translateY(-5px);
+}
+
+.target-group-icon {
+    font-size: 48px;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.target-group-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.target-group-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.target-group-card li {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 15px;
+}
+
+/* Icon List Checkmarks */
+.icon-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.icon-list-item i {
+    color: var(--color-accent);
+    margin-top: 5px;
+}
+
+
+/* Flipbox Grid (Thematic Investing) */
+/* Container matching grid */
+.flipbox-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .flipbox-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .flipbox-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* The flip box container */
+.flip-box {
+    background-color: transparent;
+    height: 350px;
+    /* Fixed height required for 3D flip */
+    perspective: 1000px;
+}
+
+/* Inner container needing height: 100% */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back */
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Front Style */
+.flip-box-front {
+    background-color: #fff;
+    color: var(--color-text);
+}
+
+.flip-box-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.flip-box-front h4 {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* Back Style */
+.flip-box-back {
+    background-color: var(--color-primary);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-box-back p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.flip-box-back .btn--light {
+    padding: 8px 20px;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.flip-box-back .btn--light:hover {
+    background: white;
+    color: var(--color-primary);
+}
+
+
+/* Process Steps (Steuerlast) */
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: var(--color-accent);
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Connecting line */
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #e1e1e1;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .process-steps::before {
+        display: none;
+    }
+}
+
+.process-step h4 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 900px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--color-primary);
+    display: block;
+}
+
+.testimonial-role {
+    font-size: 14px;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.faq-trigger {
+    width: 100%;
+    text-align: left;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-trigger span {
+    transition: transform 0.3s;
+    font-size: 24px;
+    color: var(--color-accent);
+}
+
+.faq-trigger[aria-expanded="true"] span {
+    transform: rotate(45deg);
+}
+
+.faq-content {
+    display: none;
+    padding-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+}

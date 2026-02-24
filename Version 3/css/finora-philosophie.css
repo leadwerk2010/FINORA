@@ -1,0 +1,792 @@
+/* ============================================================
+   Finora-Philosophie — Awwwards-Level Page Overrides
+   ============================================================ */
+
+.page-philosophie { background: var(--color-white); }
+
+/* Hero */
+.page-philosophie .hero.hero--philosophie {
+  background-position: center bottom;
+  background-image: linear-gradient(0deg, var(--color-primary) 32%, rgba(4, 60, 67, 0.84) 100%), url('../assets/images/Invest-bw.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #003c43 !important;
+  padding: 0 70px;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-philosophie .hero.hero--philosophie::before {
+  background:
+    radial-gradient(ellipse at 25% 75%, rgba(144, 180, 178, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 25%, rgba(38, 96, 99, 0.08) 0%, transparent 50%);
+  animation: heroGlowDrift 22s ease-in-out infinite alternate;
+}
+
+.page-philosophie .hero.hero--philosophie::after { display: none; }
+
+.page-philosophie .hero--philosophie .hero-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 100px auto 101px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.page-philosophie .hero--philosophie .hero-text {
+  width: 66.666%;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-philosophie .hero--philosophie .hero-text h1 {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: var(--fs-display);
+  color: var(--color-white) !important;
+  line-height: var(--lh-tight);
+  text-align: center;
+  margin: 42px auto 20px;
+  max-width: 80%;
+  padding-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+
+.page-philosophie .hero--philosophie .hero-text h1 strong {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-accent-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-philosophie .hero--philosophie .hero-subtitle {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: clamp(1rem, 1.2vw + 0.4rem, 1.3rem);
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto 49px;
+}
+
+.page-philosophie .hero--philosophie .hero-text > div[style*="text-align"] {
+  width: 100%;
+  text-align: center;
+}
+
+.page-philosophie .hero--philosophie .hero-images { width: 33.333%; display: block; }
+
+.page-philosophie .hero--philosophie .hero-images.hero-images--single .hero-img-main {
+  max-width: 75%;
+  margin: 0 auto;
+  border-radius: var(--radius-organic);
+  overflow: hidden;
+  box-shadow: var(--elevation-5);
+}
+
+.page-philosophie .hero--philosophie .hero-images.hero-images--single .hero-img-main img {
+  width: 100%;
+  display: block;
+}
+
+/* Pillars */
+.page-philosophie .philosophie-pillars {
+  border-radius: 10vw 0 0 0;
+  overflow: hidden;
+  padding: var(--space-16) 0 var(--space-16);
+  background: var(--gradient-section-light);
+}
+
+.page-philosophie .philosophie-pillars .pillars-title { margin-bottom: 58px; }
+.page-philosophie .philosophie-pillars .pillars-title h2 { font-size: var(--fs-h2); }
+
+.page-philosophie .philosophie-pillars .pillar-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  padding-bottom: 100px;
+  box-shadow: var(--elevation-1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-default), box-shadow var(--transition-default), border-color var(--transition-default);
+}
+
+.page-philosophie .philosophie-pillars .pillar-card:hover {
+  box-shadow: var(--elevation-3), var(--glow-mint-subtle);
+  transform: translateY(-6px);
+  border-color: rgba(144, 180, 178, 0.15);
+}
+
+.page-philosophie .philosophie-pillars .card-icon { margin-bottom: var(--space-4); max-width: 130px; }
+.page-philosophie .philosophie-pillars .pillar-card h3 { font-size: var(--fs-h3); margin-bottom: var(--space-3); }
+
+.page-philosophie .philosophie-pillars .card-desc {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin-bottom: 75px;
+  color: var(--color-text-muted);
+}
+
+.page-philosophie .philosophie-pillars .btn {
+  color: var(--color-white) !important;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: var(--radius-button);
+  font-size: 16px;
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  background-color: var(--color-text);
+  padding: 11px 80px 12px;
+}
+
+.page-philosophie .philosophie-pillars .btn:hover { background-color: var(--color-accent); }
+
+/* Shared section text */
+.page-philosophie .section-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.1vw + 0.4rem, 1.3rem);
+  line-height: 1.6em;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.page-philosophie .section-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+.page-philosophie .section-body p { margin-bottom: var(--space-3); }
+.page-philosophie .section-body p:last-child { margin-bottom: 0; }
+
+.page-philosophie .btn.btn--dark {
+  color: var(--color-white) !important;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: var(--radius-button);
+  font-size: 16px;
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  background-color: var(--color-text);
+  padding: 13px 50px 14px;
+}
+
+.page-philosophie .btn.btn--dark:hover {
+  color: var(--color-white) !important;
+  background-color: var(--color-accent);
+}
+
+/* Basis Detail */
+.page-philosophie .philosophie-basis-detail {
+  padding: var(--space-16) 0;
+  margin: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 1%, rgba(255, 255, 255, 0.95) 100%);
+  position: relative;
+  z-index: 93;
+}
+
+.page-philosophie .two-col--basis { align-items: flex-start; flex-wrap: nowrap; gap: 0; }
+
+.page-philosophie .two-col--basis .col-text,
+.page-philosophie .two-col--basis .col-img {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 0 20px;
+}
+
+.page-philosophie .two-col--basis h2,
+.page-philosophie .two-col--invest-intro h2,
+.page-philosophie .two-col--tax-intro h2,
+.page-philosophie .invest-explainer h2,
+.page-philosophie .section-heading--left h2 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+}
+
+.page-philosophie .two-col--basis h2,
+.page-philosophie .two-col--invest-intro h2,
+.page-philosophie .two-col--tax-intro h2 {
+  margin-top: var(--space-5);
+  margin-bottom: 2px;
+}
+
+.page-philosophie .two-col--basis .feature-image,
+.page-philosophie .two-col--invest-intro .feature-image,
+.page-philosophie .two-col--tax-intro .feature-image {
+  border-radius: 10px 10px 10vw 10px;
+  overflow: hidden;
+  display: block;
+  box-shadow: var(--elevation-4);
+}
+
+.page-philosophie .two-col--basis .feature-image {
+  max-width: 659px;
+  margin-top: 0;
+  margin-right: -73px;
+  margin-left: auto;
+}
+
+.page-philosophie .two-col--basis .blurb { margin-bottom: var(--space-5); }
+
+/* Audience cards */
+.page-philosophie .philosophie-audience {
+  padding: var(--space-16) 0 var(--space-16);
+  background: var(--gradient-section-light);
+}
+
+.page-philosophie .philosophie-audience .section-heading { text-align: center; margin-bottom: 58px; }
+
+.page-philosophie .philosophie-audience .section-heading h2 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.page-philosophie .audience-grid {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-5);
+}
+
+.page-philosophie .audience-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.page-philosophie .audience-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.page-philosophie .audience-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: var(--space-8) var(--space-5) var(--space-5);
+  box-shadow: var(--elevation-1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-default), box-shadow var(--transition-default), border-color var(--transition-default);
+}
+
+.page-philosophie .audience-card:hover {
+  box-shadow: var(--elevation-3);
+  transform: translateY(-6px);
+  border-color: rgba(144, 180, 178, 0.12);
+}
+
+.page-philosophie .audience-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.page-philosophie .audience-card p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin: 0 0 75px;
+  color: var(--color-text-muted);
+}
+
+.page-philosophie .audience-card .btn { margin-top: 0; }
+
+.page-philosophie .audience-card--empty {
+  background: transparent;
+  box-shadow: none;
+  pointer-events: none;
+  border: none;
+}
+
+/* Break sections */
+.page-philosophie .philosophie-break {
+  background-image: linear-gradient(180deg, rgba(43, 135, 218, 0) 0%, rgba(0, 0, 0, 0.61) 100%);
+  background-color: var(--color-primary);
+  padding: var(--space-12) 0;
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-philosophie .philosophie-break::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-mint-glow);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.page-philosophie .philosophie-break .section-heading { text-align: center; }
+
+.page-philosophie .philosophie-break .section-heading h2 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-white);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-10);
+}
+
+.page-philosophie .philosophie-break .section-heading p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto var(--space-3);
+  max-width: 1200px;
+}
+
+.page-philosophie .philosophie-break .section-heading .btn { margin-top: var(--space-5); }
+
+/* Invest Detail */
+.page-philosophie .philosophie-invest-detail {
+  padding: var(--space-16) 0;
+  background-color: var(--color-white);
+}
+
+.page-philosophie .two-col--invest-intro,
+.page-philosophie .two-col--tax-intro {
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.page-philosophie .two-col--invest-intro .col-img,
+.page-philosophie .two-col--tax-intro .col-img {
+  flex: 0 0 40%;
+  min-width: 0;
+  padding: 0 20px;
+}
+
+.page-philosophie .two-col--invest-intro .col-text,
+.page-philosophie .two-col--tax-intro .col-text {
+  flex: 0 0 60%;
+  min-width: 0;
+  padding: 0 20px;
+}
+
+.page-philosophie .two-col--invest-intro .feature-image,
+.page-philosophie .two-col--tax-intro .feature-image {
+  width: 100%;
+  max-width: 100% !important;
+  margin-top: 0;
+  margin-right: -73px;
+  margin-left: 0;
+}
+
+.page-philosophie .invest-explainer { margin-top: var(--space-5); }
+.page-philosophie .invest-explainer h2 { margin-top: var(--space-5); margin-bottom: 0; }
+
+.page-philosophie .invest-explainer p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin-top: var(--space-3);
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+.page-philosophie .invest-explainer h3,
+.page-philosophie .two-col--tax-intro h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.5em;
+  color: var(--color-teal);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-3);
+}
+
+/* Flip cards */
+.page-philosophie .megatrend-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.page-philosophie .flip-card {
+  min-height: 320px;
+  perspective: 1000px;
+}
+
+.page-philosophie .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s var(--ease-out-expo);
+}
+
+.page-philosophie .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+
+.page-philosophie .flip-card-front,
+.page-philosophie .flip-card-back {
+  position: absolute;
+  inset: 0;
+  padding: var(--space-3) var(--space-4);
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.48) 99%);
+  background-color: var(--color-primary);
+}
+
+.page-philosophie .flip-card-front {
+  border-radius: 10px 10px 5vw 10px;
+  border: 1px solid rgba(144, 180, 178, 0.08);
+}
+
+.page-philosophie .flip-card-back {
+  border-radius: 10px 10px 10px 5vw;
+  transform: rotateY(180deg);
+  background: var(--gradient-accent);
+  color: var(--color-primary-dark);
+}
+
+.page-philosophie .flip-card-front h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+  margin: 0;
+}
+
+.page-philosophie .flip-card-back p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin: 0;
+}
+
+.page-philosophie .invest-outro p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin: var(--space-5) 0;
+  color: var(--color-text-muted);
+}
+
+/* Tax Detail */
+.page-philosophie .philosophie-tax-detail {
+  padding: var(--space-16) 0 var(--space-16);
+  background-color: var(--color-white);
+}
+
+.page-philosophie .philosophie-tax-detail .blurb--single { margin-bottom: 0; }
+.page-philosophie .philosophie-tax-detail .blurb--single .blurb-content p { margin: 0; }
+.page-philosophie .philosophie-tax-detail .section-subtitle--dense { margin-top: 0; margin-bottom: var(--space-5); }
+
+.page-philosophie .section-heading--left {
+  text-align: left;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.page-philosophie .section-heading--left h2 { margin: 0; }
+
+.page-philosophie .steps-grid {
+  width: 90%;
+  max-width: 1290px;
+  margin: 0 auto var(--space-10);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.page-philosophie .step-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: var(--space-5);
+  box-shadow: var(--elevation-1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-default), box-shadow var(--transition-default), border-color var(--transition-default);
+}
+
+.page-philosophie .step-card:hover {
+  box-shadow: var(--elevation-3);
+  transform: translateY(-6px);
+  border-color: rgba(144, 180, 178, 0.12);
+}
+
+.page-philosophie .step-icon {
+  display: block;
+  text-align: center;
+  font-family: ETmodules;
+  font-weight: 400;
+  font-size: 100px;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-6);
+  filter: drop-shadow(0 0 20px rgba(144, 180, 178, 0.15));
+}
+
+.page-philosophie .step-icon--fa { font-family: inherit; }
+.page-philosophie .step-icon--fa i { font-size: 88px; color: var(--color-accent); }
+
+.page-philosophie .step-card h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  color: var(--color-primary);
+  line-height: var(--lh-heading);
+  text-align: center;
+  margin: 0 0 var(--space-3);
+}
+
+.page-philosophie .step-card p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* Testimonials */
+.page-philosophie .section-testimonials {
+  padding: var(--space-16) 0 var(--space-16);
+  background: var(--gradient-section-light);
+}
+
+.page-philosophie .section-testimonials .testimonials-title { margin-bottom: 58px; }
+.page-philosophie .section-testimonials .testimonials-title h2 { font-size: var(--fs-h2); }
+
+.page-philosophie .section-testimonials .testimonials-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.1vw + 0.4rem, 1.3rem);
+  line-height: 1.6em;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.page-philosophie .section-testimonials .testimonial-text { margin-bottom: 75px; }
+
+/* FAQ */
+.page-philosophie .section-faq .faq-left {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-radius: 0 0 10vw 0;
+  overflow: hidden;
+}
+
+.page-philosophie .section-faq .faq-right { padding: 5% 4%; }
+.page-philosophie .section-faq .faq-right h2 { margin-bottom: var(--space-3); }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .page-philosophie .hero.hero--philosophie { padding: 70px 40px; }
+
+  .page-philosophie .hero--philosophie .hero-content {
+    margin: 100px auto 101px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .page-philosophie .hero--philosophie .hero-text { display: none; }
+  .page-philosophie .hero--philosophie .hero-images { width: 100%; }
+
+  .page-philosophie .hero--philosophie .hero-images.hero-images--single .hero-img-main {
+    max-width: 75%;
+  }
+
+  .page-philosophie .mobile-menu-toggle { width: 24px; height: 24px; }
+  .page-philosophie .mobile-menu-toggle span { display: none; }
+
+  .page-philosophie .mobile-menu-toggle::before {
+    content: "a";
+    font-family: ETmodules;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--color-white);
+    display: block;
+    transform: translateY(-2px);
+  }
+
+  .page-philosophie .philosophie-pillars,
+  .page-philosophie .philosophie-basis-detail,
+  .page-philosophie .philosophie-audience--basis,
+  .page-philosophie .philosophie-audience--invest,
+  .page-philosophie .philosophie-audience--tax,
+  .page-philosophie .section-testimonials {
+    border-radius: 0 0 96px 96px;
+    overflow: hidden;
+  }
+
+  .page-philosophie .philosophie-pillars,
+  .page-philosophie .philosophie-audience--basis,
+  .page-philosophie .philosophie-audience--invest,
+  .page-philosophie .philosophie-audience--tax,
+  .page-philosophie .section-testimonials {
+    padding: var(--space-16) 0 var(--space-16);
+  }
+
+  .page-philosophie .philosophie-basis-detail { padding: var(--space-16) 0; }
+  .page-philosophie .philosophie-break { padding: var(--space-16) 0 var(--space-12); }
+
+  .page-philosophie .philosophie-break .section-heading h2,
+  .page-philosophie .philosophie-pillars .pillars-title h2,
+  .page-philosophie .two-col--basis h2,
+  .page-philosophie .two-col--invest-intro h2,
+  .page-philosophie .invest-explainer h2,
+  .page-philosophie .two-col--tax-intro h2,
+  .page-philosophie .section-heading--left h2,
+  .page-philosophie .section-testimonials .testimonials-title h2,
+  .page-philosophie .section-faq .faq-right h2,
+  .page-philosophie .philosophie-audience .section-heading h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  .page-philosophie .philosophie-break .section-heading h2 {
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+
+  .page-philosophie .philosophie-break .section-heading .btn { margin-top: var(--space-3); }
+
+  .page-philosophie .philosophie-pillars .container--wide,
+  .page-philosophie .philosophie-basis-detail .container--xl,
+  .page-philosophie .philosophie-invest-detail .container--xl,
+  .page-philosophie .philosophie-tax-detail .container--xl,
+  .page-philosophie .philosophie-audience .container--wide,
+  .page-philosophie .section-testimonials .container--wide {
+    width: 90%;
+    max-width: 440px;
+  }
+
+  .page-philosophie .two-col--basis,
+  .page-philosophie .two-col--invest-intro,
+  .page-philosophie .two-col--tax-intro {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .page-philosophie .two-col--basis .col-text,
+  .page-philosophie .two-col--basis .col-img,
+  .page-philosophie .two-col--invest-intro .col-img,
+  .page-philosophie .two-col--invest-intro .col-text,
+  .page-philosophie .two-col--tax-intro .col-img,
+  .page-philosophie .two-col--tax-intro .col-text {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  .page-philosophie .two-col--basis .feature-image,
+  .page-philosophie .two-col--invest-intro .feature-image,
+  .page-philosophie .two-col--tax-intro .feature-image {
+    max-width: 100%;
+    margin-top: 70px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .page-philosophie .audience-grid,
+  .page-philosophie .audience-grid--2,
+  .page-philosophie .audience-grid--3,
+  .page-philosophie .megatrend-grid,
+  .page-philosophie .steps-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-philosophie .steps-grid { margin-bottom: var(--space-16); }
+  .page-philosophie .audience-card--empty { display: none; }
+
+  .page-philosophie .audience-card h3,
+  .page-philosophie .step-card h4,
+  .page-philosophie .philosophie-pillars .pillar-card h3 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+  }
+
+  .page-philosophie .section-subtitle,
+  .page-philosophie .section-testimonials .testimonials-subtitle {
+    font-size: clamp(1rem, 1.1vw + 0.4rem, 1.3rem);
+  }
+
+  .page-philosophie .section-faq .row { flex-direction: column; }
+
+  .page-philosophie .section-faq .faq-left,
+  .page-philosophie .section-faq .faq-right { width: 100%; }
+}
+
+@media (max-width: 767px) {
+  .page-philosophie .hero.hero--philosophie { padding: 70px 20px; }
+
+  .page-philosophie .philosophie-pillars,
+  .page-philosophie .philosophie-basis-detail,
+  .page-philosophie .philosophie-audience--basis,
+  .page-philosophie .philosophie-audience--invest,
+  .page-philosophie .philosophie-audience--tax,
+  .page-philosophie .section-testimonials {
+    border-radius: 0 0 36px 36px;
+    overflow: hidden;
+  }
+
+  .page-philosophie .philosophie-pillars,
+  .page-philosophie .philosophie-audience--basis,
+  .page-philosophie .philosophie-audience--invest,
+  .page-philosophie .philosophie-audience--tax,
+  .page-philosophie .section-testimonials {
+    padding: var(--space-10) 0 var(--space-12);
+  }
+
+  .page-philosophie .philosophie-basis-detail { padding: var(--space-12) 0; }
+  .page-philosophie .philosophie-break { padding: var(--space-3) 0 var(--space-10); }
+
+  .page-philosophie .two-col--basis .feature-image,
+  .page-philosophie .two-col--invest-intro .feature-image,
+  .page-philosophie .two-col--tax-intro .feature-image {
+    margin-top: 55px;
+  }
+
+  .page-philosophie .philosophie-break .section-heading h2,
+  .page-philosophie .philosophie-pillars .pillars-title h2,
+  .page-philosophie .two-col--basis h2,
+  .page-philosophie .two-col--invest-intro h2,
+  .page-philosophie .invest-explainer h2,
+  .page-philosophie .two-col--tax-intro h2,
+  .page-philosophie .section-heading--left h2,
+  .page-philosophie .section-testimonials .testimonials-title h2,
+  .page-philosophie .section-faq .faq-right h2,
+  .page-philosophie .philosophie-audience .section-heading h2 {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+
+  .page-philosophie .audience-card h3,
+  .page-philosophie .step-card h4,
+  .page-philosophie .philosophie-pillars .pillar-card h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .page-philosophie .section-subtitle,
+  .page-philosophie .section-testimonials .testimonials-subtitle { font-size: 19px; }
+
+  .page-philosophie .steps-grid { margin-bottom: var(--space-12); }
+  .page-philosophie .step-icon { font-size: 72px; margin-bottom: var(--space-4); }
+  .page-philosophie .step-icon--fa i { font-size: 62px; }
+}

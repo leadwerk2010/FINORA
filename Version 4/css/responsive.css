@@ -1,0 +1,356 @@
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 980px) {
+  .site-header .header-nav,
+  .header-nav {
+    display: none;
+  }
+
+  .site-header .header-cta,
+  .header-cta {
+    display: none;
+  }
+
+  .header-logo {
+    width: 20%;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .page-home .hero-images {
+    display: none;
+  }
+
+  .hero-services {
+    flex-wrap: wrap;
+  }
+
+  .pillars {
+    border-radius: 0 0 96px 0;
+  }
+
+  .pillars-grid {
+    flex-direction: column;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slider-section {
+    flex-direction: column;
+  }
+
+  .slider-section .fs-right {
+    display: none;
+  }
+
+  .slider-section .fs-mobile-nav {
+    display: flex;
+  }
+
+  .why-finora {
+    border-radius: 0 0 0 96px;
+  }
+
+  .why-finora-left,
+  .why-finora-right {
+    width: 100%;
+  }
+
+  .how-grid {
+    flex-direction: column;
+  }
+
+  .how-step::after {
+    display: none;
+  }
+
+  .testimonials {
+    border-radius: 0 0 96px 0;
+  }
+
+  .testimonials-grid {
+    flex-direction: column;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq .row {
+    flex-direction: column;
+  }
+
+  .faq-left {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .page-home .faq-left {
+    display: none;
+  }
+
+  .faq-right {
+    width: 100%;
+  }
+
+  .page-hero {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .two-col--reverse {
+    flex-direction: column;
+  }
+
+  .tabs-wrap {
+    flex-wrap: wrap;
+  }
+
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: var(--space-8);
+  }
+
+  .timeline-item:nth-child(even) {
+    padding-left: var(--space-8);
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 13px;
+    right: auto;
+    transform: none;
+  }
+
+  .flipbox-grid,
+  .megatrend-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrap,
+  .kontakt-layout {
+    flex-direction: column;
+  }
+
+  .audience-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3,
+  .calculation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--2,
+  .grid--2-bias-left {
+    grid-template-columns: 1fr;
+  }
+
+  .target-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-heading-row {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .new-phase-wrap {
+    flex-direction: column;
+  }
+
+  .concepts-grid {
+    flex-direction: column;
+  }
+
+  .responsibility-top,
+  .responsibility-bottom {
+    flex-direction: column;
+  }
+
+  .adrian-layout {
+    flex-direction: column;
+  }
+
+  h1, .hero-text h1 {
+    font-size: clamp(2rem, 5vw + 0.5rem, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 1.2vw + 0.4rem, 1.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--space-6) var(--space-3);
+  }
+
+  .hero-text {
+    padding-right: 0;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
+    max-width: 100%;
+  }
+
+  .hero-services {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    left: 0;
+    transform: none;
+    margin-top: var(--space-4);
+  }
+
+  .hero-images {
+    width: 100%;
+    margin-top: var(--space-4);
+  }
+
+  .hero-images--single .hero-img-main {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .pillars,
+  .testimonials {
+    border-radius: 0 0 36px 0;
+    padding: var(--space-8) 0;
+  }
+
+  .slider-section {
+    padding: var(--space-8) 0 var(--space-12);
+  }
+
+  .why-finora {
+    border-radius: 0 0 0 36px;
+    padding: var(--space-8) 0;
+  }
+
+  .how-it-works {
+    padding: var(--space-8) 0;
+  }
+
+  .footer-col {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-accent {
+    display: none;
+  }
+
+  .audience-grid--2,
+  .audience-grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .flipbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .erbe-timeline-item:nth-child(even) {
+    text-align: left;
+    padding-left: var(--space-8);
+    padding-right: 0;
+  }
+
+  .kontakt-info-col {
+    flex: 1 1 100%;
+  }
+
+  [class*="glass"],
+  .glass-panel,
+  .how-step,
+  .kontakt-info-card,
+  .adrian-quote-box,
+  .calc-item,
+  .step-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .anim {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .anim.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-services .hero-service-item {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .anim {
+    opacity: 1;
+    transform: none;
+  }
+
+  .anim.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .page-home .hero::before {
+    animation: none;
+  }
+
+  .page-loader {
+    transition-duration: 0.01ms;
+  }
+
+  .page-loader.is-hidden {
+    transition-duration: 0.01ms;
+  }
+
+  .how-it-works {
+    animation: none !important;
+  }
+
+  .faq-left::before {
+    animation: none;
+  }
+}
