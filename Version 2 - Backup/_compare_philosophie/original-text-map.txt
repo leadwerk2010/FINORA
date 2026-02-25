@@ -1,0 +1,83 @@
+text_0: <h1><strong>Drei Säulen.</strong> Ein Ziel.</h1>
+text_1: <p>Die Finora-Philosophie verbindet Struktur mit Vertrauen: klare Strategien, nachhaltige Lösungen und persönliche Begleitung in jeder Lebensphase.</p>
+text_2: <h2><span data-olk-copy-source="MessageBody">Die 3 Säulen der <strong>Finora-Philosophie:</strong></span></h2>
+text_3: <h3>Basis-Strategie</h3>
+text_4: <p><span data-olk-copy-source="MessageBody">Dein finanzielles Fundament, zur Absicherung deines Lebensstandards (Steueroptimierte Altersvorsorge &amp; Einkommensabsicherung).</span></p>
+text_5: <h3>Flexibler Vermögensaufbau</h3>
+text_6: <p><span data-olk-copy-source="MessageBody">Professionelles Management deines Depots, weil dein Depot mehr kann als den MSCI World.</span></p>
+text_7: <h3>Reduzierung deiner Steuerlast</h3>
+text_8: <p><span data-olk-copy-source="MessageBody">Effektive Konzepte für dein Immobilien-Investment, in Kooperation mit unserem Partner Relago begleiten wir dich von der Konzeption bis zum Notar und darüber hinaus.</span></p>
+text_9: <h2>Die <strong>Basis-Strategie.</strong></h2>
+text_10: <p><span data-olk-copy-source="MessageBody">Das Sicherheitsnetz für deinen Vermögensaufbau.</span></p>
+text_11: <p>Stell dir vor, du baust ein Haus. Womit beginnt jeder Hausbau?<br>Richtig, mit dem Fundament. Und genau wie beim Hausbau starten wir in der Beratung mit dem Aufbau einer soliden Basis-Strategie, um die <strong>Weichen für langfristig erfolgreichen Vermögensaufbau zu stellen.</strong></p> <p>Für die meisten Menschen gehört der Verlust von Einkommen zu den größten Risiken beim Investieren.<br>Während des Arbeitslebens hängt das Einkommen meist direkt von der eigenen Arbeitskraft ab. Im Ruhestand müssen lebenslange Ausgaben weiterhin durch regelmäßige Einnahmen gedeckt werden.</p> <p><strong>Unsere Basis-Strategie konzentriert sich daher überwiegend auf zwei entscheidende Bereiche:</strong></p>
+text_12: <h2><span data-olk-copy-source="MessageBody">Für wen ist die <strong>Basis-Strategie</strong> gedacht?</span></h2>
+text_13: <h3><span data-olk-copy-source="MessageBody">Berufseinsteiger &amp; Young Professionals:</span></h3>
+text_14: <p><span data-olk-copy-source="MessageBody">Mit dem Start ins Berufsleben beginnt auch der perfekte Zeitpunkt, das finanzielle Fundament richtig zu legen. Meist gibt es noch keine bestehende Struktur und genau hier setzen wir an. Wir begleiten dich dabei, langfristig und durchdacht zu starten, um typische Fehler zu vermeiden und kein Lehrgeld zahlen zu müssen.</span></p>
+text_15: <h3><span data-olk-copy-source="MessageBody">Angestellte &amp; Selbstständige:</span></h3>
+text_16: <p><span data-olk-copy-source="MessageBody">Wer bereits mitten im Berufsleben steht, für den bieten wir besonders die Überprüfung der bestehenden Basis-Strategie an. Oft sind bestehende Konzepte lückenhaft, zu kostenintensiv oder veraltet. Wir optimieren gemeinsam mit dir, was es zu optimieren gibt und sorgen so für ein lückenfreies Sicherheitsnetz.</span></p>
+text_17: <h3><span data-olk-copy-source="MessageBody">Internationals &amp; Expats:</span></h3>
+text_18: <p><span data-olk-copy-source="MessageBody">Internationals fehlt meistens das nötige Wissen über das deutsche System, um Risiken klar erkennen und absichern zu können. Wir versorgen dich mit allem, was du über die Versorgung im deutschen System wissen musst, sodass du genau weißt worauf es ankommt um langfristig erfolgreich Vermögen in Deutschland bilden zu können. Dabei achten wir übrigens in besonderem Maße darauf, deine Flexibilität (bspw. im Fall eines Wegzugs ins Ausland) zu bewahren.</span></p>
+text_19: <h3><span data-olk-copy-source="MessageBody">ETF-Investoren:</span></h3>
+text_20: <div class="x_elementToProof" data-olk-copy-source="MessageBody">Reine ETF-Investments haben einen entscheidenden Nachteil: Sie sind endlich.</div> <div>Fällt das Einkommen weg, kann dein ETF-Portfolio nur so lange überbrücken, wie Kapital im Depot vorhanden ist. Wir zeigen dir, wie du diese Lücke durch gezielte Anpassung schließen kannst und trotzdem weiter in ETFs investiert bleibst. So bündelst du die Vorteile der Kapitalmärkte mit dauerhafter Einkommenssicherheit.
+text_21: <h2><span data-olk-copy-source="MessageBody">Finora steht <strong>für ein starkes &amp; effizientes Fundament im Vermögensaufbau.</strong>&nbsp;</span></h2>
+text_22: <p><span data-olk-copy-source="MessageBody">Mit einer klar strukturierten Basis-Strategie sichern wir deine Einnahmen, schützen deinen Lebensstandard und schaffen verlässliche Einkommensquellen für heute und morgen. So entsteht ein Fundament für langfristiges Wachstum.</span></p>
+text_23: <h2><strong>Flexibler Vermögensaufbau</strong></h2>
+text_24: <p><span data-olk-copy-source="MessageBody">Professionelles Depot-Management mit Fokus auf zukünftigen Trends</span></p>
+text_25: <p>Klar, du könntest dein Geld auch einfach in den MSCI World stecken und die nächsten 20 Jahre abwarten. Aber: Wenn du wirklich vom Wandel der Welt profitieren willst, reicht „durchschnittlich mitlaufen“ eben nicht aus.</p> <p>Bei Finora setzen wir auf <strong>thematisches Investieren</strong>, eine Strategie, die nicht in Schubladen wie Regionen oder Marktkapitalisierungen denkt, sondern in <strong>Zukunftstrends</strong>. Wir unterscheiden nicht zwischen Developed World, Emerging Markets, Large oder Small Cap.<br><strong>Wir unterscheiden zwischen Gewinnern und Verlierern des globalen Wandels.</strong></p>
+text_26: <h2><span data-olk-copy-source="MessageBody">Was <strong>thematisches Investieren</strong> bedeutet:</span></h2>
+text_27: <p>Traditionelles Investieren folgt starren Strukturen wie Indexgrenzen und Länderquoten. Das funktioniert durchschnittlich gut, genauso wie sich eben auch die Welt durchschnittlich gut entwickelt, während einzelne Länder, Regionen oder Sektoren sich tendenziell mehr im oberen Durchschnitt und andere am unteren Durchschnitt bewegen.</p> <p><strong>Themen-Investments</strong> durchbrechen diese Grenzen und unterteilen nur zwischen Profiteuren und Verlierern einer strukturellen Veränderung.</p> <p><span data-olk-copy-source="MessageBody">Unser Ziel ist es das Marktrauschen auszublenden und <strong>gezielt in Trends zu investieren</strong>, die zu den klaren Gewinnern langfristiger Entwicklungen zählen.</span></p>
+text_28: <h3><span data-olk-copy-source="MessageBody">Diese langfristigen Entwicklungen lassen sich in 4 Mega-Trends unterteilen – das Fundament zukünftigem Wachstums:</span></h3>
+text_29: <p><span data-olk-copy-source="MessageBody">Das bedeutet für uns <strong>professionelles Depot-Management</strong>: Wir analysieren diese Mega-Trends, brechen sie auf investierbare Themen herunter und richten dein Portfolio dynamisch danach aus. Entscheidend dabei sind Timing, Diversifizierung und Klarheit im Engagement des Themas. So entwickelt sich dein Portfolio, genau wie die Welt, Schritt für Schritt weiter.</span></p>
+text_30: <h2><strong>Für wen</strong> ist das interessant?</h2>
+text_31: <h3><span data-olk-copy-source="MessageBody">Berufseinsteiger &amp; Young Professionals:</span></h3>
+text_32: <p><span data-olk-copy-source="MessageBody">Baue von Beginn an ein Portfolio auf, das mit dir und der Welt mitwächst.</span></p>
+text_33: <h3><span data-olk-copy-source="MessageBody">Angestellte &amp; Selbstständige:</span></h3>
+text_34: <p><span data-olk-copy-source="MessageBody">Mach dein Kapital zu einem aktiven Teil deiner Zukunftsstrategie mit Investments, die echten Impact haben.</span></p>
+text_35: <h3><span data-olk-copy-source="MessageBody">Internationals &amp; Expats:</span></h3>
+text_36: <p><span data-olk-copy-source="MessageBody">Investiere global, trendorientiert und professionell gemanagt, unabhängig von regionalen Beschränkungen.</span></p>
+text_37: <h3><span data-olk-copy-source="MessageBody">ETF-Investoren:</span></h3>
+text_38: <div class="x_elementToProof" data-olk-copy-source="MessageBody"><span data-olk-copy-source="MessageBody">Mach Gutes noch besser. Baue dein ETF-Depot mit gezielten Themen-Investments weiter aus, die Wachstum dort suchen, wo es tatsächlich entsteht.</span>
+text_39: <h3><span data-olk-copy-source="MessageBody">Erben:</span></h3>
+text_40: <p><span data-olk-copy-source="MessageBody">Nutze dein Kapital als Sprungbrett für nachhaltigen Vermögensaufbau mit Substanz und Zukunftsperspektive.</span></p>
+text_41: <h2><span data-olk-copy-source="MessageBody">Finora steht für <strong>intelligente Investmentstrategien.</strong>&nbsp;</span></h2>
+text_42: <p><span data-olk-copy-source="MessageBody">Wir glauben nicht an Stillstand, sondern an Wandel und daran, dass Vermögen genau da entsteht, wo Wandel passiert.</span></p>
+text_43: <h2><strong>Reduzierung deiner Steuerlast </strong>durch Immobilien</h2>
+text_44: <p><span data-olk-copy-source="MessageBody">Wer clever investiert, nutzt nicht nur Renditechancen, sondern auch das Steuersystem für sich.</span></p>
+text_45: <p>Kapitalanlage-Immobilien gehören zu den effektivsten Werkzeugen, um <strong>Vermögen aufzubauen und gleichzeitig die Steuerlast deutlich zu senken</strong>. Durch gezielte Auswahl von Objekten mit überdurchschnittlich hoher Abschreibungsmöglichkeit profitierst du gleich doppelt:</p> <p>Von einer smarten Steuerstrategie und einem Vermögenswert, der ab dem ersten Tag Cashflow-positiv für dich arbeitet.</p>
+text_46: <h3><span data-olk-copy-source="MessageBody">Wie das funktioniert:</span></h3>
+text_47: <p><span data-olk-copy-source="MessageBody">In der Beratung entwickeln wir in Zusammenarbeit mit unserem Partner Relago Projektentwicklung GmbH eine auf dich zugeschnittene Immobilienstrategie. Hierbei liegt der volle <strong>Fokus auf Steuervorteilen, Stabilität und realistischer Rendite.</strong></span></p>
+text_48: <h2><span data-olk-copy-source="MessageBody"><strong>Wir begleiten dich</strong> durch alle Schritte:</span></h2>
+text_49: <h2><strong>Für wen</strong> ist das interessant?</h2>
+text_50: <h3><span data-olk-copy-source="MessageBody">Angestellte &amp; Selbstständige:</span></h3>
+text_51: <p><span data-olk-copy-source="MessageBody">Du möchtest deine Steuerlast aktiv gestalten, statt sie einfach hinzunehmen? Mit Immobilieninvestments nutzt du gezielt steuerliche Hebel, um aus ungenutztem Potenzial deiner Steuerlast reales Vermögen aufzubauen.</span></p>
+text_52: <h3><span data-olk-copy-source="MessageBody">Internationals &amp; Expats:</span></h3>
+text_53: <p><span data-olk-copy-source="MessageBody">Das deutsche Steuersystem ist komplex. Wir helfen dir, die Vorteile des Systems zu verstehen und Immobilien als steueroptimierten Investmentbaustein einzusetzen.</span></p>
+text_54: <h3><span data-olk-copy-source="MessageBody">ETF-Investoren:</span></h3>
+text_55: <div class="x_elementToProof" data-olk-copy-source="MessageBody"><span data-olk-copy-source="MessageBody">Du investierst bereits an den Kapitalmärkten, willst aber dein Portfolio um einen realen, steuerlich begünstigten Sachwert erweitern? Immobilien sind die perfekte Ergänzung zu deiner ETF-Strategie.</span>
+text_56: <h3><span data-olk-copy-source="MessageBody">Erben:</span></h3>
+text_57: <p><span data-olk-copy-source="MessageBody">Wer Vermögen erbt, steht oft vor der Herausforderung, dieses steuer- und inflationssicher zu strukturieren. Wir zeigen dir, wie du mit Immobilien nachhaltig Werte bewahrst und förderst.</span></p>
+text_58: <h2><span data-olk-copy-source="MessageBody">Finora steht für <strong>dynamisches, zukunftsorientiertes Investieren</strong>.</span></h2>
+text_59: <div class="x_elementToProof" data-olk-copy-source="MessageBody">Nicht nur an den Kapitalmärkten, sondern auch in der realen Welt.</div> <div>Immobilien mit hoher Abschreibung, positivem Cashflow und klarer Steuerstrategie sind ein zentraler Baustein unserer Philosophie das gesamte Potenzial der finanziellen Situation unserer Kunden nutzbar zu machen.
+text_60: <h2><span data-olk-copy-source="MessageBody">Das sagen <strong>unsere Kunden:</strong></span></h2>
+text_61: <p>Leverage Data Insights to Supercharge Your Business</p>
+text_62: <h3><span data-olk-copy-source="MessageBody">Élisa L.</span></h3>
+text_64: <h3>S.B.</h3>
+text_66: <h3><span data-olk-copy-source="MessageBody">Nonso Mgbechi</span></h3>
+text_68: <h2><span data-olk-copy-source="MessageBody">Fragen zu Finanzen? <strong>Hier gibt’s Klartext</strong>.</span></h2>
+text_69: <p>Hier finden Sie Antworten auf die Fragen, die mir am häufigsten gestellt werden – klar, ehrlich und ohne Fachchinesisch.</p>
+text_0: <p>Finora bietet unabhängige Finanzberatung für Expats, Erben, Berufseinsteiger, Angestellte, Selbstständige und ETF-Investoren in Deutschland. Spezialisiert auf Altersvorsorge, Investment, Immobilien und steueroptimierte Strategien.</p>
+text_1: <h4>Menü</h4>
+text_2: <ul> <li>Leistungen</li> <li>Für wen</li> <li>Über Finora</li> <li>Kontakt</li> <li>Blog</li> </ul>
+text_3: <h4>Themen</h4>
+text_4: <ul> <li>Altersvorsorge</li> <li>Investment</li> <li>Immobilien</li> <li>Erb-Anlage</li> </ul>
+text_5: <h4>Kontakt</h4>
+text_6: <p>Impressum&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Datenschutz</p>
+blurb_0: E Sicherung deiner Einnahmequellen Durch eine professionelle Absicherung schaffen wir ein stabiles Sicherheitsnetz während deines Berufslebens. So bleibt dein Lebensstandard geschützt &amp; deinen Investments, Zielen und Wünschen kommt nichts in die Quere.
+blurb_1: E Aufbau einer alternativen Einkommensquelle im Ruhestand Gemeinsam planen wir frühzeitig deine Einnahmequellen ab Rentenbeginn. Dafür nutzen wir moderne, investmentbasierte Lösungen, die dir mit überschaubaren monatlichen Sparbeiträgen ein lebenslanges Einkommen sichern.
+blurb_2: E Von einer smarten Steuerstrategie und einem Vermögenswert, der ab dem ersten Tag Cashflow-positiv für dich arbeitet.
+blurb_3: v 1. Planung &amp; Strategieentwicklung Wir analysieren deine aktuelle steuerliche Situation, definieren gemeinsam mit dir Ziele und berechnen, wie sich Immobilieninvestments optimal in dein Gesamtportfolio einfügen.
+blurb_4: i 2. Objektkalkulation &amp; Finanzierung Wir identifizieren passende Objekte mit überdurchschnittlicher Abschreibungsquote und begleiten dich bei der Finanzierungsplanung. Transparent, nachvollziehbar und strategisch durchdacht.
+blurb_5:  3. Kauf &amp; Umsetzung Vom ersten Angebot bis zur notariellen Abwicklung: Wir sind im gesamten Prozess an deiner Seite, damit du dich auf das Wesentliche konzentrieren kannst.
+blurb_0:  Musterstr. 1 12345 Musterstadt
+blurb_1:  Tel.: 0123/4567891
+blurb_2:  info@finora-invest.com

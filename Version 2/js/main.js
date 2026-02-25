@@ -6,6 +6,107 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // =========================================================
+    // 0. HERO SLIDER (Startseite – Leistungen-Style, 5s Auto, Pfeile)
+    // =========================================================
+    const heroSlider = document.getElementById('hero-slider');
+    if (heroSlider) {
+        const track = heroSlider.querySelector('.hero-slider-track');
+        const slides = Array.from(heroSlider.querySelectorAll('.hero-slide'));
+        const prevBtn = heroSlider.querySelector('.hero-slider-prev');
+        const nextBtn = heroSlider.querySelector('.hero-slider-next');
+        const AUTOPLAY_MS = 5000;
+        let currentSlideIndex = 0;
+        let autoplayTimer = null;
+        let autoplayStopped = false;
+
+        function stopAutoplay() {
+            autoplayStopped = true;
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function goToSlide(index) {
+            const len = slides.length;
+            if (len === 0) return;
+            currentSlideIndex = (index + len) % len;
+            slides.forEach(function (slide, i) {
+                slide.classList.toggle('is-active', i === currentSlideIndex);
+            });
+            if (!autoplayStopped) {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+                autoplayTimer = setInterval(nextSlide, AUTOPLAY_MS);
+            }
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlideIndex + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlideIndex - 1);
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function () {
+                stopAutoplay();
+                prevSlide();
+            });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function () {
+                stopAutoplay();
+                nextSlide();
+            });
+        }
+        heroSlider.addEventListener('mouseenter', stopAutoplay);
+
+        if (slides.length) {
+            slides.forEach(function (s) { s.classList.remove('is-active'); });
+            slides[0].classList.add('is-active');
+        }
+        if (!autoplayStopped) {
+            autoplayTimer = setInterval(nextSlide, AUTOPLAY_MS);
+        }
+    }
+
+    // =========================================================
+    // 0B. MOUSE FOLLOWER (nur Startseite, dezent Finora-Style)
+    // =========================================================
+    const cursorFollower = document.getElementById('cursor-follower');
+    if (cursorFollower && document.body.classList.contains('page-home')) {
+        let mouseX = 0, mouseY = 0;
+        let posX = 0, posY = 0;
+        let rafId = null;
+
+        document.addEventListener('mousemove', function (e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            if (rafId == null) {
+                rafId = requestAnimationFrame(animateFollower);
+            }
+        }, { passive: true });
+
+        function animateFollower() {
+            posX += (mouseX - posX) * 0.12;
+            posY += (mouseY - posY) * 0.12;
+            cursorFollower.style.left = posX + 'px';
+            cursorFollower.style.top = posY + 'px';
+            if (Math.abs(mouseX - posX) < 0.5 && Math.abs(mouseY - posY) < 0.5) {
+                rafId = null;
+                return;
+            }
+            rafId = requestAnimationFrame(animateFollower);
+        }
+
+        document.querySelectorAll('a, button').forEach(function (el) {
+            el.addEventListener('mouseenter', function () { cursorFollower.classList.add('is-hover'); });
+            el.addEventListener('mouseleave', function () { cursorFollower.classList.remove('is-hover'); });
+        });
+    }
+
+    // =========================================================
     // 1. MOBILE MENU TOGGLE
     // =========================================================
     const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -15,6 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('is-open');
             menuToggle.classList.toggle('is-active');
         });
+    }
+
+    // =========================================================
+    // 1A. LANGUAGE SWITCHER DROPDOWN
+    // =========================================================
+    const langBtn = document.querySelector('.header-lang-btn');
+    const langDropdown = document.querySelector('.header-lang-dropdown');
+    if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = !langDropdown.hidden;
+            langDropdown.hidden = isOpen;
+            langBtn.setAttribute('aria-expanded', !isOpen);
+        });
+        document.addEventListener('click', () => {
+            langDropdown.hidden = true;
+            langBtn.setAttribute('aria-expanded', 'false');
+        });
+        langDropdown.addEventListener('click', (e) => e.stopPropagation());
     }
 
     // =========================================================

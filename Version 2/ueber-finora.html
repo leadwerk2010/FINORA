@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Über Finora | Finora Investment Studio</title>
     <meta name="description"
         content="Erfahre mehr über Finora – unabhängige Finanzberatung, gegründet von Kevin Hudel. Transparent, unabhängig und mit echtem Mehrwert.">
@@ -14,7 +14,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/ueber-finora.css">
 </head>
 
 <body class="page-ueber">
@@ -23,7 +22,7 @@
     <header class="site-header">
         <div class="header-row">
             <div class="header-logo">
-                <a href="finora_investment_studio.html">
+                <a href="index.html">
                     <img src="assets/images/Logo-final-weiss-rz_svg.svg" alt="Finora Investment Studio" width="920"
                         height="210">
                 </a>
@@ -45,7 +44,18 @@
                 </ul>
             </nav>
             <div class="header-cta">
-                <a href="tel:01234567891" class="icon-phone" aria-label="Anrufen">&#xe0e3;</a>
+                <div class="header-lang" role="group" aria-label="Sprache wählen">
+                    <button type="button" class="header-lang-btn" aria-expanded="false" aria-haspopup="true" aria-label="Sprache wechseln" title="Sprache wechseln">
+                        <span class="header-lang-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </span>
+                        <span class="header-lang-label">DE</span>
+                    </button>
+                    <div class="header-lang-dropdown" hidden>
+                        <a href="#" class="header-lang-option is-active" hreflang="de" lang="de">Deutsch</a>
+                        <a href="#" class="header-lang-option" hreflang="en" lang="en">English</a>
+                    </div>
+                </div>
             </div>
             <button class="mobile-menu-toggle" aria-label="Menü öffnen">
                 <span></span><span></span><span></span>
@@ -70,9 +80,13 @@
     <section class="hero hero--ueber">
         <div class="hero-content">
             <div class="hero-text">
+                <div class="hero-badge anim" style="animation-delay:100ms">
+                    <span class="badge-dot"></span>
+                    Über Finora
+                </div>
                 <h1 class="anim">Finora beginnt mit <strong>Zuhören</strong></h1>
                 <p class="hero-subtitle anim" style="animation-delay:300ms">Wir machen Finanzplanung menschlich.</p>
-                <div style="text-align:center">
+                <div style="text-align:left">
                     <a href="" class="btn anim" style="animation-delay:600ms">Persönliches Kennenlernen
                         starten</a>
                 </div>
@@ -365,7 +379,7 @@
             <div class="footer-col">
                 <h4>Menü</h4>
                 <ul>
-                    <li><a href="finora_investment_studio.html">Startseite</a></li>
+                    <li><a href="index.html">Startseite</a></li>
                     <li><a href="finora-philosophie.html">Finora-Philosophie</a></li>
                     <li><a href="ueber-finora.html">Über Finora</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>

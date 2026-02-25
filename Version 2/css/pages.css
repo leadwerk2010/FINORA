@@ -1,0 +1,5928 @@
+/* ============================================================
+   FINORA — PAGE-SPECIFIC STYLES
+   Overrides pro Seite (.page-home, .page-kontakt, …)
+   Eine Datei, logisch nach Seite gruppiert.
+   ============================================================ */
+
+/* ========== PAGE: HOME (Startseite) ========== */
+.page-home {
+  background-color: #ffffff;
+}
+
+/* Hero: 100vh – Slider (Leistungen-Style) oder Fallback */
+.page-home .hero {
+  background-color: #043c43;
+  min-height: 100vh;
+  height: 100vh;
+  padding: calc(var(--header-height) * 2) 70px var(--header-height);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* ========== Startseite: Hero-Slider – Hintergrund 100vw × 100vh, voller Bildschirm ========== */
+.page-home .hero.hero--slider {
+  position: relative;
+  background: none;
+  padding: 0;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-home .hero.hero--slider::after {
+  display: none;
+}
+
+/* Track und Slides füllen die gesamte Viewport-Fläche */
+.page-home .hero--slider .hero-slider-track {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.page-home .hero--slider .hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #043c43;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.page-home .hero--slider .hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.page-home .hero--slider .hero-slide-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: calc(var(--header-height) * 2) 70px 140px;
+  box-sizing: border-box;
+}
+
+.page-home .hero--slider .hero-slide-content .hero-badge {
+  width: fit-content !important;
+  min-width: 0;
+  align-self: center;
+}
+
+.page-home .hero--slider .hero-slide-title {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: clamp(32px, 5.2vw, 72px);
+  line-height: 1.03em;
+  color: var(--color-white);
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+}
+
+.page-home .hero--slider .hero-slide-title strong {
+  font-weight: 700;
+}
+
+.page-home .hero--slider .hero-slide-subtitle {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: 17px;
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 24px;
+}
+
+.page-home .hero--slider .hero-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.page-home .hero--slider .hero-slider-arrow:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.page-home .hero--slider .hero-slider-arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+.page-home .hero--slider .hero-slider-prev {
+  left: 24px;
+}
+
+.page-home .hero--slider .hero-slider-next {
+  right: 24px;
+}
+
+/* Service-Karten: alle horizontal, mittig, Abstand nach unten */
+.page-home .hero--slider .hero-services {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 96%;
+  z-index: 5;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+.page-home .hero--slider .hero-services .service-item {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-size: 22px;
+  padding: 20px 26px;
+  gap: 16px;
+  border-radius: 20px;
+}
+
+.page-home .hero--slider .hero-services .service-icon {
+  width: 88px;
+}
+
+.page-home .hero--slider .hero-services .service-item:nth-child(2) .service-icon {
+  width: 84px;
+}
+
+/* Fallback: wenn kein Slider (alte Hero-Struktur) */
+.page-home .hero-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.page-home .hero-text {
+  width: 55%;
+  max-width: 640px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-home .hero-images {
+  width: 40%;
+  flex-shrink: 0;
+  display: block;
+}
+
+.page-home .hero-text h1 {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: clamp(32px, 5.2vw, 72px);
+  line-height: 1.03em;
+  max-width: 100%;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.page-home .hero-text h1 strong {
+  font-weight: 700;
+}
+
+.page-home .hero-subtitle {
+  font-family: var(--font-heading);
+  font-weight: 200;
+  font-size: 17px;
+  line-height: 1.8em;
+  margin: 0 0 24px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.page-home .hero-img-secondary {
+  margin-right: auto;
+}
+
+.page-home .hero-img-main img,
+.page-home .hero-img-secondary img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.page-home .hero-img-secondary img {
+  min-height: 360%;
+  object-position: center bottom;
+}
+
+.page-home .hero-img-main {
+  max-width: 75%;
+  margin-left: auto;
+  z-index: 2;
+}
+
+.page-home .hero-img-secondary {
+  max-width: 40%;
+  margin-top: -26%;
+  margin-right: -50px;
+  z-index: 1;
+}
+
+/* ========== Mouse-Follower (nur Startseite, dezent Finora-Style) ========== */
+.page-home .cursor-follower {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(144, 180, 178, 0.35) 0%, rgba(4, 60, 67, 0.15) 70%);
+  border: 1px solid rgba(144, 180, 178, 0.25);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out, width 0.2s ease, height 0.2s ease;
+}
+
+.page-home .cursor-follower.is-hover {
+  width: 32px;
+  height: 32px;
+  background: radial-gradient(circle, rgba(144, 180, 178, 0.2) 0%, rgba(4, 60, 67, 0.08) 70%);
+}
+
+@media (hover: none) {
+  .page-home .cursor-follower {
+    display: none !important;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1670px) {
+  .page-home .hero-text h1 {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 980px) {
+  .page-home .hero-subtitle {
+    margin-bottom: 0;
+  }
+
+  .page-home .hero-text {
+    width: 100%;
+  }
+
+  .page-home .hero-text h1 {
+    max-width: 100%;
+    font-size: clamp(32px, 7.5vw, 56px);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .page-home .why-finora-right img {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .page-home .faq-left {
+    display: none;
+  }
+
+  .page-home .faq-right {
+    width: 100%;
+    padding: 5% 4%;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-home .hero {
+    padding-top: calc(var(--header-height) * 2);
+    padding-bottom: var(--header-height);
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-left: max(16px, env(safe-area-inset-left));
+  }
+
+  .page-home .hero--slider .hero-slide-content {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+
+  .page-home .hero--slider .hero-slider-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .page-home .hero--slider .hero-slider-prev {
+    left: 12px;
+  }
+
+  .page-home .hero--slider .hero-slider-next {
+    right: 12px;
+  }
+
+  .page-home .hero-text h1 {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-home .hero-text h1 {
+    font-size: clamp(22px, 7vw, 34px);
+  }
+}
+
+/* ========== UNTERSEITEN: Above-the-fold – Texte und CTA mittig (außer Startseite) ========== */
+.page-altersvorsorge .hero--altersvorsorge .hero-content,
+.page-ueber .hero--ueber .hero-content,
+.page-kontakt .hero--kontakt .hero-content,
+.page-investment .hero--investment .hero-content,
+.page-erbanlage .hero--erbanlage .hero-content,
+.page-immobilien .hero--immobilien .hero-content,
+.page-philosophie .hero--philosophie .hero-content {
+  justify-content: center;
+}
+
+/* Badge überall: klein, Breite nur so breit wie Inhalt */
+.hero .hero-badge {
+  width: fit-content !important;
+  min-width: 0;
+  align-self: center;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text,
+.page-ueber .hero--ueber .hero-text,
+.page-kontakt .hero--kontakt .hero-text,
+.page-investment .hero--investment .hero-text,
+.page-erbanlage .hero--erbanlage .hero-text,
+.page-immobilien .hero--immobilien .hero-text,
+.page-philosophie .hero--philosophie .hero-text {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-right: 0;
+  text-align: center;
+  align-items: center;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text h1,
+.page-ueber .hero--ueber .hero-text h1,
+.page-kontakt .hero--kontakt .hero-text h1,
+.page-investment .hero--investment .hero-text h1,
+.page-erbanlage .hero--erbanlage .hero-text h1,
+.page-immobilien .hero--immobilien .hero-text h1,
+.page-philosophie .hero--philosophie .hero-text h1 {
+  text-align: center;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-subtitle,
+.page-ueber .hero--ueber .hero-subtitle,
+.page-kontakt .hero--kontakt .hero-subtitle,
+.page-investment .hero--investment .hero-subtitle,
+.page-erbanlage .hero--erbanlage .hero-subtitle,
+.page-immobilien .hero--immobilien .hero-subtitle,
+.page-philosophie .hero--philosophie .hero-subtitle {
+  text-align: center;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text > div[style*="text-align"],
+.page-ueber .hero--ueber .hero-text > div[style*="text-align"],
+.page-kontakt .hero--kontakt .hero-text > div[style*="text-align"],
+.page-investment .hero--investment .hero-text > div[style*="text-align"],
+.page-erbanlage .hero--erbanlage .hero-text > div[style*="text-align"],
+.page-immobilien .hero--immobilien .hero-text > div[style*="text-align"],
+.page-philosophie .hero--philosophie .hero-text > div[style*="text-align"] {
+  text-align: center;
+}
+
+/* ========== PAGE: IMMOBILIEN-BERATUNG ========== */
+
+/* Rechten Balken entfernen: Body/HTML und Scrollbar-Track auf Weiß */
+body.page-immobilien {
+    overflow-x: hidden;
+    background: #fff;
+}
+
+html:has(body.page-immobilien) {
+    background: #fff;
+}
+
+/* Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet */
+.page-immobilien .hero.hero--immobilien {
+    overflow: hidden;
+    background-position: center bottom;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7234_prev-e17657905637551.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+}
+
+.page-immobilien .hero.hero--immobilien::after {
+    display: none;
+}
+
+.page-immobilien .hero--immobilien .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-immobilien .hero--immobilien .hero-text {
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-immobilien .hero--immobilien .hero-text h1 {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 0 0 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.page-immobilien .hero--immobilien .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-immobilien .hero--immobilien .hero-subtitle {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 24px;
+}
+
+.page-immobilien .hero--immobilien .hero-text > div[style*="text-align"] {
+    width: 100%;
+    text-align: center;
+}
+
+.page-immobilien .hero--immobilien .hero-images {
+    display: none;
+}
+
+.page-immobilien .immobilien-intro-section {
+    padding: 60px 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+.page-immobilien .immobilien-intro-section .container--wide {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.page-immobilien .two-col--immobilien-intro {
+  gap: 56px;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.page-immobilien .col-img--immobilien-intro {
+    flex: 0 0 38%;
+    min-width: 0;
+    max-width: 42%;
+}
+
+.page-immobilien .col-text--immobilien-intro {
+    flex: 1 1 0;
+    min-width: 280px;
+}
+
+.page-immobilien .immobilien-intro-image {
+    border-radius: 16px 16px 8vw 16px;
+    width: 100%;
+    margin-top: 40px;
+    margin-right: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+.page-immobilien .col-img--immobilien-intro:hover .immobilien-intro-image {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+.page-immobilien .col-text--immobilien-intro h2,
+.page-immobilien .immobilien-timeline-section .section-heading h2,
+.page-immobilien .adrian-heading {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #191919;
+}
+
+.page-immobilien .col-text--immobilien-intro h2 {
+    margin-top: 40px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.page-immobilien .col-text--immobilien-intro h2 strong {
+    color: #191919;
+    font-weight: 700;
+}
+
+.page-immobilien .col-text--immobilien-intro p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.page-immobilien .col-text--immobilien-intro .blurb {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.page-immobilien .col-text--immobilien-intro .blurb:last-child {
+    margin-bottom: 0;
+}
+
+.page-immobilien .immobilien-timeline-section {
+    padding: 115px 0 120px;
+}
+
+.page-immobilien .immobilien-timeline-section .section-heading {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.page-immobilien .immobilien-timeline-section .section-heading p {
+    margin: 20px 0 0;
+    max-width: none;
+}
+
+/* Timeline „Von der Analyse zur Immobilie“: vertikale Linie links, nummerierte Kreise, Karten rechts */
+.page-immobilien .immobilien-timeline-section .timeline--vertical {
+    position: relative;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-accent);
+    z-index: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 48px;
+    padding-left: 100px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item::before {
+    display: none;
+}
+
+/* Kreis: deckt Linie ab (Linie endet oberhalb, beginnt unterhalb), größer, mit Glow */
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__number {
+    position: absolute;
+    left: 28px;
+    top: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--color-primary);
+    background: var(--color-light-bg);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(144, 180, 178, 0.4), 0 0 40px rgba(144, 180, 178, 0.2), 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    padding: 28px 32px;
+    background: var(--color-card-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(144, 180, 178, 0.15);
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth);
+}
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 20px 20px 0 0;
+}
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card:hover::before {
+    opacity: 1;
+}
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 24px rgba(144, 180, 178, 0.15);
+    border-color: rgba(144, 180, 178, 0.35);
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: var(--color-accent);
+    background: rgba(144, 180, 178, 0.1);
+    border-radius: 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-teal);
+    margin: 0 0 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0 0 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 12px;
+}
+
+.page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card li {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+.page-immobilien .immobilien-calculation-section {
+    background: linear-gradient(147deg, #043c43 0%, #90b4b2 100%);
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+.page-immobilien .grid--3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.page-immobilien .calculation-grid {
+    margin-top: 0;
+}
+
+.page-immobilien .calc-item {
+    text-align: left;
+    padding: 0;
+}
+
+.page-immobilien .calc-title {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.page-immobilien .calc-data-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.page-immobilien .calc-data-row i {
+    color: #ffffff;
+    margin-right: 12px;
+    margin-top: 6px;
+    width: 18px;
+    text-align: center;
+}
+
+.page-immobilien .calc-data-row strong {
+    font-weight: 700;
+}
+
+.page-immobilien .calc-data-row.highlight-row {
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+}
+
+.page-immobilien .calc-data-row.huge-text span {
+    font-size: 20px;
+}
+
+.page-immobilien .adrian-fall-section {
+    background: #ffffff;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page-immobilien .adrian-fall-section .container.container--wide {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}
+
+.page-immobilien .adrian-layout {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 60vh;
+}
+
+.page-immobilien .adrian-image-col {
+    min-height: 60vh;
+}
+
+.page-immobilien .adrian-img-wrapper {
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 60vh;
+    padding: 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+.page-immobilien .adrian-image-col:hover .adrian-img-wrapper {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+.page-immobilien .adrian-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px 16px 8vw 16px;
+}
+
+.page-immobilien .adrian-text-col {
+    position: relative;
+    border-radius: 32px;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+.page-immobilien .adrian-text-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 32px 32px 0 0;
+}
+.page-immobilien .adrian-text-col:hover::before {
+    opacity: 1;
+}
+.page-immobilien .adrian-text-col:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-immobilien .adrian-heading {
+    margin: 0 0 20px;
+    color: #191919;
+}
+
+.page-immobilien .adrian-heading strong {
+    font-weight: 700;
+}
+
+.page-immobilien .adrian-text {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-bottom: 75px;
+}
+
+.page-immobilien .adrian-quote-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.page-immobilien .quote-icon-large {
+    font-family: ETmodules;
+    font-weight: 400;
+    font-size: 72px;
+    color: #90b4b2;
+    line-height: 1;
+    flex: 0 0 auto;
+}
+
+.page-immobilien .adrian-quote {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.page-immobilien .final-cta-section {
+    background: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-immobilien .final-cta-section h2 strong {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .page-immobilien .final-cta-section {
+        background-attachment: scroll;
+    }
+}
+
+.page-immobilien .btn--white {
+    background-color: #ffffff;
+    color: var(--color-primary);
+    border: 2px solid #ffffff;
+}
+
+.page-immobilien .btn--white:hover {
+    background: transparent;
+    color: #ffffff;
+}
+
+@media (max-width: 980px) {
+    .page-immobilien .hero--immobilien {
+        padding: calc(var(--header-height) * 2) 40px;
+    }
+
+    .page-immobilien .immobilien-intro-image {
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .page-immobilien .col-text--immobilien-intro h2,
+    .page-immobilien .immobilien-timeline-section .section-heading h2,
+    .page-immobilien .adrian-heading {
+        font-size: 36px;
+    }
+
+    .page-immobilien .col-text--immobilien-intro p,
+    .page-immobilien .adrian-text {
+        margin-bottom: 52px;
+    }
+
+    .page-immobilien .immobilien-timeline-section,
+    .page-immobilien .adrian-fall-section {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+        padding: 115px 0 120px;
+    }
+
+    .page-immobilien .grid--3 {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        padding-left: 78px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical::before {
+        left: 22px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__number {
+        left: 22px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .page-immobilien .adrian-layout {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .page-immobilien .adrian-image-col {
+        min-height: 0;
+    }
+
+    .page-immobilien .adrian-img-wrapper {
+        padding: 0;
+        height: auto;
+    }
+
+    .page-immobilien .adrian-img {
+        height: auto;
+    }
+
+    .page-immobilien .adrian-text-col,
+    .page-immobilien .adrian-text-col:hover {
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+    .page-immobilien .adrian-text-col::before {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-immobilien .hero--immobilien {
+        padding: calc(var(--header-height) * 2) 20px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+        padding-left: 64px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical::before {
+        left: 18px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__number {
+        left: 18px;
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card {
+        padding: 20px 24px;
+    }
+
+    .page-immobilien .col-text--immobilien-intro h2,
+    .page-immobilien .immobilien-timeline-section .section-heading h2,
+    .page-immobilien .adrian-heading {
+        font-size: 21px;
+    }
+
+    .page-immobilien .col-text--immobilien-intro p,
+    .page-immobilien .adrian-text {
+        margin-bottom: 30px;
+    }
+
+    .page-immobilien .immobilien-timeline-section,
+    .page-immobilien .adrian-fall-section {
+        border-radius: 0 0 36px 36px;
+        padding: 85px 0 90px;
+    }
+
+    .page-immobilien .quote-icon-large {
+        font-size: 68px;
+    }
+}
+
+@media (max-width: 360px) { .page-immobilien .grid--3 { gap: 20px; } }
+
+/* ========== PAGE: UEBER FINORA ========== */
+
+/* ============================================================
+   Ueber-Finora page fidelity overrides
+   Source-aligned with original Divi export
+   ============================================================ */
+
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+.page-ueber .hero.hero--ueber {
+    background-position: center bottom;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A6908_prev-e17660461441031.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.page-ueber .hero.hero--ueber::after {
+    display: none;
+}
+
+.page-ueber .hero--ueber .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-ueber .hero--ueber .hero-text {
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-ueber .hero--ueber .hero-text h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 0 0 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.page-ueber .hero--ueber .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-ueber .hero--ueber .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 24px;
+}
+
+.page-ueber .hero--ueber .hero-text>div[style*="text-align"] {
+    width: 100%;
+    text-align: center;
+}
+
+.page-ueber .hero--ueber .hero-images {
+    display: none;
+}
+
+/* --- Section 1 (.et_pb_section_1) --- */
+.page-ueber .why-finora {
+    border-radius: 10vw 0 0 0;
+    overflow: hidden;
+    padding: 115px 0;
+}
+
+.page-ueber .why-finora .row {
+    gap: 0;
+}
+
+.page-ueber .why-finora-left {
+    padding: 0 20px;
+}
+
+.page-ueber .why-finora-left h2 {
+    margin: 40px 0 2px;
+    color: #191919;
+}
+
+.page-ueber .why-finora-left .about-text {
+    margin: 50px 0 60px;
+}
+
+.page-ueber .why-finora-right img {
+    max-width: 659px;
+    margin-top: 0;
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+.page-ueber .why-finora-right img:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+/* --- Section 2 (.et_pb_section_2) --- */
+.page-ueber .section-finanzwelt .section-heading {
+    margin-bottom: 2px !important;
+}
+
+.page-ueber .section-finanzwelt .section-heading h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+.page-ueber .section-finanzwelt .container>div[style*="max-width"] p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff;
+}
+
+/* --- Section 3 (.et_pb_section_3) --- */
+.page-ueber .section-bedeutet {
+    border-radius: 10vw 0 0 0;
+    overflow: hidden;
+}
+
+.page-ueber .section-bedeutet .container--narrow {
+    width: 95%;
+    max-width: 1290px;
+}
+
+.page-ueber .section-bedeutet .section-heading {
+    margin-top: 40px;
+    margin-bottom: 2px !important;
+    width: 65%;
+}
+
+.page-ueber .section-bedeutet .section-heading h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #191919;
+}
+
+.page-ueber .section-bedeutet .two-col {
+    gap: 0;
+    align-items: flex-start;
+}
+
+.page-ueber .section-bedeutet .two-col>.col-text {
+    flex: 0 0 50%;
+}
+
+.page-ueber .section-bedeutet .two-col>.col-text:first-child p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+.page-ueber .section-bedeutet .two-col>.col-text:first-child p:last-of-type {
+    margin-bottom: 50px;
+}
+
+.page-ueber .section-bedeutet .two-col>.col-text:last-child .blurb {
+    margin-bottom: 20px;
+}
+
+.page-ueber .section-bedeutet .two-col>.col-text:last-child .blurb:last-child {
+    margin-bottom: 40px;
+}
+
+.page-ueber .section-bedeutet .two-col>.col-text:last-child .blurb-content h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: #266063;
+}
+
+.page-ueber .section-bedeutet .two-col>.col-text:last-child .blurb-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+/* --- Section 4 (.et_pb_section_4) --- */
+.page-ueber .section-how {
+    padding: 100px 0;
+}
+
+.page-ueber .section-how .how-title {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.page-ueber .section-how .how-title h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    line-height: 1.2em;
+    color: #ffffff;
+}
+
+.page-ueber .section-how .how-grid {
+    width: 90%;
+    max-width: 1290px;
+    margin: 0 auto 120px;
+    gap: 0;
+}
+
+.page-ueber .section-how .how-step {
+    padding-right: 16px;
+}
+
+.page-ueber .section-how .how-step h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.page-ueber .section-how .how-step p,
+.page-ueber .section-how .how-bottom p {
+    display: none;
+}
+
+.page-ueber .section-how .how-bottom .btn {
+    padding: 11px 80px 12px;
+}
+
+/* --- Section 5 (.et_pb_section_5) --- */
+.page-ueber .section-testimonials {
+    padding: 115px 0 120px;
+}
+
+.page-ueber .section-testimonials .testimonials-title {
+    margin-bottom: 58px;
+}
+
+.page-ueber .section-testimonials .testimonials-title h2 {
+    font-size: 44px;
+    color: #191919;
+}
+
+.page-ueber .section-testimonials .testimonials-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin: 0;
+}
+
+.page-ueber .section-testimonials .container--wide:last-child {
+    width: 90%;
+    max-width: 100%;
+}
+
+.page-ueber .section-testimonials .testimonial-text {
+    margin-bottom: 75px;
+}
+
+/* --- FAQ (aligned with finora-philosophie) --- */
+.page-ueber .section-faq {
+    background-color: #ffffff;
+}
+
+.page-ueber .section-faq .faq-left {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+}
+
+.page-ueber .section-faq .faq-right {
+    padding: 5% 4%;
+}
+
+.page-ueber .section-faq .faq-right h2 {
+    margin-bottom: 20px;
+    color: #191919;
+}
+
+/* --- Responsive parity --- */
+@media (max-width: 980px) {
+    .page-ueber .hero.hero--ueber {
+        padding: calc(var(--header-height) * 2) 40px;
+    }
+
+    .page-ueber .hero--ueber .hero-content {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .page-ueber .hero--ueber .hero-text {
+        display: none;
+    }
+
+    .page-ueber .hero--ueber .hero-images {
+        width: 100%;
+    }
+
+    .page-ueber .hero--ueber .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-ueber .mobile-menu-toggle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .page-ueber .mobile-menu-toggle span {
+        display: none;
+    }
+
+    .page-ueber .mobile-menu-toggle::before {
+        content: "a";
+        font-family: ETmodules;
+        font-size: 30px;
+        line-height: 1;
+        color: #ffffff;
+        display: block;
+        transform: translateY(-2px);
+    }
+
+    .page-ueber .why-finora,
+    .page-ueber .section-testimonials {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+    }
+
+    .page-ueber .why-finora-left,
+    .page-ueber .why-finora-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .page-ueber .why-finora-left h2 {
+        margin-top: 0;
+        margin-bottom: 2px;
+    }
+
+    .page-ueber .why-finora-right img {
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .page-ueber .why-finora-left h2,
+    .page-ueber .section-finanzwelt .section-heading h2,
+    .page-ueber .section-bedeutet .section-heading h2,
+    .page-ueber .section-how .how-title h2,
+    .page-ueber .section-testimonials .testimonials-title h2 {
+        font-size: 36px;
+    }
+
+    .page-ueber .section-bedeutet .section-heading {
+        width: 100%;
+    }
+
+    .page-ueber .section-bedeutet .two-col {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .page-ueber .section-bedeutet .two-col>.col-text {
+        flex: 0 0 100%;
+    }
+
+    .page-ueber .section-how {
+        padding: 120px 0 100px;
+    }
+
+    .page-ueber .section-how .how-grid {
+        flex-direction: column;
+        margin-bottom: 120px;
+    }
+
+    .page-ueber .section-how .how-step {
+        padding-right: 0;
+    }
+
+    .page-ueber .section-testimonials {
+        padding: 115px 0 120px;
+    }
+
+    .page-ueber .section-testimonials .testimonials-grid {
+        max-width: 440px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-ueber .hero.hero--ueber {
+        padding: calc(var(--header-height) * 2) 20px;
+    }
+
+    .page-ueber .why-finora,
+    .page-ueber .section-testimonials {
+        border-radius: 0 0 36px 36px;
+        overflow: hidden;
+    }
+
+    .page-ueber .why-finora {
+        padding: 90px 0;
+    }
+
+    .page-ueber .why-finora-right img {
+        margin-top: 55px;
+    }
+
+    .page-ueber .why-finora-left h2,
+    .page-ueber .section-finanzwelt .section-heading h2,
+    .page-ueber .section-bedeutet .section-heading h2,
+    .page-ueber .section-how .how-title h2,
+    .page-ueber .section-testimonials .testimonials-title h2 {
+        font-size: 21px;
+    }
+
+    .page-ueber .section-how {
+        padding: 20px 0 80px;
+    }
+
+    .page-ueber .section-how .how-grid {
+        margin-bottom: 90px;
+    }
+
+    .page-ueber .section-testimonials {
+        padding: 85px 0 90px;
+    }
+
+    .page-ueber .section-testimonials .testimonials-subtitle {
+        font-size: 19px;
+    }
+}
+
+/* ========== PAGE: KONTAKT ========== */
+
+/* ============================================================
+   Kontakt page fidelity overrides
+   Source-matched to original Divi export (page-id 89203)
+   ============================================================ */
+
+.page-kontakt {
+    background: #ffffff;
+}
+
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+.page-kontakt .hero.hero--kontakt {
+    background-position: center bottom;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/Invest-bw.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.page-kontakt .hero.hero--kontakt::after {
+    display: none;
+}
+
+.page-kontakt .hero--kontakt .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-kontakt .hero--kontakt .hero-text {
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-kontakt .hero--kontakt .hero-text h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 0 0 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.page-kontakt .hero--kontakt .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-kontakt .hero--kontakt .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 24px;
+}
+
+.page-kontakt .hero--kontakt .hero-images {
+    display: none;
+}
+
+/* --- Contact main section – modern, Finora-Style --- */
+.page-kontakt .section-kontakt-main {
+    background: var(--color-light-bg);
+    padding: 80px 0 100px;
+}
+
+.page-kontakt .section-kontakt-main .container--xl {
+    width: 90%;
+    max-width: 1400px;
+}
+
+.page-kontakt .kontakt-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    column-gap: 48px;
+    align-items: start;
+}
+
+.page-kontakt .kontakt-form-col {
+    min-width: 0;
+}
+
+.page-kontakt .kontakt-info-col {
+    min-width: 0;
+}
+
+.page-kontakt .kontakt-form-col h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: var(--color-primary);
+    line-height: 1.25em;
+    text-align: left;
+    margin: 0 0 8px;
+}
+
+.page-kontakt .kontakt-form-col .kontakt-form-intro {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.75em;
+    color: var(--color-text);
+    margin: 0 0 32px;
+    max-width: 520px;
+}
+
+/* Form-Card: abgesetzter Bereich, Finora-Optik */
+.page-kontakt .contact-form-card {
+    background: var(--color-white);
+    border-radius: 24px 24px 24px 8vw;
+    padding: 40px 40px 44px;
+    box-shadow: var(--shadow-card), 0 0 0 1px rgba(4, 60, 67, 0.06);
+    transition: box-shadow 0.3s var(--ease-smooth);
+}
+
+.page-kontakt .contact-form-card:hover {
+    box-shadow: var(--shadow-md), 0 0 0 1px rgba(4, 60, 67, 0.08);
+}
+
+.page-kontakt .contact-form {
+    margin: 0;
+}
+
+.page-kontakt .contact-form .contact-field {
+    margin-bottom: 22px;
+}
+
+.page-kontakt .contact-form .contact-field:last-of-type {
+    margin-bottom: 28px;
+}
+
+.page-kontakt .contact-form label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--color-primary);
+    margin: 0 0 8px;
+}
+
+.page-kontakt .contact-form label span {
+    color: var(--color-teal);
+    font-weight: 600;
+}
+
+.page-kontakt .contact-form input[type="text"],
+.page-kontakt .contact-form input[type="email"],
+.page-kontakt .contact-form textarea {
+    width: 100%;
+    border: 1px solid rgba(4, 60, 67, 0.12);
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    color: #191919;
+    background: rgba(244, 245, 245, 0.6);
+    line-height: 1.5;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    box-sizing: border-box;
+}
+
+.page-kontakt .contact-form input::placeholder,
+.page-kontakt .contact-form textarea::placeholder {
+    color: var(--color-muted);
+}
+
+.page-kontakt .contact-form input:hover,
+.page-kontakt .contact-form textarea:hover {
+    border-color: rgba(4, 60, 67, 0.2);
+    background: rgba(244, 245, 245, 0.9);
+}
+
+.page-kontakt .contact-form input:focus,
+.page-kontakt .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(144, 180, 178, 0.2);
+    background: var(--color-white);
+}
+
+.page-kontakt .contact-form textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.page-kontakt .contact-form .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 0 28px;
+}
+
+.page-kontakt .contact-form .checkbox-group input[type="checkbox"] {
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-teal);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.page-kontakt .contact-form .checkbox-group label {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6em;
+    color: var(--color-text);
+    margin: 0;
+    cursor: pointer;
+}
+
+.page-kontakt .contact-form .checkbox-group a {
+    color: var(--color-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(38, 96, 99, 0.35);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-kontakt .contact-form .checkbox-group a:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.page-kontakt .contact-form .btn-submit {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 40px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-white);
+    background: var(--color-primary);
+    border: none;
+    border-radius: var(--radius-button);
+    cursor: pointer;
+    transition: background 0.3s var(--ease-smooth),
+                box-shadow 0.3s var(--ease-smooth),
+                transform 0.2s var(--ease-smooth);
+    box-shadow: 0 4px 20px rgba(4, 60, 67, 0.25);
+}
+
+.page-kontakt .contact-form .btn-submit:hover {
+    background: var(--color-teal);
+    box-shadow: 0 6px 28px rgba(38, 96, 99, 0.35);
+    transform: translateY(-2px);
+}
+
+.page-kontakt .contact-form .btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 12px rgba(4, 60, 67, 0.2);
+}
+
+.page-kontakt .contact-form .btn-submit:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.page-kontakt .kontakt-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-kontakt .kontakt-info-card {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffffff;
+    background: var(--gradient-dark);
+    border: 1px solid rgba(144, 180, 178, 0.12);
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    height: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s var(--ease-out-expo),
+                box-shadow 0.5s var(--ease-out-expo),
+                border-color 0.4s var(--ease-smooth);
+}
+
+.page-kontakt .kontakt-info-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 120%, rgba(144, 180, 178, 0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s var(--ease-smooth);
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.page-kontakt .kontakt-info-card:hover::before {
+    opacity: 1;
+}
+
+.page-kontakt .kontakt-info-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(144, 180, 178, 0.12);
+    border-color: rgba(144, 180, 178, 0.25);
+}
+
+.page-kontakt .kontakt-info-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 56px;
+    color: #ffffff;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+
+.page-kontakt .kontakt-info-card h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: #ffffff;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0 0 12px;
+}
+
+.page-kontakt .kontakt-info-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 1.8em;
+    text-align: center;
+    margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .page-kontakt .hero.hero--kontakt {
+        padding: calc(var(--header-height) * 2) 40px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text {
+        display: none;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text h1 {
+        font-size: 84px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-subtitle {
+        margin-bottom: 0;
+    }
+
+    .page-kontakt .kontakt-layout {
+        grid-template-columns: 100%;
+        row-gap: 20px;
+    }
+
+    .page-kontakt .kontakt-form-col h2 {
+        font-size: 36px;
+        margin-top: 0;
+    }
+
+    .page-kontakt .kontakt-form-col .kontakt-form-intro {
+        margin-bottom: 28px;
+    }
+
+    .page-kontakt .contact-form-card {
+        padding: 32px 28px 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-kontakt .hero.hero--kontakt {
+        padding: calc(var(--header-height) * 2) 20px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text {
+        display: none;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text h1 {
+        font-size: 42px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .page-kontakt .hero--kontakt .hero-subtitle {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .page-kontakt .kontakt-form-col h2 {
+        font-size: 21px;
+    }
+
+    .page-kontakt .kontakt-form-col .kontakt-form-intro {
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
+
+    .page-kontakt .contact-form-card {
+        padding: 28px 20px 32px;
+        border-radius: 20px 20px 20px 6vw;
+    }
+
+    .page-kontakt .kontakt-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== PAGE: INVESTMENT-BERATUNG ========== */
+
+/* ============================================================
+   Investment-Beratung page fidelity overrides
+   Source-matched to original Divi export (static structure)
+   ============================================================ */
+
+.page-investment {
+    background: #ffffff;
+}
+
+.page-investment .btn--light {
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+    background-color: #191919;
+}
+
+.page-investment .btn--light:hover {
+    background-color: #90b4b2;
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+}
+
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+.page-investment .hero.hero--investment {
+    background-position: center bottom;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7139_prev-e17696842159562.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.page-investment .hero.hero--investment::after {
+    display: none;
+}
+
+.page-investment .hero--investment .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-investment .hero--investment .hero-text {
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-investment .hero--investment .hero-text h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 0 0 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.page-investment .hero--investment .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-investment .hero--investment .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 24px;
+}
+
+.page-investment .hero--investment .hero-text>div[style*="text-align"] {
+    text-align: center;
+    width: 100%;
+}
+
+.page-investment .hero--investment .hero-images {
+    display: none;
+}
+
+/* --- Strategy (.et_pb_section_1) --- */
+.page-investment .section-strategy {
+    background: #ffffff;
+    border-radius: 10vw 0 0 0;
+    overflow: hidden;
+    padding: 70px 0 90px;
+}
+
+.page-investment .section-strategy .two-col {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-investment .section-strategy .col-img {
+    flex: 0 0 40%;
+}
+
+.page-investment .section-strategy .col-text {
+    flex: 0 0 60%;
+}
+
+.page-investment .section-strategy .col-img img {
+    border-radius: 10px 10px 10vw 10px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-right: -73px;
+}
+
+.page-investment .section-strategy .col-text h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-investment .section-strategy .col-text>p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-strategy .col-text>p:last-of-type {
+    color: #043c43;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.page-investment .section-strategy .btn-section {
+    margin-top: 40px;
+}
+
+/* --- Challenge (.et_pb_section_2) --- */
+.page-investment .section-challenge {
+    background-color: #f2f2f2;
+    padding: 100px 0;
+}
+
+.page-investment .section-challenge .section-heading {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-challenge .section-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #191919;
+    line-height: 1.2em;
+}
+
+.page-investment .section-challenge .section-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin-top: 0;
+    max-width: none;
+}
+
+.page-investment .section-challenge .two-col {
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-investment .section-challenge .two-col>.col-text:first-child {
+    flex: 0 0 58%;
+}
+
+.page-investment .section-challenge .two-col>.col-text:last-child {
+    flex: 0 0 38%;
+    background-image: linear-gradient(35deg, rgba(255, 255, 255, 0.27) 29%, #ffffff 48%, rgba(255, 255, 255, 0.59) 66%);
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 2px 18px rgba(255, 255, 255, 0.32);
+}
+
+.page-investment .section-challenge .two-col>.col-text:last-child h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-challenge .two-col>.col-text:last-child p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.page-investment .section-challenge .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-challenge .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.page-investment .section-challenge .blurb-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #191919;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-investment .section-challenge .btn-section {
+    margin-top: 40px;
+}
+
+/* --- Flipboxes (.et_pb_section_3) --- */
+.page-investment .section-flipboxes {
+    padding: 100px 0;
+}
+
+.page-investment .section-flipboxes .section-heading {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.page-investment .section-flipboxes .section-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #ffffff;
+    line-height: 1.2em;
+}
+
+.page-investment .section-flipboxes .section-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #ffffff;
+    margin-top: 0;
+    max-width: none;
+}
+
+.page-investment .section-flipboxes .two-col {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.page-investment .section-flipboxes .two-col>.col-text {
+    flex: 0 0 34%;
+}
+
+.page-investment .section-flipboxes .two-col>.col-img {
+    flex: 0 0 60%;
+}
+
+.page-investment .section-flipboxes .two-col>.col-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page-investment .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 0;
+}
+
+.page-investment .flip-card {
+    height: 250px;
+    perspective: 1000px;
+    background: transparent;
+}
+
+.page-investment .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s var(--ease-out-expo);
+    transform-style: preserve-3d;
+}
+
+.page-investment .flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.page-investment .flip-front,
+.page-investment .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #043c43;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.48) 99%);
+}
+
+.page-investment .flip-card:nth-child(1) .flip-front,
+.page-investment .flip-card:nth-child(1) .flip-back,
+.page-investment .flip-card:nth-child(3) .flip-front,
+.page-investment .flip-card:nth-child(3) .flip-back {
+    border-radius: 10px 10px 5vw 10px;
+}
+
+.page-investment .flip-card:nth-child(2) .flip-front,
+.page-investment .flip-card:nth-child(2) .flip-back,
+.page-investment .flip-card:nth-child(4) .flip-front,
+.page-investment .flip-card:nth-child(4) .flip-back {
+    border-radius: 10px 10px 10px 5vw;
+}
+
+.page-investment .flip-front h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    color: #ffffff !important;
+    line-height: 1.3em;
+    text-align: center;
+    margin: 0;
+}
+
+.page-investment .flip-back {
+    transform: rotateY(180deg);
+}
+
+.page-investment .flip-back p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    margin: 0;
+}
+
+/* --- Goal (.et_pb_section_4) --- */
+.page-investment .section-goal {
+    padding: 30px 0;
+    margin: 0;
+    background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A6656_prev.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-investment .section-goal .section-heading {
+    text-align: center;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+.page-investment .section-goal h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #ffffff !important;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-goal p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 75px;
+}
+
+.page-investment .section-goal .btn {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background: transparent;
+}
+
+.page-investment .section-goal .btn:hover {
+    background-color: #90b4b2;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+/* --- Timeline (.et_pb_section_5) --- */
+.page-investment .section-timeline {
+    background: #f2f2f2;
+    border-radius: 0 10vw 0 0;
+    overflow: hidden;
+    padding: 115px 0 120px;
+}
+
+.page-investment .section-timeline .section-heading {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.page-investment .section-timeline .section-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #191919;
+    line-height: 1.2em;
+}
+
+.page-investment .section-timeline .section-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin-top: 0;
+    max-width: none;
+}
+
+.page-investment .section-timeline .timeline {
+    max-width: 1100px;
+}
+
+.page-investment .section-timeline .timeline::before {
+    width: 3px;
+    background: #90b4b2;
+}
+
+.page-investment .section-timeline .timeline-item {
+    width: 45%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.page-investment .section-timeline .timeline-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.page-investment .section-timeline .timeline-item h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 38px;
+    color: #043c43;
+    margin-bottom: 12px;
+}
+
+.page-investment .section-timeline .timeline-item p,
+.page-investment .section-timeline .timeline-item li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+}
+
+/* --- Target Groups (.et_pb_section_6) --- */
+.page-investment .section-target-groups {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-investment .section-target-groups .two-col {
+    align-items: flex-start;
+}
+
+.page-investment .section-target-groups .two-col>.col-text:first-child,
+.page-investment .section-target-groups .two-col>.col-text:last-child {
+    flex: 0 0 calc(50% - 30px);
+}
+
+.page-investment .section-target-groups h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #191919;
+    line-height: 1.2em;
+    max-width: 65%;
+    margin-bottom: 2px;
+}
+
+.page-investment .section-target-groups .btn-section {
+    margin-top: 60px;
+}
+
+.page-investment .section-target-groups h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    color: #191919;
+    line-height: 1.2em;
+}
+
+.page-investment .section-target-groups .target-group-grid {
+    display: block;
+    margin-top: 0;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb:hover {
+    transform: none;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-top: -3px;
+    margin-right: 0;
+    width: 32px;
+    min-width: 32px;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    display: block;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb-content p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+}
+
+.page-investment .section-target-groups .col-text>p:last-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-top: 20px;
+}
+
+/* --- Results (.et_pb_section_7) --- */
+.page-investment .section-results {
+    background: #f2f2f2;
+    padding: 0;
+    margin: 0;
+}
+
+.page-investment .section-results .two-col {
+    gap: 0;
+    align-items: stretch;
+    min-height: 800px;
+}
+
+.page-investment .section-results .col-img {
+    flex: 0 0 40%;
+    min-height: 800px;
+    background-image: url('../assets/images/X8A7369_prev-e1769685408385.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+}
+
+.page-investment .section-results .col-text {
+    flex: 0 0 60%;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 7%;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.page-investment .section-results .col-text:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.page-investment .section-results h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #191919;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-results .col-text>p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin-bottom: 50px;
+}
+
+.page-investment .section-results .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-results .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.page-investment .section-results .blurb-content p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+}
+
+.page-investment .section-results .btn-section {
+    margin-top: 40px;
+}
+
+/* --- Final CTA (.et_pb_section_8) --- */
+.page-investment .section-final-cta {
+    background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 0;
+    margin: 0;
+}
+
+.page-investment .section-final-cta .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 120px 0;
+}
+
+.page-investment .section-final-cta h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.page-investment .section-final-cta h2 strong {
+    color: #ffffff;
+}
+
+.page-investment .section-final-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8em;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 1200px;
+    margin: 0 auto 75px;
+}
+
+.page-investment .section-final-cta .btn {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.page-investment .section-final-cta .btn:hover {
+    background-color: #90b4b2;
+    border-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .page-investment .hero.hero--investment {
+        padding: calc(var(--header-height) * 2) 40px !important;
+    }
+
+    .page-investment .hero--investment .hero-content {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .page-investment .hero--investment .hero-text {
+        display: none;
+    }
+
+    .page-investment .hero--investment .hero-images {
+        width: 100%;
+        display: block;
+    }
+
+    .page-investment .hero--investment .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .page-investment .section-strategy .col-img img {
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .page-investment .section-strategy .col-text h2,
+    .page-investment .section-challenge .section-heading h2,
+    .page-investment .section-flipboxes .section-heading h2,
+    .page-investment .section-goal h2,
+    .page-investment .section-timeline .section-heading h2,
+    .page-investment .section-target-groups h2,
+    .page-investment .section-results h2,
+    .page-investment .section-final-cta h2 {
+        font-size: 36px;
+    }
+
+    .page-investment .section-challenge .two-col>.col-text:last-child h3,
+    .page-investment .section-timeline .timeline-item h4 {
+        font-size: 26px;
+        line-height: 1.2em;
+    }
+
+    .page-investment .section-target-groups h2 {
+        max-width: none;
+    }
+
+    .page-investment .section-timeline,
+    .page-investment .section-results {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+    }
+
+    .page-investment .section-timeline {
+        padding: 115px 0 120px;
+    }
+
+    .page-investment .section-results {
+        padding: 115px 0 120px;
+    }
+
+    .page-investment .section-results .two-col {
+        min-height: 0;
+        gap: 30px;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .page-investment .section-results .col-img {
+        min-height: 420px;
+        background-attachment: scroll;
+    }
+
+    .page-investment .section-results .col-text,
+    .page-investment .section-results .col-text:hover {
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-investment .hero.hero--investment {
+        padding: calc(var(--header-height) * 2) 20px !important;
+    }
+
+    .page-investment .hero--investment .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-investment .section-strategy .col-img img {
+        margin-top: 55px;
+    }
+
+    .page-investment .section-strategy .col-text h2,
+    .page-investment .section-challenge .section-heading h2,
+    .page-investment .section-flipboxes .section-heading h2,
+    .page-investment .section-goal h2,
+    .page-investment .section-timeline .section-heading h2,
+    .page-investment .section-target-groups h2,
+    .page-investment .section-results h2,
+    .page-investment .section-final-cta h2 {
+        font-size: 21px;
+    }
+
+    .page-investment .section-challenge .two-col>.col-text:last-child h3,
+    .page-investment .section-timeline .timeline-item h4 {
+        font-size: 20px;
+    }
+
+    .page-investment .section-strategy .col-text>p:last-of-type,
+    .page-investment .section-challenge .section-heading p,
+    .page-investment .section-timeline .section-heading p,
+    .page-investment .section-results .col-text>p,
+    .page-investment .section-final-cta p {
+        font-size: 19px;
+    }
+
+    .page-investment .section-timeline,
+    .page-investment .section-results {
+        border-radius: 0 0 36px 36px;
+        overflow: hidden;
+    }
+
+    .page-investment .section-timeline {
+        padding: 85px 0 90px;
+    }
+
+    .page-investment .section-results {
+        padding: 85px 0 90px;
+    }
+
+    .page-investment .section-final-cta p {
+        margin-bottom: 30px;
+    }
+
+    .page-investment .section-final-cta .container {
+        padding: 85px 0 90px;
+    }
+}
+
+/* ========== PAGE: ERBANLAGE-BERATUNG ========== */
+
+/* ============================================================
+   Erbanlage-Beratung page fidelity overrides
+   Source-matched to original Divi export (page-id 89047)
+   ============================================================ */
+
+.page-erbanlage {
+    background: #ffffff;
+}
+
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+.page-erbanlage .hero.hero--erbanlage {
+    background-position: center bottom;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7439_prev.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.page-erbanlage .hero.hero--erbanlage::after {
+    display: none;
+}
+
+.page-erbanlage .hero--erbanlage .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-erbanlage .hero--erbanlage .hero-text {
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-erbanlage .hero--erbanlage .hero-text h1 {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 0 0 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.page-erbanlage .hero--erbanlage .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-erbanlage .hero--erbanlage .hero-subtitle {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 24px;
+}
+
+.page-erbanlage .hero--erbanlage .hero-text>div[style*="text-align"] {
+    width: 100%;
+    text-align: center;
+}
+
+.page-erbanlage .hero--erbanlage .hero-images {
+    display: none;
+}
+
+/* --- Shared dark button (.et_pb_button_1/2/3) --- */
+.page-erbanlage .btn.btn--dark {
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    background-color: #191919;
+    padding: 13px 50px 14px;
+}
+
+.page-erbanlage .btn.btn--dark:hover {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+}
+
+/* --- Section 1 (.et_pb_section_1) --- */
+.page-erbanlage .section-responsibility {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-erbanlage .section-responsibility .container--xl {
+    width: 90%;
+    max-width: 1400px;
+}
+
+.page-erbanlage .responsibility-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.page-erbanlage .responsibility-top__main {
+    flex: 1;
+    min-width: 0;
+}
+
+.page-erbanlage .responsibility-top__main h2 {
+    color: #191919;
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    margin: 0 0 20px;
+}
+
+.page-erbanlage .responsibility-top__main h2 strong {
+    font-weight: 700;
+}
+
+.page-erbanlage .responsibility-top__main p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin: 0;
+}
+
+.page-erbanlage .responsibility-top__side {
+    flex-shrink: 0;
+}
+
+.page-erbanlage .responsibility-top__side .btn {
+    white-space: nowrap;
+}
+
+.page-erbanlage .responsibility-bottom {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.page-erbanlage .responsibility-bottom__image {
+    flex: 0 0 42%;
+    min-width: 0;
+}
+
+.page-erbanlage .responsibility-bottom__content {
+    flex: 1;
+    min-width: 0;
+    padding: 50px 0;
+}
+
+.page-erbanlage .responsibility-bottom__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px 16px 8vw 16px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+.page-erbanlage .responsibility-bottom__image:hover img {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+.page-erbanlage .responsibility-lead {
+    color: #191919;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.6em;
+    margin: 0 0 60px;
+}
+
+.page-erbanlage .blurb {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.page-erbanlage .blurb-icon {
+    flex-shrink: 0;
+    font-family: ETmodules, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    width: 32px;
+    margin-top: -4px;
+}
+
+.page-erbanlage .blurb-icon--triangle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+.page-erbanlage .responsibility-bottom .blurb:hover .blurb-icon--triangle {
+    transform: scale(1.1);
+    color: #5a9b97;
+}
+
+.page-erbanlage .blurb-icon--triangle i {
+    font-size: inherit;
+}
+
+.page-erbanlage .responsibility-bottom .blurb {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-bottom: 24px;
+    align-items: center;
+    padding: 12px 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.page-erbanlage .responsibility-bottom .blurb:hover {
+    background-color: rgba(144, 180, 178, 0.08);
+}
+.page-erbanlage .responsibility-bottom .blurb:hover .blurb-content p {
+    color: #333;
+}
+
+.page-erbanlage .responsibility-bottom .blurb:last-of-type {
+    margin-bottom: 28px;
+}
+
+.page-erbanlage .responsibility-bottom .blurb .blurb-content p {
+    margin: 0;
+    color: #666666;
+}
+
+.page-erbanlage .responsibility-note {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 1.65em;
+    letter-spacing: 0.01em;
+    color: #2d6b70;
+    margin: 60px 0 0;
+    padding: 28px 32px 28px 36px;
+    background: linear-gradient(135deg, rgba(144, 180, 178, 0.07) 0%, rgba(144, 180, 178, 0.02) 100%);
+    border-radius: 0 16px 16px 0;
+    border-left: 4px solid #5a9b97;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.35s ease, background 0.35s ease;
+}
+.page-erbanlage .responsibility-note:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(144, 180, 178, 0.15);
+    background: linear-gradient(135deg, rgba(144, 180, 178, 0.1) 0%, rgba(144, 180, 178, 0.04) 100%);
+}
+.page-erbanlage .responsibility-note strong {
+    font-weight: 700;
+    color: #1a5358;
+}
+
+.page-erbanlage .section-erbe-timeline .section-heading h2,
+.page-erbanlage .section-new-phase h2,
+.page-erbanlage .section-outcomes .section-heading h2,
+.page-erbanlage .section-target-erbe h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+/* --- Section 2 (.et_pb_section_2 + tmdivi timeline) --- */
+.page-erbanlage .section-erbe-timeline {
+    background-color: #f2f2f2;
+    padding: 115px 0 120px;
+}
+
+.page-erbanlage .section-erbe-timeline .container--xl {
+    width: 90%;
+    max-width: 1400px;
+}
+
+.page-erbanlage .section-erbe-timeline .section-heading {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.page-erbanlage .section-erbe-timeline .section-heading h2 {
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-erbanlage .section-erbe-timeline .section-heading p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    max-width: none;
+}
+
+/* Timeline wie Immobilienseite: vertikale Linie links, nummerierte Kreise, Karten rechts */
+.page-erbanlage .section-erbe-timeline .timeline--vertical {
+    position: relative;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-accent);
+    z-index: 0;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 48px;
+    padding-left: 100px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item::before {
+    display: none;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__number {
+    position: absolute;
+    left: 28px;
+    top: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--color-primary);
+    background: var(--color-light-bg);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(144, 180, 178, 0.4), 0 0 40px rgba(144, 180, 178, 0.2), 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    padding: 28px 32px;
+    background: var(--color-card-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(144, 180, 178, 0.15);
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth);
+}
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 20px 20px 0 0;
+}
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card:hover::before {
+    opacity: 1;
+}
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 24px rgba(144, 180, 178, 0.15);
+    border-color: rgba(144, 180, 178, 0.35);
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: var(--color-accent);
+    background: rgba(144, 180, 178, 0.1);
+    border-radius: 12px;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-teal);
+    margin: 0 0 12px;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0 0 12px;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 12px;
+}
+
+.page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card li {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+/* --- Section 3 (wie Adrian's Fall auf Immobilienseite) --- */
+.page-erbanlage .section-new-phase {
+    background: #ffffff;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page-erbanlage .section-new-phase .container.container--wide {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}
+
+.page-erbanlage .new-phase-wrap {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 60vh;
+}
+
+.page-erbanlage .new-phase-media {
+    min-height: 60vh;
+}
+
+.page-erbanlage .new-phase-img-wrapper {
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+    height: 100%;
+    min-height: 60vh;
+    padding: 0;
+}
+
+.page-erbanlage .new-phase-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 10vw 0;
+}
+
+.page-erbanlage .new-phase-content {
+    position: relative;
+    border-radius: 32px;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+.page-erbanlage .new-phase-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 32px 32px 0 0;
+}
+.page-erbanlage .new-phase-content:hover::before {
+    opacity: 1;
+}
+.page-erbanlage .new-phase-content:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-erbanlage .new-phase-heading {
+    margin: 0 0 20px;
+    color: #191919;
+}
+
+.page-erbanlage .new-phase-heading strong {
+    font-weight: 700;
+}
+
+.page-erbanlage .new-phase-text {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.page-erbanlage .section-new-phase h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.page-erbanlage .section-new-phase p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+    margin: 0 0 75px;
+}
+
+.page-erbanlage .section-new-phase .new-phase-content p.new-phase-text {
+    margin-bottom: 40px;
+}
+
+.page-erbanlage .section-new-phase .blurb {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+.page-erbanlage .section-new-phase .blurb .blurb-content p {
+    margin: 0;
+    color: #191919;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.page-erbanlage .section-new-phase .btn {
+    margin-top: 40px;
+}
+
+/* --- Section 4 (.et_pb_section_4 + dsm flipbox) --- */
+.page-erbanlage .section-outcomes {
+    background-color: #f2f2f2;
+    padding: 100px 0;
+}
+
+.page-erbanlage .section-outcomes .container--xl {
+    width: 90%;
+    max-width: 1400px;
+}
+
+.page-erbanlage .section-outcomes .section-heading {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.page-erbanlage .section-outcomes .section-heading h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.page-erbanlage .section-outcomes .section-heading p {
+    color: #191919;
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.6em;
+    margin: 0;
+    max-width: none;
+}
+
+.page-erbanlage .outcomes-text {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+    margin: 40px 0;
+    max-width: none;
+}
+
+.page-erbanlage .flipbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.page-erbanlage .flip-box {
+    background: transparent;
+    border-radius: 0;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.page-erbanlage .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.page-erbanlage .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.page-erbanlage .flip-box-front,
+.page-erbanlage .flip-box-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    background-color: #043c43;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.48) 99%);
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.page-erbanlage .flip-box-front::before,
+.page-erbanlage .flip-box-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+}
+.page-erbanlage .flip-box:hover .flip-box-front::before,
+.page-erbanlage .flip-box:hover .flip-box-back::before {
+    opacity: 1;
+}
+
+.page-erbanlage .flip-box:nth-child(1) .flip-box-front,
+.page-erbanlage .flip-box:nth-child(1) .flip-box-back,
+.page-erbanlage .flip-box:nth-child(3) .flip-box-front,
+.page-erbanlage .flip-box:nth-child(3) .flip-box-back {
+    border-radius: 10px 10px 5vw 10px;
+}
+
+.page-erbanlage .flip-box:nth-child(2) .flip-box-front,
+.page-erbanlage .flip-box:nth-child(2) .flip-box-back {
+    border-radius: 10px 10px 10px 5vw;
+}
+
+.page-erbanlage .flip-box-front h4 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    line-height: 1.3em;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.page-erbanlage .flip-box-back {
+    transform: rotateY(180deg);
+}
+
+.page-erbanlage .flip-box-back p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.8em;
+    text-align: center;
+    margin: 0;
+}
+
+/* --- Section 5 (.et_pb_section_5) --- */
+.page-erbanlage .section-target-erbe {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-erbanlage .section-target-erbe .container--xl {
+    width: 90%;
+    max-width: 1400px;
+}
+
+.page-erbanlage .two-col--target-erbe {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.page-erbanlage .two-col--target-erbe .col-text {
+    flex: 0 0 60%;
+    min-width: 0;
+}
+
+.page-erbanlage .two-col--target-erbe .col-img {
+    flex: 0 0 40%;
+    min-width: 0;
+}
+
+.page-erbanlage .section-target-erbe h2 {
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-erbanlage .section-target-erbe .target-intro {
+    color: #191919;
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.6em;
+    margin-top: 0;
+    margin-bottom: 75px;
+}
+
+.page-erbanlage .section-target-erbe .blurb {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+.page-erbanlage .section-target-erbe .blurb .blurb-content p {
+    margin: 0;
+    color: #191919;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.page-erbanlage .section-target-erbe .btn {
+    margin-top: 40px;
+}
+
+.page-erbanlage .section-target-erbe .col-img img {
+    width: 100%;
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    margin-top: 0;
+    margin-right: -73px;
+}
+
+/* --- Section 6 (.et_pb_section_6) --- */
+.page-erbanlage .section-erbe-cta {
+    background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.page-erbanlage .section-erbe-cta .container {
+    width: 90%;
+    max-width: 100%;
+    padding: 120px 0;
+}
+
+.page-erbanlage .section-erbe-cta h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-erbanlage .section-erbe-cta p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8em;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.page-erbanlage .section-erbe-cta .btn {
+    color: #ffffff !important;
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 11px 80px 12px;
+}
+
+.page-erbanlage .section-erbe-cta .btn:hover {
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .page-erbanlage .hero.hero--erbanlage {
+        padding: calc(var(--header-height) * 2) 40px;
+    }
+
+    .page-erbanlage .hero--erbanlage .hero-content {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .page-erbanlage .hero--erbanlage .hero-text {
+        display: none;
+    }
+
+    .page-erbanlage .hero--erbanlage .hero-images {
+        width: 100%;
+        display: block !important;
+    }
+
+    .page-erbanlage .hero--erbanlage .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .page-erbanlage .responsibility-top,
+    .page-erbanlage .responsibility-bottom,
+    .page-erbanlage .two-col--target-erbe {
+        flex-direction: column;
+    }
+
+    .page-erbanlage .responsibility-top__main,
+    .page-erbanlage .responsibility-top__side,
+    .page-erbanlage .responsibility-bottom__image,
+    .page-erbanlage .responsibility-bottom__content,
+    .page-erbanlage .two-col--target-erbe .col-text,
+    .page-erbanlage .two-col--target-erbe .col-img {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .page-erbanlage .responsibility-top__side .btn {
+        margin-top: 20px;
+    }
+
+    .page-erbanlage .responsibility-bottom__image img,
+    .page-erbanlage .section-target-erbe .col-img img {
+        margin-top: 70px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .page-erbanlage .responsibility-top__main h2,
+    .page-erbanlage .section-erbe-timeline .section-heading h2,
+    .page-erbanlage .section-new-phase h2,
+    .page-erbanlage .section-outcomes .section-heading h2,
+    .page-erbanlage .section-target-erbe h2,
+    .page-erbanlage .section-erbe-cta h2 {
+        font-size: 36px;
+    }
+
+    .page-erbanlage .responsibility-lead,
+    .page-erbanlage .responsibility-note,
+    .page-erbanlage .section-outcomes .section-heading p,
+    .page-erbanlage .section-target-erbe .target-intro {
+        font-size: 17px;
+    }
+
+    .page-erbanlage .section-erbe-timeline,
+    .page-erbanlage .section-new-phase {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+        padding-top: 115px;
+        padding-bottom: 120px;
+    }
+
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        padding-left: 78px;
+    }
+
+    .page-erbanlage .section-erbe-timeline .timeline--vertical::before {
+        left: 22px;
+    }
+
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__number {
+        left: 22px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .page-erbanlage .new-phase-wrap {
+        display: block;
+        min-height: 0;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .page-erbanlage .new-phase-media {
+        min-height: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .page-erbanlage .new-phase-img-wrapper {
+        min-height: 0;
+        height: auto;
+    }
+
+    .page-erbanlage .new-phase-img,
+    .page-erbanlage .new-phase-media img {
+        height: auto;
+    }
+
+    .page-erbanlage .new-phase-content,
+    .page-erbanlage .new-phase-content:hover {
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+    .page-erbanlage .new-phase-content::before {
+        display: none;
+    }
+
+    .page-erbanlage .flipbox-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-erbanlage .hero.hero--erbanlage {
+        padding: calc(var(--header-height) * 2) 20px;
+    }
+
+    .page-erbanlage .responsibility-top__main h2,
+    .page-erbanlage .section-erbe-timeline .section-heading h2,
+    .page-erbanlage .section-new-phase h2,
+    .page-erbanlage .section-outcomes .section-heading h2,
+    .page-erbanlage .section-target-erbe h2,
+    .page-erbanlage .section-erbe-cta h2 {
+        font-size: 21px;
+    }
+
+    .page-erbanlage .responsibility-lead,
+    .page-erbanlage .responsibility-note,
+    .page-erbanlage .section-outcomes .section-heading p,
+    .page-erbanlage .section-target-erbe .target-intro {
+        font-size: 19px;
+    }
+
+    .page-erbanlage .section-erbe-timeline,
+    .page-erbanlage .section-new-phase {
+        border-radius: 0 0 36px 36px;
+        overflow: hidden;
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item {
+        padding-left: 64px;
+    }
+
+    .page-erbanlage .section-erbe-timeline .timeline--vertical::before {
+        left: 18px;
+    }
+
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__number {
+        left: 18px;
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card {
+        padding: 20px 24px;
+    }
+
+    .page-erbanlage .responsibility-bottom__image img,
+    .page-erbanlage .section-target-erbe .col-img img {
+        margin-top: 55px;
+    }
+
+    .page-erbanlage .section-erbe-cta .container {
+        width: 90%;
+        padding: 90px 0;
+    }
+}
+
+/* ========== PAGE: ALTERSVORSORGE ========== */
+
+/* ============================================================
+   Altersvorsorge-Beratung page fidelity overrides
+   Source-matched to original Divi export (static rebuild)
+   ============================================================ */
+
+.page-altersvorsorge {
+    background: #ffffff;
+}
+
+/* --- Hero: 100vh, nur Hintergrundbild – Verlauf von rechts nach links wie zuvor, rechts abgemildert damit Person gut sichtbar --- */
+.page-altersvorsorge .hero.hero--altersvorsorge {
+    background-position: center bottom;
+    /* Verlauf to left = rechts → links; gleichmäßig, etwas stärker */
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A7478_prev.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.page-altersvorsorge .hero.hero--altersvorsorge::after {
+    display: none;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text {
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text h1 {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 0 0 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-altersvorsorge .hero--altersvorsorge .hero-subtitle {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 24px;
+}
+
+/* Above-the-fold: Inline-Bild ausblenden – nur Hintergrundbild mit Person sichtbar */
+.page-altersvorsorge .hero--altersvorsorge .hero-images {
+    display: none;
+}
+
+/* --- Shared dark-button module style (.et_pb_button_1..14) --- */
+.page-altersvorsorge .section-meaning .btn--dark,
+.page-altersvorsorge .section-workflow .btn--dark,
+.page-altersvorsorge .section-private-vorsorge .btn--dark,
+.page-altersvorsorge .section-favorites .btn--dark,
+.page-altersvorsorge .section-audience .btn--dark,
+.page-altersvorsorge .section-concepts .btn--dark {
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    background-color: #191919;
+    padding: 13px 50px 14px;
+}
+
+.page-altersvorsorge .section-meaning .btn--dark:hover,
+.page-altersvorsorge .section-workflow .btn--dark:hover,
+.page-altersvorsorge .section-private-vorsorge .btn--dark:hover,
+.page-altersvorsorge .section-favorites .btn--dark:hover,
+.page-altersvorsorge .section-audience .btn--dark:hover,
+.page-altersvorsorge .section-concepts .btn--dark:hover {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+}
+
+/* --- Section 1: wie Immobilien-Intro (oberer Abschnitt) --- */
+.page-altersvorsorge .section-meaning {
+    background: #ffffff;
+    padding: 60px 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.page-altersvorsorge .section-meaning .container--wide {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.page-altersvorsorge .section-meaning .two-col--meaning {
+    gap: 56px;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.page-altersvorsorge .section-meaning .col-img {
+    flex: 0 0 38%;
+    min-width: 0;
+    max-width: 42%;
+}
+
+.page-altersvorsorge .section-meaning .col-text {
+    flex: 1 1 0;
+    min-width: 280px;
+}
+
+/* Bild mit Erbanlage-Effekt (abgerundet rechts, Schatten, Hover) */
+.page-altersvorsorge .section-meaning .col-img img {
+    border-radius: 16px 16px 8vw 16px;
+    width: 100%;
+    margin-top: 40px;
+    margin-right: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+.page-altersvorsorge .section-meaning .col-img:hover img {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+.page-altersvorsorge .section-meaning .col-text h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+    line-height: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.page-altersvorsorge .section-meaning .col-text h2 strong {
+    font-weight: 700;
+    color: #191919;
+}
+
+.page-altersvorsorge .section-meaning .col-text p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.page-altersvorsorge .section-meaning .col-text p:first-of-type {
+    margin-top: 20px;
+}
+
+.page-altersvorsorge .section-meaning .col-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+.page-altersvorsorge .section-meaning .btn-section {
+    margin-top: 25px;
+}
+
+/* --- Section 2 (.et_pb_section_2) --- */
+.page-altersvorsorge .section-workflow {
+    background: #f2f2f2;
+    padding: 100px 0;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text {
+    flex: 0 0 50%;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text:first-child {
+    padding-right: 40px;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text:last-child {
+    padding-left: 5px;
+}
+
+.page-altersvorsorge .section-workflow h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+    line-height: 1.2em;
+    margin: 0 0 2px;
+}
+
+.page-altersvorsorge .section-workflow .btn-section {
+    margin-top: 75px;
+}
+
+.page-altersvorsorge .section-workflow .two-col--workflow>.col-text:last-child>p:first-child {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.page-altersvorsorge .section-workflow .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-workflow .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: -2px;
+}
+
+.page-altersvorsorge .section-workflow .blurb-content p {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-workflow .workflow-highlight {
+    font-family: var(--font-heading);
+    font-size: 21px;
+    line-height: 1.4em;
+    color: #266063;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* --- Section 3 (.et_pb_section_3) --- */
+.page-altersvorsorge .section-private-vorsorge {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-altersvorsorge .section-private-vorsorge .two-col--private {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-text {
+    flex: 0 0 52%;
+    padding-right: 25px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-img {
+    flex: 0 0 48%;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-text h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+    line-height: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .lead {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin: 0 0 35px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-text>p:last-of-type {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .btn-section {
+    margin-top: 40px;
+}
+
+.page-altersvorsorge .section-private-vorsorge .col-img img {
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    margin-right: -73px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+.page-altersvorsorge .section-private-vorsorge .col-img:hover img {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+/* --- Section 4 + 8 (.et_pb_section_4 / .et_pb_section_8) --- */
+.page-altersvorsorge .section-gap-cta,
+.page-altersvorsorge .section-final-cta {
+    background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.page-altersvorsorge .section-gap-cta .container,
+.page-altersvorsorge .section-final-cta .container {
+    width: 80%;
+    max-width: 100%;
+    padding: 120px 0;
+}
+
+.page-altersvorsorge .section-gap-cta h2,
+.page-altersvorsorge .section-final-cta h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-gap-cta p,
+.page-altersvorsorge .section-final-cta p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8em;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.page-altersvorsorge .section-gap-cta .btn,
+.page-altersvorsorge .section-final-cta .btn {
+    color: #ffffff !important;
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 11px 80px 12px;
+}
+
+.page-altersvorsorge .section-gap-cta .btn:hover,
+.page-altersvorsorge .section-final-cta .btn:hover {
+    border-color: rgba(255, 255, 255, 0) !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+}
+
+/* --- Section 5 (.et_pb_section_5) --- */
+.page-altersvorsorge .section-favorites {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.page-altersvorsorge .section-favorites .container--wide {
+    width: 100%;
+    max-width: 100%;
+}
+
+.page-altersvorsorge .section-favorites .favorites-heading-row {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.page-altersvorsorge .section-favorites .favorites-title {
+    flex: 0 0 66.666%;
+}
+
+.page-altersvorsorge .section-favorites .favorites-cta {
+    flex: 0 0 33.333%;
+    padding-top: 20px;
+}
+
+.page-altersvorsorge .section-favorites .favorites-title h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+    line-height: 1.2em;
+    margin: 0 0 2px;
+    text-align: left;
+}
+
+.page-altersvorsorge .section-favorites .favorites-title p {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin: 0;
+    text-align: left;
+}
+
+.page-altersvorsorge .section-favorites .favorites-cta .btn {
+    margin-top: 0;
+}
+
+.page-altersvorsorge .section-favorites .tabs-wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.page-altersvorsorge .section-favorites .tabs-img {
+    flex: 0 0 33.333%;
+}
+
+.page-altersvorsorge .section-favorites .tabs-img img {
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    margin-top: 70px;
+    margin-right: -73px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+.page-altersvorsorge .section-favorites .tabs-img:hover img {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+.page-altersvorsorge .section-favorites .tabs-content {
+    flex: 0 0 66.666%;
+    margin-top: 20px;
+}
+
+.page-altersvorsorge .section-favorites .tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 0;
+    border: 0;
+    padding: 0;
+}
+
+.page-altersvorsorge .section-favorites .tab-nav button {
+    background: #90b4b2;
+    color: #ffffff;
+    border: 0;
+    border-radius: var(--radius-button);
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    padding: 8px 20px 9px;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    line-height: 2em;
+    font-weight: 400;
+}
+
+.page-altersvorsorge .section-favorites .tab-nav button.is-active {
+    background: #266063;
+    color: #ffffff;
+    border: 0;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel {
+    background-image: linear-gradient(13deg, #f8f8f8 0%, rgba(255, 255, 255, 0) 72%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 18px -12px rgba(0, 0, 0, 0.1);
+    padding: 24px 28px;
+    color: #191919;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel h4 {
+    color: #266063;
+    font-family: var(--font-heading);
+    font-size: 25px;
+    line-height: 1.4em;
+    margin: 0 0 14px;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #191919;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel ul {
+    list-style: disc;
+    padding-left: 22px;
+    margin: 0 0 16px;
+}
+
+.page-altersvorsorge .section-favorites .tab-panel li {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 2.4em;
+    color: #191919;
+}
+
+/* --- Section 6 (.et_pb_section_6) --- */
+.page-altersvorsorge .section-audience {
+    background: #f2f2f2;
+    padding: 115px 0 120px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.page-altersvorsorge .section-audience .section-heading {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+.page-altersvorsorge .section-audience .section-heading h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.page-altersvorsorge .section-audience .audience-links {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.page-altersvorsorge .section-audience .btn.btn-audience {
+    width: 100%;
+    padding: 8px 20px 9px;
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    background-image: linear-gradient(127deg, #043c43 2%, #266063 100%);
+    text-align: center;
+}
+
+.page-altersvorsorge .section-audience .btn.btn-audience:hover {
+    color: #ffffff !important;
+    letter-spacing: 0;
+    background-color: #90b4b2;
+    background-image: none;
+}
+
+.page-altersvorsorge .section-audience .audience-card {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 60px 40px 40px;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+.page-altersvorsorge .section-audience .audience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 32px 32px 0 0;
+}
+.page-altersvorsorge .section-audience .audience-card:hover::before {
+    opacity: 1;
+}
+.page-altersvorsorge .section-audience .audience-card:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-altersvorsorge .section-audience .audience-card--highlight {
+    background-image: linear-gradient(187deg, rgba(255, 255, 255, 0.43) 1%, rgba(255, 255, 255, 0.92) 60%);
+    border: 1px solid rgba(255, 255, 255, 0.84);
+    box-shadow: 0 12px 18px -9px rgba(0, 0, 0, 0.07);
+}
+
+.page-altersvorsorge .section-audience .audience-card h3 {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    color: #266063;
+    line-height: 1.2em;
+    margin: 0 0 25px;
+}
+
+.page-altersvorsorge .section-audience .audience-card>p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0 0 35px;
+}
+
+.page-altersvorsorge .section-audience .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-audience .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: -2px;
+}
+
+.page-altersvorsorge .section-audience .blurb-content h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 19px;
+    color: #266063;
+    line-height: 1.2em;
+    margin: 0 0 8px;
+}
+
+.page-altersvorsorge .section-audience .blurb-content p {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-audience .audience-grid {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+}
+
+.page-altersvorsorge .section-audience .audience-grid .audience-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-audience .audience-card--large .btn-section,
+.page-altersvorsorge .section-audience #berufseinsteiger .btn-section {
+    margin-top: 35px;
+}
+
+/* --- Section 7 (.et_pb_section_7) --- */
+.page-altersvorsorge .section-concepts {
+    background: #ffffff;
+    padding: 0;
+}
+
+.page-altersvorsorge .section-concepts .concepts-grid {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: stretch;
+    gap: 0;
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-col {
+    overflow: hidden;
+    padding: 40px;
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-wrap {
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-col:hover .concepts-image-wrap {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+}
+
+.page-altersvorsorge .section-concepts .concepts-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px 16px 8vw 16px;
+}
+
+.page-altersvorsorge .section-concepts .concepts-text-col {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 7%;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+.page-altersvorsorge .section-concepts .concepts-text-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 32px 32px 0 0;
+}
+.page-altersvorsorge .section-concepts .concepts-text-col:hover::before {
+    opacity: 1;
+}
+.page-altersvorsorge .section-concepts .concepts-text-col:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-altersvorsorge .section-concepts h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+    line-height: 1.2em;
+    margin: 0 0 20px;
+}
+
+.page-altersvorsorge .section-concepts .concepts-text-col>p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0 0 75px;
+}
+
+.page-altersvorsorge .section-concepts .blurb {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.page-altersvorsorge .section-concepts .blurb-icon {
+    font-family: ETmodules, sans-serif;
+    font-size: 40px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: -4px;
+}
+
+.page-altersvorsorge .section-concepts .blurb-content p {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-altersvorsorge .section-concepts .btn-section {
+    margin-top: 40px;
+}
+
+@media (min-width: 981px) {
+    .page-altersvorsorge .section-concepts .concepts-grid {
+        min-height: 949px;
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .page-altersvorsorge .hero.hero--altersvorsorge {
+        padding: calc(var(--header-height) * 2) 40px;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-content {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-text {
+        display: none;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-images {
+        width: 100%;
+        display: block;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-altersvorsorge .section-meaning .two-col--meaning,
+    .page-altersvorsorge .section-workflow .two-col--workflow,
+    .page-altersvorsorge .section-private-vorsorge .two-col--private,
+    .page-altersvorsorge .section-favorites .tabs-wrap,
+    .page-altersvorsorge .section-concepts .concepts-grid {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .page-altersvorsorge .section-meaning .col-img,
+    .page-altersvorsorge .section-meaning .col-text,
+    .page-altersvorsorge .section-workflow .two-col--workflow>.col-text,
+    .page-altersvorsorge .section-private-vorsorge .col-text,
+    .page-altersvorsorge .section-private-vorsorge .col-img,
+    .page-altersvorsorge .section-favorites .tabs-img,
+    .page-altersvorsorge .section-favorites .tabs-content,
+    .page-altersvorsorge .section-concepts .concepts-image-col,
+    .page-altersvorsorge .section-concepts .concepts-text-col {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .page-altersvorsorge .section-meaning .col-img img,
+    .page-altersvorsorge .section-private-vorsorge .col-img img,
+    .page-altersvorsorge .section-favorites .tabs-img img {
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text h2 {
+        margin-top: 0;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:first-of-type {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:last-of-type {
+        margin-bottom: 52px;
+    }
+
+    .page-altersvorsorge .section-meaning {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .two-col--private {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text {
+        padding-right: 0;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text h2 {
+        margin-top: 0;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text>p:last-of-type {
+        margin-top: 0;
+        margin-bottom: 52px;
+    }
+
+    .page-altersvorsorge .section-favorites .favorites-heading-row {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-favorites .favorites-title,
+    .page-altersvorsorge .section-favorites .favorites-cta {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .page-altersvorsorge .section-favorites .tabs-img {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-favorites .tabs-content {
+        margin-top: 0;
+    }
+
+    .page-altersvorsorge .section-favorites .tabs-wrap {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text h2,
+    .page-altersvorsorge .section-workflow h2,
+    .page-altersvorsorge .section-private-vorsorge .col-text h2,
+    .page-altersvorsorge .section-favorites .favorites-title h2,
+    .page-altersvorsorge .section-audience .section-heading h2,
+    .page-altersvorsorge .section-concepts .concepts-text-col h2,
+    .page-altersvorsorge .section-gap-cta h2,
+    .page-altersvorsorge .section-final-cta h2 {
+        font-size: 36px;
+    }
+
+    .page-altersvorsorge .section-workflow .workflow-highlight,
+    .page-altersvorsorge .section-private-vorsorge .lead,
+    .page-altersvorsorge .section-favorites .favorites-title p {
+        font-size: 17px;
+    }
+
+    .page-altersvorsorge .section-concepts .concepts-text-col>p {
+        margin-bottom: 52px;
+    }
+
+    .page-altersvorsorge .section-audience {
+        border-radius: 0 0 96px 96px;
+        padding: 115px 0 120px;
+    }
+
+    .page-altersvorsorge .section-concepts {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+        padding: 115px 0 120px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-links {
+        max-width: 440px;
+        grid-template-columns: 1fr;
+        margin-bottom: 58px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-card,
+    .page-altersvorsorge .section-audience .audience-grid,
+    .page-altersvorsorge .section-concepts .concepts-grid {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-altersvorsorge .section-audience .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-altersvorsorge .section-concepts .concepts-image-col {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-altersvorsorge .hero.hero--altersvorsorge {
+        padding: calc(var(--header-height) * 2) 20px !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-altersvorsorge .section-meaning .col-img img,
+    .page-altersvorsorge .section-private-vorsorge .col-img img,
+    .page-altersvorsorge .section-favorites .tabs-img img {
+        margin-top: 55px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text h2,
+    .page-altersvorsorge .section-workflow h2,
+    .page-altersvorsorge .section-private-vorsorge .col-text h2,
+    .page-altersvorsorge .section-favorites .favorites-title h2,
+    .page-altersvorsorge .section-audience .section-heading h2,
+    .page-altersvorsorge .section-concepts .concepts-text-col h2,
+    .page-altersvorsorge .section-gap-cta h2,
+    .page-altersvorsorge .section-final-cta h2 {
+        font-size: 21px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-card h3 {
+        font-size: 20px;
+    }
+
+    .page-altersvorsorge .section-workflow .workflow-highlight,
+    .page-altersvorsorge .section-private-vorsorge .lead,
+    .page-altersvorsorge .section-favorites .favorites-title p {
+        font-size: 19px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:first-of-type {
+        margin-bottom: 20px;
+    }
+
+    .page-altersvorsorge .section-meaning .col-text p:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-private-vorsorge .col-text>p:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-gap-cta p,
+    .page-altersvorsorge .section-final-cta p {
+        margin-bottom: 30px;
+    }
+
+    .page-altersvorsorge .section-audience {
+        border-radius: 0 0 36px 36px;
+        padding: 85px 0 90px;
+    }
+
+    .page-altersvorsorge .section-concepts {
+        border-radius: 0 0 36px 36px;
+        padding: 85px 0 90px;
+    }
+
+    .page-altersvorsorge .section-audience .audience-card,
+    .page-altersvorsorge .section-concepts .concepts-text-col,
+    .page-altersvorsorge .section-concepts .concepts-image-col {
+        padding: 40px 24px 30px;
+    }
+}
+
+/* ========== PAGE: FINORA-PHILOSOPHIE ========== */
+
+/* ============================================================
+   Finora-Philosophie page fidelity overrides
+   Source-aligned with original Divi export
+   ============================================================ */
+
+.page-philosophie {
+    background: #ffffff;
+}
+
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+.page-philosophie .hero.hero--philosophie {
+    background-position: center bottom;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7304_prev-e1765975803707-1.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.page-philosophie .hero.hero--philosophie::after {
+    display: none;
+}
+
+.page-philosophie .hero--philosophie .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-philosophie .hero--philosophie .hero-text {
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-philosophie .hero--philosophie .hero-text h1 {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    color: #ffffff !important;
+    line-height: 1.03em;
+    text-align: center;
+    margin: 0 0 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.page-philosophie .hero--philosophie .hero-text h1 strong {
+    font-weight: 700;
+}
+
+.page-philosophie .hero--philosophie .hero-subtitle {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: #ffffff !important;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 24px;
+}
+
+.page-philosophie .hero--philosophie .hero-text>div[style*="text-align"] {
+    width: 100%;
+    text-align: center;
+}
+
+.page-philosophie .hero--philosophie .hero-images {
+    display: none;
+}
+
+/* --- Section 1 (.et_pb_section_1) --- */
+.page-philosophie .philosophie-pillars {
+    border-radius: 10vw 0 0 0;
+    overflow: hidden;
+    padding: 115px 0 120px;
+    background-color: #f2f2f2;
+}
+
+.page-philosophie .philosophie-pillars .pillars-title {
+    margin-bottom: 58px;
+}
+
+.page-philosophie .philosophie-pillars .pillars-title h2 {
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+}
+
+.page-philosophie .philosophie-pillars .pillar-card {
+    position: relative;
+    border-radius: 32px;
+    padding: 40px;
+    padding-bottom: 100px;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+.page-philosophie .philosophie-pillars .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 32px 32px 0 0;
+}
+.page-philosophie .philosophie-pillars .pillar-card:hover::before {
+    opacity: 1;
+}
+.page-philosophie .philosophie-pillars .pillar-card:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-philosophie .philosophie-pillars .card-icon {
+    margin-bottom: 30px;
+    max-width: 130px;
+}
+
+.page-philosophie .philosophie-pillars .pillar-card h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.page-philosophie .philosophie-pillars .card-desc {
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-bottom: 75px;
+}
+
+.page-philosophie .philosophie-pillars .btn {
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    background-color: #191919;
+    padding: 11px 80px 12px;
+}
+
+.page-philosophie .philosophie-pillars .btn:hover {
+    background-color: #90b4b2;
+}
+
+/* --- Shared section text --- */
+.page-philosophie .section-subtitle {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin: 0;
+}
+
+.page-philosophie .section-body {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.page-philosophie .section-body p {
+    margin-bottom: 20px;
+}
+
+.page-philosophie .section-body p:last-child {
+    margin-bottom: 0;
+}
+
+.page-philosophie .btn.btn--dark {
+    color: #ffffff !important;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    background-color: #191919;
+    padding: 13px 50px 14px;
+}
+
+.page-philosophie .btn.btn--dark:hover {
+    color: #ffffff !important;
+    background-color: #90b4b2;
+}
+
+/* --- Section 2 (.et_pb_section_2) --- */
+.page-philosophie .philosophie-basis-detail {
+    padding: 115px 0;
+    margin: 0;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 1%, rgba(255, 255, 255, 0.9) 100%);
+    position: relative;
+    z-index: 93;
+}
+
+.page-philosophie .two-col--basis {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-philosophie .two-col--basis .col-text,
+.page-philosophie .two-col--basis .col-img {
+    flex: 0 0 50%;
+    min-width: 0;
+    padding: 0 20px;
+}
+
+.page-philosophie .two-col--basis h2,
+.page-philosophie .two-col--invest-intro h2,
+.page-philosophie .two-col--tax-intro h2,
+.page-philosophie .invest-explainer h2,
+.page-philosophie .section-heading--left h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #191919;
+}
+
+.page-philosophie .two-col--basis h2,
+.page-philosophie .two-col--invest-intro h2,
+.page-philosophie .two-col--tax-intro h2 {
+    margin-top: 40px;
+    margin-bottom: 2px;
+}
+
+.page-philosophie .two-col--basis .feature-image,
+.page-philosophie .two-col--invest-intro .feature-image,
+.page-philosophie .two-col--tax-intro .feature-image {
+    border-radius: 16px 16px 8vw 16px;
+    overflow: hidden;
+    display: block;
+}
+
+.page-philosophie .two-col--basis .feature-image {
+    max-width: 659px;
+    margin-top: 0;
+    margin-right: -73px;
+    margin-left: auto;
+}
+
+.page-philosophie .two-col--basis .blurb {
+    margin-bottom: 40px;
+}
+
+/* --- Audience card sections (.et_pb_section_3/.6/.9) --- */
+.page-philosophie .philosophie-audience {
+    padding: 115px 0 120px;
+    background-color: #f2f2f2;
+}
+
+.page-philosophie .philosophie-audience .section-heading {
+    text-align: center;
+    margin-bottom: 58px;
+}
+
+.page-philosophie .philosophie-audience .section-heading h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #191919;
+    text-align: center;
+}
+
+.page-philosophie .audience-grid {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    gap: 40px;
+}
+
+.page-philosophie .audience-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-philosophie .audience-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.page-philosophie .audience-card {
+    background-color: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 60px 40px 40px;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.page-philosophie .audience-card {
+    position: relative;
+}
+.page-philosophie .audience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 32px 32px 0 0;
+}
+.page-philosophie .audience-card:hover::before {
+    opacity: 1;
+}
+.page-philosophie .audience-card:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-philosophie .audience-card h3 {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    line-height: 1.2em;
+    color: #191919;
+    margin-bottom: 25px;
+}
+
+.page-philosophie .audience-card p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0 0 75px;
+}
+
+.page-philosophie .audience-card .btn {
+    margin-top: 0;
+}
+
+.page-philosophie .audience-card--empty {
+    background: transparent;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+/* --- Break sections (.et_pb_section_4/.7/.10) --- */
+.page-philosophie .philosophie-break {
+    background-image: linear-gradient(180deg, rgba(43, 135, 218, 0) 0%, rgba(0, 0, 0, 0.61) 100%);
+    background-color: #043c43;
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+.page-philosophie .philosophie-break .section-heading {
+    text-align: center;
+}
+
+.page-philosophie .philosophie-break .section-heading h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 40px);
+    line-height: 1.2em;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.page-philosophie .philosophie-break .section-heading p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff;
+    margin: 0 auto 20px;
+    max-width: 1200px;
+}
+
+.page-philosophie .philosophie-break .section-heading .btn {
+    margin-top: 40px;
+}
+
+/* --- Section 5 (.et_pb_section_5) --- */
+.page-philosophie .philosophie-invest-detail {
+    padding: 115px 0;
+    background-color: #ffffff;
+}
+
+.page-philosophie .two-col--invest-intro,
+.page-philosophie .two-col--tax-intro {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.page-philosophie .two-col--invest-intro .col-img,
+.page-philosophie .two-col--tax-intro .col-img {
+    flex: 0 0 40%;
+    min-width: 0;
+    padding: 0 20px;
+}
+
+.page-philosophie .two-col--invest-intro .col-text,
+.page-philosophie .two-col--tax-intro .col-text {
+    flex: 0 0 60%;
+    min-width: 0;
+    padding: 0 20px;
+}
+
+.page-philosophie .two-col--invest-intro .feature-image,
+.page-philosophie .two-col--tax-intro .feature-image {
+    width: 100%;
+    max-width: 100% !important;
+    margin-top: 0;
+    margin-right: -73px;
+    margin-left: 0;
+}
+
+.page-philosophie .invest-explainer {
+    margin-top: 40px;
+}
+
+.page-philosophie .invest-explainer h2 {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.page-philosophie .invest-explainer p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.page-philosophie .invest-explainer h3,
+.page-philosophie .two-col--tax-intro h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5em;
+    color: #266063;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.page-philosophie .megatrend-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.page-philosophie .flip-card {
+    min-height: 320px;
+    perspective: 1000px;
+}
+
+.page-philosophie .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.35s var(--ease-out-expo);
+}
+
+.page-philosophie .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.page-philosophie .flip-card-front,
+.page-philosophie .flip-card-back {
+    position: absolute;
+    inset: 0;
+    padding: 20px 30px;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.48) 99%);
+    background-color: #043c43;
+}
+
+.page-philosophie .flip-card-front {
+    border-radius: 10px 10px 5vw 10px;
+}
+
+.page-philosophie .flip-card-back {
+    border-radius: 10px 10px 10px 5vw;
+    transform: rotateY(180deg);
+}
+
+.page-philosophie .flip-card-front h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.page-philosophie .flip-card-back p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.page-philosophie .invest-outro p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 40px 0;
+}
+
+/* --- Section 8 (.et_pb_section_8) --- */
+.page-philosophie .philosophie-tax-detail {
+    padding: 115px 0 120px;
+    background-color: #ffffff;
+}
+
+.page-philosophie .philosophie-tax-detail .blurb--single {
+    margin-bottom: 0;
+}
+
+.page-philosophie .philosophie-tax-detail .blurb--single .blurb-content p {
+    margin: 0;
+}
+
+.page-philosophie .philosophie-tax-detail .section-subtitle--dense {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.page-philosophie .section-heading--left {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.page-philosophie .section-heading--left h2 {
+    margin: 0;
+}
+
+.page-philosophie .steps-grid {
+    width: 90%;
+    max-width: 1290px;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.page-philosophie .step-card {
+    background-color: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 40px;
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.page-philosophie .step-card {
+    position: relative;
+}
+.page-philosophie .step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    border-radius: 32px 32px 0 0;
+}
+.page-philosophie .step-card:hover::before {
+    opacity: 1;
+}
+.page-philosophie .step-card:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.page-philosophie .step-icon {
+    display: block;
+    text-align: center;
+    font-family: ETmodules;
+    font-weight: 400;
+    font-size: 100px;
+    color: #90b4b2;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+
+.page-philosophie .step-icon--fa {
+    font-family: inherit;
+}
+
+.page-philosophie .step-icon--fa i {
+    font-size: 88px;
+    color: #90b4b2;
+}
+
+.page-philosophie .step-card h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 25px;
+    color: #043c43;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.page-philosophie .step-card p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+/* --- Section 11 (.et_pb_section_11) --- */
+.page-philosophie .section-testimonials {
+    padding: 115px 0 120px;
+    background-color: #f2f2f2;
+}
+
+.page-philosophie .section-testimonials .testimonials-title {
+    margin-bottom: 58px;
+}
+
+.page-philosophie .section-testimonials .testimonials-title h2 {
+    font-size: clamp(22px, 2.8vw, 40px);
+    color: #191919;
+}
+
+.page-philosophie .section-testimonials .testimonials-subtitle {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #191919;
+    margin: 0;
+}
+
+.page-philosophie .section-testimonials .testimonial-text {
+    margin-bottom: 75px;
+}
+
+/* --- Section 12 (.et_pb_section_12) --- */
+.page-philosophie .section-faq .faq-left {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-radius: 0 0 10vw 0;
+    overflow: hidden;
+}
+
+.page-philosophie .section-faq .faq-right {
+    padding: 5% 4%;
+}
+
+.page-philosophie .section-faq .faq-right h2 {
+    margin-bottom: 20px;
+    color: #191919;
+}
+
+/* --- Responsive parity --- */
+@media (max-width: 980px) {
+    .page-philosophie .hero.hero--philosophie {
+        padding: calc(var(--header-height) * 2) 40px;
+    }
+
+    .page-philosophie .hero--philosophie .hero-content {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .page-philosophie .hero--philosophie .hero-text {
+        display: none;
+    }
+
+    .page-philosophie .hero--philosophie .hero-images {
+        width: 100%;
+    }
+
+    .page-philosophie .hero--philosophie .hero-images.hero-images--single .hero-img-main {
+        max-width: 75%;
+    }
+
+    .page-philosophie .mobile-menu-toggle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .page-philosophie .mobile-menu-toggle span {
+        display: none;
+    }
+
+    .page-philosophie .mobile-menu-toggle::before {
+        content: "a";
+        font-family: ETmodules;
+        font-size: 30px;
+        line-height: 1;
+        color: #ffffff;
+        display: block;
+        transform: translateY(-2px);
+    }
+
+    .page-philosophie .philosophie-pillars,
+    .page-philosophie .philosophie-basis-detail,
+    .page-philosophie .philosophie-audience--basis,
+    .page-philosophie .philosophie-audience--invest,
+    .page-philosophie .philosophie-audience--tax,
+    .page-philosophie .section-testimonials {
+        border-radius: 0 0 96px 96px;
+        overflow: hidden;
+    }
+
+    .page-philosophie .philosophie-pillars,
+    .page-philosophie .philosophie-audience--basis,
+    .page-philosophie .philosophie-audience--invest,
+    .page-philosophie .philosophie-audience--tax,
+    .page-philosophie .section-testimonials {
+        padding: 115px 0 120px;
+    }
+
+    .page-philosophie .philosophie-basis-detail {
+        padding: 115px 0;
+    }
+
+    .page-philosophie .philosophie-break {
+        padding: 120px 0 100px;
+    }
+
+    .page-philosophie .philosophie-break .section-heading h2,
+    .page-philosophie .philosophie-pillars .pillars-title h2,
+    .page-philosophie .two-col--basis h2,
+    .page-philosophie .two-col--invest-intro h2,
+    .page-philosophie .invest-explainer h2,
+    .page-philosophie .two-col--tax-intro h2,
+    .page-philosophie .section-heading--left h2,
+    .page-philosophie .section-testimonials .testimonials-title h2,
+    .page-philosophie .section-faq .faq-right h2,
+    .page-philosophie .philosophie-audience .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .page-philosophie .philosophie-break .section-heading h2 {
+        margin-top: 0;
+        margin-bottom: 2px;
+    }
+
+    .page-philosophie .philosophie-break .section-heading .btn {
+        margin-top: 24px;
+    }
+
+    .page-philosophie .philosophie-pillars .container--wide,
+    .page-philosophie .philosophie-basis-detail .container--xl,
+    .page-philosophie .philosophie-invest-detail .container--xl,
+    .page-philosophie .philosophie-tax-detail .container--xl,
+    .page-philosophie .philosophie-audience .container--wide,
+    .page-philosophie .section-testimonials .container--wide {
+        width: 90%;
+        max-width: 440px;
+    }
+
+    .page-philosophie .two-col--basis,
+    .page-philosophie .two-col--invest-intro,
+    .page-philosophie .two-col--tax-intro {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .page-philosophie .two-col--basis .col-text,
+    .page-philosophie .two-col--basis .col-img,
+    .page-philosophie .two-col--invest-intro .col-img,
+    .page-philosophie .two-col--invest-intro .col-text,
+    .page-philosophie .two-col--tax-intro .col-img,
+    .page-philosophie .two-col--tax-intro .col-text {
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .page-philosophie .two-col--basis .feature-image,
+    .page-philosophie .two-col--invest-intro .feature-image,
+    .page-philosophie .two-col--tax-intro .feature-image {
+        max-width: 100%;
+        margin-top: 70px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .page-philosophie .audience-grid,
+    .page-philosophie .audience-grid--2,
+    .page-philosophie .audience-grid--3,
+    .page-philosophie .megatrend-grid,
+    .page-philosophie .steps-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .page-philosophie .steps-grid {
+        margin-bottom: 120px;
+    }
+
+    .page-philosophie .audience-card--empty {
+        display: none;
+    }
+
+    .page-philosophie .audience-card h3,
+    .page-philosophie .step-card h4,
+    .page-philosophie .philosophie-pillars .pillar-card h3 {
+        font-size: 26px;
+    }
+
+    .page-philosophie .section-subtitle,
+    .page-philosophie .section-testimonials .testimonials-subtitle {
+        font-size: 17px;
+    }
+
+    .page-philosophie .section-faq .row {
+        flex-direction: column;
+    }
+
+    .page-philosophie .section-faq .faq-left,
+    .page-philosophie .section-faq .faq-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-philosophie .hero.hero--philosophie {
+        padding: calc(var(--header-height) * 2) 20px;
+    }
+
+    .page-philosophie .philosophie-pillars,
+    .page-philosophie .philosophie-basis-detail,
+    .page-philosophie .philosophie-audience--basis,
+    .page-philosophie .philosophie-audience--invest,
+    .page-philosophie .philosophie-audience--tax,
+    .page-philosophie .section-testimonials {
+        border-radius: 0 0 36px 36px;
+        overflow: hidden;
+    }
+
+    .page-philosophie .philosophie-pillars,
+    .page-philosophie .philosophie-audience--basis,
+    .page-philosophie .philosophie-audience--invest,
+    .page-philosophie .philosophie-audience--tax,
+    .page-philosophie .section-testimonials {
+        padding: 85px 0 90px;
+    }
+
+    .page-philosophie .philosophie-basis-detail {
+        padding: 90px 0;
+    }
+
+    .page-philosophie .philosophie-break {
+        padding: 20px 0 80px;
+    }
+
+    .page-philosophie .two-col--basis .feature-image,
+    .page-philosophie .two-col--invest-intro .feature-image,
+    .page-philosophie .two-col--tax-intro .feature-image {
+        margin-top: 55px;
+    }
+
+    .page-philosophie .philosophie-break .section-heading h2,
+    .page-philosophie .philosophie-pillars .pillars-title h2,
+    .page-philosophie .two-col--basis h2,
+    .page-philosophie .two-col--invest-intro h2,
+    .page-philosophie .invest-explainer h2,
+    .page-philosophie .two-col--tax-intro h2,
+    .page-philosophie .section-heading--left h2,
+    .page-philosophie .section-testimonials .testimonials-title h2,
+    .page-philosophie .section-faq .faq-right h2,
+    .page-philosophie .philosophie-audience .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .page-philosophie .audience-card h3,
+    .page-philosophie .step-card h4,
+    .page-philosophie .philosophie-pillars .pillar-card h3 {
+        font-size: 20px;
+    }
+
+    .page-philosophie .section-subtitle,
+    .page-philosophie .section-testimonials .testimonials-subtitle {
+        font-size: 19px;
+    }
+
+    .page-philosophie .steps-grid {
+        margin-bottom: 90px;
+    }
+
+    .page-philosophie .step-icon {
+        font-size: 72px;
+        margin-bottom: 30px;
+    }
+
+    .page-philosophie .step-icon--fa i {
+        font-size: 62px;
+    }
+}
