@@ -7,6 +7,7 @@
     <title>Finora-Philosophie | Finora Investment Studio</title>
     <meta name="description"
         content="Die Finora-Philosophie basiert auf drei S&auml;ulen: Basis-Strategie, flexibler Verm&ouml;gensaufbau und Reduzierung deiner Steuerlast.">
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -106,8 +107,8 @@
         <div class="container--wide pillars-title anim anim--fade">
             <h2>Drei S&auml;ulen. <strong>Ein klares Ziel.</strong></h2>
         </div>
-        <div class="container--wide">
-            <div class="pillars-grid">
+        <div class="container--xl">
+            <div class="pillars-grid process-card-wrap">
                 <div class="pillar-card anim" style="animation-delay:0ms">
                     <img class="card-icon" src="assets/images/philosophie/BasisStrategie.svg" alt="Basis-Strategie"
                         width="512" height="512">
@@ -291,6 +292,7 @@
                 <article class="flip-card anim">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
+                            <span class="flip-card-icon" aria-hidden="true"><i class="fas fa-microchip"></i></span>
                             <h4>1. Technologie &amp; Digitalisierung</h4>
                         </div>
                         <div class="flip-card-back">
@@ -303,6 +305,7 @@
                 <article class="flip-card anim" style="animation-delay:100ms">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
+                            <span class="flip-card-icon" aria-hidden="true"><i class="fas fa-city"></i></span>
                             <h4>2. Urbanisierung</h4>
                         </div>
                         <div class="flip-card-back">
@@ -314,6 +317,7 @@
                 <article class="flip-card anim" style="animation-delay:200ms">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
+                            <span class="flip-card-icon" aria-hidden="true"><i class="fas fa-leaf"></i></span>
                             <h4>3. Ressourcenknappheit</h4>
                         </div>
                         <div class="flip-card-back">
@@ -326,6 +330,7 @@
                 <article class="flip-card anim" style="animation-delay:300ms">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
+                            <span class="flip-card-icon" aria-hidden="true"><i class="fas fa-people-group"></i></span>
                             <h4>4. Demografischer &amp; sozialer Wandel</h4>
                         </div>
                         <div class="flip-card-back">
@@ -533,36 +538,99 @@
             <h2>Erfahrungen, die <strong>f&uuml;r sich sprechen.</strong></h2>
             <p class="testimonials-subtitle"></p>
         </div>
-
-        <div class="container--wide">
-            <div class="testimonials-grid">
-                <div class="testimonial-card anim">
-                    <span class="quote-icon">|</span>
-                    <h3>&Eacute;lisa L.</h3>
-                    <p class="testimonial-text">&bdquo;Kevin ist ein hervorragender Berater! Er kennt sich bestens mit
-                        dem deutschen Finanzsystem aus und hat mir einen individuellen Finanzplan erstellt. Ich kann ihm
-                        jederzeit alle meine Fragen stellen und seine Dienste uneingeschr&auml;nkt empfehlen.&ldquo;</p>
-                    <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+        <div class="testimonials-track" aria-label="Kundenstimmen Karussell">
+            <div class="testimonials-track-inner">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">&bdquo;Kevin ist ein hervorragender Berater! Er kennt sich bestens mit
+                            dem deutschen Finanzsystem aus und hat mir einen individuellen Finanzplan erstellt. Ich kann ihm
+                            jederzeit alle meine Fragen stellen und seine Dienste uneingeschr&auml;nkt empfehlen.&ldquo;</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">EL</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">&Eacute;lisa L.</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">&bdquo;Freundlich, kompetent, hilfsbereit und auch kurzfristig
+                            erreichbar. Und nat&uuml;rlich spricht er hervorragend Englisch. Ein exzellenter
+                            Finanzberater.&ldquo;</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">SB</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">S.B.</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">&bdquo;Kevin verf&uuml;gt &uuml;ber umfassende Finanzkenntnisse im
+                            Allgemeinen und insbesondere im deutschen Finanzsystem. Er versteht es, diese Informationen klar
+                            und einf&uuml;hlsam zu vermitteln und entwickelt auf Ihre aktuelle finanzielle Situation
+                            zugeschnittene, praxisorientierte Pl&auml;ne. Dar&uuml;ber hinaus hat er mir die beste Kondition f&uuml;r
+                            meine Berufsunf&auml;higkeitsversicherung besorgt. Absolut empfehlenswert!&ldquo;</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">NM</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Nonso Mgbechi</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="testimonial-card anim" style="animation-delay:100ms">
-                    <span class="quote-icon">|</span>
-                    <h3>S.B.</h3>
-                    <p class="testimonial-text">&bdquo;Freundlich, kompetent, hilfsbereit und auch kurzfristig
-                        erreichbar. Und nat&uuml;rlich spricht er hervorragend Englisch. Ein exzellenter
-                        Finanzberater.&ldquo;</p>
-                    <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
-                </div>
-
-                <div class="testimonial-card anim" style="animation-delay:200ms">
-                    <span class="quote-icon">|</span>
-                    <h3>Nonso Mgbechi</h3>
-                    <p class="testimonial-text">&bdquo;Kevin verf&uuml;gt &uuml;ber umfassende Finanzkenntnisse im
-                        Allgemeinen und insbesondere im deutschen Finanzsystem. Er versteht es, diese Informationen klar
-                        und einf&uuml;hlsam zu vermitteln und entwickelt auf Ihre aktuelle finanzielle Situation
-                        zugeschnittene, praxisorientierte Pl&auml;ne. Dar&uuml;ber hinaus hat er mir die beste Kondition f&uuml;r
-                        meine Berufsunf&auml;higkeitsversicherung besorgt. Absolut empfehlenswert!&ldquo;</p>
-                    <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">&bdquo;Kevin ist ein hervorragender Berater! Er kennt sich bestens mit
+                            dem deutschen Finanzsystem aus und hat mir einen individuellen Finanzplan erstellt. Ich kann ihm
+                            jederzeit alle meine Fragen stellen und seine Dienste uneingeschr&auml;nkt empfehlen.&ldquo;</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">EL</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">&Eacute;lisa L.</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">&bdquo;Freundlich, kompetent, hilfsbereit und auch kurzfristig
+                            erreichbar. Und nat&uuml;rlich spricht er hervorragend Englisch. Ein exzellenter
+                            Finanzberater.&ldquo;</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">SB</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">S.B.</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">&bdquo;Kevin verf&uuml;gt &uuml;ber umfassende Finanzkenntnisse im
+                            Allgemeinen und insbesondere im deutschen Finanzsystem. Er versteht es, diese Informationen klar
+                            und einf&uuml;hlsam zu vermitteln und entwickelt auf Ihre aktuelle finanzielle Situation
+                            zugeschnittene, praxisorientierte Pl&auml;ne. Dar&uuml;ber hinaus hat er mir die beste Kondition f&uuml;r
+                            meine Berufsunf&auml;higkeitsversicherung besorgt. Absolut empfehlenswert!&ldquo;</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">&#8595;</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">NM</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Nonso Mgbechi</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -658,6 +726,10 @@
                     <p>info@finora-invest.com</p>
                 </div>
             </div>
+        </div>
+        <div class="footer-logo-full">
+            <img class="footer-logo-full__img" src="assets/images/Schriftzug.svg" alt="Finora" width="972" height="176" loading="lazy">
+            <div class="footer-logo-full__gradient" aria-hidden="true"></div>
         </div>
         <div class="footer-bottom">
             <p>Impressum&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Datenschutz</p>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finora | Investment Studio</title>
   <meta name="description"
     content="Finora bietet unabhängige Finanzberatung für Expats, Erben, Berufseinsteiger, Angestellte, Selbstständige und ETF-Investoren in Deutschland. Spezialisiert auf Altersvorsorge, Investment, Immobilien und steueroptimierte Strategien.">
@@ -15,16 +15,16 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body class="page-home">
-  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="header-row">
       <div class="header-logo">
-        <a href="index.html">
+        <a href="finora_investment_studio.html">
           <img src="assets/images/Logo-final-weiss-rz_svg.svg" alt="Finora Investment Studio" width="920" height="210">
         </a>
       </div>
@@ -45,18 +45,7 @@
         </ul>
       </nav>
       <div class="header-cta">
-        <div class="header-lang" role="group" aria-label="Sprache wählen">
-          <button type="button" class="header-lang-btn" aria-expanded="false" aria-haspopup="true" aria-label="Sprache wechseln" title="Sprache wechseln">
-            <span class="header-lang-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </span>
-            <span class="header-lang-label">DE</span>
-          </button>
-          <div class="header-lang-dropdown" hidden>
-            <a href="#" class="header-lang-option is-active" hreflang="de" lang="de">Deutsch</a>
-            <a href="#" class="header-lang-option" hreflang="en" lang="en">English</a>
-          </div>
-        </div>
+        <a href="tel:01234567891" class="icon-phone" aria-label="Anrufen">&#xe0e3;</a>
       </div>
       <button class="mobile-menu-toggle" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
@@ -76,53 +65,32 @@
     </div>
   </header>
 
-  <!-- ============ HERO SLIDER (Leistungen-Style) ============ -->
-  <section class="hero hero--slider" id="hero-slider" aria-label="Leistungen">
-    <div class="hero-slider-track">
-      <!-- Slide 1: Altersvorsorge -->
-      <div class="hero-slide is-active" data-slide="0" style="background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('assets/images/_X8A7478_prev.jpg');">
-        <div class="hero-slide-content">
-          <div class="hero-badge"><span class="badge-dot"></span>Leistungen</div>
-          <h1 class="hero-slide-title"><strong>Altersvorsorge-</strong><br>Beratung</h1>
-          <p class="hero-slide-subtitle">Heute vorsorgen, morgen frei entscheiden. Mit einer Strategie, die sich deinem Leben anpasst.</p>
-          <a href="altersvorsorge.html" class="btn">Beratung anfragen</a>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <video class="hero-video" autoplay loop muted playsinline preload="none">
+      <source src="assets/images/Kevin-Hudel-.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="anim">Dein Vermögen. <strong>Dein Vorsprung.</strong></h1>
+        <p class="hero-subtitle anim" style="animation-delay:300ms">Unabhängige Beratung. Steueroptimierung.
+          Langfristiger Vermögensaufbau.</p>
+        <div style="text-align:center">
+          <a href="kontakt.html" class="btn anim" style="animation-delay:600ms">Lass uns sprechen</a>
         </div>
       </div>
-      <!-- Slide 2: Investment -->
-      <div class="hero-slide" data-slide="1" style="background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('assets/images/X8A7139_prev-e17696842159562.jpg');">
-        <div class="hero-slide-content">
-          <div class="hero-badge"><span class="badge-dot"></span>Leistungen</div>
-          <h1 class="hero-slide-title"><strong>Investment-</strong><br>Beratung</h1>
-          <p class="hero-slide-subtitle">Nicht das Produkt entscheidet über den Erfolg, sondern die Strategie dahinter. Genau dort setzen wir an.</p>
-          <a href="investment-beratung.html" class="btn">Kostenloses Erstgespräch vereinbaren</a>
+      <div class="hero-images">
+        <div class="hero-img-main anim" style="animation-delay:900ms">
+          <img src="assets/images/X8A7574_prev-e17657901337453.jpg" alt="Kevin Hudel - Finora" width="1023"
+            height="1333" loading="lazy">
         </div>
-      </div>
-      <!-- Slide 3: Immobilien -->
-      <div class="hero-slide" data-slide="2" style="background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('assets/images/X8A7234_prev-e17657905637551.jpg');">
-        <div class="hero-slide-content">
-          <div class="hero-badge"><span class="badge-dot"></span>Leistungen</div>
-          <h1 class="hero-slide-title"><strong>Immobilien-</strong><br>Beratung</h1>
-          <p class="hero-slide-subtitle">Wie Adrian mit Finora seine erste Kapitalanlage-Immobilie fand, Steuern sparte und dabei nie selbst zum Immobilienexperten werden musste.</p>
-          <a href="immobilien-beratung.html" class="btn">Kostenloses Erstgespräch vereinbaren</a>
-        </div>
-      </div>
-      <!-- Slide 4: Erbanlage -->
-      <div class="hero-slide" data-slide="3" style="background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('assets/images/X8A7439_prev.jpg');">
-        <div class="hero-slide-content">
-          <div class="hero-badge"><span class="badge-dot"></span>Leistungen</div>
-          <h1 class="hero-slide-title"><strong>Erbanlage-</strong><br>Beratung</h1>
-          <p class="hero-slide-subtitle">Eine Erbschaft verändert vieles. Wir schaffen Orientierung für fundierte, langfristige Entscheidungen.</p>
-          <a href="erbanlage-beratung.html" class="btn">Unverbindlich beraten lassen</a>
+        <div class="hero-img-secondary anim" style="animation-delay:500ms">
+          <img src="assets/images/X8A7656_prev-e17657891385952.jpg" alt="Kevin Hudel - Finora" width="857" height="1043"
+            loading="lazy">
         </div>
       </div>
     </div>
-
-    <button type="button" class="hero-slider-arrow hero-slider-prev" aria-label="Vorherige Leistung">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-    </button>
-    <button type="button" class="hero-slider-arrow hero-slider-next" aria-label="Nächste Leistung">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
 
     <!-- Service blurbs at bottom of hero -->
     <div class="hero-services">
@@ -391,7 +359,6 @@
             </div>
           </div>
         </div>
-        <!-- Duplikat für nahtlose Endlosschleife -->
         <div class="testimonials-grid">
           <div class="testimonial-card anim">
             <span class="testimonial-label">Kundenstimme</span>
@@ -518,7 +485,7 @@
       <div class="footer-col">
         <h4>Menü</h4>
         <ul>
-          <li><a href="index.html">Startseite</a></li>
+          <li><a href="finora_investment_studio.html">Startseite</a></li>
           <li><a href="finora-philosophie.html">Finora-Philosophie</a></li>
           <li><a href="ueber-finora.html">Über Finora</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>

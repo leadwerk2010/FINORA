@@ -187,8 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================================
     // 2. SCROLL ENTRANCE ANIMATIONS (IntersectionObserver)
     // =========================================================
-    const animEls = document.querySelectorAll('.anim');
-    if (animEls.length && 'IntersectionObserver' in window) {
+    const allAnim = document.querySelectorAll('.anim');
+    const animEls = Array.from(allAnim).filter(el => !(el.classList.contains('pillar-card') && el.closest('.pillars-grid')));
+
+    if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -203,12 +205,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
         animEls.forEach(el => observer.observe(el));
+
+        // Drei Säulen: kein Observer – Scroll-Effekt über scrollPillarCards()
     } else {
-        animEls.forEach(el => el.classList.add('is-visible'));
+        document.querySelectorAll('.anim').forEach(el => el.classList.add('is-visible'));
     }
 
-    // Stagger children for pillar cards, testimonial cards, how-steps
-    document.querySelectorAll('.pillars-grid, .testimonials-grid, .how-grid').forEach(grid => {
+    // Stagger für andere Grids (testimonials, how-steps)
+    document.querySelectorAll('.testimonials-grid, .how-grid').forEach(grid => {
         const children = grid.children;
         for (let i = 0; i < children.length; i++) {
             if (children[i].classList.contains('anim')) {
@@ -216,6 +220,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // =========================================================
+    // 2b. DREI SÄULEN: Scroll-Effekt (0% = übereinander, 50% Scrolltiefe = Endposition)
+    // =========================================================
+    const PILLAR_STACK_OFFSET = 220;
+    let pillarTicking = false;
+
+    function updatePillarCards() {
+        const section = document.querySelector('.pillars');
+        if (!section) return;
+        const grid = section.querySelector('.pillars-grid');
+        if (!grid) return;
+        const cards = grid.querySelectorAll('.pillar-card');
+        if (cards.length < 3) return;
+
+        const rect = section.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const top = rect.top;
+
+        let progress = 0;
+        if (top <= vh * 0.2) {
+            progress = 1;
+        } else if (top < vh) {
+            progress = 1 - (top - vh * 0.2) / (vh * 0.8);
+        }
+
+        const t = 1 - progress;
+        const left = cards[0];
+        const center = cards[1];
+        const right = cards[2];
+        if (left) left.style.transform = `translate(${t * PILLAR_STACK_OFFSET}px, 0)`;
+        if (center) center.style.transform = 'translate(0, 0)';
+        if (right) right.style.transform = `translate(${-t * PILLAR_STACK_OFFSET}px, 0)`;
+    }
+
+    function onPillarScroll() {
+        if (pillarTicking) return;
+        pillarTicking = true;
+        requestAnimationFrame(() => {
+            updatePillarCards();
+            pillarTicking = false;
+        });
+    }
+
+    const pillarsSection = document.querySelector('.pillars');
+    if (pillarsSection) {
+        updatePillarCards();
+        window.addEventListener('scroll', onPillarScroll, { passive: true });
+        window.addEventListener('resize', onPillarScroll);
+    }
 
     // =========================================================
     // 3. FAQ ACCORDION
@@ -239,23 +293,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================================================
-    // 4. TESTIMONIAL EXPAND/COLLAPSE
+    // 4. TESTIMONIAL EXPAND/COLLAPSE (nur die geklickte Kachel öffnen, per Event-Delegation)
     // =========================================================
-    document.querySelectorAll('.testimonial-card').forEach(card => {
-        const textEl = card.querySelector('.testimonial-text');
-        const btn = card.querySelector('.lw-more-btn');
-        if (!textEl || !btn) return;
+    document.addEventListener('click', function (e) {
+        const btn = e.target && e.target.closest('.testimonials .lw-more-btn');
+        if (!btn) return;
 
-        let expanded = false;
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            expanded = !expanded;
-            textEl.classList.toggle('is-expanded', expanded);
-            btn.innerHTML = expanded
-                ? 'Weniger <span class="lw-arrow">&uarr;</span>'
-                : 'Mehr <span class="lw-arrow">&darr;</span>';
+        e.preventDefault();
+        e.stopPropagation();
+        const card = btn.closest('.testimonial-card');
+        const section = card && card.closest('.testimonials');
+        const textEl = card && card.querySelector('.testimonial-text');
+        if (!section || !textEl) return;
+
+        const wasThisExpanded = textEl.classList.contains('is-expanded');
+
+        // Erst alle Karten in dieser Sektion schließen
+        section.querySelectorAll('.testimonial-text').forEach(function (el) {
+            el.classList.remove('is-expanded');
         });
+        section.querySelectorAll('.lw-more-btn').forEach(function (b) {
+            b.innerHTML = 'Mehr <span class="lw-arrow">&darr;</span>';
+        });
+
+        // Nur die geklickte Karte wieder öffnen, wenn sie vorher zu war
+        if (!wasThisExpanded) {
+            textEl.classList.add('is-expanded');
+            btn.innerHTML = 'Weniger <span class="lw-arrow">&uarr;</span>';
+        }
     });
+
+    // Testimonial-Punkte: Anzahl Karten anzeigen (über dem Karussell)
+    const testimonialsSection = document.querySelector('.testimonials');
+    const testimonialsTrack = testimonialsSection && testimonialsSection.querySelector('.testimonials-track');
+    const firstGrid = testimonialsTrack && testimonialsTrack.querySelector('.testimonials-grid');
+    const cardCount = firstGrid ? firstGrid.querySelectorAll('.testimonial-card').length : 0;
+    if (testimonialsSection && testimonialsTrack && cardCount > 0) {
+        const dotsWrap = document.createElement('div');
+        dotsWrap.className = 'testimonials-dots-wrap';
+        dotsWrap.setAttribute('aria-hidden', 'true');
+        const dotsEl = document.createElement('div');
+        dotsEl.className = 'testimonials-dots';
+        for (let i = 0; i < cardCount; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'testimonial-dot';
+            dotsEl.appendChild(dot);
+        }
+        dotsWrap.appendChild(dotsEl);
+        testimonialsSection.insertBefore(dotsWrap, testimonialsTrack);
+    }
 
     // =========================================================
     // 5. FINORA SERVICE SLIDER
@@ -335,7 +421,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const initial = items.find(b => b.classList.contains('is-active')) || items[0];
         if (initial) activate(initial);
 
-        // Desktop list click
+        // Desktop: Inhalt bei Hover wechseln
+        items.forEach(btn => {
+            btn.addEventListener('mouseenter', () => activate(btn));
+        });
+
+        // Klick weiterhin für Fokus/Tastatur
         root.addEventListener('click', e => {
             const b = e.target.closest('.fs-item');
             if (!b) return;

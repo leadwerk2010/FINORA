@@ -7,6 +7,7 @@
     <title>Über Finora | Finora Investment Studio</title>
     <meta name="description"
         content="Erfahre mehr über Finora – unabhängige Finanzberatung, gegründet von Kevin Hudel. Transparent, unabhängig und mit echtem Mehrwert.">
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -252,13 +253,12 @@
         <div class="container--wide testimonials-title anim anim--fade">
             <h2>Erfahrungen, die <strong>für sich sprechen.</strong></h2>
         </div>
-        <div class="container--wide">
-            <div class="testimonials-grid">
-                <!-- Customer 1 -->
-                <div class="testimonial-card anim">
-                    <span class="quote-icon">|</span>
-                    <h3>Jennifer Illenseer</h3>
-                    <p class="testimonial-text">„Ich arbeite seit fünf Jahren mit Kevin zusammen und kann ihn
+        <div class="testimonials-track" aria-label="Kundenstimmen Karussell">
+            <div class="testimonials-track-inner">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">„Ich arbeite seit fünf Jahren mit Kevin zusammen und kann ihn
                         uneingeschränkt empfehlen. Bevor ich ihn kennenlernte, fühlte ich mich als Ausländer in
                         Deutschland unsicher, wie ich mein Geld anlegen sollte. Dank ihm gewann ich Klarheit und
                         Sicherheit. Seit Beginn unserer Zusammenarbeit hat er mich bei der Altersvorsorgeplanung
@@ -268,31 +268,107 @@
                         Jahr.<br><br>Ich fühle mich mit meinen Investitionen sehr gut aufgestellt und bin dank ihm
                         zuversichtlich, meine finanziellen Ziele zu erreichen. Ich kann jedem nur empfehlen, seine
                         Unterstützung in Anspruch zu nehmen.“</p>
-                    <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
-                </div>
-                <!-- Customer 2 -->
-                <div class="testimonial-card anim">
-                    <span class="quote-icon">|</span>
-                    <h3>Franziska</h3>
-                    <p class="testimonial-text">„Die Beratung verlief top! Es wurde auf alle Belange eingegangen, Vor-
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">JI</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Jennifer Illenseer</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">„Die Beratung verlief top! Es wurde auf alle Belange eingegangen, Vor-
                         und Nachteile erörtert und geduldig auf Nachfragen geantwortet. Die persönlichen Anliegen wurden
                         ernst genommen und dementsprechend bei der Auswahl der Produkte berücksichtigt. Je nach
                         Lebensphase werden die Produkte pro-aktiv in regelmäßigen Treffen angepasst.<br><br>Für uns war
                         klar, dass wir Kevin Hudel vertrauen können und unsere finanzielle Zukunft mit ihm ohne Bedenken
                         planen können.<br><br>Er ist gut erreichbar und antwortet schnell auf dringende
                         Anliegen.<br><br>Wir können ihn als Finanz- und Versicherungsberater wärmstens empfehlen.“</p>
-                    <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
-                </div>
-                <!-- Customer 3 -->
-                <div class="testimonial-card anim">
-                    <span class="quote-icon">|</span>
-                    <h3>Bharath Krishnan</h3>
-                    <p class="testimonial-text">„Kevin unterstützt mich seit einem Jahr bei meinen Investitionen, und
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">F</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Franziska</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">„Kevin unterstützt mich seit einem Jahr bei meinen Investitionen, und
                         ich bin sehr zufrieden mit seiner Beratung. Er nimmt sich die Zeit, alles verständlich zu
                         erklären, ist immer ansprechbar und beantwortet meine Fragen schnell. Seine
                         Finanzmarktkenntnisse geben mir Sicherheit bei meinen Entscheidungen. Ich kann Kevin jedem
                         wärmstens empfehlen, der einen professionellen und vertrauenswürdigen Finanzberater sucht.“</p>
-                    <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">BK</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Bharath Krishnan</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplikat für nahtlose Endlosschleife -->
+                <div class="testimonials-grid">
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">„Ich arbeite seit fünf Jahren mit Kevin zusammen und kann ihn
+                            uneingeschränkt empfehlen. Bevor ich ihn kennenlernte, fühlte ich mich als Ausländer in
+                            Deutschland unsicher, wie ich mein Geld anlegen sollte. Dank ihm gewann ich Klarheit und
+                            Sicherheit. Seit Beginn unserer Zusammenarbeit hat er mich bei der Altersvorsorgeplanung
+                            unterstützt, mein ETF-Portfolio verwaltet und mich durch den gesamten Prozess meiner ersten
+                            Immobilieninvestition begleitet. Gerade bei Immobilieninvestitionen hätte ich mich ohne ihn und
+                            sein Fachwissen nie getraut. Ich freue mich schon jetzt auf die zweite Investition in diesem
+                            Jahr.<br><br>Ich fühle mich mit meinen Investitionen sehr gut aufgestellt und bin dank ihm
+                            zuversichtlich, meine finanziellen Ziele zu erreichen. Ich kann jedem nur empfehlen, seine
+                            Unterstützung in Anspruch zu nehmen."</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">JI</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Jennifer Illenseer</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">„Die Beratung verlief top! Es wurde auf alle Belange eingegangen, Vor-
+                            und Nachteile erörtert und geduldig auf Nachfragen geantwortet. Die persönlichen Anliegen wurden
+                            ernst genommen und dementsprechend bei der Auswahl der Produkte berücksichtigt. Je nach
+                            Lebensphase werden die Produkte pro-aktiv in regelmäßigen Treffen angepasst.<br><br>Für uns war
+                            klar, dass wir Kevin Hudel vertrauen können und unsere finanzielle Zukunft mit ihm ohne Bedenken
+                            planen können.<br><br>Er ist gut erreichbar und antwortet schnell auf dringende
+                            Anliegen.<br><br>Wir können ihn als Finanz- und Versicherungsberater wärmstens empfehlen."</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">F</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Franziska</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card anim">
+                        <span class="testimonial-label">Kundenstimme</span>
+                        <p class="testimonial-text">„Kevin unterstützt mich seit einem Jahr bei meinen Investitionen, und
+                            ich bin sehr zufrieden mit seiner Beratung. Er nimmt sich die Zeit, alles verständlich zu
+                            erklären, ist immer ansprechbar und beantwortet meine Fragen schnell. Seine
+                            Finanzmarktkenntnisse geben mir Sicherheit bei meinen Entscheidungen. Ich kann Kevin jedem
+                            wärmstens empfehlen, der einen professionellen und vertrauenswürdigen Finanzberater sucht."</p>
+                        <button class="lw-more-btn">Mehr <span class="lw-arrow">↓</span></button>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-initials" aria-hidden="true">BK</span>
+                            <div class="testimonial-meta">
+                                <h3 class="testimonial-name">Bharath Krishnan</h3>
+                                <span class="testimonial-role">Kunde</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -409,6 +485,10 @@
                     <p>info@finora-invest.com</p>
                 </div>
             </div>
+        </div>
+        <div class="footer-logo-full">
+            <img class="footer-logo-full__img" src="assets/images/Schriftzug.svg" alt="Finora" width="972" height="176" loading="lazy">
+            <div class="footer-logo-full__gradient" aria-hidden="true"></div>
         </div>
         <div class="footer-bottom">
             <p>Impressum&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Datenschutz</p>
