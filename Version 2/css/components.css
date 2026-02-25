@@ -1674,16 +1674,24 @@
   font-size: 16px;
   line-height: 1.7em;
   color: #333;
+  margin-bottom: 20px;
+}
+
+/* Zugeklappt: nur Karten OHNE .is-expanded zeigen gekürzten Text */
+.testimonial-card:not(.is-expanded) .testimonial-text {
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 20px;
+  max-height: 10.2em;
 }
 
-.testimonial-text.is-expanded {
+/* Nur die eine Karte MIT .is-expanded zeigt vollen Text */
+.testimonial-card.is-expanded .testimonial-text {
+  display: block;
   -webkit-line-clamp: unset;
   overflow: visible;
+  max-height: none;
 }
 
 /* Autor-Footer: Initials-Kreis + Name + Rolle (Leadwerk-Style) */

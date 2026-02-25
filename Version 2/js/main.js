@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================================================
-    // 4. TESTIMONIAL EXPAND/COLLAPSE (nur die geklickte Kachel öffnen, per Event-Delegation)
+    // 4. TESTIMONIAL EXPAND/COLLAPSE (nur die geklickte Kachel öffnen)
     // =========================================================
     document.addEventListener('click', function (e) {
         const btn = e.target && e.target.closest('.testimonials .lw-more-btn');
@@ -301,27 +301,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
         const card = btn.closest('.testimonial-card');
         const section = card && card.closest('.testimonials');
-        const textEl = card && card.querySelector('.testimonial-text');
-        if (!section || !textEl) return;
+        if (!section || !card) return;
 
-        const wasThisExpanded = textEl.classList.contains('is-expanded');
+        const wasExpanded = card.classList.contains('is-expanded');
 
-        // Erst alle Karten in dieser Sektion schließen
-        section.querySelectorAll('.testimonial-text').forEach(function (el) {
-            el.classList.remove('is-expanded');
-        });
-        section.querySelectorAll('.lw-more-btn').forEach(function (b) {
-            b.innerHTML = 'Mehr <span class="lw-arrow">&darr;</span>';
-        });
+        // 1. Bei allen Karten in dieser Sektion is-expanded entfernen
+        var cards = section.querySelectorAll('.testimonial-card');
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].classList.remove('is-expanded');
+        }
+        var buttons = section.querySelectorAll('.lw-more-btn');
+        for (var j = 0; j < buttons.length; j++) {
+            buttons[j].innerHTML = 'Mehr <span class="lw-arrow">&darr;</span>';
+        }
 
-        // Nur die geklickte Karte wieder öffnen, wenn sie vorher zu war
-        if (!wasThisExpanded) {
-            textEl.classList.add('is-expanded');
+        // 2. Nur diese eine Karte wieder öffnen
+        if (!wasExpanded) {
+            card.classList.add('is-expanded');
             btn.innerHTML = 'Weniger <span class="lw-arrow">&uarr;</span>';
         }
-    });
+    }, true);
 
     // Testimonial-Punkte: Anzahl Karten anzeigen (über dem Karussell)
     const testimonialsSection = document.querySelector('.testimonials');
