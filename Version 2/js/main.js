@@ -296,16 +296,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. TESTIMONIAL EXPAND/COLLAPSE (nur die geklickte Kachel öffnen)
     // Inline-Styles setzen, damit garantiert nur eine Karte den vollen Text zeigt.
     // =========================================================
-    var COLLAPSED_STYLE = { overflow: 'hidden', maxHeight: '10.2em', WebkitLineClamp: '6', display: '-webkit-box' };
-    var EXPANDED_STYLE = { overflow: 'visible', maxHeight: 'none', WebkitLineClamp: 'unset', display: 'block' };
-
+    /* Zugeklappt: 7 Zeilen (11.9em), Verblassen per CSS; Aufklappen: Kachel öffnet nach unten, Resttext sichtbar */
     function setTestimonialTextStyle(el, expanded) {
         var s = el.style;
-        var obj = expanded ? EXPANDED_STYLE : COLLAPSED_STYLE;
-        s.overflow = obj.overflow;
-        s.maxHeight = obj.maxHeight;
-        s.webkitLineClamp = obj.WebkitLineClamp;
-        s.display = obj.display;
+        if (expanded) {
+            s.overflow = 'visible';
+            s.maxHeight = (el.scrollHeight + 24) + 'px';
+            s.webkitLineClamp = '';
+            s.display = 'block';
+            s.setProperty('mask-image', 'none');
+            s.setProperty('-webkit-mask-image', 'none');
+        } else {
+            s.overflow = 'hidden';
+            s.maxHeight = '11.9em';
+            s.webkitLineClamp = '';
+            s.display = 'block';
+            s.removeProperty('mask-image');
+            s.removeProperty('-webkit-mask-image');
+        }
     }
 
     // Beim Start alle Zitate per Inline-Style zuklappen (einheitlicher Ausgangszustand)
@@ -333,7 +341,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!textEl) return;
         var wasExpanded = textEl.style.overflow === 'visible';
 
-        // 1. Alle Zitate in dieser Sektion zuklappen (per Inline-Style)
+        // 1. Alle Zitate in dieser Sektion zuklappen (per Inline-Style + data-expanded entfernen)
+        var allCards = section.querySelectorAll('.testimonial-card');
+        for (var c = 0; c < allCards.length; c++) {
+            allCards[c].removeAttribute('data-expanded');
+        }
         var allTexts = section.querySelectorAll('.testimonial-text');
         for (var i = 0; i < allTexts.length; i++) {
             setTestimonialTextStyle(allTexts[i], false);
@@ -343,8 +355,9 @@ document.addEventListener('DOMContentLoaded', () => {
             buttons[i].innerHTML = 'Mehr <span class="lw-arrow">&darr;</span>';
         }
 
-        // 2. Nur diese eine Karte aufklappen
+        // 2. Nur diese eine Karte aufklappen – Karte wächst mit, Footer bleibt unter dem Text
         if (!wasExpanded) {
+            card.setAttribute('data-expanded', 'true');
             setTestimonialTextStyle(textEl, true);
             btn.innerHTML = 'Weniger <span class="lw-arrow">&uarr;</span>';
         }

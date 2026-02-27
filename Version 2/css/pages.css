@@ -61,8 +61,14 @@
 }
 
 /* Slide 2 (Investment): Hintergrundbild vertikal zentrieren */
+/* Investment-Beratung: noch mehr vom oberen Bildteil sichtbar */
 .page-home .hero--slider .hero-slide[data-slide="1"] {
-  background-position: center center;
+  background-position: center 15%;
+}
+
+/* Immobilien-Beratung: obere Bildhälfte sichtbar */
+.page-home .hero--slider .hero-slide[data-slide="2"] {
+  background-position: center 25%;
 }
 
 .page-home .hero--slider .hero-slide.is-active {
@@ -449,6 +455,8 @@
 .page-immobilien .hero--immobilien .hero-text h1,
 .page-philosophie .hero--philosophie .hero-text h1 {
   text-align: center;
+  font-size: 56px;
+  font-weight: 700;
 }
 
 .page-altersvorsorge .hero--altersvorsorge .hero-subtitle,
@@ -483,13 +491,14 @@ html:has(body.page-immobilien) {
     background: #fff;
 }
 
-/* Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet */
+/* Hero: Hintergrundbild + Verlauf; Bild gezielt weiter nach unten (Gradient bleibt zentriert); Parallax */
 .page-immobilien .hero.hero--immobilien {
     overflow: hidden;
-    background-position: center bottom;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7234_prev-e17657905637551.jpg') !important;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover, cover;
+    background-position: center, center 25%;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
     background-color: #043c43;
 }
 
@@ -517,8 +526,8 @@ html:has(body.page-immobilien) {
 
 .page-immobilien .hero--immobilien .hero-text h1 {
     font-family: var(--font-heading);
-    font-weight: 200;
-    font-size: clamp(32px, 5.2vw, 72px);
+    font-weight: 700;
+    font-size: 56px;
     color: #ffffff !important;
     line-height: 1.03em;
     text-align: center;
@@ -1143,12 +1152,13 @@ html:has(body.page-immobilien) {
    Source-aligned with original Divi export
    ============================================================ */
 
-/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-ueber .hero.hero--ueber {
     background-position: center bottom;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A6908_prev-e17660461441031.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #043c43;
     padding: calc(var(--header-height) * 2) 70px var(--header-height);
     min-height: 100vh;
@@ -1184,8 +1194,8 @@ html:has(body.page-immobilien) {
 
 .page-ueber .hero--ueber .hero-text h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 200;
-    font-size: clamp(32px, 5.2vw, 72px);
+    font-weight: 700;
+    font-size: 56px;
     color: #ffffff !important;
     line-height: 1.03em;
     text-align: center;
@@ -1413,9 +1423,7 @@ html:has(body.page-immobilien) {
     max-width: 100%;
 }
 
-.page-ueber .section-testimonials .testimonial-text {
-    margin-bottom: 75px;
-}
+/* Testimonial-Karten: gleiches Styling wie Startseite/Investment Studio (components.css) – kein margin-bottom auf .testimonial-text */
 
 /* --- FAQ (aligned with finora-philosophie) --- */
 .page-ueber .section-faq {
@@ -1606,6 +1614,7 @@ html:has(body.page-immobilien) {
 .page-kontakt .hero.hero--kontakt {
     background-position: center bottom;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/Invest-bw.png') !important;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #043c43;
@@ -1643,8 +1652,8 @@ html:has(body.page-immobilien) {
 
 .page-kontakt .hero--kontakt .hero-text h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 200;
-    font-size: clamp(32px, 5.2vw, 72px);
+    font-weight: 700;
+    font-size: 56px;
     color: #ffffff !important;
     line-height: 1.03em;
     text-align: center;
@@ -2060,10 +2069,11 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
 .page-investment .hero.hero--investment {
-    background-position: center bottom;
+    background-position: center 25%;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7139_prev-e17696842159562.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #043c43;
     padding: calc(var(--header-height) * 2) 70px var(--header-height);
     min-height: 100vh;
@@ -2099,8 +2109,8 @@ html:has(body.page-immobilien) {
 
 .page-investment .hero--investment .hero-text h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 200;
-    font-size: clamp(32px, 5.2vw, 72px);
+    font-weight: 700;
+    font-size: 56px;
     color: #ffffff !important;
     line-height: 1.03em;
     text-align: center;
@@ -2223,7 +2233,7 @@ html:has(body.page-immobilien) {
 }
 
 .page-investment .section-challenge .two-col {
-    align-items: stretch;
+    align-items: center;
     flex-wrap: nowrap;
     gap: 80px;
 }
@@ -2232,14 +2242,31 @@ html:has(body.page-immobilien) {
     flex: 0 0 58%;
 }
 
+@keyframes challenge-card-float {
+    0%, 100% {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1), 0 6px 28px rgba(0, 0, 0, 0.06);
+    }
+    50% {
+        transform: translateY(-18px);
+        box-shadow: 0 26px 70px rgba(0, 0, 0, 0.14), 0 10px 36px rgba(0, 0, 0, 0.08);
+    }
+}
+
 .page-investment .section-challenge .two-col>.col-text:last-child {
     flex: 0 0 38%;
     background-image: linear-gradient(35deg, rgba(255, 255, 255, 0.27) 29%, #ffffff 48%, rgba(255, 255, 255, 0.59) 66%);
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 30px;
     padding: 50px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 24px rgba(0, 0, 0, 0.06);
-    transform: translateY(-8px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1), 0 6px 28px rgba(0, 0, 0, 0.06);
+    animation: challenge-card-float 4s ease-in-out infinite;
+}
+
+.page-investment .section-challenge .two-col>.col-text:last-child:hover {
+    animation-play-state: paused;
+    box-shadow: 0 28px 72px rgba(0, 0, 0, 0.16), 0 12px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
 }
 
 .page-investment .section-challenge .two-col>.col-text:last-child h3 {
@@ -2261,7 +2288,7 @@ html:has(body.page-immobilien) {
 
 .page-investment .section-challenge .blurb {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -2416,7 +2443,7 @@ html:has(body.page-immobilien) {
     transition: transform 0.4s var(--ease-smooth), opacity 0.35s var(--ease-out-expo), box-shadow 0.4s var(--ease-smooth), z-index 0s;
     cursor: default;
     transform: scale(0.95);
-    opacity: 0.8;
+    opacity: 0.85;
     box-sizing: border-box;
     border-radius: 10px;
 }
@@ -2432,21 +2459,23 @@ html:has(body.page-immobilien) {
     overflow: visible;
     transform: scale(1.32);
     opacity: 1;
-    box-shadow: var(--img-shadow-hover, 0 20px 56px rgba(4, 60, 67, 0.35)), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 56px rgba(4, 60, 67, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     will-change: transform;
+}
+
+.page-investment .approach-tiles-grid:hover .approach-tile:not(:hover) {
+    opacity: 0.35;
+    filter: blur(2px);
+    transition: transform 0.4s var(--ease-smooth), opacity 0.3s ease, filter 0.3s ease, box-shadow 0.4s var(--ease-smooth);
 }
 
 /* Inner = eine Box, ein Hintergrund: Glas-Look direkt am Element */
 .page-investment .approach-tile__inner {
     position: absolute;
-    left: 0;
-    right: 0;
+    inset: 0;
     width: 100%;
-    height: 280px;
-    min-height: 280px;
+    height: 100%;
     padding: 24px;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2454,10 +2483,11 @@ html:has(body.page-immobilien) {
     text-align: center;
     border-radius: 10px;
     color: #043c43;
-    background: rgba(4, 60, 67, 0.20);
+    background: rgba(200, 218, 217, 0.85);
     backdrop-filter: blur(28px) saturate(1.15);
     -webkit-backdrop-filter: blur(28px) saturate(1.15);
     border: 1px solid rgba(144, 180, 178, 0.35);
+    overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.06);
     transition: box-shadow 0.5s var(--ease-smooth), height 0.5s var(--ease-smooth), min-height 0.5s var(--ease-smooth), top 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
     transform-origin: top center;
@@ -2465,12 +2495,13 @@ html:has(body.page-immobilien) {
 
 /* Größerer grüner Block, bleibt aber handhabbar */
 .page-investment .approach-tile:hover .approach-tile__inner {
-    height: 200px;
-    min-height: 200px;
-    top: 0;
-    transform: translateY(0);
+    height: auto;
+    min-height: 100%;
+    inset: 0 0 auto 0;
     justify-content: flex-start;
-    box-shadow: var(--img-shadow-hover);
+    box-shadow: 0 20px 56px rgba(4, 60, 67, 0.35);
+    overflow: visible;
+    background: rgba(200, 218, 217, 0.95);
 }
 
 /* Inhalt gegen Kachel-Scale (1.32) kompensieren, damit Schriftgröße gleich bleibt */
@@ -2517,11 +2548,11 @@ html:has(body.page-immobilien) {
 }
 
 .page-investment .approach-tile:hover .approach-tile__back {
-    max-height: 100px;
+    max-height: 300px;
     opacity: 1;
     transform: translateY(0) scale(0.758);
     transform-origin: top center;
-    transition: max-height 0.35s var(--ease-smooth) 0.5s, opacity 0.65s var(--ease-smooth) 0.5s, transform 0.65s var(--ease-smooth) 0.5s;
+    transition: max-height 0.35s var(--ease-smooth) 0.3s, opacity 0.5s var(--ease-smooth) 0.3s, transform 0.5s var(--ease-smooth) 0.3s;
 }
 
 .page-investment .approach-tile__back p {
@@ -2804,7 +2835,7 @@ html:has(body.page-immobilien) {
 
 .page-investment .section-target-groups .target-group-grid .blurb {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     margin-bottom: 20px;
     padding: 0;
@@ -2831,6 +2862,33 @@ html:has(body.page-immobilien) {
     border-radius: 0;
     background: transparent;
     display: block;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb-icon--triangle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    margin-top: 0;
+    margin-right: 15px;
+    font-size: 14px;
+    color: var(--color-accent);
+    background: rgba(144, 180, 178, 0.08);
+    border: 1px solid rgba(144, 180, 178, 0.15);
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb:hover .blurb-icon--triangle {
+    transform: scale(1.08);
+    color: #5a9b97;
+}
+
+.page-investment .section-target-groups .target-group-grid .blurb-icon--triangle i {
+    font-size: inherit;
 }
 
 .page-investment .section-target-groups .target-group-grid .blurb-content p {
@@ -3200,12 +3258,13 @@ html:has(body.page-immobilien) {
     background: #ffffff;
 }
 
-/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-erbanlage .hero.hero--erbanlage {
     background-position: center bottom;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7439_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #043c43;
     padding: calc(var(--header-height) * 2) 70px var(--header-height);
     min-height: 100vh;
@@ -3241,8 +3300,8 @@ html:has(body.page-immobilien) {
 
 .page-erbanlage .hero--erbanlage .hero-text h1 {
     font-family: var(--font-heading);
-    font-weight: 200;
-    font-size: clamp(32px, 5.2vw, 72px);
+    font-weight: 700;
+    font-size: 56px;
     color: #ffffff !important;
     line-height: 1.03em;
     text-align: center;
@@ -3351,8 +3410,8 @@ html:has(body.page-immobilien) {
 
 .page-erbanlage .responsibility-bottom {
     display: flex;
-    align-items: flex-start;
-    gap: 48px;
+    align-items: center;
+    gap: 96px;
 }
 
 .page-erbanlage .responsibility-bottom__image {
@@ -3449,6 +3508,7 @@ html:has(body.page-immobilien) {
 .page-erbanlage .responsibility-bottom .blurb .blurb-content p {
     margin: 0;
     color: #666666;
+    font-size: 18px;
 }
 
 .page-erbanlage .responsibility-note {
@@ -3768,6 +3828,8 @@ html:has(body.page-immobilien) {
 }
 
 .page-erbanlage .section-new-phase .blurb {
+    display: flex;
+    align-items: center;
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 18px;
@@ -3814,7 +3876,8 @@ html:has(body.page-immobilien) {
 .page-erbanlage .section-outcomes .section-heading p {
     color: #191919;
     font-family: var(--font-heading);
-    font-size: 17px;
+    font-size: 21px;
+    font-weight: 500;
     line-height: 1.6em;
     margin: 0;
     max-width: none;
@@ -3881,16 +3944,16 @@ html:has(body.page-immobilien) {
 .page-erbanlage .two-col--target-erbe {
     display: flex;
     align-items: flex-start;
-    gap: 0;
+    gap: 72px;
 }
 
 .page-erbanlage .two-col--target-erbe .col-text {
-    flex: 0 0 60%;
+    flex: 0 0 calc(60% - 72px * 0.6);
     min-width: 0;
 }
 
 .page-erbanlage .two-col--target-erbe .col-img {
-    flex: 0 0 40%;
+    flex: 0 0 calc(40% - 72px * 0.4);
     min-width: 0;
 }
 
@@ -3909,6 +3972,8 @@ html:has(body.page-immobilien) {
 }
 
 .page-erbanlage .section-target-erbe .blurb {
+    display: flex;
+    align-items: center;
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 18px;
@@ -3932,7 +3997,7 @@ html:has(body.page-immobilien) {
     border-radius: 16px 16px 8vw 16px;
     overflow: hidden;
     margin-top: 0;
-    margin-right: -73px;
+    margin-right: 0;
 }
 
 /* --- Section 6 (.et_pb_section_6) --- */
@@ -3940,6 +4005,8 @@ html:has(body.page-immobilien) {
     background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding: 30px 0;
     margin: 0;
     border-radius: 0;
@@ -3953,8 +4020,8 @@ html:has(body.page-immobilien) {
 
 .page-erbanlage .section-erbe-cta h2 {
     font-family: var(--font-heading);
-    font-weight: 300;
-    font-size: clamp(22px, 2.8vw, 40px);
+    font-weight: 700;
+    font-size: 56px;
     line-height: 1.2em;
     color: #ffffff;
     text-align: center;
@@ -4046,7 +4113,11 @@ html:has(body.page-immobilien) {
     .page-erbanlage .section-outcomes .section-heading h2,
     .page-erbanlage .section-target-erbe h2,
     .page-erbanlage .section-erbe-cta h2 {
-        font-size: 36px;
+        font-size: 40px;
+    }
+
+    .page-erbanlage .section-erbe-cta {
+        background-attachment: scroll;
     }
 
     .page-erbanlage .responsibility-lead,
@@ -4131,7 +4202,7 @@ html:has(body.page-immobilien) {
     .page-erbanlage .section-outcomes .section-heading h2,
     .page-erbanlage .section-target-erbe h2,
     .page-erbanlage .section-erbe-cta h2 {
-        font-size: 21px;
+        font-size: 28px;
     }
 
     .page-erbanlage .responsibility-lead,
@@ -4190,13 +4261,13 @@ html:has(body.page-immobilien) {
     background: #ffffff;
 }
 
-/* --- Hero: 100vh, nur Hintergrundbild – Verlauf von rechts nach links wie zuvor, rechts abgemildert damit Person gut sichtbar --- */
+/* --- Hero: 100vh, Hintergrundbild mit Parallax – Verlauf von rechts nach links --- */
 .page-altersvorsorge .hero.hero--altersvorsorge {
     background-position: center bottom;
-    /* Verlauf to left = rechts → links; gleichmäßig, etwas stärker */
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A7478_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #043c43;
     padding: calc(var(--header-height) * 2) 70px var(--header-height);
     min-height: 100vh;
@@ -4232,8 +4303,8 @@ html:has(body.page-immobilien) {
 
 .page-altersvorsorge .hero--altersvorsorge .hero-text h1 {
     font-family: var(--font-heading);
-    font-weight: 200;
-    font-size: clamp(32px, 5.2vw, 72px);
+    font-weight: 700;
+    font-size: 56px;
     color: #ffffff !important;
     line-height: 1.03em;
     text-align: center;
@@ -4421,7 +4492,7 @@ html:has(body.page-immobilien) {
 
 .page-altersvorsorge .section-workflow .blurb {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -4461,16 +4532,16 @@ html:has(body.page-immobilien) {
 .page-altersvorsorge .section-private-vorsorge .two-col--private {
     align-items: flex-start;
     flex-wrap: nowrap;
-    gap: 0;
+    gap: 72px;
 }
 
 .page-altersvorsorge .section-private-vorsorge .col-text {
-    flex: 0 0 52%;
-    padding-right: 25px;
+    flex: 0 0 calc(52% - 72px * 0.52);
+    padding-right: 0;
 }
 
 .page-altersvorsorge .section-private-vorsorge .col-img {
-    flex: 0 0 48%;
+    flex: 0 0 calc(48% - 72px * 0.48);
 }
 
 .page-altersvorsorge .section-private-vorsorge .col-text h2 {
@@ -4507,7 +4578,7 @@ html:has(body.page-immobilien) {
 .page-altersvorsorge .section-private-vorsorge .col-img img {
     border-radius: 16px 16px 8vw 16px;
     overflow: hidden;
-    margin-right: -73px;
+    margin-right: 0;
     width: 100%;
     max-width: 100%;
 }
@@ -4518,6 +4589,8 @@ html:has(body.page-immobilien) {
     background-image: linear-gradient(310deg, #043c43 2%, rgba(38, 96, 99, 0.8) 99%), url('../assets/images/X8A7387_prev.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding: 30px 0;
     margin: 0;
     border-radius: 0;
@@ -4533,8 +4606,8 @@ html:has(body.page-immobilien) {
 .page-altersvorsorge .section-gap-cta h2,
 .page-altersvorsorge .section-final-cta h2 {
     font-family: var(--font-heading);
-    font-weight: 300;
-    font-size: clamp(22px, 2.8vw, 40px);
+    font-weight: 700;
+    font-size: 56px;
     line-height: 1.2em;
     color: #ffffff;
     text-align: center;
@@ -4629,25 +4702,26 @@ html:has(body.page-immobilien) {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    gap: 0;
+    gap: 72px;
     align-items: flex-start;
 }
 
 .page-altersvorsorge .section-favorites .tabs-img {
-    flex: 0 0 33.333%;
+    flex: 0 0 calc(33.333% - 72px * 0.333);
 }
 
 .page-altersvorsorge .section-favorites .tabs-img img {
     border-radius: 16px 16px 8vw 16px;
     overflow: hidden;
     margin-top: 70px;
-    margin-right: -73px;
+    margin-right: 0;
     width: 100%;
 }
 
 .page-altersvorsorge .section-favorites .tabs-content {
-    flex: 0 0 66.666%;
+    flex: 0 0 calc(66.666% - 72px * 0.667);
     margin-top: 20px;
+    padding-top: 50px;
 }
 
 .page-altersvorsorge .section-favorites .tab-nav {
@@ -4723,6 +4797,11 @@ html:has(body.page-immobilien) {
     padding: 115px 0 120px;
     border-radius: 0;
     overflow: hidden;
+}
+
+.page-altersvorsorge .section-audience .container--wide {
+    max-width: 1400px;
+    width: min(92%, 1400px);
 }
 
 .page-altersvorsorge .section-audience .section-heading {
@@ -4883,6 +4962,13 @@ html:has(body.page-immobilien) {
     padding: 0;
 }
 
+.page-altersvorsorge .section-concepts .container--full {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .page-altersvorsorge .section-concepts .concepts-grid {
     width: 100%;
     max-width: 100%;
@@ -4894,28 +4980,30 @@ html:has(body.page-immobilien) {
 
 .page-altersvorsorge .section-concepts .concepts-image-col {
     overflow: hidden;
-    padding: 40px;
+    padding: 0;
 }
 
 .page-altersvorsorge .section-concepts .concepts-image-wrap {
-    border-radius: 16px 16px 8vw 16px;
+    border-radius: 0 0 10vw 0;
     overflow: hidden;
     height: 100%;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
-    transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+    min-height: 60vh;
+    box-shadow: none;
+    transition: transform 0.6s var(--ease-out-expo);
 }
 
 .page-altersvorsorge .section-concepts .concepts-image-col:hover .concepts-image-wrap {
     transform: translateY(-6px) scale(1.01);
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+    box-shadow: none;
 }
 
 .page-altersvorsorge .section-concepts .concepts-image-wrap img {
     width: 100%;
     height: 100%;
+    min-height: 60vh;
     object-fit: cover;
     display: block;
-    border-radius: 16px 16px 8vw 16px;
+    border-radius: 0 0 10vw 0;
 }
 
 .page-altersvorsorge .section-concepts .concepts-text-col {
@@ -4965,7 +5053,7 @@ html:has(body.page-immobilien) {
 
 .page-altersvorsorge .section-concepts .blurb {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -4975,7 +5063,7 @@ html:has(body.page-immobilien) {
     color: #90b4b2;
     line-height: 1;
     margin-right: 15px;
-    margin-top: -4px;
+    margin-top: 0;
 }
 
 .page-altersvorsorge .section-concepts .blurb-content p {
@@ -5124,7 +5212,12 @@ html:has(body.page-immobilien) {
     .page-altersvorsorge .section-concepts .concepts-text-col h2,
     .page-altersvorsorge .section-gap-cta h2,
     .page-altersvorsorge .section-final-cta h2 {
-        font-size: 36px;
+        font-size: 40px;
+    }
+
+    .page-altersvorsorge .section-gap-cta,
+    .page-altersvorsorge .section-final-cta {
+        background-attachment: scroll;
     }
 
     .page-altersvorsorge .section-workflow .workflow-highlight,
@@ -5194,7 +5287,7 @@ html:has(body.page-immobilien) {
     .page-altersvorsorge .section-concepts .concepts-text-col h2,
     .page-altersvorsorge .section-gap-cta h2,
     .page-altersvorsorge .section-final-cta h2 {
-        font-size: 21px;
+        font-size: 28px;
     }
 
     .page-altersvorsorge .section-audience .audience-card h3 {
@@ -5252,12 +5345,13 @@ html:has(body.page-immobilien) {
     background: #ffffff;
 }
 
-/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
+/* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-philosophie .hero.hero--philosophie {
     background-position: center bottom;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7304_prev-e1765975803707-1.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #043c43;
     padding: calc(var(--header-height) * 2) 70px var(--header-height);
     min-height: 100vh;
@@ -5293,8 +5387,8 @@ html:has(body.page-immobilien) {
 
 .page-philosophie .hero--philosophie .hero-text h1 {
     font-family: var(--font-heading);
-    font-weight: 200;
-    font-size: clamp(32px, 5.2vw, 72px);
+    font-weight: 700;
+    font-size: 56px;
     color: #ffffff !important;
     line-height: 1.03em;
     text-align: center;
@@ -5978,9 +6072,7 @@ html:has(body.page-immobilien) {
     margin: 0;
 }
 
-.page-philosophie .section-testimonials .testimonial-text {
-    margin-bottom: 75px;
-}
+/* Testimonial-Karten: gleiches Styling wie Startseite/Investment Studio (components.css) – kein margin-bottom auf .testimonial-text */
 
 /* --- Section 12 (.et_pb_section_12) --- */
 .page-philosophie .section-faq .faq-left {

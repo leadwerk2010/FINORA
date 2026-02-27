@@ -406,7 +406,10 @@
   .hero.hero--altersvorsorge,
   .hero.hero--investment,
   .hero.hero--immobilien,
-  .hero.hero--erbanlage {
+  .hero.hero--erbanlage,
+  .hero.hero--ueber,
+  .hero.hero--kontakt,
+  .hero.hero--philosophie {
     background-attachment: scroll;
   }
 }
@@ -1562,7 +1565,7 @@
 
 .testimonials-track-inner {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 24px;
   width: max-content;
   animation: testimonial-scroll 45s linear infinite;
@@ -1580,7 +1583,7 @@
 
 .testimonials-grid {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 24px;
   flex-shrink: 0;
 }
@@ -1615,6 +1618,11 @@
   min-height: 0;
 }
 
+.testimonial-card:has(.testimonial-quote-wrap) .testimonial-quote-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .testimonial-card .lw-more-btn {
   margin-top: auto;
   margin-bottom: 30px;
@@ -1643,7 +1651,45 @@
   border-color: rgba(144, 180, 178, 0.4);
 }
 
-/* Leadwerk-Style: Label oben */
+/* Zitat-Umbau: +Zahl% oben, „Mehr Ersparnis“, Zitat mit Mint-Linie links */
+.testimonial-percent {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #043c43;
+  margin: 0 0 4px;
+}
+
+.testimonial-ersparnis {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 6px;
+  padding-bottom: 40px;
+}
+
+/* Mint-Linie über komplette Höhe des Zitats, 24px Abstand zum Text; Platz für 7 Zeilen */
+.testimonial-quote-wrap {
+  border-left: 3px solid var(--color-accent);
+  padding: 0 0 0 24px;
+  margin-bottom: 16px;
+  flex: 1;
+  min-height: 11.9em; /* Mindestens 7 Zeilen Fließtext sichtbar */
+}
+
+.testimonial-quote-wrap .testimonial-text {
+  margin-bottom: 0;
+}
+
+/* Leadwerk-Style: Label oben (ausgeblendet wenn .testimonial-percent vorhanden) */
+.testimonial-card:has(.testimonial-percent) .testimonial-label {
+  display: none;
+}
+
 .testimonial-label {
   font-family: var(--font-heading);
   font-size: 11px;
@@ -1677,21 +1723,25 @@
   margin-bottom: 20px;
 }
 
-/* Zugeklappt: Standard – gekürzter Text */
+/* Zugeklappt: genau 7 Zeilen, Text verblasst nach unten langsam; Aufklappen per JS mit Übergang */
 .testimonial-card .testimonial-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
+  display: block;
   overflow: hidden;
-  max-height: 10.2em;
+  max-height: 11.9em; /* 7 Zeilen bei line-height 1.7 */
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 100%);
+  transition: max-height 0.45s var(--ease-smooth);
 }
 
-/* Nur die Karte mit data-expanded="true" zeigt vollen Text */
+/* Ausgeklappt: voller Text, kein Verlauf; Zitat-Bereich wächst mit Inhalt, Karte schiebt Footer nach unten */
 .testimonial-card[data-expanded="true"] .testimonial-text {
-  display: block;
-  -webkit-line-clamp: unset;
-  overflow: visible;
-  max-height: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.testimonial-card[data-expanded="true"] .testimonial-quote-wrap {
+  flex: 0 1 auto;
+  min-height: 0;
 }
 
 /* Autor-Footer: Initials-Kreis + Name + Rolle (Leadwerk-Style) */
