@@ -60,15 +60,12 @@
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
-/* Slide 2 (Investment): Hintergrundbild vertikal zentrieren */
-/* Investment-Beratung: noch mehr vom oberen Bildteil sichtbar */
-.page-home .hero--slider .hero-slide[data-slide="1"] {
-  background-position: center 15%;
-}
-
-/* Immobilien-Beratung: obere Bildhälfte sichtbar */
-.page-home .hero--slider .hero-slide[data-slide="2"] {
-  background-position: center 25%;
+/* Slider: gleiche Bildposition wie Hero auf den Unterseiten (obere Hälfte, 20 % nach unten) */
+.page-home .hero--slider .hero-slide[data-slide="0"],
+.page-home .hero--slider .hero-slide[data-slide="1"],
+.page-home .hero--slider .hero-slide[data-slide="2"],
+.page-home .hero--slider .hero-slide[data-slide="3"] {
+  background-position: center 20%;
 }
 
 .page-home .hero--slider .hero-slide.is-active {
@@ -145,7 +142,7 @@
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.08);
   color: var(--color-white);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,32 +319,6 @@
   margin-top: -26%;
   margin-right: -50px;
   z-index: 1;
-}
-
-/* ========== Mouse-Follower (alle Seiten, dezent Finora-Style) ========== */
-.cursor-follower {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(144, 180, 178, 0.35) 0%, rgba(4, 60, 67, 0.15) 70%);
-  border: 1px solid rgba(144, 180, 178, 0.25);
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s ease-out, width 0.2s ease, height 0.2s ease;
-}
-
-.cursor-follower.is-hover {
-  width: 32px;
-  height: 32px;
-  background: radial-gradient(circle, rgba(144, 180, 178, 0.2) 0%, rgba(4, 60, 67, 0.08) 70%);
-}
-
-@media (hover: none) {
-  .cursor-follower {
-    display: none !important;
-  }
 }
 
 @media (min-width: 981px) and (max-width: 1670px) {
@@ -1567,7 +1538,7 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-ueber .hero.hero--ueber {
-    background-position: center bottom;
+    background-position: center 20%;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A6908_prev-e17660461441031.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2241,7 +2212,7 @@ html:has(body.page-immobilien) {
     width: 20px;
     height: 20px;
     accent-color: var(--color-teal);
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
     flex-shrink: 0;
 }
 
@@ -2252,7 +2223,7 @@ html:has(body.page-immobilien) {
     line-height: 1.6em;
     color: var(--color-text);
     margin: 0;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
 }
 
 .page-kontakt .contact-form .checkbox-group a {
@@ -2282,7 +2253,7 @@ html:has(body.page-immobilien) {
     background: var(--color-primary);
     border: none;
     border-radius: var(--radius-button);
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
     transition: background 0.3s var(--ease-smooth),
                 box-shadow 0.3s var(--ease-smooth),
                 transform 0.2s var(--ease-smooth);
@@ -2531,7 +2502,7 @@ html:has(body.page-immobilien) {
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
 .page-investment .hero.hero--investment {
     background-position: center 25%;
-    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7139_prev-e17696842159562.jpg') !important;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A6656_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -2914,7 +2885,7 @@ html:has(body.page-immobilien) {
     z-index: 0;
     overflow: hidden;
     transition: transform 0.4s var(--ease-smooth), opacity 0.35s var(--ease-out-expo), box-shadow 0.4s var(--ease-smooth), z-index 0s;
-    cursor: default;
+    cursor: var(--cursor-default);
     transform: scale(0.95);
     opacity: 0.85;
     box-sizing: border-box;
@@ -3798,7 +3769,7 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-erbanlage .hero.hero--erbanlage {
-    background-position: center bottom;
+    background-position: center 20%;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7439_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4801,8 +4772,8 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: 100vh, Hintergrundbild mit Parallax - Verlauf von rechts nach links --- */
 .page-altersvorsorge .hero.hero--altersvorsorge {
-    background-position: center bottom;
-    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A7478_prev.jpg') !important;
+    background-position: center 20%;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A7339_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -5885,8 +5856,8 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-philosophie .hero.hero--philosophie {
-    background-position: center bottom;
-    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7304_prev-e1765975803707-1.jpg') !important;
+    background-position: center 20%;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A7013_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -6351,7 +6322,7 @@ html:has(body.page-immobilien) {
     min-height: 0;
     perspective: none;
     transition: transform 0.5s var(--ease-smooth), opacity 0.5s var(--ease-smooth), flex 0.6s var(--ease-smooth), margin-top 0.5s var(--ease-smooth);
-    cursor: default;
+    cursor: var(--cursor-default);
     transform: scale(0.95);
     opacity: 0.8;
     transform-origin: center center;
