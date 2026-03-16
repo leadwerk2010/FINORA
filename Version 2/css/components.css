@@ -5,16 +5,17 @@
 
 /* --- 5. HEADER --- */
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-  background-color: rgba(4, 60, 67, 0.6);
+  background-color: rgba(4, 60, 67, 0.88);
   background-image: none;
   backdrop-filter: blur(24px) saturate(1.5);
   -webkit-backdrop-filter: blur(24px) saturate(1.5);
-  border-bottom: 1px solid rgba(144, 180, 178, 0.08);
+  border-bottom: 1px solid rgba(144, 180, 178, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   transition: background-color 0.6s var(--ease-smooth),
     border-color 0.6s var(--ease-smooth),
     box-shadow 0.6s var(--ease-smooth);
@@ -335,9 +336,11 @@
 /* Abstand oben (= zum Header) und unten (= zum Sektionsende) immer gleich: var(--header-height) */
 .hero {
   position: relative;
-  min-height: 100vh;
-  height: 100vh;
-  padding: calc(var(--header-height) * 2) clamp(20px, 5vw, 70px) var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+  padding: var(--header-height) clamp(20px, 5vw, 70px) var(--header-height);
   background: var(--color-primary-dark);
   display: flex;
   flex-direction: column;
@@ -351,9 +354,11 @@
 .hero.hero--investment,
 .hero.hero--immobilien,
 .hero.hero--erbanlage {
-  padding: calc(var(--header-height) * 2) 70px var(--header-height);
-  min-height: 100vh;
-  height: 100vh;
+  padding: var(--header-height) clamp(20px, 5vw, 70px) var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -385,9 +390,11 @@
 .hero.hero--ueber,
 .hero.hero--kontakt,
 .hero.hero--philosophie {
-  padding: calc(var(--header-height) * 2) 70px var(--header-height);
-  min-height: 100vh;
-  height: 100vh;
+  padding: var(--header-height) clamp(20px, 5vw, 70px) var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -668,6 +675,14 @@
 .hero .hero-images.hero-images--single .hero-img-main img {
   width: 100%;
   display: block;
+}
+
+/* Spezifische Bildausrichtung für Über Finora & Philosophie */
+.hero.hero--philosophie .hero-img-main img,
+.hero.hero--ueber .hero-img-main img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
 }
 
 /* Hero CTA Button - min 44px touch target (accessibility) */
@@ -2445,10 +2460,12 @@
     width: 100%;
   }
 
-  /* Hero: 100vh, Abstand oben = Abstand unten = header-height */
+  /* Hero: 100dvh, Abstand oben = Abstand unten = header-height */
   .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
     padding: calc(var(--header-height) * 2) clamp(20px, 4vw, 40px) var(--header-height);
   }
 
@@ -2488,6 +2505,7 @@
 
   .pillars-grid {
     flex-direction: column;
+    gap: 24px;
     max-width: 440px;
     margin: 0 auto;
   }
@@ -2708,7 +2726,9 @@
 @media (max-width: 767px) {
   .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
     padding: calc(var(--header-height) * 2) max(16px, env(safe-area-inset-left)) var(--header-height) max(16px, env(safe-area-inset-right));
   }
 
@@ -2818,6 +2838,19 @@
     border-radius: 14px;
   }
 
+  .blurb {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .blurb-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 12px;
+  }
+
   .how-it-works {
     padding: 20px 0 80px;
   }
@@ -2826,12 +2859,38 @@
     font-size: 26px;
   }
 
+  .how-title {
+    margin-bottom: 40px;
+  }
+
+  .how-step .step-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 44px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+  }
+
+  .how-step h4 {
+    font-size: 20px;
+  }
+
+  .how-step p {
+    font-size: 15px;
+  }
+
   .how-grid {
     margin-bottom: 0;
+    gap: 32px;
   }
 
   .how-bottom {
     margin-top: 48px;
+  }
+
+  .how-bottom p {
+    font-size: clamp(14px, 3.5vw, 18px);
+    padding: 20px 24px;
   }
 
   .testimonials {
@@ -2844,7 +2903,28 @@
   }
 
   .faq-right h2 {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .faq-intro {
+    font-size: 16px;
+  }
+
+  .accordion-title {
+    font-size: 18px;
+    padding-right: 36px;
+  }
+
+  .accordion-item {
+    padding: 18px 20px;
+  }
+
+  .accordion-content {
+    font-size: 15px;
+  }
+
+  .slider-section {
+    padding: 80px 0;
   }
 
   .footer-col {
@@ -2872,26 +2952,75 @@
   }
 
   .pillar-card {
-    padding: 32px 24px 64px;
+    padding: 32px 24px 44px;
   }
 
   .pillar-card .card-desc {
     font-size: 15px;
   }
 
+  .pillar-card .card-icon {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+
   .btn {
-    padding: 12px 32px;
-    font-size: 15px;
+    padding: 12px 28px;
+    font-size: 14px;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .how-step .step-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    border-radius: 20px;
   }
 
   .footer-main {
     padding: 40px 0;
-    gap: 24px;
+    gap: 16px;
   }
 
   .footer-col h4 {
-    font-size: 20px;
-    margin-top: 32px;
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+  }
+
+  .footer-col ul li {
+    font-size: 14px;
+    line-height: 2.2em;
+  }
+
+  .footer-logo {
+    max-width: 200px;
+  }
+
+  .testimonial-percent {
+    font-size: 40px;
+  }
+
+  .testimonial-ersparnis {
+    font-size: 14px;
+    padding-bottom: 24px;
+  }
+
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+
+  .accordion-title {
+    font-size: 16px;
+  }
+
+  .accordion-item {
+    padding: 16px 16px;
   }
 }
 
@@ -3933,7 +4062,9 @@
 @media (max-width: 980px) {
   .page-hero {
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
     padding: calc(var(--header-height) * 2) var(--container-padding);
   }
 
@@ -3983,9 +4114,18 @@
   }
 
   .audience-block {
-    padding: 30px 20px;
+    padding: 28px 20px;
   }
 
+  .audience-block h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .audience-block>p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
   .timeline:not(.timeline--horizontal)::before {
     left: 20px;
   }
@@ -4017,7 +4157,9 @@
 @media (max-width: 767px) {
   .page-hero {
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
     padding: calc(var(--header-height) * 2) var(--container-padding);
   }
 
@@ -4031,6 +4173,14 @@
 
   .content-section {
     padding: clamp(40px, 8vw, 60px) 0;
+  }
+
+  .col-img {
+    margin-bottom: 24px;
+  }
+
+  .col-text h2 {
+    margin-top: 0;
   }
 
   .col-text h2,
