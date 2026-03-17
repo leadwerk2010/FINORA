@@ -351,6 +351,7 @@
     .page-home .faq-right {
         width: 100%;
         padding: 5% 4%;
+        min-height: 85vh;
     }
 }
 
