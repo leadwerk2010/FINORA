@@ -1,0 +1,273 @@
+/* ============================================================
+   FINORA - GLASS CONTRACT
+   Demo-aligned glass-panel / glass-button layer system
+   ============================================================ */
+
+:root {
+  --glass-border: rgba(255, 255, 255, 0.34);
+  --glass-border-strong: rgba(255, 255, 255, 0.5);
+  --glass-shadow-soft: 0 14px 40px rgba(7, 21, 32, 0.12);
+  --glass-shadow-strong: 0 22px 56px rgba(7, 21, 32, 0.18);
+  --glass-tint-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --glass-specular-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.14) 28%, rgba(255, 255, 255, 0) 58%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.pillars,
+.testimonials,
+.faq,
+.content-section--white,
+.content-section--light,
+.content-section--gray,
+.legal-content {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/images/glass-scene-light.svg");
+}
+
+.faq {
+  background-color: var(--color-light-bg, #f4f5f5);
+}
+
+.page-legal .legal-content {
+  background-color: var(--color-primary);
+  background-image: url("../assets/images/glass-scene-light.svg");
+}
+
+.glass-panel {
+  --glass-tint-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --glass-specular-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.14) 28%, rgba(255, 255, 255, 0) 58%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--glass-tint-background) !important;
+  backdrop-filter: blur(18px) saturate(145%) brightness(1.03);
+  -webkit-backdrop-filter: blur(18px) saturate(145%) brightness(1.03);
+  border: 1px solid var(--glass-border) !important;
+  box-shadow:
+    var(--glass-shadow-soft),
+    inset 0 1px 0 rgba(255, 255, 255, 0.76),
+    inset 0 0 22px rgba(255, 255, 255, 0.06) !important;
+}
+
+.glass-panel.glass-enhanced {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html.webgl-liquid-glass .glass-panel {
+  backdrop-filter: blur(24px) saturate(180%) brightness(1.06);
+  -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.06);
+}
+
+.glass-button {
+  --glass-tint-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.09) 100%);
+  --glass-specular-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.18) 32%, rgba(255, 255, 255, 0) 62%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0) 52%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 10px 24px rgba(7, 21, 32, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.glass-button:hover {
+  --glass-tint-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.12) 100%);
+  box-shadow:
+    0 16px 32px rgba(7, 21, 32, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94) !important;
+}
+
+html.webgl-liquid-glass .glass-button {
+  backdrop-filter: blur(18px) saturate(180%) brightness(1.08);
+  -webkit-backdrop-filter: blur(18px) saturate(180%) brightness(1.08);
+}
+
+.glass-backdrop-layer,
+.glass-tint-layer,
+.glass-specular-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.glass-backdrop-layer {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.glass-tint-layer {
+  z-index: 1;
+  background: var(--glass-tint-background);
+}
+
+.glass-specular-layer {
+  z-index: 2;
+  background: var(--glass-specular-background);
+  mix-blend-mode: screen;
+  opacity: 0.64;
+}
+
+.glass-content-layer {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  gap: inherit;
+}
+
+.glass-render-surface {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.site-header.glass-panel,
+.footer-main.glass-panel {
+  --glass-tint-background:
+    linear-gradient(135deg, rgba(4, 60, 67, 0.56) 0%, rgba(38, 96, 99, 0.3) 100%);
+  --glass-specular-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.12) 26%, rgba(255, 255, 255, 0) 58%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 48%);
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+.header-lang-dropdown.glass-panel,
+.nav-menu .sub-menu.glass-panel,
+.mobile-menu.glass-panel {
+  --glass-tint-background:
+    linear-gradient(135deg, rgba(5, 54, 60, 0.74) 0%, rgba(12, 78, 84, 0.46) 100%);
+  --glass-specular-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.09) 24%, rgba(255, 255, 255, 0) 58%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 46%);
+  border-color: rgba(214, 235, 234, 0.3) !important;
+  box-shadow:
+    var(--glass-shadow-strong),
+    inset 0 1px 0 rgba(255, 255, 255, 0.76) !important;
+}
+
+.hero-badge.glass-panel,
+.testimonials-nav-dot.glass-panel,
+.fs-item.glass-panel,
+.tab-nav button.glass-panel,
+.btn.btn-audience.glass-panel {
+  --glass-tint-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.11) 100%);
+  --glass-specular-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.16) 28%, rgba(255, 255, 255, 0) 58%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.calc-v2__card.glass-panel,
+.calc-v2__kpi-strip.glass-panel,
+.legal-body.glass-panel {
+  --glass-tint-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.legal-body.glass-panel {
+  --glass-tint-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.18) 100%);
+  --glass-specular-background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.16) 30%, rgba(255, 255, 255, 0) 62%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 54%);
+}
+
+.site-header.glass-panel {
+  background-color: transparent !important;
+  overflow: visible;
+}
+
+.site-header.glass-enhanced > .glass-content-layer,
+.header-lang-dropdown.glass-enhanced > .glass-content-layer,
+.nav-menu .sub-menu.glass-enhanced > .glass-content-layer,
+.mobile-menu.glass-enhanced > .glass-content-layer {
+  height: auto;
+}
+
+.hero-badge.glass-panel {
+  padding-inline: 14px;
+}
+
+.footer-main.glass-panel {
+  border-radius: 32px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.footer-contact .contact-item.glass-panel {
+  border-radius: 18px;
+  padding: 12px 14px;
+  border-color: rgba(255, 255, 255, 0.38) !important;
+}
+
+.contact-form-card.glass-panel,
+.kontakt-info-card.glass-panel,
+.tab-panel.glass-panel,
+.testimonial-card.glass-panel,
+.accordion-item.glass-panel,
+.timeline-item__card.glass-panel,
+.pillar-card.glass-panel,
+.audience-card.glass-panel,
+.calc-v2__card.glass-panel,
+.calc-v2__kpi-strip.glass-panel,
+.hero-services .service-item.glass-panel,
+.fs-card.glass-panel,
+.legal-body.glass-panel,
+.approach-tile__front.glass-panel,
+.approach-tile__back.glass-panel,
+.flip-card-front.glass-panel,
+.flip-card-back.glass-panel,
+.flip-box-front.glass-panel,
+.flip-box-back.glass-panel {
+  border-color: rgba(255, 255, 255, 0.36) !important;
+}
+
+.legal-body.glass-panel {
+  padding: clamp(28px, 4vw, 40px);
+  border-radius: 32px;
+}
+
+.mobile-menu.glass-panel {
+  border-top-width: 1px;
+}
+
+.lw-more-btn.glass-panel,
+.timeline-card__toggle.glass-panel,
+.fs-dot.glass-panel {
+  min-height: 0;
+}
+
+@media (max-width: 767px) {
+  .footer-main.glass-panel {
+    border-radius: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .legal-body.glass-panel {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+}

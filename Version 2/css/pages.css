@@ -1858,25 +1858,6 @@ html:has(body.page-immobilien) {
         max-width: 75%;
     }
 
-    .page-ueber .mobile-menu-toggle {
-        width: 24px;
-        height: 24px;
-    }
-
-    .page-ueber .mobile-menu-toggle span {
-        display: none;
-    }
-
-    .page-ueber .mobile-menu-toggle::before {
-        content: "a";
-        font-family: ETmodules;
-        font-size: 30px;
-        line-height: 1;
-        color: #ffffff;
-        display: block;
-        transform: translateY(-2px);
-    }
-
     .page-ueber .why-finora,
     .page-ueber .section-testimonials {
         border-radius: 0 0 96px 96px;
@@ -1885,8 +1866,14 @@ html:has(body.page-immobilien) {
 
     .page-ueber .why-finora-left,
     .page-ueber .why-finora-right {
+        flex: 0 0 100%;
+        max-width: 100%;
         width: 100%;
         padding: 0;
+    }
+
+    .page-ueber .why-finora .row {
+        gap: 36px;
     }
 
     .page-ueber .why-finora-left h2 {
@@ -1895,6 +1882,9 @@ html:has(body.page-immobilien) {
     }
 
     .page-ueber .why-finora-right img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
         margin-top: 70px;
         margin-right: 0;
     }
@@ -1962,8 +1952,29 @@ html:has(body.page-immobilien) {
         padding: 90px 0;
     }
 
+    .page-ueber .why-finora .row {
+        gap: 28px;
+    }
+
+    .page-ueber .why-finora-left .about-text {
+        margin: 28px 0 36px;
+    }
+
+    .page-ueber .why-finora-left .blurb {
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .page-ueber .why-finora-left .blurb-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        border-radius: 14px;
+    }
+
     .page-ueber .why-finora-right img {
-        margin-top: 55px;
+        margin-top: 12px;
+        border-radius: 16px 16px 28px 16px;
     }
 
     .page-ueber .why-finora-left h2,
@@ -4772,8 +4783,8 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: 100vh, Hintergrundbild mit Parallax - Verlauf von rechts nach links --- */
 .page-altersvorsorge .hero.hero--altersvorsorge {
-    background-position: center 20%;
-    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A7339_prev.jpg') !important;
+    background-position: center bottom;
+    background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7478_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -6624,25 +6635,6 @@ html:has(body.page-immobilien) {
         max-width: 75%;
     }
 
-    .page-philosophie .mobile-menu-toggle {
-        width: 24px;
-        height: 24px;
-    }
-
-    .page-philosophie .mobile-menu-toggle span {
-        display: none;
-    }
-
-    .page-philosophie .mobile-menu-toggle::before {
-        content: "a";
-        font-family: ETmodules;
-        font-size: 30px;
-        line-height: 1;
-        color: #ffffff;
-        display: block;
-        transform: translateY(-2px);
-    }
-
     .page-philosophie .philosophie-pillars,
     .page-philosophie .philosophie-basis-detail,
     .page-philosophie .philosophie-audience--basis,
@@ -6879,6 +6871,17 @@ html:has(body.page-immobilien) {
     .page-investment .approach-tile__inner {
         position: relative;
         inset: auto;
+        height: auto;
+        min-height: 0;
+        padding: 20px 18px;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .page-investment .approach-tile {
+        transform: none;
+        opacity: 1;
+        transition: none;
     }
 
     .page-investment .approach-tile:hover {
@@ -6898,9 +6901,15 @@ html:has(body.page-immobilien) {
         filter: none;
     }
 
+    .page-investment .approach-tile__front,
+    .page-investment .approach-tile__back {
+        padding: 0;
+    }
+
     .page-investment .approach-tile .approach-tile__back {
-        max-height: 300px;
+        max-height: none;
         opacity: 1;
+        overflow: visible;
         transform: translateY(0);
         transition: none;
     }
@@ -7041,5 +7050,720 @@ html:has(body.page-immobilien) {
 
     .page-legal .legal-body {
         font-size: 14px;
+    }
+}
+
+/* ============================================================
+   MOBILE QA REMEDIATION OVERRIDES
+   Shared fixes added after page-specific exports so they win
+   ============================================================ */
+
+@media (max-width: 980px) {
+    .cursor-follower {
+        display: none !important;
+    }
+
+    body.has-mobile-menu-open {
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+
+    .site-header {
+        background-color: rgba(4, 60, 67, 0.92);
+        border-bottom-color: rgba(144, 180, 178, 0.16);
+        backdrop-filter: blur(18px) saturate(1.2);
+        -webkit-backdrop-filter: blur(18px) saturate(1.2);
+    }
+
+    .header-row {
+        width: 100% !important;
+        min-height: 72px;
+        padding: 12px max(14px, env(safe-area-inset-left)) 14px max(14px, env(safe-area-inset-right)) !important;
+    }
+
+    .header-logo {
+        width: auto !important;
+        flex: 0 1 auto !important;
+    }
+
+    .header-logo img {
+        width: min(132px, 34vw) !important;
+        max-width: none;
+    }
+
+    .mobile-menu-toggle,
+    .page-ueber .mobile-menu-toggle,
+    .page-philosophie .mobile-menu-toggle {
+        display: inline-flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 44px !important;
+        height: 44px !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-menu-toggle span,
+    .page-ueber .mobile-menu-toggle span,
+    .page-philosophie .mobile-menu-toggle span {
+        display: block !important;
+        flex: 0 0 auto;
+        width: 22px !important;
+        height: 2px !important;
+        margin: 0 !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .page-ueber .mobile-menu-toggle::before,
+    .page-philosophie .mobile-menu-toggle::before {
+        content: none !important;
+        display: none !important;
+    }
+
+    .mobile-menu-toggle.is-active span:nth-child(1) {
+        transform: none !important;
+    }
+
+    .mobile-menu-toggle.is-active span:nth-child(2) {
+        opacity: 1 !important;
+    }
+
+    .mobile-menu-toggle.is-active span:nth-child(3) {
+        transform: none !important;
+    }
+
+    .mobile-menu {
+        display: block !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100svh - var(--header-height) - 8px);
+        overflow-y: auto;
+        padding: 0 0 calc(20px + env(safe-area-inset-bottom));
+        background: rgba(4, 60, 67, 0.98);
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    }
+
+    .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .mobile-menu a {
+        padding: 16px 20px !important;
+        font-size: 18px !important;
+        line-height: 1.35;
+    }
+
+    .mobile-menu .sub-menu {
+        padding-bottom: 8px;
+    }
+
+    .mobile-menu .sub-menu a {
+        padding-left: 34px !important;
+        font-size: 15px !important;
+    }
+
+    .page-altersvorsorge .hero.hero--altersvorsorge,
+    .page-ueber .hero.hero--ueber,
+    .page-kontakt .hero.hero--kontakt,
+    .page-investment .hero.hero--investment,
+    .page-erbanlage .hero.hero--erbanlage,
+    .page-immobilien .hero.hero--immobilien,
+    .page-philosophie .hero.hero--philosophie {
+        min-height: max(560px, 100svh);
+        height: auto !important;
+        padding: calc(var(--header-height) + 28px) clamp(20px, 5vw, 32px) clamp(28px, 7vw, 44px) !important;
+        justify-content: flex-start !important;
+        background-attachment: scroll !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-content,
+    .page-ueber .hero--ueber .hero-content,
+    .page-kontakt .hero--kontakt .hero-content,
+    .page-investment .hero--investment .hero-content,
+    .page-erbanlage .hero--erbanlage .hero-content,
+    .page-immobilien .hero--immobilien .hero-content,
+    .page-philosophie .hero--philosophie .hero-content {
+        width: 100% !important;
+        max-width: 560px !important;
+        min-height: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-text,
+    .page-ueber .hero--ueber .hero-text,
+    .page-kontakt .hero--kontakt .hero-text,
+    .page-investment .hero--investment .hero-text,
+    .page-erbanlage .hero--erbanlage .hero-text,
+    .page-immobilien .hero--immobilien .hero-text,
+    .page-philosophie .hero--philosophie .hero-text {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding-right: 0 !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-text h1,
+    .page-ueber .hero--ueber .hero-text h1,
+    .page-kontakt .hero--kontakt .hero-text h1,
+    .page-investment .hero--investment .hero-text h1,
+    .page-erbanlage .hero--erbanlage .hero-text h1,
+    .page-immobilien .hero--immobilien .hero-text h1,
+    .page-philosophie .hero--philosophie .hero-text h1 {
+        max-width: 11ch;
+        margin: 0 0 14px !important;
+        padding-bottom: 0 !important;
+        font-size: clamp(2.25rem, 9vw, 3.5rem) !important;
+        line-height: 0.98 !important;
+        text-align: left !important;
+    }
+
+    .page-kontakt .hero--kontakt .hero-text h1,
+    .page-immobilien .hero--immobilien .hero-text h1 {
+        max-width: 8.5ch;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-subtitle,
+    .page-ueber .hero--ueber .hero-subtitle,
+    .page-kontakt .hero--kontakt .hero-subtitle,
+    .page-investment .hero--investment .hero-subtitle,
+    .page-erbanlage .hero--erbanlage .hero-subtitle,
+    .page-immobilien .hero--immobilien .hero-subtitle,
+    .page-philosophie .hero--philosophie .hero-subtitle {
+        max-width: 34ch;
+        margin: 0 0 18px !important;
+        font-size: clamp(15px, 4vw, 18px) !important;
+        line-height: 1.55 !important;
+        text-align: left !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-badge,
+    .page-ueber .hero--ueber .hero-badge,
+    .page-kontakt .hero--kontakt .hero-badge,
+    .page-investment .hero--investment .hero-badge,
+    .page-erbanlage .hero--erbanlage .hero-badge,
+    .page-immobilien .hero--immobilien .hero-badge,
+    .page-philosophie .hero--philosophie .hero-badge {
+        align-self: flex-start !important;
+        margin-bottom: 12px;
+        max-width: 100%;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-text > div[style*="text-align"],
+    .page-ueber .hero--ueber .hero-text > div[style*="text-align"],
+    .page-investment .hero--investment .hero-text > div[style*="text-align"],
+    .page-erbanlage .hero--erbanlage .hero-text > div[style*="text-align"],
+    .page-philosophie .hero--philosophie .hero-text > div[style*="text-align"],
+    .page-immobilien .hero--immobilien .hero-text > div[style*="text-align"] {
+        width: 100%;
+        text-align: left !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-microcopy,
+    .page-ueber .hero--ueber .hero-microcopy,
+    .page-kontakt .hero--kontakt .hero-microcopy,
+    .page-investment .hero--investment .hero-microcopy,
+    .page-erbanlage .hero--erbanlage .hero-microcopy,
+    .page-immobilien .hero--immobilien .hero-microcopy,
+    .page-philosophie .hero--philosophie .hero-microcopy {
+        text-align: left !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-images,
+    .page-ueber .hero--ueber .hero-images,
+    .page-kontakt .hero--kontakt .hero-images,
+    .page-investment .hero--investment .hero-images,
+    .page-erbanlage .hero--erbanlage .hero-images,
+    .page-immobilien .hero--immobilien .hero-images,
+    .page-philosophie .hero--philosophie .hero-images {
+        display: none !important;
+    }
+
+    .page-home .hero--slider .hero-slide-content {
+        max-width: 100%;
+        padding: calc(var(--header-height) + 32px) clamp(16px, 4vw, 24px) 148px !important;
+    }
+
+    .page-home .hero--slider .hero-slide-title {
+        margin-bottom: 14px;
+        font-size: clamp(2.25rem, 10vw, 3.25rem);
+    }
+
+    .page-home .hero--slider .hero-slide-subtitle {
+        max-width: 33ch;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .page-home .hero--slider .hero-services {
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item {
+        width: calc(50% - 6px);
+        min-width: 0;
+        gap: 12px;
+        padding: 14px 12px;
+        font-size: 16px;
+    }
+
+    .page-home .hero--slider .hero-services .service-icon {
+        width: 54px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item:nth-child(2) .service-icon {
+        width: 50px;
+    }
+
+    .page-home .hero--slider .hero-slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pillars-grid .pillar-card,
+    .pillars-grid.process-card-wrap .pillar-card {
+        transform: none !important;
+    }
+
+    .testimonials-track {
+        padding: 8px 12px 14px !important;
+        cursor: auto;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+    }
+
+    .testimonials-track-inner,
+    .testimonials-grid {
+        gap: 16px;
+    }
+
+    .testimonial-card {
+        width: min(280px, calc(100vw - 48px));
+        min-width: min(280px, calc(100vw - 48px));
+        padding: 24px 20px;
+    }
+
+    .testimonial-percent {
+        font-size: 42px;
+    }
+
+    .testimonial-ersparnis {
+        padding-bottom: 18px;
+        font-size: 13px;
+    }
+
+    .testimonial-quote-wrap {
+        min-height: 0;
+        padding-left: 18px;
+    }
+
+    .testimonials-nav {
+        margin-top: 20px;
+    }
+
+    .timeline-card__toggle {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+
+    .page-investment .section-timeline .timeline--vertical,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical {
+        max-width: 100%;
+        padding-top: 12px;
+    }
+
+    .two-col > .col-text,
+    .two-col > .col-img,
+    .page-investment .section-timeline .timeline--vertical .timeline-item,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .page-investment .section-timeline .timeline--vertical .timeline-item,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 72px !important;
+        margin-bottom: 32px !important;
+    }
+
+    .page-investment .section-timeline .timeline--vertical::before,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical::before,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical::before {
+        left: 18px !important;
+    }
+
+    .page-investment .section-timeline .timeline--vertical .timeline-item__number,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__number,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__number {
+        left: 18px !important;
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 16px !important;
+    }
+
+    .page-investment .section-timeline .timeline--vertical .timeline-item__card,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 20px !important;
+    }
+
+    .page-immobilien .two-col--immobilien-intro {
+        flex-wrap: wrap !important;
+        gap: 24px !important;
+    }
+
+    .page-immobilien .col-img--immobilien-intro,
+    .page-immobilien .col-text--immobilien-intro {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .page-immobilien .col-text--immobilien-intro {
+        order: 1;
+    }
+
+    .page-immobilien .col-img--immobilien-intro {
+        order: 2;
+    }
+
+    .page-immobilien .immobilien-intro-image {
+        margin-top: 0 !important;
+        width: 100%;
+    }
+
+    .page-altersvorsorge .section-favorites .tab-nav {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .page-altersvorsorge .section-favorites .tab-nav button {
+        width: 100%;
+        margin: 0 !important;
+        padding: 12px 16px !important;
+        text-align: left;
+        line-height: 1.4 !important;
+        font-size: 16px;
+    }
+
+    .page-altersvorsorge .section-favorites .tabs-content {
+        padding-top: 24px;
+    }
+
+    .page-altersvorsorge .section-favorites .tab-panel {
+        padding: 24px 18px;
+    }
+
+    .blurb-content,
+    .page-altersvorsorge .section-favorites .tab-panel p,
+    .page-altersvorsorge .section-favorites .tab-panel li {
+        min-width: 0;
+        overflow-wrap: break-word;
+    }
+
+    .footer-main {
+        padding: 32px clamp(16px, 4vw, 24px) 20px !important;
+        gap: 18px !important;
+    }
+
+    .footer-col,
+    .footer-col:first-child {
+        margin: 0 !important;
+    }
+
+    .footer-logo {
+        max-width: 220px;
+        margin-bottom: 14px;
+    }
+
+    .footer-col h4 {
+        margin: 10px 0 10px !important;
+        font-size: 18px !important;
+    }
+
+    .footer-desc,
+    .footer-col ul li,
+    .footer-contact p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .footer-col ul li {
+        line-height: 1.75;
+    }
+
+    .footer-contact .contact-item {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo-full {
+        min-height: 88px;
+        margin-top: 4px;
+    }
+
+    .footer-logo-full__img {
+        max-height: 110px;
+        object-fit: contain;
+        opacity: 0.12;
+    }
+
+    .footer-bottom {
+        padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
+    }
+
+    .footer-bottom p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-home .hero--slider .hero-slide-content {
+        padding-bottom: 164px !important;
+    }
+
+    .page-home .hero--slider .hero-slide-title {
+        font-size: clamp(2rem, 9vw, 2.75rem);
+    }
+
+    .page-home .hero--slider .hero-slide-subtitle {
+        font-size: 14px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item {
+        font-size: 15px;
+    }
+
+    .page-altersvorsorge .hero.hero--altersvorsorge,
+    .page-ueber .hero.hero--ueber,
+    .page-kontakt .hero.hero--kontakt,
+    .page-investment .hero.hero--investment,
+    .page-erbanlage .hero.hero--erbanlage,
+    .page-immobilien .hero.hero--immobilien,
+    .page-philosophie .hero.hero--philosophie {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 22px) !important;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-text h1,
+    .page-ueber .hero--ueber .hero-text h1,
+    .page-kontakt .hero--kontakt .hero-text h1,
+    .page-investment .hero--investment .hero-text h1,
+    .page-erbanlage .hero--erbanlage .hero-text h1,
+    .page-immobilien .hero--immobilien .hero-text h1,
+    .page-philosophie .hero--philosophie .hero-text h1 {
+        max-width: 9ch;
+        font-size: clamp(2rem, 10vw, 2.85rem) !important;
+    }
+
+    .page-investment .hero--investment .hero-text h1,
+    .page-philosophie .hero--philosophie .hero-text h1 {
+        max-width: 10ch;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-subtitle,
+    .page-ueber .hero--ueber .hero-subtitle,
+    .page-kontakt .hero--kontakt .hero-subtitle,
+    .page-investment .hero--investment .hero-subtitle,
+    .page-erbanlage .hero--erbanlage .hero-subtitle,
+    .page-immobilien .hero--immobilien .hero-subtitle,
+    .page-philosophie .hero--philosophie .hero-subtitle {
+        font-size: 15px !important;
+    }
+
+    .page-investment .section-timeline .timeline--vertical .timeline-item,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
+        padding-left: 64px !important;
+    }
+
+    .page-investment .section-timeline .timeline--vertical .timeline-item__card,
+    .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card,
+    .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card {
+        padding: 20px 18px !important;
+    }
+
+    .testimonial-card {
+        width: min(272px, calc(100vw - 40px));
+        min-width: min(272px, calc(100vw - 40px));
+    }
+
+    .footer-main {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-home .hero.hero--slider {
+        min-height: max(780px, 100svh);
+        height: auto;
+    }
+
+    .page-home .hero--slider .hero-slide-content {
+        justify-content: flex-start;
+        padding-top: calc(var(--header-height) + 22px) !important;
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+        padding-bottom: 248px !important;
+    }
+
+    .page-home .hero--slider .hero-slide-title {
+        max-width: 8ch;
+        margin-bottom: 10px;
+        font-size: clamp(2.1rem, 10vw, 2.8rem);
+        line-height: 0.98;
+    }
+
+    .page-home .hero--slider .hero-slide-subtitle {
+        max-width: 21ch;
+        margin-bottom: 18px;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .page-home .hero--slider .hero-slide-content .btn {
+        width: min(100%, 292px);
+        padding: 12px 22px;
+        line-height: 1.35;
+    }
+
+    .page-home .hero--slider .hero-microcopy {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .page-home .hero--slider .hero-slider-arrow {
+        top: auto;
+        bottom: 248px;
+        width: 34px;
+        height: 34px;
+        transform: none;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .page-home .hero--slider .hero-slider-arrow:hover {
+        transform: none;
+    }
+
+    .page-home .hero--slider .hero-slider-prev {
+        left: 10px;
+    }
+
+    .page-home .hero--slider .hero-slider-next {
+        right: 10px;
+    }
+
+    .page-home .hero--slider .hero-services {
+        right: 0;
+        bottom: 16px;
+        gap: 8px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item {
+        min-height: 88px;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 10px;
+        font-size: 12.5px;
+        line-height: 1.25;
+        border-radius: 16px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item strong {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 13px;
+        line-height: 1.15;
+    }
+
+    .page-home .hero--slider .hero-services .service-icon {
+        width: 42px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item:nth-child(2) .service-icon {
+        width: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .page-home .hero--slider .hero-services {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item {
+        min-height: 86px;
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .page-home .hero--slider .hero-services .service-item strong {
+        font-size: 13px;
+    }
+
+    .page-home .hero--slider .hero-slide-content {
+        padding-bottom: 236px !important;
+    }
+
+    .page-home .hero--slider .hero-slider-arrow {
+        bottom: 236px;
+    }
+
+    .mobile-menu a {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+
+    .page-altersvorsorge .hero--altersvorsorge .hero-text h1,
+    .page-ueber .hero--ueber .hero-text h1,
+    .page-kontakt .hero--kontakt .hero-text h1,
+    .page-investment .hero--investment .hero-text h1,
+    .page-erbanlage .hero--erbanlage .hero-text h1,
+    .page-immobilien .hero--immobilien .hero-text h1,
+    .page-philosophie .hero--philosophie .hero-text h1 {
+        font-size: 32px !important;
     }
 }

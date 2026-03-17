@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbfcfc"/>
+      <stop offset="54%" stop-color="#eef4f3"/>
+      <stop offset="100%" stop-color="#e7efee"/>
+    </linearGradient>
+    <radialGradient id="washA" cx="16%" cy="18%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="44%" stop-color="#d7e6e4" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#d7e6e4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="washB" cx="82%" cy="24%" r="38%">
+      <stop offset="0%" stop-color="#b7d1cd" stop-opacity="0.38"/>
+      <stop offset="42%" stop-color="#c7dfdc" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#c7dfdc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="washC" cx="72%" cy="80%" r="42%">
+      <stop offset="0%" stop-color="#9dbebb" stop-opacity="0.22"/>
+      <stop offset="48%" stop-color="#cfe1de" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#cfe1de" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#washA)"/>
+  <rect width="1600" height="1200" fill="url(#washB)"/>
+  <rect width="1600" height="1200" fill="url(#washC)"/>
+  <g fill="#ffffff" opacity="0.58">
+    <circle cx="210" cy="1010" r="190"/>
+    <circle cx="1380" cy="980" r="150"/>
+    <circle cx="1240" cy="220" r="108"/>
+  </g>
+  <g fill="#d9e7e5" opacity="0.44">
+    <path d="M0 840c180-112 326-136 444-82 124 56 226 88 330 54 112-34 206-124 372-118 152 5 286 84 454 206V1200H0Z"/>
+    <path d="M0 316c164-104 322-118 446-54 140 72 236 102 354 84 104-14 220-64 370-40 154 26 288 100 430 210V0H0Z"/>
+  </g>
+</svg>

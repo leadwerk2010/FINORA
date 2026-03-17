@@ -1,0 +1,255 @@
+/* ============================================================
+   FINORA — BASE
+   Design Tokens, Reset, Layout Utilities, Fonts
+   ============================================================ */
+
+/* --- 1. DESIGN TOKENS --- */
+:root {
+  /* Colors */
+  --color-primary: #043c43;
+  --color-primary-dark: #003c43;
+  --color-accent: #90b4b2;
+  --color-teal: #266063;
+  --color-text: #666666;
+  --color-white: #ffffff;
+  --color-light-bg: #f4f5f5;
+  --color-card-bg: #ffffff;
+  --color-muted: #5B6D6B;
+  --color-scrollbar-track: #7a8a88; /* dunkler Finora-Ton für Scrollbar-Track */
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', Helvetica, Arial, Lucida, sans-serif;
+  --font-body: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+
+  /* Spacing (8px grid) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+  --space-3xl: 120px;
+
+  /* Radii */
+  --radius-card: 32px;
+  --radius-button: 48px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.10);
+  --shadow-glow: 0 0 40px rgba(144, 180, 178, 0.15);
+  --shadow-none: 0 4px 20px rgba(0, 0, 0, 0);
+
+  /* Gradients */
+  --gradient-dark: linear-gradient(135deg, #043c43 0%, #266063 100%);
+  --gradient-hero: linear-gradient(to bottom, rgba(4, 50, 67, 0.82) 0%, rgba(4, 60, 67, 0.92) 50%, #043c43 100%);
+  --gradient-card-hover: linear-gradient(180deg, rgba(144, 180, 178, 0.06) 0%, rgba(144, 180, 178, 0) 100%);
+
+  /* Transitions */
+  --transition-default: 300ms ease;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Glass */
+  --glass-bg: rgba(4, 60, 67, 0.55);
+  --glass-bg-light: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(144, 180, 178, 0.22);
+  --glass-border-light: rgba(255, 255, 255, 0.5);
+
+  /* Accent glow */
+  --glow-accent: 0 0 60px rgba(144, 180, 178, 0.25), 0 0 120px rgba(144, 180, 178, 0.08);
+  --glow-teal: 0 0 40px rgba(38, 96, 99, 0.3);
+
+  /* Einheitlicher Bild-Schatten (alle Seiten) */
+  --img-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
+  --img-shadow-hover: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
+  --img-hover-transform: translateY(-6px) scale(1.01);
+  --img-transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
+
+  /* Finora slider tokens */
+  --fin-card: #13474b;
+  --fin-text: #e8f4f3;
+  --fin-shadow: 0 20px 40px rgba(0, 0, 0, .25);
+  --fin-radius: 16px;
+
+  /* Breakpoints */
+  --bp-xs: 360px;
+  --bp-sm: 480px;
+  --bp-md: 600px;
+  --bp-tablet: 768px;
+  --bp-lg: 980px;
+  --bp-desktop: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1440px;
+  --bp-3xl: 1920px;
+
+  /* Container padding */
+  --container-padding: clamp(16px, 4vw, 32px);
+  --container-padding-sm: clamp(12px, 3vw, 20px);
+
+  /* Header height - Hero startet darunter (kein Überlappen) */
+  --header-height: 72px;
+}
+
+@media (max-width: 980px) {
+  :root {
+    --header-height: 58px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 54px;
+  }
+}
+
+/* --- 2. RESET & BASE --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: var(--color-primary-dark);
+  scrollbar-color: var(--color-teal) var(--color-scrollbar-track); /* Firefox: Thumb | Track (dunkler Finora) */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: clamp(14px, 0.45vw + 12px, 15px);
+  font-weight: 300;
+  line-height: 1.8em;
+  color: var(--color-text);
+  background: var(--color-primary-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-width: 0;
+}
+
+/* Scrollbar-Optik zentral für alle Seiten - dunkler, Finora-Stil */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--color-teal);
+  border-radius: 5px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s var(--ease-smooth), opacity 0.3s var(--ease-smooth);
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2 {
+  color: #191919;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* --- 3. LAYOUT UTILITIES --- */
+.container {
+  width: min(90%, 1080px);
+  margin: 0 auto;
+  position: relative;
+  padding-inline: var(--container-padding);
+  box-sizing: border-box;
+}
+
+.container--wide {
+  width: min(92%, 1200px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+  box-sizing: border-box;
+}
+
+.container--full {
+  width: min(98%, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+  box-sizing: border-box;
+}
+
+.container--xl {
+  width: min(92%, 1400px);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+  box-sizing: border-box;
+}
+
+.container--narrow {
+  width: min(92%, 1290px);
+  max-width: 1290px;
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+  box-sizing: border-box;
+}
+
+.row {
+  position: relative;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.flex-equal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* --- 4. FONT FACES --- */
+@font-face {
+  font-family: ETmodules;
+  font-display: block;
+  src: url('../assets/fonts/modules.eot') format('embedded-opentype'),
+    url('../assets/fonts/modules.woff') format('woff'),
+    url('../assets/fonts/modules.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

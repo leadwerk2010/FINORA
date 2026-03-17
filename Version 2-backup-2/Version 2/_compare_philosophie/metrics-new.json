@@ -1,0 +1,76 @@
+{
+  "orig_desktop": {
+    "doc": {
+      "w": 1512,
+      "h": 15243
+    },
+    "hero": null,
+    "heroImage": null,
+    "heroHeading": null,
+    "animAll": 0,
+    "animVisible": 0
+  },
+  "static_desktop": {
+    "doc": {
+      "w": 1512,
+      "h": 15841
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "w": 1512,
+      "h": 816.390625
+    },
+    "heroImage": {
+      "x": 1041.828125,
+      "y": 170,
+      "w": 342.984375,
+      "h": 462.484375
+    },
+    "heroHeading": {
+      "x": 156.46875,
+      "y": 212,
+      "w": 691.71875,
+      "h": 236.59375
+    },
+    "animAll": 43,
+    "animVisible": 5
+  },
+  "orig_mobile": {
+    "doc": {
+      "w": 375,
+      "h": 29553
+    },
+    "hero": null,
+    "heroImage": null,
+    "heroHeading": null,
+    "animAll": 0,
+    "animVisible": 0
+  },
+  "static_mobile": {
+    "doc": {
+      "w": 375,
+      "h": 30385
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "w": 375,
+      "h": 819.796875
+    },
+    "heroImage": {
+      "x": 61.875,
+      "y": 240,
+      "w": 251.25,
+      "h": 338.796875
+    },
+    "heroHeading": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "animAll": 43,
+    "animVisible": 1
+  }
+}
