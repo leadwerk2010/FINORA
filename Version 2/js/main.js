@@ -101,41 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================
-    // 0B. MOUSE FOLLOWER (alle Seiten, dezent Finora-Style)
-    // =========================================================
-    const cursorFollower = document.getElementById('cursor-follower');
-    if (cursorFollower) {
-        let mouseX = 0, mouseY = 0;
-        let posX = 0, posY = 0;
-        let rafId = null;
-
-        document.addEventListener('mousemove', function (e) {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            if (rafId == null) {
-                rafId = requestAnimationFrame(animateFollower);
-            }
-        }, { passive: true });
-
-        function animateFollower() {
-            posX += (mouseX - posX) * 0.12;
-            posY += (mouseY - posY) * 0.12;
-            cursorFollower.style.left = posX + 'px';
-            cursorFollower.style.top = posY + 'px';
-            if (Math.abs(mouseX - posX) < 0.5 && Math.abs(mouseY - posY) < 0.5) {
-                rafId = null;
-                return;
-            }
-            rafId = requestAnimationFrame(animateFollower);
-        }
-
-        document.querySelectorAll('a, button').forEach(function (el) {
-            el.addEventListener('mouseenter', function () { cursorFollower.classList.add('is-hover'); });
-            el.addEventListener('mouseleave', function () { cursorFollower.classList.remove('is-hover'); });
-        });
-    }
-
-    // =========================================================
     // 1. MOBILE MENU TOGGLE
     // =========================================================
     const menuToggle = document.querySelector('.mobile-menu-toggle');

@@ -82,7 +82,7 @@
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 500;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: background 0.25s var(--ease-smooth), border-color 0.25s var(--ease-smooth), color 0.25s var(--ease-smooth);
 }
 
@@ -270,7 +270,7 @@
   display: none;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   padding: 10px;
   position: relative;
   z-index: 100;
@@ -375,7 +375,7 @@
 }
 
 .hero.hero--investment {
-  background-image: url(../assets/images/X8A7139_prev-e17696842159562.jpg);
+  background-image: url(../assets/images/_X8A6656_prev.jpg);
 }
 
 .hero.hero--immobilien {
@@ -698,7 +698,7 @@
   padding: clamp(12px, 1.5vw, 14px) clamp(28px, 4vw, 48px);
   min-height: 44px;
   min-width: 44px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: background-color 0.3s var(--ease-smooth),
     border-color 0.3s var(--ease-smooth),
     box-shadow 0.3s var(--ease-smooth),
@@ -969,12 +969,14 @@
   animation: floatY 9s ease-in-out infinite;
 }
 
+/* Gesamt-Container behält maximale Höhe (längster Text), damit keine Höhensprünge; Textcontainer (.fs-card) passt sich dem Text an */
 .finora-switch {
   display: grid;
   grid-template-columns: 6fr 4fr;
   gap: 100px;
   align-items: start;
   background: none;
+  min-height: 640px;
 }
 
 .fs-left {
@@ -1005,6 +1007,7 @@
   border-radius: var(--fin-radius) var(--fin-radius) min(42vw, 280px) var(--fin-radius);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+  box-sizing: border-box;
 }
 
 .fs-card.fs-card--changing {
@@ -1074,7 +1077,7 @@
   padding: 10px 16px 10px 14px;
   margin-bottom: 16px;
   text-align: left;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: color 0.4s var(--ease-smooth), text-shadow 0.4s var(--ease-smooth), border-color 0.4s var(--ease-smooth), background 0.4s var(--ease-smooth), font-size 0.3s var(--ease-smooth);
   display: block;
   width: 100%;
@@ -1645,7 +1648,7 @@
   border: none;
   padding: 0;
   background: rgba(4, 60, 67, 0.18);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
@@ -1871,7 +1874,7 @@
   font-size: 14px;
   font-weight: 600;
   font-family: var(--font-heading);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   padding: 0;
   line-height: 1.2;
   display: block;
@@ -1962,7 +1965,7 @@
 }
 
 .accordion-title {
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   position: relative;
   padding-right: 50px;
   font-family: var(--font-heading);
@@ -2584,7 +2587,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
   }
 
   .fs-nav-btn .fs-nav-icon {
@@ -2607,7 +2610,7 @@
     border: none;
     background: rgba(255, 255, 255, .35);
     padding: 0;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
   }
 
   .fs-dot.is-active {
@@ -3388,7 +3391,7 @@
   border: none;
   border-bottom: 3px solid transparent;
   padding: 12px 20px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: color 0.3s, border-color 0.3s;
   white-space: nowrap;
 }
@@ -3842,7 +3845,7 @@
   flex: 1 1 0;
   min-width: 180px;
   transition: flex 0.7s var(--ease-smooth);
-  cursor: default;
+  cursor: var(--cursor-default);
   perspective: none;
 }
 
@@ -4047,7 +4050,7 @@
   border: none;
   border-radius: var(--radius-button);
   padding: 14px 60px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: background 0.3s;
 }
 
@@ -4335,7 +4338,7 @@
   min-width: 160px;
   align-self: center;
   transition: flex 0.7s var(--ease-smooth);
-  cursor: default;
+  cursor: var(--cursor-default);
 }
 
 .flip-box:hover {
@@ -4572,7 +4575,7 @@
   font-size: 18px;
   font-weight: 600;
   color: var(--color-primary);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   display: flex;
   justify-content: space-between;
   align-items: center;
