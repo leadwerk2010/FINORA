@@ -6,463 +6,465 @@
 
 /* ========== PAGE: HOME (Startseite) ========== */
 .page-home {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 /* Hero: 100vh - Slider (Leistungen-Style) oder Fallback */
 .page-home .hero {
-  background-color: #043c43;
-  min-height: 100vh;
-  height: 100vh;
-  padding: calc(var(--header-height) * 2) 70px var(--header-height);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-sizing: border-box;
+    background-color: #043c43;
+    min-height: 100vh;
+    height: 100vh;
+    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 /* ========== Startseite: Hero-Slider - Hintergrund 100vw × 100vh, voller Bildschirm ========== */
 .page-home .hero.hero--slider {
-  position: relative;
-  background: none;
-  padding: 0;
-  min-height: 100vh;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    background: none;
+    padding: 0;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 .page-home .hero.hero--slider::after {
-  display: none;
+    display: none;
 }
 
 /* Track und Slides füllen die gesamte Viewport-Fläche */
 .page-home .hero--slider .hero-slider-track {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
 
 .page-home .hero--slider .hero-slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #043c43;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #043c43;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 /* Slide 2 (Investment): Hintergrundbild vertikal zentrieren */
 /* Investment-Beratung: noch mehr vom oberen Bildteil sichtbar */
 .page-home .hero--slider .hero-slide[data-slide="1"] {
-  background-position: center 15%;
+    background-position: center 15%;
 }
 
 /* Immobilien-Beratung: obere Bildhälfte sichtbar */
 .page-home .hero--slider .hero-slide[data-slide="2"] {
-  background-position: center 25%;
+    background-position: center 25%;
 }
 
 .page-home .hero--slider .hero-slide.is-active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
 }
 
 .page-home .hero--slider .hero-slide-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: calc(var(--header-height) * 2) 70px 140px;
-  box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: calc(var(--header-height) * 2) 70px 140px;
+    box-sizing: border-box;
 }
 
 .page-home .hero--slider .hero-slide-content .hero-badge {
-  width: fit-content !important;
-  min-width: 0;
-  align-self: center;
+    width: fit-content !important;
+    min-width: 0;
+    align-self: center;
 }
 
 .page-home .hero--slider .hero-slide-title {
-  font-family: var(--font-heading);
-  font-weight: 200;
-  font-size: clamp(32px, 5.2vw, 72px);
-  line-height: 1.03em;
-  color: var(--color-white);
-  margin: 0 0 20px;
-  padding-bottom: 10px;
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    line-height: 1.03em;
+    color: var(--color-white);
+    margin: 0 0 20px;
+    padding-bottom: 10px;
 }
 
 .page-home .hero--slider .hero-slide-title strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .page-home .hero--slider .hero-slide-subtitle {
-  font-family: var(--font-heading);
-  font-weight: 200;
-  font-size: 17px;
-  line-height: 1.8em;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 24px;
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 24px;
 }
 
 .page-home .hero--slider .hero-microcopy,
 .hero .hero-microcopy {
-  display: block;
-  margin-top: 12px;
-  font-family: var(--font-body);
-  font-weight: 300;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.55);
-  text-align: center;
-  width: 100%;
+    display: block;
+    margin-top: 12px;
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    width: 100%;
 }
 
 .page-home .hero--slider .hero-slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--color-white);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 .page-home .hero--slider .hero-slider-arrow:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-50%) scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(1.05);
 }
 
 .page-home .hero--slider .hero-slider-arrow svg {
-  width: 22px;
-  height: 22px;
+    width: 22px;
+    height: 22px;
 }
 
 .page-home .hero--slider .hero-slider-prev {
-  left: 24px;
+    left: 24px;
 }
 
 .page-home .hero--slider .hero-slider-next {
-  right: 24px;
+    right: 24px;
 }
 
 /* Service-Karten: volle Hero-Breite, feste Kartengröße, großer Abstand dazwischen */
 .page-home .hero--slider .hero-services {
-  position: absolute;
-  bottom: 24px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 5;
-  margin: 0;
-  padding: 0 24px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: stretch;
-  gap: 32px;
-  flex-wrap: nowrap;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
+    margin: 0;
+    padding: 0 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 32px;
+    flex-wrap: nowrap;
 }
 
 .page-home .hero--slider .hero-services .service-item {
-  flex: 0 0 auto;
-  width: 320px;
-  min-width: 0;
-  font-size: 22px;
-  padding: 20px 20px;
-  gap: 16px;
-  border-radius: 20px;
+    flex: 0 0 auto;
+    width: 320px;
+    min-width: 0;
+    font-size: 22px;
+    padding: 20px 20px;
+    gap: 16px;
+    border-radius: 20px;
 }
 
 .page-home .hero--slider .hero-services .service-icon {
-  width: 88px;
+    width: 88px;
 }
 
 .page-home .hero--slider .hero-services .service-item:nth-child(2) .service-icon {
-  width: 84px;
+    width: 84px;
 }
 
 @media (max-width: 1200px) {
-  .page-home .hero--slider .hero-services .service-item {
-    width: 280px;
-  }
-  .page-home .hero--slider .hero-services {
-    gap: 24px;
-  }
+    .page-home .hero--slider .hero-services .service-item {
+        width: 280px;
+    }
+
+    .page-home .hero--slider .hero-services {
+        gap: 24px;
+    }
 }
 
 @media (max-width: 900px) {
-  .page-home .hero--slider .hero-services .service-item {
-    width: 240px;
-  }
-  .page-home .hero--slider .hero-services {
-    gap: 16px;
-    padding: 0 16px;
-  }
+    .page-home .hero--slider .hero-services .service-item {
+        width: 240px;
+    }
+
+    .page-home .hero--slider .hero-services {
+        gap: 16px;
+        padding: 0 16px;
+    }
 }
 
 @media (max-width: 768px) {
-  .page-home .hero--slider .hero-services {
-    display: none;
-  }
+    .page-home .hero--slider .hero-services {
+        display: none;
+    }
 }
 
 /* Fallback: wenn kein Slider (alte Hero-Struktur) */
 .page-home .hero-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0;
-  margin-top: auto;
-  margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .page-home .hero-text {
-  width: 55%;
-  max-width: 640px;
-  padding-right: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    width: 55%;
+    max-width: 640px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .page-home .hero-images {
-  width: 40%;
-  flex-shrink: 0;
-  display: block;
+    width: 40%;
+    flex-shrink: 0;
+    display: block;
 }
 
 .page-home .hero-text h1 {
-  font-family: var(--font-heading);
-  font-weight: 200;
-  font-size: clamp(32px, 5.2vw, 72px);
-  line-height: 1.03em;
-  max-width: 100%;
-  margin: 0 0 20px;
-  padding-bottom: 10px;
-  text-align: center;
-  color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: clamp(32px, 5.2vw, 72px);
+    line-height: 1.03em;
+    max-width: 100%;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: var(--color-white);
 }
 
 .page-home .hero-text h1 strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .page-home .hero-subtitle {
-  font-family: var(--font-heading);
-  font-weight: 200;
-  font-size: 17px;
-  line-height: 1.8em;
-  margin: 0 0 24px;
-  max-width: 100%;
-  text-align: center;
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.8em;
+    margin: 0 0 24px;
+    max-width: 100%;
+    text-align: center;
 }
 
 .page-home .hero-img-secondary {
-  margin-right: auto;
+    margin-right: auto;
 }
 
 .page-home .hero-img-main img,
 .page-home .hero-img-secondary img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .page-home .hero-img-secondary img {
-  min-height: 360%;
-  object-position: center bottom;
+    min-height: 360%;
+    object-position: center bottom;
 }
 
 .page-home .hero-img-main {
-  max-width: 75%;
-  margin-left: auto;
-  z-index: 2;
+    max-width: 75%;
+    margin-left: auto;
+    z-index: 2;
 }
 
 .page-home .hero-img-secondary {
-  max-width: 40%;
-  margin-top: -26%;
-  margin-right: -50px;
-  z-index: 1;
+    max-width: 40%;
+    margin-top: -26%;
+    margin-right: -50px;
+    z-index: 1;
 }
 
 /* ========== Mouse-Follower (alle Seiten, dezent Finora-Style) ========== */
 .cursor-follower {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(144, 180, 178, 0.35) 0%, rgba(4, 60, 67, 0.15) 70%);
-  border: 1px solid rgba(144, 180, 178, 0.25);
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s ease-out, width 0.2s ease, height 0.2s ease;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(144, 180, 178, 0.35) 0%, rgba(4, 60, 67, 0.15) 70%);
+    border: 1px solid rgba(144, 180, 178, 0.25);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease-out, width 0.2s ease, height 0.2s ease;
 }
 
 .cursor-follower.is-hover {
-  width: 32px;
-  height: 32px;
-  background: radial-gradient(circle, rgba(144, 180, 178, 0.2) 0%, rgba(4, 60, 67, 0.08) 70%);
+    width: 32px;
+    height: 32px;
+    background: radial-gradient(circle, rgba(144, 180, 178, 0.2) 0%, rgba(4, 60, 67, 0.08) 70%);
 }
 
 @media (hover: none) {
-  .cursor-follower {
-    display: none !important;
-  }
+    .cursor-follower {
+        display: none !important;
+    }
 }
 
 @media (min-width: 981px) and (max-width: 1670px) {
-  .page-home .hero-text h1 {
-    font-size: 72px;
-  }
+    .page-home .hero-text h1 {
+        font-size: 72px;
+    }
 }
 
 @media (max-width: 980px) {
-  .page-home .hero-subtitle {
-    margin-bottom: 0;
-  }
+    .page-home .hero-subtitle {
+        margin-bottom: 0;
+    }
 
-  .page-home .hero-text {
-    width: 100%;
-  }
+    .page-home .hero-text {
+        width: 100%;
+    }
 
-  .page-home .hero-text h1 {
-    max-width: 100%;
-    font-size: clamp(32px, 7.5vw, 56px);
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
+    .page-home .hero-text h1 {
+        max-width: 100%;
+        font-size: clamp(32px, 7.5vw, 56px);
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
 
-  .page-home .why-finora-right img {
-    width: 100%;
-    max-width: 100%;
-    margin-right: 0;
-  }
+    .page-home .why-finora-right img {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
 
-  .page-home .faq-left {
-    display: none;
-  }
+    .page-home .faq-left {
+        display: none;
+    }
 
-  .page-home .faq-right {
-    width: 100%;
-    padding: 5% 4%;
-  }
+    .page-home .faq-right {
+        width: 100%;
+        padding: 5% 4%;
+    }
 }
 
 @media (max-width: 767px) {
-  .page-home .hero {
-    padding-top: calc(var(--header-height) * 2);
-    padding-bottom: var(--header-height);
-    padding-right: max(16px, env(safe-area-inset-right));
-    padding-left: max(16px, env(safe-area-inset-left));
-  }
+    .page-home .hero {
+        padding-top: calc(var(--header-height) * 2);
+        padding-bottom: var(--header-height);
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-left: max(16px, env(safe-area-inset-left));
+    }
 
-  .page-home .hero--slider .hero-slide-content {
-    padding-left: max(16px, env(safe-area-inset-left));
-    padding-right: max(16px, env(safe-area-inset-right));
-  }
+    .page-home .hero--slider .hero-slide-content {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
 
-  .page-home .hero--slider .hero-slider-arrow {
-    width: 44px;
-    height: 44px;
-  }
+    .page-home .hero--slider .hero-slider-arrow {
+        width: 44px;
+        height: 44px;
+    }
 
-  .page-home .hero--slider .hero-slider-prev {
-    left: 12px;
-  }
+    .page-home .hero--slider .hero-slider-prev {
+        left: 12px;
+    }
 
-  .page-home .hero--slider .hero-slider-next {
-    right: 12px;
-  }
+    .page-home .hero--slider .hero-slider-next {
+        right: 12px;
+    }
 
-  .page-home .hero-text h1 {
-    max-width: 100%;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
+    .page-home .hero-text h1 {
+        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 480px) {
-  .page-home .hero-text h1 {
-    font-size: clamp(22px, 7vw, 34px);
-  }
+    .page-home .hero-text h1 {
+        font-size: clamp(20px, 6.5vw, 30px);
+    }
 
-  .page-home .hero--slider .hero-services {
-    flex-direction: column;
-    gap: 8px;
-    padding: 0 12px;
-  }
+    .page-home .hero--slider .hero-services {
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 12px;
+    }
 
-  .page-home .hero--slider .hero-services .service-item {
-    width: 100%;
-    min-width: 0;
-    font-size: 14px;
-    padding: 10px 14px;
-    gap: 10px;
-  }
+    .page-home .hero--slider .hero-services .service-item {
+        width: 100%;
+        min-width: 0;
+        font-size: 14px;
+        padding: 10px 14px;
+        gap: 10px;
+    }
 
-  .page-home .hero--slider .hero-services .service-icon {
-    width: 48px;
-  }
+    .page-home .hero--slider .hero-services .service-icon {
+        width: 48px;
+    }
 
-  .page-home .hero--slider .hero-services .service-item:nth-child(2) .service-icon {
-    width: 44px;
-  }
+    .page-home .hero--slider .hero-services .service-item:nth-child(2) .service-icon {
+        width: 44px;
+    }
 
-  .page-home .hero--slider .hero-slide-content {
-    padding-top: calc(var(--header-height) + 20px);
-    padding-bottom: 100px;
-  }
+    .page-home .hero--slider .hero-slide-content {
+        padding-top: calc(var(--header-height) + 20px);
+        padding-bottom: 100px;
+    }
 
-  .page-home .hero--slider .hero-slide-title {
-    font-size: clamp(28px, 8vw, 40px);
-  }
+    .page-home .hero--slider .hero-slide-title {
+        font-size: clamp(28px, 8vw, 40px);
+    }
 
-  .page-home .hero--slider .hero-slide-subtitle {
-    font-size: 15px;
-  }
+    .page-home .hero--slider .hero-slide-subtitle {
+        font-size: 15px;
+    }
 
-  .page-home .hero--slider .hero-slider-arrow {
-    width: 38px;
-    height: 38px;
-  }
+    .page-home .hero--slider .hero-slider-arrow {
+        width: 38px;
+        height: 38px;
+    }
 
-  .page-home .hero--slider .hero-slider-arrow svg {
-    width: 18px;
-    height: 18px;
-  }
+    .page-home .hero--slider .hero-slider-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 /* ========== UNTERSEITEN: Above-the-fold - Texte und CTA mittig (außer Startseite) ========== */
@@ -473,14 +475,14 @@
 .page-erbanlage .hero--erbanlage .hero-content,
 .page-immobilien .hero--immobilien .hero-content,
 .page-philosophie .hero--philosophie .hero-content {
-  justify-content: center;
+    justify-content: center;
 }
 
 /* Badge überall: klein, Breite nur so breit wie Inhalt */
 .hero .hero-badge {
-  width: fit-content !important;
-  min-width: 0;
-  align-self: center;
+    width: fit-content !important;
+    min-width: 0;
+    align-self: center;
 }
 
 .page-altersvorsorge .hero--altersvorsorge .hero-text,
@@ -490,12 +492,12 @@
 .page-erbanlage .hero--erbanlage .hero-text,
 .page-immobilien .hero--immobilien .hero-text,
 .page-philosophie .hero--philosophie .hero-text {
-  width: 100%;
-  max-width: 640px;
-  margin: 0 auto;
-  padding-right: 0;
-  text-align: center;
-  align-items: center;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-right: 0;
+    text-align: center;
+    align-items: center;
 }
 
 .page-altersvorsorge .hero--altersvorsorge .hero-text h1,
@@ -505,9 +507,9 @@
 .page-erbanlage .hero--erbanlage .hero-text h1,
 .page-immobilien .hero--immobilien .hero-text h1,
 .page-philosophie .hero--philosophie .hero-text h1 {
-  text-align: center;
-  font-size: clamp(32px, 5vw, 56px);
-  font-weight: 700;
+    text-align: center;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 700;
 }
 
 .page-altersvorsorge .hero--altersvorsorge .hero-subtitle,
@@ -517,46 +519,47 @@
 .page-erbanlage .hero--erbanlage .hero-subtitle,
 .page-immobilien .hero--immobilien .hero-subtitle,
 .page-philosophie .hero--philosophie .hero-subtitle {
-  text-align: center;
+    text-align: center;
 }
 
-.page-altersvorsorge .hero--altersvorsorge .hero-text > div[style*="text-align"],
-.page-ueber .hero--ueber .hero-text > div[style*="text-align"],
-.page-kontakt .hero--kontakt .hero-text > div[style*="text-align"],
-.page-investment .hero--investment .hero-text > div[style*="text-align"],
-.page-erbanlage .hero--erbanlage .hero-text > div[style*="text-align"],
-.page-immobilien .hero--immobilien .hero-text > div[style*="text-align"],
-.page-philosophie .hero--philosophie .hero-text > div[style*="text-align"] {
-  text-align: center;
+.page-altersvorsorge .hero--altersvorsorge .hero-text>div[style*="text-align"],
+.page-ueber .hero--ueber .hero-text>div[style*="text-align"],
+.page-kontakt .hero--kontakt .hero-text>div[style*="text-align"],
+.page-investment .hero--investment .hero-text>div[style*="text-align"],
+.page-erbanlage .hero--erbanlage .hero-text>div[style*="text-align"],
+.page-immobilien .hero--immobilien .hero-text>div[style*="text-align"],
+.page-philosophie .hero--philosophie .hero-text>div[style*="text-align"] {
+    text-align: center;
 }
 
 /* Inner page hero — mobile subtitle/button sizing */
 @media (max-width: 767px) {
-  .page-altersvorsorge .hero--altersvorsorge .hero-subtitle,
-  .page-ueber .hero--ueber .hero-subtitle,
-  .page-kontakt .hero--kontakt .hero-subtitle,
-  .page-investment .hero--investment .hero-subtitle,
-  .page-erbanlage .hero--erbanlage .hero-subtitle,
-  .page-immobilien .hero--immobilien .hero-subtitle,
-  .page-philosophie .hero--philosophie .hero-subtitle {
-    font-size: clamp(14px, 3.5vw, 16px);
-    margin-bottom: 20px;
-  }
 
-  .page-altersvorsorge .hero--altersvorsorge .hero-text .btn,
-  .page-ueber .hero--ueber .hero-text .btn,
-  .page-kontakt .hero--kontakt .hero-text .btn,
-  .page-investment .hero--investment .hero-text .btn,
-  .page-erbanlage .hero--erbanlage .hero-text .btn,
-  .page-immobilien .hero--immobilien .hero-text .btn,
-  .page-philosophie .hero--philosophie .hero-text .btn {
-    font-size: 14px;
-    padding: 12px 24px;
-  }
+    .page-altersvorsorge .hero--altersvorsorge .hero-subtitle,
+    .page-ueber .hero--ueber .hero-subtitle,
+    .page-kontakt .hero--kontakt .hero-subtitle,
+    .page-investment .hero--investment .hero-subtitle,
+    .page-erbanlage .hero--erbanlage .hero-subtitle,
+    .page-immobilien .hero--immobilien .hero-subtitle,
+    .page-philosophie .hero--philosophie .hero-subtitle {
+        font-size: clamp(14px, 3.5vw, 16px);
+        margin-bottom: 20px;
+    }
 
-  .hero .hero-microcopy {
-    font-size: 12px;
-  }
+    .page-altersvorsorge .hero--altersvorsorge .hero-text .btn,
+    .page-ueber .hero--ueber .hero-text .btn,
+    .page-kontakt .hero--kontakt .hero-text .btn,
+    .page-investment .hero--investment .hero-text .btn,
+    .page-erbanlage .hero--erbanlage .hero-text .btn,
+    .page-immobilien .hero--immobilien .hero-text .btn,
+    .page-philosophie .hero--philosophie .hero-text .btn {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .hero .hero-microcopy {
+        font-size: 12px;
+    }
 }
 
 /* ========== PAGE: IMMOBILIEN-BERATUNG ========== */
@@ -631,7 +634,7 @@ html:has(body.page-immobilien) {
     margin: 0 0 24px;
 }
 
-.page-immobilien .hero--immobilien .hero-text > div[style*="text-align"] {
+.page-immobilien .hero--immobilien .hero-text>div[style*="text-align"] {
     width: 100%;
     text-align: center;
 }
@@ -657,10 +660,10 @@ html:has(body.page-immobilien) {
 }
 
 .page-immobilien .two-col--immobilien-intro {
-  gap: 56px;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: nowrap;
+    gap: 56px;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .page-immobilien .col-img--immobilien-intro {
@@ -811,6 +814,7 @@ html:has(body.page-immobilien) {
     border: 1px solid rgba(144, 180, 178, 0.15);
     transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth);
 }
+
 .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card::before {
     content: '';
     position: absolute;
@@ -823,9 +827,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 20px 20px 0 0;
 }
+
 .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card:hover::before {
     opacity: 1;
 }
+
 .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item__card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 24px rgba(144, 180, 178, 0.15);
@@ -977,6 +983,7 @@ html:has(body.page-immobilien) {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), var(--glow-accent);
     transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo);
 }
+
 .page-immobilien .adrian-image-col:hover .adrian-img-wrapper {
     transform: translateY(-6px) scale(1.01);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), 0 0 80px rgba(144, 180, 178, 0.18);
@@ -1000,6 +1007,7 @@ html:has(body.page-immobilien) {
     box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
     transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
 }
+
 .page-immobilien .adrian-text-col::before {
     content: '';
     position: absolute;
@@ -1012,9 +1020,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 32px 32px 0 0;
 }
+
 .page-immobilien .adrian-text-col:hover::before {
     opacity: 1;
 }
+
 .page-immobilien .adrian-text-col:hover {
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
@@ -1504,7 +1514,7 @@ html:has(body.page-immobilien) {
     .page-immobilien .adrian-layout {
         grid-template-columns: 1fr;
         min-height: 0;
-        max-width: 440px;
+        max-width: 100%;
         margin: 0 auto;
     }
 
@@ -1523,11 +1533,12 @@ html:has(body.page-immobilien) {
 
     .page-immobilien .adrian-text-col,
     .page-immobilien .adrian-text-col:hover {
-        padding: 0;
+        padding: 40px clamp(16px, 4vw, 32px) 0;
         border-radius: 0;
         box-shadow: none;
         transform: none;
     }
+
     .page-immobilien .adrian-text-col::before {
         display: none;
     }
@@ -1640,7 +1651,11 @@ html:has(body.page-immobilien) {
     }
 }
 
-@media (max-width: 360px) { .page-immobilien .grid--3 { gap: 20px; } }
+@media (max-width: 360px) {
+    .page-immobilien .grid--3 {
+        gap: 20px;
+    }
+}
 
 /* ========== PAGE: UEBER FINORA ========== */
 
@@ -2380,8 +2395,8 @@ html:has(body.page-immobilien) {
     border-radius: var(--radius-button);
     cursor: pointer;
     transition: background 0.3s var(--ease-smooth),
-                box-shadow 0.3s var(--ease-smooth),
-                transform 0.2s var(--ease-smooth);
+        box-shadow 0.3s var(--ease-smooth),
+        transform 0.2s var(--ease-smooth);
     box-shadow: 0 4px 20px rgba(4, 60, 67, 0.25);
 }
 
@@ -2425,8 +2440,8 @@ html:has(body.page-immobilien) {
     text-align: center;
     position: relative;
     transition: transform 0.5s var(--ease-out-expo),
-                box-shadow 0.5s var(--ease-out-expo),
-                border-color 0.4s var(--ease-smooth);
+        box-shadow 0.5s var(--ease-out-expo),
+        border-color 0.4s var(--ease-smooth);
 }
 
 .page-kontakt .kontakt-info-card::before {
@@ -2626,7 +2641,7 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Inline-Bild ausgeblendet --- */
 .page-investment .hero.hero--investment {
-    background-position: center 25%;
+    background-position: center top;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7139_prev-e17696842159562.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2812,10 +2827,13 @@ html:has(body.page-immobilien) {
 }
 
 @keyframes challenge-card-float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(-8px);
         box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1), 0 6px 28px rgba(0, 0, 0, 0.06);
     }
+
     50% {
         transform: translateY(-18px);
         box-shadow: 0 26px 70px rgba(0, 0, 0, 0.14), 0 10px 36px rgba(0, 0, 0, 0.08);
@@ -2823,7 +2841,7 @@ html:has(body.page-immobilien) {
 }
 
 .page-investment .section-challenge .two-col>.col-text:last-child {
-    flex: 0 0 38%;
+    flex: 0 0 70%;
     background-image: linear-gradient(35deg, rgba(255, 255, 255, 0.27) 29%, #ffffff 48%, rgba(255, 255, 255, 0.59) 66%);
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 30px;
@@ -2861,13 +2879,7 @@ html:has(body.page-immobilien) {
     margin-bottom: 20px;
 }
 
-.page-investment .section-challenge .blurb-icon {
-    font-family: ETmodules, sans-serif;
-    font-size: 40px;
-    color: #90b4b2;
-    margin-right: 15px;
-    line-height: 1;
-}
+
 
 .page-investment .section-challenge .blurb-content p {
     font-family: 'Montserrat', sans-serif;
@@ -3018,10 +3030,37 @@ html:has(body.page-immobilien) {
 }
 
 /* 2×2 mit 16px Lücke: Zellen (100% - 16px)/2 × (440px - 16px)/2 */
-.page-investment .approach-tile--1 { top: 0; left: 0; width: calc((100% - 16px) / 2); height: 212px; transform-origin: top left; }
-.page-investment .approach-tile--2 { top: 0; left: calc(50% + 8px); width: calc((100% - 16px) / 2); height: 212px; transform-origin: top right; }
-.page-investment .approach-tile--3 { top: 228px; left: 0; width: calc((100% - 16px) / 2); height: 212px; transform-origin: bottom left; }
-.page-investment .approach-tile--4 { top: 228px; left: calc(50% + 8px); width: calc((100% - 16px) / 2); height: 212px; transform-origin: bottom right; }
+.page-investment .approach-tile--1 {
+    top: 0;
+    left: 0;
+    width: calc((100% - 16px) / 2);
+    height: 212px;
+    transform-origin: top left;
+}
+
+.page-investment .approach-tile--2 {
+    top: 0;
+    left: calc(50% + 8px);
+    width: calc((100% - 16px) / 2);
+    height: 212px;
+    transform-origin: top right;
+}
+
+.page-investment .approach-tile--3 {
+    top: 228px;
+    left: 0;
+    width: calc((100% - 16px) / 2);
+    height: 212px;
+    transform-origin: bottom left;
+}
+
+.page-investment .approach-tile--4 {
+    top: 228px;
+    left: calc(50% + 8px);
+    width: calc((100% - 16px) / 2);
+    height: 212px;
+    transform-origin: bottom right;
+}
 
 .page-investment .approach-tile:hover {
     z-index: 100;
@@ -3368,7 +3407,9 @@ html:has(body.page-immobilien) {
 }
 
 .page-investment .section-target-groups .two-col {
+    display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .page-investment .section-target-groups .two-col>.col-text:first-child {
@@ -3421,47 +3462,7 @@ html:has(body.page-immobilien) {
     transform: none;
 }
 
-.page-investment .section-target-groups .target-group-grid .blurb-icon {
-    font-family: ETmodules, sans-serif;
-    font-size: 40px;
-    color: #90b4b2;
-    line-height: 1;
-    margin-top: -3px;
-    margin-right: 0;
-    width: 32px;
-    min-width: 32px;
-    height: auto;
-    border-radius: 0;
-    background: transparent;
-    display: block;
-}
 
-.page-investment .section-target-groups .target-group-grid .blurb-icon--triangle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    min-width: 36px;
-    height: 36px;
-    margin-top: 0;
-    margin-right: 15px;
-    font-size: 14px;
-    color: var(--color-accent);
-    background: rgba(144, 180, 178, 0.08);
-    border: 1px solid rgba(144, 180, 178, 0.15);
-    border-radius: 10px;
-    flex-shrink: 0;
-    transition: transform 0.25s ease, color 0.25s ease;
-}
-
-.page-investment .section-target-groups .target-group-grid .blurb:hover .blurb-icon--triangle {
-    transform: scale(1.08);
-    color: #5a9b97;
-}
-
-.page-investment .section-target-groups .target-group-grid .blurb-icon--triangle i {
-    font-size: inherit;
-}
 
 .page-investment .section-target-groups .target-group-grid .blurb-content p {
     margin: 0;
@@ -3542,13 +3543,7 @@ html:has(body.page-immobilien) {
     margin-bottom: 20px;
 }
 
-.page-investment .section-results .blurb-icon {
-    font-family: ETmodules, sans-serif;
-    font-size: 40px;
-    color: #90b4b2;
-    margin-right: 15px;
-    line-height: 1;
-}
+
 
 .page-investment .section-results .blurb-content p {
     margin: 0;
@@ -3894,7 +3889,7 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-erbanlage .hero.hero--erbanlage {
-    background-position: center bottom;
+    background-position: center top;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7439_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4083,36 +4078,7 @@ html:has(body.page-immobilien) {
     gap: 16px;
 }
 
-.page-erbanlage .blurb-icon {
-    flex-shrink: 0;
-    font-family: ETmodules, sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    color: #90b4b2;
-    line-height: 1;
-    width: 32px;
-    margin-top: -4px;
-}
 
-.page-erbanlage .blurb-icon--triangle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-    color: var(--color-accent);
-    flex-shrink: 0;
-    transition: transform 0.25s ease, color 0.25s ease;
-}
-.page-erbanlage .responsibility-bottom .blurb:hover .blurb-icon--triangle {
-    transform: scale(1.1);
-    color: #5a9b97;
-}
-
-.page-erbanlage .blurb-icon--triangle i {
-    font-size: inherit;
-}
 
 .page-erbanlage .responsibility-bottom .blurb {
     font-family: var(--font-body);
@@ -4128,9 +4094,11 @@ html:has(body.page-immobilien) {
     border-radius: 8px;
     transition: background-color 0.25s ease, color 0.25s ease;
 }
+
 .page-erbanlage .responsibility-bottom .blurb:hover {
     background-color: rgba(144, 180, 178, 0.08);
 }
+
 .page-erbanlage .responsibility-bottom .blurb:hover .blurb-content p {
     color: #333;
 }
@@ -4160,10 +4128,12 @@ html:has(body.page-immobilien) {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
     transition: box-shadow 0.35s ease, background 0.35s ease;
 }
+
 .page-erbanlage .responsibility-note:hover {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(144, 180, 178, 0.15);
     background: linear-gradient(135deg, rgba(144, 180, 178, 0.1) 0%, rgba(144, 180, 178, 0.04) 100%);
 }
+
 .page-erbanlage .responsibility-note strong {
     font-weight: 700;
     color: #1a5358;
@@ -4288,6 +4258,7 @@ html:has(body.page-immobilien) {
     border: 1px solid rgba(144, 180, 178, 0.15);
     transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth);
 }
+
 .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card::before {
     content: '';
     position: absolute;
@@ -4300,9 +4271,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 20px 20px 0 0;
 }
+
 .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card:hover::before {
     opacity: 1;
 }
+
 .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item__card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 24px rgba(144, 180, 178, 0.15);
@@ -4406,6 +4379,7 @@ html:has(body.page-immobilien) {
     box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
     transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
 }
+
 .page-erbanlage .new-phase-content::before {
     content: '';
     position: absolute;
@@ -4418,9 +4392,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 32px 32px 0 0;
 }
+
 .page-erbanlage .new-phase-content:hover::before {
     opacity: 1;
 }
+
 .page-erbanlage .new-phase-content:hover {
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
@@ -4477,6 +4453,7 @@ html:has(body.page-immobilien) {
     font-size: 18px;
     font-weight: 600;
 }
+
 
 .page-erbanlage .section-new-phase .btn {
     margin-top: 40px;
@@ -4537,6 +4514,7 @@ html:has(body.page-immobilien) {
     box-shadow: 0 8px 32px rgba(4, 60, 67, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.7);
     color: #191919;
 }
+
 .page-erbanlage .flip-box:hover .flip-box-inner {
     background: rgba(255, 255, 255, 0.6);
     border-color: rgba(255, 255, 255, 0.65);
@@ -4795,7 +4773,7 @@ html:has(body.page-immobilien) {
 
     .page-erbanlage .new-phase-media {
         min-height: 0;
-        padding: 0;
+        padding: 0 clamp(16px, 4vw, 32px);
         border-radius: 0;
     }
 
@@ -4811,11 +4789,12 @@ html:has(body.page-immobilien) {
 
     .page-erbanlage .new-phase-content,
     .page-erbanlage .new-phase-content:hover {
-        padding: 0;
+        padding: 40px clamp(16px, 4vw, 32px) 0;
         border-radius: 0;
         box-shadow: none;
         transform: none;
     }
+
     .page-erbanlage .new-phase-content::before {
         display: none;
     }
@@ -4844,6 +4823,34 @@ html:has(body.page-immobilien) {
     .page-erbanlage .section-outcomes .section-heading p,
     .page-erbanlage .section-target-erbe .target-intro {
         font-size: 19px;
+    }
+
+    .page-erbanlage .section-new-phase .blurb {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    .page-erbanlage .section-new-phase .blurb .blurb-icon--triangle {
+        margin-bottom: 0 !important;
+        margin-right: 15px !important;
+    }
+
+    .page-investment .section-target-groups .two-col {
+        flex-direction: column;
+    }
+
+    .page-investment .section-target-groups .target-group-grid .blurb {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    .page-investment .section-target-groups .target-group-grid .blurb .blurb-icon--triangle {
+        margin-bottom: 0 !important;
+        margin-right: 15px !important;
     }
 
     .page-erbanlage .section-erbe-timeline,
@@ -4897,7 +4904,7 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: 100vh, Hintergrundbild mit Parallax - Verlauf von rechts nach links --- */
 .page-altersvorsorge .hero.hero--altersvorsorge {
-    background-position: center bottom;
+    background-position: center top;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7478_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
@@ -5131,14 +5138,7 @@ html:has(body.page-immobilien) {
     margin-bottom: 20px;
 }
 
-.page-altersvorsorge .section-workflow .blurb-icon {
-    font-family: ETmodules, sans-serif;
-    font-size: 40px;
-    color: #90b4b2;
-    line-height: 1;
-    margin-right: 15px;
-    margin-top: -2px;
-}
+
 
 .page-altersvorsorge .section-workflow .blurb-content p {
     font-family: var(--font-body);
@@ -5496,6 +5496,7 @@ html:has(body.page-immobilien) {
     box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
     transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
 }
+
 .page-altersvorsorge .section-audience .audience-card::before {
     content: '';
     position: absolute;
@@ -5508,9 +5509,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 32px 32px 0 0;
 }
+
 .page-altersvorsorge .section-audience .audience-card:hover::before {
     opacity: 1;
 }
+
 .page-altersvorsorge .section-audience .audience-card:hover {
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
@@ -5545,14 +5548,7 @@ html:has(body.page-immobilien) {
     margin-bottom: 20px;
 }
 
-.page-altersvorsorge .section-audience .blurb-icon {
-    font-family: ETmodules, sans-serif;
-    font-size: 40px;
-    color: #90b4b2;
-    line-height: 1;
-    margin-right: 15px;
-    margin-top: -2px;
-}
+
 
 .page-altersvorsorge .section-audience .blurb-content h4 {
     font-family: var(--font-heading);
@@ -5648,6 +5644,7 @@ html:has(body.page-immobilien) {
     box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
     transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
 }
+
 .page-altersvorsorge .section-concepts .concepts-text-col::before {
     content: '';
     position: absolute;
@@ -5660,9 +5657,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 32px 32px 0 0;
 }
+
 .page-altersvorsorge .section-concepts .concepts-text-col:hover::before {
     opacity: 1;
 }
+
 .page-altersvorsorge .section-concepts .concepts-text-col:hover {
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
@@ -5691,14 +5690,7 @@ html:has(body.page-immobilien) {
     margin-bottom: 20px;
 }
 
-.page-altersvorsorge .section-concepts .blurb-icon {
-    font-family: ETmodules, sans-serif;
-    font-size: 40px;
-    color: #90b4b2;
-    line-height: 1;
-    margin-right: 15px;
-    margin-top: 0;
-}
+
 
 .page-altersvorsorge .section-concepts .blurb-content p {
     font-family: var(--font-body);
@@ -6081,6 +6073,7 @@ html:has(body.page-immobilien) {
     box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0);
     transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
 }
+
 .page-philosophie .philosophie-pillars .pillar-card::before {
     content: '';
     position: absolute;
@@ -6093,9 +6086,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 32px 32px 0 0;
 }
+
 .page-philosophie .philosophie-pillars .pillar-card:hover::before {
     opacity: 1;
 }
+
 .page-philosophie .philosophie-pillars .pillar-card:hover {
     background: #ffffff;
     box-shadow: var(--shadow-card);
@@ -6285,6 +6280,7 @@ html:has(body.page-immobilien) {
 .page-philosophie .audience-card {
     position: relative;
 }
+
 .page-philosophie .audience-card::before {
     content: '';
     position: absolute;
@@ -6297,9 +6293,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 32px 32px 0 0;
 }
+
 .page-philosophie .audience-card:hover::before {
     opacity: 1;
 }
+
 .page-philosophie .audience-card:hover {
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
@@ -6464,6 +6462,7 @@ html:has(body.page-immobilien) {
 .page-philosophie .flip-card.anim.is-visible {
     opacity: 0.8;
 }
+
 .page-philosophie .flip-card.anim.is-visible:hover {
     opacity: 1;
 }
@@ -6625,6 +6624,7 @@ html:has(body.page-immobilien) {
 .page-philosophie .step-card {
     position: relative;
 }
+
 .page-philosophie .step-card::before {
     content: '';
     position: absolute;
@@ -6637,9 +6637,11 @@ html:has(body.page-immobilien) {
     transition: opacity 0.4s var(--ease-smooth);
     border-radius: 32px 32px 0 0;
 }
+
 .page-philosophie .step-card:hover::before {
     opacity: 1;
 }
+
 .page-philosophie .step-card:hover {
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
@@ -6759,6 +6761,7 @@ html:has(body.page-immobilien) {
         border-radius: 0 0 96px 96px;
         overflow: hidden;
     }
+
     .page-philosophie .philosophie-pillars {
         border-radius: 0;
     }
@@ -6913,6 +6916,7 @@ html:has(body.page-immobilien) {
         border-radius: 0 0 36px 36px;
         overflow: hidden;
     }
+
     .page-philosophie .philosophie-pillars {
         border-radius: 0;
     }
@@ -6977,7 +6981,8 @@ html:has(body.page-immobilien) {
     }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
     .page-philosophie .flip-card .flip-card-inner {
         height: auto;
         min-height: 280px;
@@ -7204,7 +7209,7 @@ html:has(body.page-immobilien) {
     .header-row {
         width: 100% !important;
         min-height: 72px;
-        padding: 12px max(14px, env(safe-area-inset-left)) 14px max(14px, env(safe-area-inset-right)) !important;
+        padding: 15px max(20px, env(safe-area-inset-left)) 15px max(20px, env(safe-area-inset-right)) !important;
     }
 
     .header-logo {
@@ -7396,12 +7401,12 @@ html:has(body.page-immobilien) {
         max-width: 100%;
     }
 
-    .page-altersvorsorge .hero--altersvorsorge .hero-text > div[style*="text-align"],
-    .page-ueber .hero--ueber .hero-text > div[style*="text-align"],
-    .page-investment .hero--investment .hero-text > div[style*="text-align"],
-    .page-erbanlage .hero--erbanlage .hero-text > div[style*="text-align"],
-    .page-philosophie .hero--philosophie .hero-text > div[style*="text-align"],
-    .page-immobilien .hero--immobilien .hero-text > div[style*="text-align"] {
+    .page-altersvorsorge .hero--altersvorsorge .hero-text>div[style*="text-align"],
+    .page-ueber .hero--ueber .hero-text>div[style*="text-align"],
+    .page-investment .hero--investment .hero-text>div[style*="text-align"],
+    .page-erbanlage .hero--erbanlage .hero-text>div[style*="text-align"],
+    .page-philosophie .hero--philosophie .hero-text>div[style*="text-align"],
+    .page-immobilien .hero--immobilien .hero-text>div[style*="text-align"] {
         width: 100%;
         text-align: left !important;
     }
@@ -7523,8 +7528,8 @@ html:has(body.page-immobilien) {
         padding-top: 12px;
     }
 
-    .two-col > .col-text,
-    .two-col > .col-img,
+    .two-col>.col-text,
+    .two-col>.col-img,
     .page-investment .section-timeline .timeline--vertical .timeline-item,
     .page-erbanlage .section-erbe-timeline .timeline--vertical .timeline-item,
     .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {

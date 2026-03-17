@@ -86,8 +86,8 @@
   --bp-3xl: 1920px;
 
   /* Container padding */
-  --container-padding: clamp(16px, 4vw, 32px);
-  --container-padding-sm: clamp(12px, 3vw, 20px);
+  --container-padding: clamp(20px, 4vw, 32px);
+  --container-padding-sm: clamp(16px, 3vw, 20px);
 
   /* Header height - Hero startet darunter (kein Überlappen) */
   --header-height: 72px;
@@ -242,6 +242,13 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
+
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
 
 /* --- 4. FONT FACES --- */
 @font-face {
