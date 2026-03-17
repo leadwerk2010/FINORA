@@ -333,14 +333,13 @@
 
 /* --- HOME HERO --- */
 /* Alle Hero-Sections: immer 100vh auf allen Endgeräten. Hintergrund ganz oben, Inhalt + Service-Cards im Flow. */
-/* Abstand oben (= zum Header) und unten (= zum Sektionsende) immer gleich: var(--header-height) */
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--header-height));
-  min-height: calc(100dvh - var(--header-height));
-  height: calc(100vh - var(--header-height));
-  height: calc(100dvh - var(--header-height));
-  padding: var(--header-height) clamp(20px, 5vw, 70px) var(--header-height);
+  min-height: 90vh;
+  min-height: 90dvh;
+  height: 90vh;
+  height: 90dvh;
+  padding: 80px clamp(20px, 5vw, 70px) 60px;
   background: var(--color-primary-dark);
   display: flex;
   flex-direction: column;
@@ -354,15 +353,15 @@
 .hero.hero--investment,
 .hero.hero--immobilien,
 .hero.hero--erbanlage {
-  padding: var(--header-height) clamp(20px, 5vw, 70px) var(--header-height);
-  min-height: calc(100vh - var(--header-height));
-  min-height: calc(100dvh - var(--header-height));
-  height: calc(100vh - var(--header-height));
-  height: calc(100dvh - var(--header-height));
+  padding: 80px clamp(20px, 5vw, 70px) 60px;
+  min-height: 90vh;
+  min-height: 90dvh;
+  height: 90vh;
+  height: 90dvh;
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -390,11 +389,11 @@
 .hero.hero--ueber,
 .hero.hero--kontakt,
 .hero.hero--philosophie {
-  padding: var(--header-height) clamp(20px, 5vw, 70px) var(--header-height);
-  min-height: calc(100vh - var(--header-height));
-  min-height: calc(100dvh - var(--header-height));
-  height: calc(100vh - var(--header-height));
-  height: calc(100dvh - var(--header-height));
+  padding: 80px clamp(20px, 5vw, 70px) 60px;
+  min-height: 90vh;
+  min-height: 90dvh;
+  height: 90vh;
+  height: 90dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2489,13 +2488,12 @@
     width: 100%;
   }
 
-  /* Hero: 100dvh, Abstand oben = Abstand unten = header-height */
   .hero {
     min-height: 100vh;
     min-height: 100dvh;
     height: 100vh;
     height: 100dvh;
-    padding: calc(var(--header-height) * 2) clamp(20px, 4vw, 40px) var(--header-height);
+    padding: 80px clamp(20px, 4vw, 40px) 60px;
   }
 
   .hero-content {
@@ -2758,7 +2756,7 @@
     min-height: 100dvh;
     height: 100vh;
     height: 100dvh;
-    padding: calc(var(--header-height) * 2) max(16px, env(safe-area-inset-left)) var(--header-height) max(16px, env(safe-area-inset-right));
+    padding: 60px max(16px, env(safe-area-inset-left)) 40px max(16px, env(safe-area-inset-right));
   }
 
   .hero-content {
@@ -2971,6 +2969,7 @@
 
   .fs-card {
     padding: 20px 18px;
+    min-height: 40vh ;
   }
 }
 
@@ -3125,9 +3124,9 @@
 /* 100vh, Hintergrund ab oben, symmetrische Abstände - Text/CTA gleichmäßig oben/unten */
 .page-hero {
   position: relative;
-  min-height: 100vh;
-  height: 100vh;
-  padding: calc(var(--header-height) * 2) var(--container-padding);
+  min-height: 90vh;
+  height: 90vh;
+  padding: 80px var(--container-padding) 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4094,7 +4093,7 @@
     min-height: 100dvh;
     height: 100vh;
     height: 100dvh;
-    padding: calc(var(--header-height) * 2) var(--container-padding);
+    padding: 80px var(--container-padding) 60px;
   }
 
   .page-hero h1 {
@@ -4189,7 +4188,7 @@
     min-height: 100dvh;
     height: 100vh;
     height: 100dvh;
-    padding: calc(var(--header-height) * 2) var(--container-padding);
+    padding: 60px var(--container-padding) 40px;
   }
 
   .page-hero h1 {

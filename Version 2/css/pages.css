@@ -9,12 +9,12 @@
     background-color: #ffffff;
 }
 
-/* Hero: 100vh - Slider (Leistungen-Style) oder Fallback */
+/* Hero: 90vh Desktop - Slider (Leistungen-Style) oder Fallback */
 .page-home .hero {
     background-color: #043c43;
-    min-height: 100vh;
-    height: 100vh;
-    padding: calc(var(--header-height) * 2) 70px var(--header-height);
+    min-height: 90vh;
+    height: 90vh;
+    padding: 80px 70px 60px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -22,13 +22,13 @@
     box-sizing: border-box;
 }
 
-/* ========== Startseite: Hero-Slider - Hintergrund 100vw × 100vh, voller Bildschirm ========== */
+/* ========== Startseite: Hero-Slider - Hintergrund 100vw × 90vh (Desktop) ========== */
 .page-home .hero.hero--slider {
     position: relative;
     background: none;
     padding: 0;
-    min-height: 100vh;
-    height: 100vh;
+    min-height: 90vh;
+    height: 90vh;
     width: 100%;
     overflow: hidden;
 }
@@ -85,7 +85,7 @@
     text-align: center;
     max-width: 720px;
     margin: 0 auto;
-    padding: calc(var(--header-height) * 2) 70px 140px;
+    padding: 80px 70px 140px;
     box-sizing: border-box;
 }
 
@@ -356,8 +356,8 @@
 
 @media (max-width: 767px) {
     .page-home .hero {
-        padding-top: calc(var(--header-height) * 2);
-        padding-bottom: var(--header-height);
+        padding-top: 60px;
+        padding-bottom: 40px;
         padding-right: max(16px, env(safe-area-inset-right));
         padding-left: max(16px, env(safe-area-inset-left));
     }
@@ -415,7 +415,7 @@
     }
 
     .page-home .hero--slider .hero-slide-content {
-        padding-top: calc(var(--header-height) + 20px);
+        padding-top: 74px;
         padding-bottom: 100px;
     }
 
@@ -552,7 +552,7 @@ html:has(body.page-immobilien) {
     background-size: cover, cover;
     background-position: center, center 25%;
     background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed, fixed;
+    background-attachment: scroll, scroll;
     background-color: #043c43;
 }
 
@@ -624,7 +624,7 @@ html:has(body.page-immobilien) {
 
 .page-immobilien .immobilien-intro-section .container--wide {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -1408,7 +1408,7 @@ html:has(body.page-immobilien) {
 
 @media (max-width: 980px) {
     .page-immobilien .hero--immobilien {
-        padding: calc(var(--header-height) * 2) 40px;
+        padding: 80px 40px 60px;
     }
 
     .page-immobilien .immobilien-intro-image {
@@ -1517,7 +1517,7 @@ html:has(body.page-immobilien) {
 
 @media (max-width: 767px) {
     .page-immobilien .hero--immobilien {
-        padding: calc(var(--header-height) * 2) 20px;
+        padding: 60px 20px 40px;
     }
 
     .page-immobilien .immobilien-timeline-section .timeline--vertical .timeline-item {
@@ -1637,15 +1637,15 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-ueber .hero.hero--ueber {
-    background-position: center, center -120px;
+    background-position: center, center -280px;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A6908_prev-e17660461441031.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-color: #043c43;
-    padding: calc(var(--header-height) * 2) 70px var(--header-height);
-    min-height: 100vh;
-    height: 100vh;
+    padding: 80px 70px 60px;
+    min-height: 90vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1777,7 +1777,7 @@ html:has(body.page-immobilien) {
 
 .page-ueber .section-bedeutet .section-heading {
     margin-top: 40px;
-    margin-bottom: 2px !important;
+    margin-bottom: 56px !important;
     width: 65%;
 }
 
@@ -1937,7 +1937,7 @@ html:has(body.page-immobilien) {
 /* --- Responsive parity --- */
 @media (max-width: 980px) {
     .page-ueber .hero.hero--ueber {
-        padding: calc(var(--header-height) * 2) 40px;
+        padding: 80px 40px 60px;
         background-position: center !important;
     }
 
@@ -2030,16 +2030,11 @@ html:has(body.page-immobilien) {
     .page-ueber .section-testimonials {
         padding: 115px 0 120px;
     }
-
-    .page-ueber .section-testimonials .testimonials-grid {
-        max-width: 440px;
-        margin: 0 auto;
-    }
 }
 
 @media (max-width: 767px) {
     .page-ueber .hero.hero--ueber {
-        padding: calc(var(--header-height) * 2) 20px;
+        padding: 60px 20px 40px;
     }
 
     .page-ueber .why-finora,
@@ -2085,6 +2080,14 @@ html:has(body.page-immobilien) {
         font-size: 21px;
     }
 
+    .page-ueber .section-bedeutet .section-heading {
+        margin-bottom: 20px !important;
+    }
+
+    .page-ueber .section-bedeutet .two-col > .col-text:first-child {
+        margin-bottom: 28px;
+    }
+
     .page-ueber .section-how {
         padding: 20px 0 80px;
     }
@@ -2099,6 +2102,11 @@ html:has(body.page-immobilien) {
 
     .page-ueber .section-testimonials .testimonials-subtitle {
         font-size: 19px;
+    }
+
+    /* Slider mobilde kaydırılabilir olsun (index ile aynı): grid geniş kalsın */
+    .page-ueber .section-testimonials .testimonials-grid {
+        max-width: none;
     }
 }
 
@@ -2117,13 +2125,13 @@ html:has(body.page-immobilien) {
 .page-kontakt .hero.hero--kontakt {
     background-position: center bottom;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/Invest-bw.png') !important;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #043c43;
-    padding: calc(var(--header-height) * 2) 70px var(--header-height);
-    min-height: 100vh;
-    height: 100vh;
+    padding: 80px 70px 60px;
+    min-height: 90vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -2477,7 +2485,7 @@ html:has(body.page-immobilien) {
 /* --- Responsive --- */
 @media (max-width: 980px) {
     .page-kontakt .hero.hero--kontakt {
-        padding: calc(var(--header-height) * 2) 40px;
+        padding: 80px 40px 60px;
     }
 
     .page-kontakt .hero--kontakt .hero-text {
@@ -2525,7 +2533,7 @@ html:has(body.page-immobilien) {
 
 @media (max-width: 767px) {
     .page-kontakt .hero.hero--kontakt {
-        padding: calc(var(--header-height) * 2) 20px;
+        padding: 60px 20px 40px;
     }
 
     .page-kontakt .hero--kontakt .hero-text {
@@ -2616,11 +2624,11 @@ html:has(body.page-immobilien) {
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/_X8A6656_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-color: #043c43;
-    padding: calc(var(--header-height) * 2) 70px var(--header-height);
-    min-height: 100vh;
-    height: 100vh;
+    padding: 80px 70px 60px;
+    min-height: 90vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -3412,8 +3420,11 @@ html:has(body.page-immobilien) {
     line-height: 1.2em;
 }
 
+/* Desktop: Grid 2 Spalten erzwingen (überschreibt keine andere display-Regel) */
 .page-investment .section-target-groups .target-group-grid {
-    display: block;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     margin-top: 0;
 }
 
@@ -3421,12 +3432,13 @@ html:has(body.page-immobilien) {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding: 0;
     background: transparent;
     border-radius: 0;
     box-shadow: none;
     transform: none;
+    min-width: 0; /* Grid-Items dürfen schrumpfen */
 }
 
 .page-investment .section-target-groups .target-group-grid .blurb:hover {
@@ -3467,7 +3479,7 @@ html:has(body.page-immobilien) {
 }
 
 .page-investment .section-results .col-img {
-    flex: 0 0 40%;
+    flex: 0 0 38%;
     min-height: 800px;
     background-image: url('../assets/images/X8A7369_prev-e1769685408385.jpg');
     background-size: cover;
@@ -3478,7 +3490,7 @@ html:has(body.page-immobilien) {
 }
 
 .page-investment .section-results .col-text {
-    flex: 0 0 60%;
+    flex: 0 0 62%;
     border-radius: 32px;
     background: #ffffff;
     padding: 7%;
@@ -3527,6 +3539,26 @@ html:has(body.page-immobilien) {
 
 .page-investment .section-results .btn-section {
     margin-top: 40px;
+}
+
+/* Desktop: Ergebnis-Sektion breiter, Bild + Text nebeneinander (Bild breiter, Textbreite bleibt) */
+@media (min-width: 769px) {
+    .page-investment .section-results .container--wide {
+        max-width: 1600px;
+        width: min(94%, 1600px);
+        margin-left: auto;
+        margin-right: 4%;
+    }
+    .page-investment .section-results .two-col {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+    .page-investment .section-results .col-img {
+        flex: 0 0 38%;
+    }
+    .page-investment .section-results .col-text {
+        flex: 0 0 62%;
+    }
 }
 
 /* --- Final CTA (.et_pb_section_8) --- */
@@ -3581,10 +3613,41 @@ html:has(body.page-immobilien) {
     color: #ffffff;
 }
 
+/* --- Desktop: Zielgruppen-Sektion immer 2 Spalten (ab 769px) --- */
+@media (min-width: 769px) {
+    .page-investment .section-target-groups .two-col {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+    .page-investment .section-target-groups .two-col > .col-text:first-child {
+        flex: 0 0 35% !important;
+    }
+    .page-investment .section-target-groups .two-col > .col-text:last-child {
+        flex: 0 0 60% !important;
+    }
+    .page-investment .section-target-groups .target-group-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px;
+        margin-top: 0;
+    }
+}
+
 /* --- Responsive --- */
 @media (max-width: 980px) {
     .page-investment .hero.hero--investment {
-        padding: calc(var(--header-height) * 2) 40px !important;
+        padding: 80px 40px 60px !important;
+    }
+
+    .page-investment .section-target-groups .two-col {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+    .page-investment .section-target-groups .two-col > .col-text:first-child {
+        flex: 0 0 35% !important;
+    }
+    .page-investment .section-target-groups .two-col > .col-text:last-child {
+        flex: 0 0 60% !important;
     }
 
     .page-investment .hero--investment .hero-content {
@@ -3714,8 +3777,10 @@ html:has(body.page-immobilien) {
     .page-investment .section-results .two-col {
         min-height: 0;
         gap: 30px;
-        max-width: 440px;
-        margin: 0 auto;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        max-width: none;
+        margin: 0;
     }
 
     .page-investment .section-results .col-img {
@@ -3733,8 +3798,6 @@ html:has(body.page-immobilien) {
 
     .page-investment .section-results .col-text,
     .page-investment .section-results .col-text:hover {
-        padding: 0;
-        border-radius: 0;
         box-shadow: none;
         transform: none;
     }
@@ -3742,7 +3805,7 @@ html:has(body.page-immobilien) {
 
 @media (max-width: 767px) {
     .page-investment .hero.hero--investment {
-        padding: calc(var(--header-height) * 2) 20px !important;
+        padding: 60px 20px 40px !important;
     }
 
     .page-investment .hero--investment .hero-images.hero-images--single .hero-img-main {
@@ -3837,6 +3900,12 @@ html:has(body.page-immobilien) {
     .page-investment .section-results {
         padding: 85px 0 90px;
     }
+    .page-investment .section-results .two-col {
+        flex-direction: column !important;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .page-investment .section-final-cta p {
         margin-bottom: 30px;
@@ -3864,11 +3933,11 @@ html:has(body.page-immobilien) {
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7439_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-color: #043c43;
-    padding: calc(var(--header-height) * 2) 70px var(--header-height);
-    min-height: 100vh;
-    height: 100vh;
+    padding: 80px 70px 60px;
+    min-height: 90vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -4641,7 +4710,7 @@ html:has(body.page-immobilien) {
 /* --- Responsive --- */
 @media (max-width: 980px) {
     .page-erbanlage .hero.hero--erbanlage {
-        padding: calc(var(--header-height) * 2) 40px;
+        padding: 80px 40px 60px;
     }
 
     .page-erbanlage .hero--erbanlage .hero-content {
@@ -4777,7 +4846,7 @@ html:has(body.page-immobilien) {
 
 @media (max-width: 767px) {
     .page-erbanlage .hero.hero--erbanlage {
-        padding: calc(var(--header-height) * 2) 20px;
+        padding: 60px 20px 40px;
     }
 
     .page-erbanlage .responsibility-top__main h2,
@@ -4809,7 +4878,18 @@ html:has(body.page-immobilien) {
     }
 
     .page-investment .section-target-groups .two-col {
-        flex-direction: column;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+    .page-investment .section-target-groups .two-col > .col-text:first-child,
+    .page-investment .section-target-groups .two-col > .col-text:last-child {
+        flex: 0 0 100% !important;
+        max-width: 100%;
+    }
+
+    .page-investment .section-target-groups .target-group-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
     }
 
     .page-investment .section-target-groups .target-group-grid .blurb {
@@ -4873,17 +4953,17 @@ html:has(body.page-immobilien) {
     background: #ffffff;
 }
 
-/* --- Hero: 100vh, Hintergrundbild mit Parallax - Verlauf von rechts nach links --- */
+/* --- Hero: 90vh Desktop, Hintergrundbild - Verlauf von rechts nach links --- */
 .page-altersvorsorge .hero.hero--altersvorsorge {
     background-position: center top;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7478_prev.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-color: #043c43;
-    padding: calc(var(--header-height) * 2) 70px var(--header-height);
-    min-height: 100vh;
-    height: 100vh;
+    padding: 80px 70px 60px;
+    min-height: 90vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -5684,7 +5764,7 @@ html:has(body.page-immobilien) {
 /* --- Responsive --- */
 @media (max-width: 980px) {
     .page-altersvorsorge .hero.hero--altersvorsorge {
-        padding: calc(var(--header-height) * 2) 40px;
+        padding: 80px 40px 60px;
     }
 
     .page-altersvorsorge .hero--altersvorsorge .hero-content {
@@ -5863,7 +5943,7 @@ html:has(body.page-immobilien) {
 
 @media (max-width: 767px) {
     .page-altersvorsorge .hero.hero--altersvorsorge {
-        padding: calc(var(--header-height) * 2) 20px !important;
+        padding: 60px 20px 40px !important;
     }
 
     .page-altersvorsorge .hero--altersvorsorge .hero-images.hero-images--single .hero-img-main {
@@ -5944,15 +6024,15 @@ html:has(body.page-immobilien) {
 
 /* --- Hero: Hintergrundbild + Verlauf wie Altersvorsorge, Parallax --- */
 .page-philosophie .hero.hero--philosophie {
-    background-position: center, center -60px;
+    background-position: center, center -150px;
     background-image: linear-gradient(to left, rgba(4, 60, 67, 0.42) 0%, rgba(4, 60, 67, 0.62) 50%, rgba(4, 60, 67, 0.82) 100%), url('../assets/images/X8A7304_prev-e1765975803707-1.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-color: #043c43;
-    padding: calc(var(--header-height) * 2) 70px var(--header-height);
-    min-height: 100vh;
-    height: 100vh;
+    padding: 80px 70px 60px;
+    min-height: 90vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -6702,7 +6782,7 @@ html:has(body.page-immobilien) {
 /* --- Responsive parity --- */
 @media (max-width: 980px) {
     .page-philosophie .hero.hero--philosophie {
-        padding: calc(var(--header-height) * 2) 40px;
+        padding: 80px 40px 60px;
         background-position: center !important;
     }
 
@@ -6871,11 +6951,16 @@ html:has(body.page-immobilien) {
     .page-philosophie .section-faq .faq-right {
         width: 100%;
     }
+    
+    .page-philosophie .step-card {
+        padding: 0px;
+     }
+    
 }
 
 @media (max-width: 767px) {
     .page-philosophie .hero.hero--philosophie {
-        padding: calc(var(--header-height) * 2) 20px;
+        padding: 60px 20px 40px;
     }
 
     .page-philosophie .philosophie-pillars,
@@ -7245,7 +7330,7 @@ html:has(body.page-immobilien) {
         top: 100%;
         left: 0;
         right: 0;
-        max-height: calc(100svh - var(--header-height) - 8px);
+        max-height: calc(100svh - 80px);
         overflow-y: auto;
         padding: 0 0 calc(20px + env(safe-area-inset-bottom));
         background: rgba(4, 60, 67, 0.98);
@@ -7289,7 +7374,7 @@ html:has(body.page-immobilien) {
     .page-philosophie .hero.hero--philosophie {
         min-height: max(560px, 100svh);
         height: auto !important;
-        padding: calc(var(--header-height) + 28px) clamp(20px, 5vw, 32px) clamp(28px, 7vw, 44px) !important;
+        padding: 100px clamp(20px, 5vw, 32px) clamp(28px, 7vw, 44px) !important;
         justify-content: flex-start !important;
         background-attachment: scroll !important;
     }
@@ -7404,7 +7489,7 @@ html:has(body.page-immobilien) {
 
     .page-home .hero--slider .hero-slide-content {
         max-width: 100%;
-        padding: calc(var(--header-height) + 32px) clamp(16px, 4vw, 24px) 148px !important;
+        padding: 104px clamp(16px, 4vw, 24px) 148px !important;
     }
 
     .page-home .hero--slider .hero-slide-title {
@@ -7658,12 +7743,12 @@ html:has(body.page-immobilien) {
 @media (max-width: 767px) {
     .page-home .hero.hero--slider {
         min-height: 0;
-        height: 60vh;
-        height: 60dvh;
+        height: 80vh;
+        height: 80dvh;
     }
 
     .page-home .hero--slider .hero-slide-content {
-        padding-top: calc(var(--header-height) + 22px) !important;
+        padding-top: 94px !important;
         padding-right: 20px !important;
         padding-left: 20px !important;
         padding-bottom: 32px !important;
@@ -7685,7 +7770,7 @@ html:has(body.page-immobilien) {
     .page-immobilien .hero.hero--immobilien,
     .page-philosophie .hero.hero--philosophie {
         min-height: auto;
-        padding-top: calc(var(--header-height) + 22px) !important;
+        padding-top: 94px !important;
         padding-right: 20px !important;
         padding-left: 20px !important;
         padding-bottom: 32px !important;
@@ -7743,13 +7828,13 @@ html:has(body.page-immobilien) {
 @media (max-width: 480px) {
     .page-home .hero.hero--slider {
         min-height: 0;
-        height: 60vh;
-        height: 60dvh;
+        height: 80vh;
+        height: 80dvh;
     }
 
     .page-home .hero--slider .hero-slide-content {
         justify-content: flex-start;
-        padding-top: calc(var(--header-height) + 22px) !important;
+        padding-top: 94px !important;
         padding-right: 16px !important;
         padding-left: 16px !important;
         padding-bottom: 32px !important;
